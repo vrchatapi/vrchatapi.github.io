@@ -1,5 +1,7 @@
 # Unofficial VRChat API Docs
 
+!> **Note!** This is an unofficial documentation, use at your own risk, these are not meant to be used by users, these are meant to be used internally for the game.
+
 In here you can find unofficial API documents for VRChat
 
 The API allows you to get information about the world of VRChat like the players, worlds and more...
