@@ -1,3 +1,23 @@
 - [Getting Started](README.md)
 - Endpoints
     - [Remote Config](RemoteConfig.md)
+    - User API
+        - [User Object](UserAPI/Object.md)
+        - Current user
+            - [Login](UserAPI/Login.md)
+            - [Logout](UserAPI/Logout.md)
+            - [Update Info](UserAPI/UpdateInfo.md)
+            - [Friends](UserAPI/Friends.md)
+            - [Friend Request](UserAPI/FriendRequest.md)
+            - [Unfriend](UserAPI/Unfriend.md)
+        - Any user
+            - [List active](UserAPI/ListActive.md)
+            - [Get by id](UserAPI/GetByID.md)
+            - [Search](UserAPI/Search.md)
+    - World API
+        - [Save World](WorldAPI/SaveWorld.md)
+        - [Get World](WorldAPI/GetWorld.md)
+        - [Delete World](WorldAPI/DeleteWorld.md)
+        - [Get World metadata](WorldAPI/GetWorldMetadata.md)
+        - [List worlds](WorldAPI/ListWorlds.md)
+    - File API *soon*
