@@ -1,3 +1,3 @@
 - [Getting Started](README.md)
 - Endpoints
-    - [Remote Config] (RemoteConfig.md)
+    - [Remote Config](RemoteConfig.md)
