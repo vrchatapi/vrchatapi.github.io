@@ -1,6 +1,6 @@
 # Sercret Worlds
 
-While creating the API I found some off worlds and maps.
+While documenting the API I found some worlds that are not normally accesible.....
 
 ## Public Ban
 
