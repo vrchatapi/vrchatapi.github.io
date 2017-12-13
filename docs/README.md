@@ -18,7 +18,7 @@ Regarding reverse engineering our API - Our stance here is don't be malicious.  
 
 Regarding reverse engineering our APP or using hacked clients - reverse engineering the VRChat app is a violation of section 9 of our TOS and can lead to a permanent ban from the service.
 ```
-*- 13/12/2017 by VRPill*
+*- by VRPill 13/12/2017*
 
 # Quick overview
 
@@ -30,8 +30,8 @@ Most of the APIs require you to be authenticated.
 
 There are two ways to authenticate
 
-1) Send the  Authorization header with Basic authentication
-2) After calling the login send a cookie named `auth` with your `authToken`
+1. Send the  Authorization header with Basic authentication
+2. After calling the login send a cookie named `auth` with your `authToken`
 
 The second option is probably more recommended
 
@@ -45,11 +45,11 @@ Every API requires you to give a special API key. To get it simply call the Remo
 
 !> **Note!** Whenever the script asks for an API it is because everything in the API is protected. The scripts you find here are ones that I checked and made sure the password never leaves the page, so be careful if you paste external scripts!
 
-1) Go to [https://vrchat.net](https://vrchat.net) 
-2) open developer tools (f12) 
-3) open the console tab;
-4) First paste the `library.js`
-5) paste the script you want to run
-6) ???
-7) Profit
+1. Go to [https://vrchat.net](https://vrchat.net) 
+2. open developer tools (f12) 
+3. open the console tab;
+4. First paste the `library.js`
+5. paste the script you want to run
+6. ???
+7. Profit
 
