@@ -1,4 +1,4 @@
-# Friends
+# List Active
 
 This API allows you to get all the users online
 
