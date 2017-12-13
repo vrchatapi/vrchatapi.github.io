@@ -2,6 +2,8 @@
 
 Remote config contains configuration that the clients needs to work properly.
 
+Corrently the most important value from here is the `clientApiKey` as it is used for every other API 
+
 ## Request Method 
 GET
 
@@ -10,9 +12,6 @@ https://api.vrchat.cloud/api/1/config
 
 ## Requires Authentication
 No
-
-## Usage
-corrently the most important value from here is the `clientApiKey` as it is used for every other API 
 
 ## Example response
 ```json
