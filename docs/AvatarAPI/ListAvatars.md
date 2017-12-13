@@ -24,6 +24,7 @@ search | string | yes | Search by name
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
 order | string | yes | ascending/descending
+releaseStatus | string | yes - default is public | The realse status
 maxUnityVersion | string | yes | The max unity version the world support
 minUnityVersion | string | yes | The min unity version the world support
 maxAssetVersion | string | yes | The max asset version the world support
