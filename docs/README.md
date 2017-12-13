@@ -12,8 +12,17 @@ VRChat uses the HTTP procotol to get basic information from the server and send 
 
 ## Authentication
 
-Most of the APIs require you to be authenticated, the authentication is done pretty easily, using the Basic Authentication header.
+Most of the APIs require you to be authenticated.
+
+There are two ways to authenticate
+
+1) Send the  Authorization header with Basic authentication
+2) After calling the login send a cookie named `auth` with your `authToken`
+
+The second option is probably more recommended
 
 ## Client API Key
 
 Every API requires you to give a special API key. To get it simply call the Remote Config endpoint (read here <INSERT LINK>)
+
+?> Last Known key is `JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`
