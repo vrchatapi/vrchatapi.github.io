@@ -1,6 +1,6 @@
 # List Worlds
 
-This API allows you to list and search for worlds
+This API allows you to list and search for worlds.
 
 ## Request Method 
 GET
