@@ -13,7 +13,10 @@ https://api.vrchat.cloud/api/1/config
 ## Requires Authentication
 No
 
-## Example response
+## Returns
+
+!> This will be documented better in the future
+
 ```json
 {
    "messageOfTheDay":"",

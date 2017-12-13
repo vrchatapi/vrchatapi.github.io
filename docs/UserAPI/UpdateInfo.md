@@ -23,6 +23,6 @@ email | string | yes | New Email
 birthday | string | yes | New Birthday
 acceptedTOSVersion | int |  unknown | The last accepted TOS version
 
-## Example response
+## Returns
 
 *soon*
