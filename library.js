@@ -22,16 +22,14 @@ var VRChatAPI = {};
     }
 
     function doRequest(url, method, data, creds, callback, error) {
-        let xhttp = createCORSRequest();
+        let xhttp = createCORSRequest(method, url);
         if(error == undefined || error === null) error = console.log;
         if(callback == undefined || callback === null) callback = console.error;
-        xhttp.onreadystatechange = function() {
-            if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                callback(JSON.parse(this.responseText));
-            }else {
-                // TODO Better error handling
-                error(JSON.parse(this.responseText));
-            }
+        xhttp.onload = function() {
+            callback(JSON.parse(xhttp.responseText));
+        }
+        xhttp.onerror = function() {
+            error(xhttp.responseText);            
         }
         if(creds != null) {
             xhttp.setRequestHeader("Authorization", "Basic " + btoa(creds.username + ":" + creds.password));            
@@ -39,7 +37,6 @@ var VRChatAPI = {};
         if(AUTH_TOKEN != null) {
             xhttp.setRequestHeader("Cookie", "auth=" + AUTH_TOKEN);            
         }
-        xhttp.open(method, BASE_URL + url, true);
         if(data == null) {
             xhttp.send();
         }else {
@@ -47,11 +44,13 @@ var VRChatAPI = {};
         }
     }
 
-    function createCORSRequest(){
+    function createCORSRequest(method, url){
         var xhr = new XMLHttpRequest();
         if ("withCredentials" in xhr){
+            xhr.open(method, BASE_URL + url, true);
         } else if (typeof XDomainRequest != "undefined"){
             xhr = new XDomainRequest();
+            xhr.open(method, BASE_URL + url);
         } else {
             xhr = null;
         }
