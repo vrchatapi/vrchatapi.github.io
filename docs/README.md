@@ -4,7 +4,7 @@
 
 ?> This docs are for SDK version `2017.10.26.17.36`
 
-The VRChat team was nice anough to allow us reverse engineer the API, and create + publish these docs, but they have given us one condition, don't use it for malicious stuff!
+The VRChat team was nice enough to allow us reverse engineer the API, and create + publish these docs, but they have given us one condition, don't use it for malicious stuff!
 
 This gives us the opportunity to create stuff that interact with the game in a way we could only imagine. 
 
