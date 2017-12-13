@@ -26,3 +26,16 @@ The second option is probably more recommended
 Every API requires you to give a special API key. To get it simply call the Remote Config endpoint (read here <INSERT LINK>)
 
 ?> Last Known key is `JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`
+
+# Using the JavaScript library
+
+!> **Note!** Whenever the script asks for an API it is because everything in the API is protected. The scripts you find here are ones that I checked and made sure the password never leaves the page, so be careful if you paste external scripts!
+
+1) Go to [https://vrchat.net](https://vrchat.net) 
+2) open developer tools (f12) 
+3) open the console tab;
+4) First paste the `library.js`
+5) paste the script you want to run
+6) ???
+7) Profit
+
