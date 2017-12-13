@@ -13,7 +13,7 @@
         - Any user
             - [List active](UserAPI/ListActive.md)
             - [Get by id](UserAPI/GetByID.md)
-            - [Search](UserAPI/Search.md)
+            - [List](UserAPI/List.md)
     - World API
         - [Save World](WorldAPI/SaveWorld.md)
         - [Get World](WorldAPI/GetWorld.md)
