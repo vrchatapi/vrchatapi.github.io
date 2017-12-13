@@ -2,7 +2,7 @@
 
 When we refer to the user object, we refer to the data that is used by the server to represent a user. 
 
-## Public User
+## Public info
 This is the data everyone can get about a user
 
 Field | Type | Description
@@ -17,7 +17,26 @@ instanceId | string | The ID of the instance the user is in or `offline`
 location | string | Formatted world and instance as `{worldId}:{instanceId}` 
 developerType | `DeveloperType` | Is a developer
 
-## Private User
+
+## Extended Public info
+This info is sent by some APIs instead of the the normal public info
+
+Field | Type | Description
+------|------|------------
+id | string | The user id
+username | string | The username OR steam_{id}
+displayName | string | The username
+currentAvatarImageUrl | string | URL to the avatar image
+currentAvatarThumbnailImageUrl | string | URL to the avatar image (smaller)
+creatorLevel | int | unknown
+socialLevel | int | unknown
+timeEquity | int | unknown
+nuisanceFactor | int | unknown
+level | int | unknown
+location | string | Formatted world and instance as `{worldId}:{instanceId}` 
+developerType | `DeveloperType` | Is a developer
+
+## Private info
 This is the data only the current user can see
 
 Field | Type | Description
@@ -31,7 +50,7 @@ obfuscatedEmail | string | The email, contains first letter and the host, other 
 emailVerified | boolean | Did the user verify the email
 hasBirthday | boolean | Did the user provided a DOB
 unsubscribed | boolean | Unknown
-friends | array of friend user info | Unknown
+friends | array of extended public info | Unknown
 blueprints | object | unknown
 currentAvatarBlueprint | object | unknown
 events | array | unknown
@@ -48,24 +67,6 @@ socialLevel | int | unknown
 timeEquity | int | unknown
 level | int | unknown
 authToken | string | Used for authenticating
-
-## Friend info
-This is data a player can get about his friend
-
-Field | Type | Description
-------|------|------------
-id | string | The user id
-username | string | The username OR steam_{id}
-displayName | string | The username
-currentAvatarImageUrl | string | URL to the avatar image
-currentAvatarThumbnailImageUrl | string | URL to the avatar image (smaller)
-creatorLevel | int | unknown
-socialLevel | int | unknown
-timeEquity | int | unknown
-nuisanceFactor | int | unknown
-level | int | unknown
-location | string | Formatted world and instance as `{worldId}:{instanceId}` 
-developerType | `DeveloperType` | Is a developer
 
 ## Developer Type
 This is an enum to tell if the user is a developer or not

@@ -12,4 +12,4 @@ https://api.vrchat.cloud/api/1/auth/user/friends
 Yes
 
 ## Returns 
-array of friend user info
+array of extended public user info
