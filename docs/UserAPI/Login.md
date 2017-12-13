@@ -12,7 +12,9 @@ https://api.vrchat.cloud/api/1/auth/user
 No
 
 ## Usage
-corrently the most important value from here is the `clientApiKey` as it is used for every other API 
+The main reason you need this API is to get the `authToken`, it also contain data that is private to the user, like events, friends and so on.
+
+Also this is currently the only way to get a user asset, the public user data does not contains that.
 
 ## Example response
 ```json
