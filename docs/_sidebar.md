@@ -21,4 +21,9 @@
         - [Delete World](WorldAPI/DeleteWorld.md)
         - [Get World metadata](WorldAPI/GetWorldMetadata.md)
         - [List worlds](WorldAPI/ListWorlds.md)
-    - File API *soon*
+    - Avatar API
+        - [Get by ID](AvatarAPI/GetByID.md)
+        - [Choose Avatar](AvatarAPI/ChooseAvatar.md)
+        - [List Avatars](AvatarAPI/ListAvatars.md)
+        - [Save Avatar](AvatarAPI/SaveAvatar.md)
+        - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
