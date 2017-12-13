@@ -1,6 +1,6 @@
 # Get By ID
 
-This API allows you to get public user info about a specific user using his ID
+This API allows you to get details about any avatar by ID.
 
 ## Request Method 
 GET
@@ -31,7 +31,7 @@ version | int | Avatar version
 featured | boolean | is the avatar featured (not used in-game)
 unityPackage | array of `UnityPackage` | The unity packages
 unityPackageUpdated | boolean | unknown
-unityPackageURL | string | Full unitypackage that can be used in unity as is (.unitypackage)
+unityPackageURL | string | Full unitypackage that can be used in unity as is (.unitypackage). If the avatar is not yours then it will just be empty.
 
 ### UnityPackage
 
