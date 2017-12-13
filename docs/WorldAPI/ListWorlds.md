@@ -49,6 +49,8 @@ Trending is set as:
 
 ## Returns 
 
+Array of:
+
 Field | Type | Description
 ------|------|------------
 id | string | World ID
