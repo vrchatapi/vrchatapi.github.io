@@ -4,9 +4,21 @@
 
 ?> This docs are for SDK version `2017.10.26.17.36`
 
-In here you can find unofficial API documents for VRChat
+The VRChat team was nice anough to allow us reverse engineer the API, and create + publish these docs, but they have given us one condition, don't use it for malicious stuff!
 
-The API allows you to get information about the world of VRChat like the players, worlds and more...
+This gives us the opportunity to create stuff that interact with the game in a way we could only imagine. 
+
+The VRChat team has given us their trust, and we should use it well, and not lose it. So please use this for making the game better.
+
+# Policy
+```
+Hello everyone. We have a new policy on reverse engineering our API & reverse engineering the APP and/or using hacked clients.
+
+Regarding reverse engineering our API - Our stance here is don't be malicious.  This is unsupported and it might break.
+
+Regarding reverse engineering our APP or using hacked clients - reverse engineering the VRChat app is a violation of section 9 of our TOS and can lead to a permanent ban from the service.
+```
+*- 13/12/2017 by VRPill*
 
 # Quick overview
 
