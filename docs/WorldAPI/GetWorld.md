@@ -30,8 +30,9 @@ tags | array of string | World tags
 releaseStatus | `ReleaseStatus` | The status of the world
 imageUrl | string | URL to the image of the world
 thumbnailImageURL | string | URL to the image of the world (small)
+assetUrl | string | URL for downloading the map as unity3d compressed file
 pluginUrl | string | URL (usually DLL). This is probably used for custom scripts, only found in worlds made by vrchat currently
-unityPackageUrl | string | URL for downloading unity3d compressed file (not always included)
+unityPackageUrl | string | URL for downloading unitypackage file (only avariable to the map's editor)
 namespacae | string | unknown
 unityPackageUpdated | false | unknown
 unityPackages | `UnityPackage` | Versions of this world
