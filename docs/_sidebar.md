@@ -7,19 +7,19 @@
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
-            - [Update Info](UserAPI/UpdateInfo.md)
+            - [Update User Info](UserAPI/UpdateInfo.md)
             - [Friends](UserAPI/Friends.md)
             - [Friend Request](UserAPI/FriendRequest.md)
             - [Unfriend](UserAPI/Unfriend.md)
         - Any user
-            - [List active](UserAPI/ListActive.md)
+            - [List active users](UserAPI/ListActive.md)
             - [Get by id](UserAPI/GetByID.md)
-            - [List](UserAPI/List.md)
+            - [List Users](UserAPI/List.md)
     - World API
-        - [Save World](WorldAPI/SaveWorld.md)
+        - [Save World *soon*]()
         - [Get World](WorldAPI/GetWorld.md)
         - [Delete World](WorldAPI/DeleteWorld.md)
-        - [Get World metadata](WorldAPI/GetWorldMetadata.md)
+        - [Get World metadata *soon*]()
         - [List worlds](WorldAPI/ListWorlds.md)
     - Avatar API
         - [Get by ID](AvatarAPI/GetByID.md)
@@ -27,3 +27,29 @@
         - [List Avatars](AvatarAPI/ListAvatars.md)
         - [Save Avatar](AvatarAPI/SaveAvatar.md)
         - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
+    - Moderation API
+        - World owner
+            - [Send Moderation *soon*]()
+            - [Start Vote Kick *soon*]()
+            - [Delete Moderation *soon*]()
+            - [Get Local moderations *soon*]()
+        - Player
+            - [Send moderation]()
+            - [Delete moderation]()
+            - [Get against]()
+            - [Get player's]()
+    - Notification API
+        - [Send Notification *soon*]()
+        - [Mark As Read *soon*]()
+        - [Delete Notification *soon*]()
+        - [Get All Notifications *soon*]()
+    - File API
+        - [Create File *soon*]()
+        - [Get File *soon*]()
+        - [Delete File *soon*]()
+        - [Dowmload File *soon*]()
+        - [Simple Upload *soon*]()
+        - [Multipart Upload *soon*]()
+        - [Finish Upload *soon*]()
+        - [Get Download Status *soon*]()
+    - [Analytics API *soon*]()
