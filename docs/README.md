@@ -43,7 +43,7 @@ Every API requires you to give a special API key. To get it simply call the Remo
 
 # Using the JavaScript library
 
-!> **Note!** Whenever the script asks for an API it is because everything in the API is protected. The scripts you find here are ones that I checked and made sure the password never leaves the page, so be careful if you paste external scripts!
+!> **Note!** Whenever the script asks for a password it is because everything in the API is protected. The scripts you find in the github repo have been manually checked and verfied to keep your password safe. Please be careful when posting scripts that are not from here.
 
 1. Go to [https://vrchat.net](https://vrchat.net) 
 2. open developer tools (f12) 
