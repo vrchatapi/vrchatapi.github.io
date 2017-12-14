@@ -27,6 +27,7 @@ n | int | yes | How many users to return
 offset | int | yes | How many users to skip
 search | string | yes | Filter by name
 tag | Comma seperated strings | yes | Filter by tag
+notag | Comma seperated strings | Tags to exclude 
 releaseStatus | `ReleaseStatus` | yes | Filter by release status
 maxUnityVersion | string | yes | The max unity version the world support
 minUnityVersion | string | yes | The min unity version the world support
