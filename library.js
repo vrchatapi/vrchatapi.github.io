@@ -20,6 +20,14 @@ var VRChatAPI = {};
         doRequest("avatars", "GET", searchParams, AUTH_DETIALS, callback, error)
     }
 
+    VRChatAPI.Avatar.Save = function(data, callback, error) {
+        if(data.id) {
+            doRequest("avatars/" + data.id, "PUT", data, AUTH_DETIALS, callback, error);
+        }else {
+            doRequest("avatars", "POST", data, AUTH_DETIALS, callback, error);        
+        }
+    }
+
     VRChatAPI.Login = function(username, password, callback, error) {
         doRequest("auth/user", "GET", null, {username: username, password: password}, function(data) {
             AUTH_TOKEN = data.authToken
