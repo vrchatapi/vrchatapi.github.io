@@ -20,6 +20,8 @@ You can not join into it, tried directly and tried using a portal in a custom wo
 
 This is interesting, in the remote config it is listed as `homeworldWorldId`, it was last updated in 24/1/2017 meaning that we might never actually see it ingame...
 
+One theory is that HAB01 stands for HAbitat 01 and each player would have their own "house" eventually, sort of like the SteamVR home. Maybe you'd be able to buy props from the planned monetezation feature and place in your habitat.
+
 You can not join into it, tried directly and tried using a portal in a custom worlds but both seem to just kick you back to the main hub.
 
 Unlike most other VRChat created maps this map's Author is `AtomJaay`
