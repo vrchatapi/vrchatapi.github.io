@@ -20,6 +20,16 @@ Regarding reverse engineering our APP or using hacked clients - reverse engineer
 ```
 *- by VRPill 13/12/2017*
 
+# Links to APIs
+
+Right now there are 3 different options
+
+1. Dev API - https://dev-api.vrchat.cloud/api/1/
+2. Beta API - https://beta-api.vrchat.cloud/api/1/
+3. Release API - https://api.vrchat.cloud/api/1/
+
+In the docs we just use the Release but you can manually change it if needed
+
 # Quick overview
 
 VRChat uses the HTTP procotol to get basic information from the server and send information to the server.
