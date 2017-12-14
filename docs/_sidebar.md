@@ -34,12 +34,12 @@
             - [Delete Moderation *soon*]()
             - [Get Local moderations *soon*]()
         - Player
-            - [Send moderation]()
-            - [Delete moderation]()
-            - [Get against]()
-            - [Get player's]()
+            - [Send moderation *soon*]()
+            - [Delete moderation *soon*]()
+            - [Get against *soon*]()
+            - [Get player's *soon*]()
     - Notification API
-        - [Send Notification *soon*]()
+        - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read *soon*]()
         - [Delete Notification *soon*]()
         - [Get All Notifications *soon*]()
