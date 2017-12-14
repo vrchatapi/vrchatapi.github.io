@@ -21,7 +21,7 @@ Field | Type | Optional | Description
 ------|------|----------|------------
 featured | bool | yes | is the world featured
 sort | `SortOptions` | yes | How to sort the worlds
-user | string | yes | if set to `me` will only show the current user's maps
+user | `UserOptions` | yes | who the creator may be
 userId | string | yes | Filter by creator id
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
@@ -41,12 +41,19 @@ Featured are set as:
 Trending is set as:
     - sort=popularity, featured=false
 
+### UserOptions
+
+    - me
+    - friends
+
 ### SortOptions
 
+    - popularity
     - created
     - updated
-    - popularity
     - order
+    - _created_at
+    - _updated_at
 
 ## Returns 
 
