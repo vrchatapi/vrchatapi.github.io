@@ -12,7 +12,6 @@
             - [Friend Request](UserAPI/FriendRequest.md)
             - [Unfriend](UserAPI/Unfriend.md)
         - Any user
-            - [List active users](UserAPI/ListActive.md)
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
     - World API

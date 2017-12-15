@@ -2,7 +2,7 @@
 
 This API allows you to delete an avatar. This API will not actually delete the character file but will sets it's release status to hidden.
 
-!> This API only works if you own the map.
+!> Only works if the avatar is yours!
 
 ## Request Method 
 DELETE
