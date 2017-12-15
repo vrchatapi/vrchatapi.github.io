@@ -16,7 +16,7 @@
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
     - World API
-        - [Save World *soon*]()
+        - [Save World](WorldAPI/SaveWorld.md)
         - [Get World](WorldAPI/GetWorld.md)
         - [Delete World](WorldAPI/DeleteWorld.md)
         - [Get World metadata *soon*]()

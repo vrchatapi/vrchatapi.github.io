@@ -1,8 +1,8 @@
-# Delete Avatar
+# Delete World
 
-This API allows you to delete an avatar.
+This API allows you to delete an world.
 
-!> This API only works if you own the map.
+!> This API only works if you own the world.
 
 ## Request Method 
 DELETE
