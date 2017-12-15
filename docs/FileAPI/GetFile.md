@@ -2,6 +2,8 @@
 
 This API allows you to get file info from the server.
 
+!> I was facing some problems testing the File API, so it is best not to use it
+
 ## Request Method 
 GET
 
