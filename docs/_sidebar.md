@@ -44,9 +44,9 @@
         - [Delete Notification *soon*]()
         - [Get All Notifications *soon*]()
     - File API
-        - [Create File *soon*]()
-        - [Get File *soon*]()
-        - [Delete File *soon*]()
+        - [Create File](FileAPI/CreateFile.md)
+        - [Get File](FileAPI/GetFile.md)
+        - [Delete File](FileAPI/DeleteFile.md)
         - [Dowmload File *soon*]()
         - [Simple Upload *soon*]()
         - [Multipart Upload *soon*]()
