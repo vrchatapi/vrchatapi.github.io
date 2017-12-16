@@ -3,6 +3,7 @@
 - Endpoints
     - [Remote Config](RemoteConfig.md)
     - User API
+        - [Register](UserAPI/Register.md)
         - [User Object](UserAPI/Object.md)
         - Current user
             - [Login](UserAPI/Login.md)
