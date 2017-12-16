@@ -44,6 +44,7 @@
         - [Delete Notification *soon*]()
         - [Get All Notifications *soon*]()
     - File API
+        - [Mime Types](FileAPI/MimeTypes.md)
         - [Create File](FileAPI/CreateFile.md)
         - [Get File](FileAPI/GetFile.md)
         - [Delete File](FileAPI/DeleteFile.md)
