@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VRChat Online Check</title>
+</head>
+<body>
+    <h1>Check if VRChat is working</h1>
+    <p>
+        VRChat is split to about 3 different servers: amazon3s (storage), Photon (networking), API (users/worlds/avatars and so on)
+    </p>
+    <p>
+        Because Amazon3S and Photon servers are pretty much stable, they should always work, but, the APIs are hosted by VRChat and can go down sometimes.
+        This site can check if these sites are still working or not.
+    </p>
+    <script type="text/javascript">
+        var url = "https://api.vrchat.cloud/api/1/auth/user";
+        var img = new Image();
+        img.src = url;
+    
+        img.onload = function()
+        {
+            document.write("Server is up!");
+        }
+    
+        img.onerror = function()
+        {
+            document.write("Server is down!");
+        }
+    </script>
+</body>
+</html>
