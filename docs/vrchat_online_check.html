@@ -16,19 +16,21 @@
         This site can check if these sites are still working or not.
     </p>
     <script type="text/javascript">
-        var url = "https://api.vrchat.cloud/api/1/auth/user";
-        var img = new Image();
-        img.src = url;
-    
-        img.onload = function()
-        {
-            document.write("Server is up!");
-        }
-    
-        img.onerror = function()
-        {
-            document.write("Server is down!");
-        }
+        setTimeout(function() {
+            var url = "https://api.vrchat.cloud/api/1/auth/user";
+            var img = new Image();
+            img.src = url;
+        
+            img.onload = function()
+            {
+                document.write("Server is up!");
+            }
+        
+            img.onerror = function()
+            {
+                document.write("Server is down!");
+            }
+        }, 1000);
     </script>
 </body>
 </html>
