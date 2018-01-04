@@ -2,7 +2,7 @@
 
 !> **Note!** This is an unofficial documentation, use at your own risk, these are not meant to be used by users, these are meant to be used internally for the game.
 
-?> This docs are for SDK version `2017.12.12.13.36`
+?> These docs are for SDK version `2017.12.12.13.36`
 
 The VRChat team was nice enough to allow us reverse engineer the API, and create + publish these docs, but they have given us one condition, don't use it for malicious stuff!
 

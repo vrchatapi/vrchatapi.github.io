@@ -29,20 +29,20 @@
         - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
     - Moderation API
         - World owner
-            - [Send Moderation *soon*]()
-            - [Start Vote Kick *soon*]()
-            - [Delete Moderation *soon*]()
-            - [Get Local moderations *soon*]()
+            - [Send Moderation *soon*](nothing)
+            - [Start Vote Kick *soon*](nothing)
+            - [Delete Moderation *soon*](nothing)
+            - [Get Local moderations *soon*](nothing)
         - Player
-            - [Send moderation *soon*]()
-            - [Delete moderation *soon*]()
-            - [Get against *soon*]()
-            - [Get player's *soon*]()
+            - [Send moderation *soon*](nothing)
+            - [Delete moderation *soon*](nothing)
+            - [Get against *soon*](nothing)
+            - [Get player's *soon*](nothing)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
-        - [Mark As Read *soon*]()
-        - [Delete Notification *soon*]()
-        - [Get All Notifications *soon*]()
+        - [Mark As Read *soon*](nothing)
+        - [Delete Notification *soon*](nothing)
+        - [Get All Notifications *soon*](nothing)
     - File API
         - [Mime Types](FileAPI/MimeTypes.md)
         - Files
@@ -54,7 +54,7 @@
             - [Finish Upload](FileAPI/FinishUpload.md)
             - [Upload Status](FileAPI/UploadStatus.md)
         - Versions
-            - [Create Version *soon*]()
-            - [Delete Version *soon*]() 
+            - [Create Version](FileAPI/CreateNewVersion.md)
+            - [Delete Version *soon*](nothing) 
             
-    - [Analytics API *soon*]()
+    - [Analytics API *soon*](nothing)
