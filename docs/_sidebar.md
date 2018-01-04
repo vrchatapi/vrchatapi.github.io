@@ -57,4 +57,4 @@
             - [Create Version](FileAPI/CreateNewVersion.md)
             - [Delete Version *soon*](nothing) 
             
-    - [Analytics API *soon*](nothing)
+    - [Analytics API](Analytics.md)
