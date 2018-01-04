@@ -45,12 +45,16 @@
         - [Get All Notifications *soon*]()
     - File API
         - [Mime Types](FileAPI/MimeTypes.md)
-        - [Create File](FileAPI/CreateFile.md)
-        - [Get File](FileAPI/GetFile.md)
-        - [Delete File](FileAPI/DeleteFile.md)
-        - [Dowmload File](FileAPI/DownloadFile.md)
-        - [Simple Upload](FileAPI/SimpleUpload.md)
-        - [Multipart Upload *soon*]()
-        - [Finish Upload *soon*]()
-        - [Get Download Status *soon*]()
+        - Files
+            - [Create File](FileAPI/CreateFile.md)
+            - [Get File](FileAPI/GetFile.md)
+            - [Delete File](FileAPI/DeleteFile.md)
+            - [Dowmload File](FileAPI/DownloadFile.md)
+            - [Start Upload](FileAPI/StartUpload.md)
+            - [Finish Upload](FileAPI/FinishUpload.md)
+            - [Upload Status](FileAPI/UploadStatus.md)
+        - Versions
+            - [Create Version *soon*]()
+            - [Delete Version *soon*]() 
+            
     - [Analytics API *soon*]()

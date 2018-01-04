@@ -1,21 +1,5 @@
 # Download File
 
-This API allows you to download a file from the server.
+There isn't any endpoint to actually download a file directly from the VRChat API, instead you need to get the file description and take the URLs given from the latest version.
 
 !> I was facing some problems testing the File API, so it is best not to use it
-
-## Request Method 
-POST
-
-## Endpoint
-https://api.vrchat.cloud/api/1/file/:id/:version
-
-id - the id of the file
-version - the version of the file
-
-## Requires Authentication
-Yes
-
-## Returns
-
-*soon*

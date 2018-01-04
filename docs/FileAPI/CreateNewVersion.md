@@ -1,16 +1,47 @@
-# Get File
+# Create new version
 
-This API allows you to get file info from the server.
+Create new file version
+
+This requires a signature and delta/file
+
+The file is the actual data
+The signature is unknown
+The delta is unknown
 
 !> I was facing some problems testing the File API, so it is best not to use it
 
 ## Request Method 
-GET
+POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/file/:fileId
+    https://api.vrchat.cloud/api/1/file/:id
+    
 
-fileId - the file id
+id - the file id
+
+## Parameters
+
+Field | Type | Optional | Description
+-----|------|----------|-------------
+signatureMd5 | base64 string | no | signature md5 checksum
+signatureSizeInBytes | long | no | signature size in bytes
+
+### These depends on upload type
+
+Must provide one of the following
+
+#### Full
+
+Field | Type | Description
+-----|------|-------------
+deltaMd5 | base64 string | delta md5 checksum
+deltaSizeInBytes | long | delta size in bytes
+
+#### Delta
+Field | Type | Description
+-----|------|-------------
+fileMd5 | base64 string | file md5 checksum
+fileSizeInBytes | long | file size in bytes
 
 ## Requires Authentication
 Yes
