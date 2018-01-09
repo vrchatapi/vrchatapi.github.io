@@ -1,5 +1,7 @@
 # Unofficial VRChat API Docs
 
+!> **Since the servers been having alot of issues lately I will not continue any RE until they are fixed!** Also, I suggest to not use the API until the issues resolve to not cause even bigger issues.
+
 !> **Note!** This is an unofficial documentation, use at your own risk, these are not meant to be used by users, these are meant to be used internally for the game.
 
 ?> These docs are for SDK version `2017.12.12.13.36`
