@@ -1,26 +1,24 @@
 # Unofficial VRChat API Docs
 
-!> **Since the servers been having alot of issues lately I will not continue any RE until they are fixed!** Also, I suggest to not use the API until the issues resolve to not cause even bigger issues.
-
-!> **Note!** This is an unofficial documentation, use at your own risk, these are not meant to be used by users, these are meant to be used internally for the game.
+!> **Super Important!** I am not going to update this repo anymore as the rules and policy about RE the SDK/API is now prohibited!
 
 ?> These docs are for SDK version `2017.12.12.13.36`
 
-The VRChat team was nice enough to allow us reverse engineer the API, and create + publish these docs, but they have given us one condition, don't use it for malicious stuff!
+The new EULA does not allow anymore to RE the SDK/API and use it in any way other than to create avatars/worlds/items.
 
-This gives us the opportunity to create stuff that interact with the game in a way we could only imagine. 
+From the [EULA](https://vrchat.com/legal):
 
-The VRChat team has given us their trust, and we should use it well, and not lose it. So please use this for making the game better.
-
-# Policy
 ```
-Hello everyone. We have a new policy on reverse engineering our API & reverse engineering the APP and/or using hacked clients.
-
-Regarding reverse engineering our API - Our stance here is don't be malicious.  This is unsupported and it might break.
-
-Regarding reverse engineering our APP or using hacked clients - reverse engineering the VRChat app is a violation of section 9 of our TOS and can lead to a permanent ban from the service.
+5. VRChat SDK License. Subject to your complete and ongoing compliance with the terms and conditions in this EULA and any additional terms included with the SDK, VRChat grants you a limited, personal, worldwide, royalty-free, non-exclusive, nonsublicenseable, and nontransferable license to: (a) use a reasonable number of copies of any documentation provided as part of the SDK (“Documentation”) solely in connection with your development of avatars, virtual worlds, and other virtual items for use solely within the Service (“Virtual Content”); (b) reproduce, modify, and use any sample software provided to you in source code format as part of the SDK in either object code or source code formats solely in connection with your development and use of Virtual Content within the Service; and (c) reproduce and distribute any sample software provided to you in object code format as part of the SDK, including any plugins (“SDK Object Code”) in object code format solely in connection with your development and use of Virtual Content within the Service. You will not: (i) transfer, disclose, or distribute any portion of the SDK or Documentation or access to either to any third party, except as permitted by the license grant above; (ii) subject any portion of the SDK or Documentation to the terms of any “open source” or “creative commons” license; (iii) modify any of the SDK Object Code included with the SDK; or (iv) use the SDK or Documentation to develop code, software, or other materials for anything other than for use with the Service.
 ```
-*- by VRPill 13/12/2017*
+
+```
+9. Prohibited Conduct. BY USING THE SERVICE YOU AGREE NOT TO:
+[...]
+interfere with security-related features of the Service, including by: (a) disabling or circumventing features that prevent or limit use or copying of any content; or (b) reverse engineering or otherwise attempting to discover the source code of any portion of the Service, including the SDK Object Code, except to the extent that the activity is expressly permitted by applicable law;
+``` 
+
+this basically means "DO NOT TOUCH IT"
 
 # Links to APIs
 
