@@ -8,15 +8,33 @@ The new EULA does not allow anymore to RE the SDK/API and use it in any way othe
 
 From the [EULA](https://vrchat.com/legal):
 
-`
-5. VRChat SDK License. Subject to your complete and ongoing compliance with the terms and conditions in this EULA and any additional terms included with the SDK, VRChat grants you a limited, personal, worldwide, royalty-free, non-exclusive, nonsublicenseable, and nontransferable license to: (a) use a reasonable number of copies of any documentation provided as part of the SDK (“Documentation”) solely in connection with your development of avatars, virtual worlds, and other virtual items for use solely within the Service (“Virtual Content”); (b) reproduce, modify, and use any sample software provided to you in source code format as part of the SDK in either object code or source code formats solely in connection with your development and use of Virtual Content within the Service; and (c) reproduce and distribute any sample software provided to you in object code format as part of the SDK, including any plugins (“SDK Object Code”) in object code format solely in connection with your development and use of Virtual Content within the Service. You will not: (i) transfer, disclose, or distribute any portion of the SDK or Documentation or access to either to any third party, except as permitted by the license grant above; (ii) subject any portion of the SDK or Documentation to the terms of any “open source” or “creative commons” license; (iii) modify any of the SDK Object Code included with the SDK; or (iv) use the SDK or Documentation to develop code, software, or other materials for anything other than for use with the Service.
-`
+```
+5. VRChat SDK License. Subject to your complete and ongoing compliance with the terms and conditions in
+this EULA and any additional terms included with the SDK, VRChat grants you a limited, personal,
+worldwide, royalty-free, non-exclusive, nonsublicenseable, and nontransferable license to: (a) use a
+reasonable number of copies of any documentation provided as part of the SDK (“Documentation”) solely in
+connection with your development of avatars, virtual worlds, and other virtual items for use solely
+within the Service (“Virtual Content”); (b) reproduce, modify, and use any sample software provided to
+you in source code format as part of the SDK in either object code or source code formats solely in
+connection with your development and use of Virtual Content within the Service; and (c) reproduce and
+distribute any sample software provided to you in object code format as part of the SDK, including any
+plugins (“SDK Object Code”) in object code format solely in connection with your development and use of
+Virtual Content within the Service. You will not: (i) transfer, disclose, or distribute any portion of
+the SDK or Documentation or access to either to any third party, except as permitted by the license
+grant above; (ii) subject any portion of the SDK or Documentation to the terms of any “open source” or
+“creative commons” license; (iii) modify any of the SDK Object Code included with the SDK; or (iv) use
+the SDK or Documentation to develop code, software, or other materials for anything other than for use
+with the Service.
+```
 
-`
+```
 9. Prohibited Conduct. BY USING THE SERVICE YOU AGREE NOT TO:
 [...]
-interfere with security-related features of the Service, including by: (a) disabling or circumventing features that prevent or limit use or copying of any content; or (b) reverse engineering or otherwise attempting to discover the source code of any portion of the Service, including the SDK Object Code, except to the extent that the activity is expressly permitted by applicable law;
-`
+interfere with security-related features of the Service, including by: (a) disabling or circumventing
+features that prevent or limit use or copying of any content; or (b) reverse engineering or otherwise
+attempting to discover the source code of any portion of the Service, including the SDK Object Code,
+except to the extent that the activity is expressly permitted by applicable law
+```
 
 this basically means "DO NOT TOUCH IT"
 
