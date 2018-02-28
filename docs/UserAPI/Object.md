@@ -44,13 +44,14 @@ Field | Type | Description
 id | string | The user id
 username | string | the username OR steam_{id}
 displayName | string | The username
+pastDisplayNames | array | unknown
 developerType | `DeveloperType` | Is a developer
 hasEmail | boolean | Did the user provide an email
 obfuscatedEmail | string | The email, contains first letter and the host, other is obfuscated like i******@gmail.com
 emailVerified | boolean | Did the user verify the email
 hasBirthday | boolean | Did the user provided a DOB
 unsubscribed | boolean | Unknown
-friends | array of extended public info | Unknown
+friends | array of ids | Unknown
 blueprints | object | unknown
 currentAvatarBlueprint | object | unknown
 events | array | unknown
@@ -61,11 +62,6 @@ currentAvatarThumbnailImageUrl | string | URL to the avatar image (smaller)
 acceptedTOSVersion | int | Probably used to track if you need to accept a new TOS
 steamDetails | object | unknown 
 hasLoggedInFromClient | boolean | unknown
-nuisanceFactor | int | unknown
-creatorLevel | int | unknown
-socialLevel | int | unknown
-timeEquity | int | unknown
-level | int | unknown
 authToken | string | Used for authenticating
 
 ## Developer Type
