@@ -1,6 +1,6 @@
 # Unofficial VRChat API Docs
 
-!> **Super Important!** I am not going to update this repo anymore as the rules and policy about RE the SDK/API is now prohibited!
+!> **Super Important!** Using this API is allowed for non malicious usage. Just don't abuse the API and they won't restrict it.
 
 ?> These docs are for SDK version `2017.12.12.13.36`
 
