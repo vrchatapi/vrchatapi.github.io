@@ -21,7 +21,7 @@
         - [Get World metadata *soon*]()
         - [Delete World (Outdated)](WorldAPI/DeleteWorld.md)
         - [List worlds (Outdated)](WorldAPI/ListWorlds.md)
-        - [Get Instance Info](WorldAPI/ListUsersInWorld.md)
+        - [Get Instance Info](WorldAPI/InstanceInfo.md)
     - Avatar API
         - [Get by ID (Outdated)](AvatarAPI/GetByID.md)
         - [Choose Avatar (Outdated)](AvatarAPI/ChooseAvatar.md)
