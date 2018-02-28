@@ -1,5 +1,7 @@
 # Get All Notifications 
 
+!> We tried to test these APIs and we are not sure how they work in-game, even friendrequest wasn't recieved unless we sent a real friend request and not a notification. will have to do some further testing.
+
 This API allows you to set a notification as seen
 
 ## Request Method 

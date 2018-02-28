@@ -1,5 +1,7 @@
 # Delete Notification 
 
+!> We tried to test these APIs and we are not sure how they work in-game, even friendrequest wasn't recieved unless we sent a real friend request and not a notification. will have to do some further testing.
+
 This API allows you to delete a notification
 
 The endpoint can suggest that the notification still exists, but it will just be hidden, but I could not find a way to unhide it.

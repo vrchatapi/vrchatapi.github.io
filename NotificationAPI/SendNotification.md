@@ -1,5 +1,7 @@
 # Send Notification 
 
+!> We tried to test these APIs and we are not sure how they work in-game, even friendrequest wasn't recieved unless we sent a real friend request and not a notification. will have to do some further testing.
+
 This API allows you to send notifications to other players
 
 ## Request Method 
@@ -17,11 +19,11 @@ Yes
 
 Field | Type | Optional | Description
 ------|------|----------|------------
-type | `NotificaitonType` | No | The type of notification to send
+type | `NotificationType` | No | The type of notification to send
 message | string | No | The message to send
 details | json as string | Yes | Unknown
 
-### NotificaitonType
+### NotificationType
 
     - all
     - message
@@ -36,8 +38,10 @@ details | json as string | Yes | Unknown
 Field | Type | Description
 ------|------|------------
 id | string | Notification ID
-type | `NotificaitonType` | The notification type
+type | `NotificationType` | The notification type
 senderUserId | string | The id of the sender
 receiverUserId | string | The id of the receiver
 message | string | The message
 details | `object` | Unknown
+jobName | string | unknown, always `write_notification`
+jobColor | string | unknown, always `blue`
