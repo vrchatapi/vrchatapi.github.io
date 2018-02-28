@@ -2,6 +2,8 @@
 
 This API allows you to unfriend a friend
 
+If the id is of user who is not your friend, an error will be returned.
+
 ## Request Method 
 DELETE
 

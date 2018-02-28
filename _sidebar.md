@@ -10,8 +10,8 @@
             - [Logout](UserAPI/Logout.md)
             - [Update User Info](UserAPI/UpdateInfo.md)
             - [Friends](UserAPI/Friends.md)
-            - [Friend Request (Outdated)](UserAPI/FriendRequest.md)
-            - [Unfriend (Outdated)](UserAPI/Unfriend.md)
+            - [Friend Request](UserAPI/FriendRequest.md)
+            - [Unfriend](UserAPI/Unfriend.md)
         - Any user
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
