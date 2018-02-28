@@ -25,4 +25,4 @@ acceptedTOSVersion | int |  unknown | The last accepted TOS version
 
 ## Returns
 
-*soon*
+The new user data (same one as returned by the [Login](UserAPI/Login.md) Endpoint)
