@@ -7,7 +7,7 @@
 # Documentation Information
 Sections of the documentation which are labeled **Outdated** means the the article or endpoint is no longer supported be the current API version or we are still working on making sure the endpoint is still working.
 
-Sections which are labeled **Removed** are old and now unused articles which are only kept for referance to old information.
+Sections which are labeled **Removed** are old and now unused articles which are only kept for reference to old information.
 
 Sections labeled **Soon** are work in progress articles and will be added to the documentation on future updates.
 
