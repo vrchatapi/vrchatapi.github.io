@@ -7,5 +7,9 @@ This documentation was not created with the help of the official VRChat team. Th
 
 # Credits
 
-itay2805#4629
-Ruby Rose#0001
+itay2805#4629, Ruby Rose#0001
+
+# Getting Started
+
+Now that you've read the information you should be ready to get started.
+[Getting Started](GettingStarted.md)

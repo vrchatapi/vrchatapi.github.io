@@ -4,14 +4,19 @@
 
 ?> These docs are for SDK version `2018.02.23.18.45`.
 
-!> every endpoint marked as **outdated** was last tested in version `2017.12.12.13.36` and might not work as expected anymore!
+# Documentation Information
+Sections of the documentation which are labeled **Outdated** means the the article or endpoint is no longer supported be the current API version or we are still working on making sure the endpoint is still working.
+
+Sections which are labeled **Removed** are old and now unused articles which are only kept for reference to old information.
+
+Sections labeled **Soon** are work in progress articles and will be added to the documentation on future updates.
 
 # Links to APIs
 
 Right now there are 3 different options
 
-1. Dev API - https://dev-api.vrchat.cloud/api/1/
-2. Beta API - https://beta-api.vrchat.cloud/api/1/
+1. Dev API - https://dev-api.vrchat.cloud/api/1/ (Not Documented)
+2. Beta API - https://beta-api.vrchat.cloud/api/1/ (Not Documented)
 3. Release API - https://api.vrchat.cloud/api/1/
 
 In the docs we just use the Release but you can manually change it if needed
