@@ -3,6 +3,7 @@
 !> **Super Important!** Using this API is allowed for non malicious usage. Just don't abuse the API and they won't restrict it.
 
 ?> These docs are for SDK version `2018.02.23.18.45`.
+
 !> every endpoint marked as **outdated** was last tested in version `2017.12.12.13.36` and might not work as expected anymore!
 
 # Links to APIs
