@@ -1,4 +1,5 @@
-- [Getting Started](README.md)
+- [Disclaimer](README.md)
+- [Getting Started](GettingStarted.md)
 - [Secret Worlds](SecretWorlds.md)
 - Endpoints
     - [Remote Config](RemoteConfig.md)
@@ -49,7 +50,7 @@
             - [Create File](FileAPI/CreateFile.md)
             - [Get File](FileAPI/GetFile.md)
             - [Delete File](FileAPI/DeleteFile.md)
-            - [Dowmload File](FileAPI/DownloadFile.md)
+            - [Download File](FileAPI/DownloadFile.md)
             - [Start Upload](FileAPI/StartUpload.md)
             - [Finish Upload](FileAPI/FinishUpload.md)
             - [Upload Status](FileAPI/UploadStatus.md)
