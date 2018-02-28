@@ -26,6 +26,8 @@ offset | int | yes | How many users to skip
 
 ## Returns 
 
+array of users
+
 Field | Type | Description
 ------|------|------------
 id | string | the user id
