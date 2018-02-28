@@ -13,7 +13,7 @@
             - [Friend Request (Outdated)](UserAPI/FriendRequest.md)
             - [Unfriend (Outdated)](UserAPI/Unfriend.md)
         - Any user
-            - [Get by id (Outdated)](UserAPI/GetByID.md)
+            - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
     - World API
         - [Save World (Outdated)](WorldAPI/SaveWorld.md)
