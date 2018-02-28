@@ -31,13 +31,15 @@ releaseSdkUrl | string | SDK Unitypackage for release
 releaseSdkVersion | string | SDK Version for release
 devSdkUrl | string | SDK Unitypackage for release
 devSdkVersion | string | SDK Version for release
-whiteListedAssetUrls | string | unknown
+whiteListedAssetUrls | array | unknown
 clientApiKey | string | The Key for using the API
 viveWindowsUrl | string | unknown
 sdkUnityVersion | string | Unity version of the SDK
 hubWorldId | string | The ID of the hub world
 homeWorldId | string | unknown
 tutorialWorldId | string | tutorial world id
+disableEventStream | boolean | unknown
+registrationShitList | array | unknown
 appName | string | App name (VrChat)
 serverName | string | unknown
 deploymentGroup | string | unknown
