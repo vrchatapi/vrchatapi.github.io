@@ -2,7 +2,8 @@
 
 !> **Super Important!** Using this API is allowed for non malicious usage. Just don't abuse the API and they won't restrict it.
 
-?> These docs are for SDK version `2017.12.12.13.36` (OUTDATED)
+?> These docs are for SDK version `2018.02.23.18.45`.
+!> every endpoint marked as **outdated** was last tested in version `2017.12.12.13.36` and might not work as expected anymore!
 
 # Links to APIs
 
@@ -31,6 +32,6 @@ The second option is probably more recommended
 
 ## Client API Key
 
-Every API requires you to give a special API key. To get it simply call the Remote Config endpoint (read here <INSERT LINK>)
+Every API requires you to give a special API key. To get it simply call the [Remote Config](RemoteConfig.md) endpoint
 
 ?> Last Known key is `JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`

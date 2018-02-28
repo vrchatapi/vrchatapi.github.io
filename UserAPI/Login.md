@@ -38,7 +38,7 @@ currentAvatarAssetUrl | string | the url for the unity asset
 currentAvatarThumbnailImageUrl | string | the url for the avatar thumbnail
 acceptedTOSVersion | int | the version of the accepted ToS, used to check if user needs to accept a new ToS
 steamDetails | `SteamDetails` | the steam details of the user, empty if steam is not connected
-hasLoggedInFromClient | boolean | unknown
+hasLoggedInFromClient | boolean | did the user ever use the client 
 authToken | string | a token that can be used to continue accessing API endpoints
 
 

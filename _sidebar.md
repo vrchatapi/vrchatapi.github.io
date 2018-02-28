@@ -4,7 +4,7 @@
 - Endpoints
     - [Remote Config](RemoteConfig.md)
     - User API
-        - [Register (Outdated)](UserAPI/Register.md)
+        - [Register](UserAPI/Register.md)
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
