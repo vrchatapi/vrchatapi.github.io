@@ -2,8 +2,6 @@
 
 This API allows you to send notifications to other players
 
-?> No idea how it is used in game....
-
 ## Request Method 
 POST
 

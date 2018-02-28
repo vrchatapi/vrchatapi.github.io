@@ -40,10 +40,10 @@
             - [Get against *soon*](nothing)
             - [Get player's *soon*](nothing)
     - Notification API
-        - [Send Notification (Outdated)](NotificationAPI/SendNotification.md)
-        - [Mark As Read *soon*](nothing)
-        - [Delete Notification *soon*](nothing)
-        - [Get All Notifications *soon*](nothing)
+        - [Send Notification](NotificationAPI/SendNotification.md)
+        - [Mark As Read](NotificationAPI/MarkAsSeen.md)
+        - [Delete Notification](NotificationAPI/Delete.md)
+        - [Get All Notifications](NotificationAPI/GetAll.md)
     - File API
         - [Mime Types (Outdated)](FileAPI/MimeTypes.md)
         - Files

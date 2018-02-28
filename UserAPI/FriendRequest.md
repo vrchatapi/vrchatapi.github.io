@@ -19,13 +19,13 @@ Yes
 
 A notification info.
 
-!> Once we update the notification API things will be more clear
+This is probably used to tell the client to send the actual notification to the user, still has to test.
 
 Field | Type | Description
 ------|------|------------
 id | string | Notification ID
 senderUserId | string | the sender (current user)
 receiverUserId | string | the receiver (user that got the friend request)
-type | string | unknown, always `friendRequest`
-jobName | string | unknown, always `write_notification`
+type | string | the notification type, always `friendRequest`
+jobName | string | what to do, always `write_notification`
 jobColor | string | unknown, always `blue` 
