@@ -11,6 +11,10 @@ Sections which are labeled **Removed** are old and now unused articles which are
 
 Sections labeled **Soon** are work in progress articles and will be added to the documentation on future updates.
 
+# API Libraries
+
+1. VRChatJava (Java) https://github.com/VRChatAPI/VRChatJava
+
 # Links to APIs
 
 Right now there are 3 different options
