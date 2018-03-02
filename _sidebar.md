@@ -9,16 +9,18 @@
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
             - [Update User Info](UserAPI/UpdateInfo.md)
-            - [Friends](UserAPI/Friends.md)
-            - [Friend Request](UserAPI/FriendRequest.md)
-            - [Unfriend](UserAPI/Unfriend.md)
+            - Friends
+                - [Get Friends](UserAPI/Friends.md)
+                - [Send Friend Request](UserAPI/FriendRequest.md)
+                - [Unfriend](UserAPI/Unfriend.md)
+                - [Accept/Ignore Friend Request](UserAPI/AcceptIgnoreFriend.md)
         - Any user
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
     - World API
         - [Save World (Outdated)](WorldAPI/SaveWorld.md)
         - [Get World (Outdated)](WorldAPI/GetWorld.md)
-        - [Get World metadata *soon*]()
+        - [Get World metadata (soon)]()
         - [Delete World (Outdated)](WorldAPI/DeleteWorld.md)
         - [List worlds (Outdated)](WorldAPI/ListWorlds.md)
         - [Get Instance Info](WorldAPI/InstanceInfo.md)
@@ -30,15 +32,15 @@
         - [Delete Avatar (Outdated)](AvatarAPI/DeleteAvatar.md)
     - Moderation API
         - World owner
-            - [Send Moderation *soon*](nothing)
-            - [Start Vote Kick *soon*](nothing)
-            - [Delete Moderation *soon*](nothing)
-            - [Get Local moderations *soon*](nothing)
+            - [Send Moderation (soon)](nothing)
+            - [Start Vote Kick (soon)](nothing)
+            - [Delete Moderation (soon)](nothing)
+            - [Get Local moderations (soon)](nothing)
         - Player
-            - [Send moderation *soon*](nothing)
-            - [Delete moderation *soon*](nothing)
-            - [Get against *soon*](nothing)
-            - [Get player's *soon*](nothing)
+            - [Send moderation (soon)](nothing)
+            - [Delete moderation (soon)](nothing)
+            - [Get against (soon)](nothing)
+            - [Get player's (soon)](nothing)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
@@ -56,7 +58,7 @@
             - [Upload Status (Outdated)](FileAPI/UploadStatus.md)
         - Versions
             - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
-            - [Delete Version *soon*](nothing) 
+            - [Delete Version (soon)](nothing) 
             
     - [Analytics API (Outdated)](Analytics.md)
 

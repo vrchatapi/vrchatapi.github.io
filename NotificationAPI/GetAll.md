@@ -40,7 +40,7 @@ created_at | date | when did you get the notification
 
     - all
     - message
-    - friendrequest
+    - friendRequest
     - invite
     - votetokick
     - halp

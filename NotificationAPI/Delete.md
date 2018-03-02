@@ -4,7 +4,7 @@
 
 This API allows you to delete a notification
 
-The endpoint can suggest that the notification still exists, but it will just be hidden, but I could not find a way to unhide it.
+The endpoint can suggest that the notification still exists, but it will just be hidden, but we can't get these notifications using the `hidden` notification type when filtering.
 
 ## Request Method 
 PUT
