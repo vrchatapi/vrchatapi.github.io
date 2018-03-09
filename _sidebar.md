@@ -22,7 +22,7 @@
         - World Instance
             - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
     - Avatar API
-        - [Get by ID (Outdated)](AvatarAPI/GetByID.md)
+        - [Get by ID](AvatarAPI/GetByID.md)
         - [Choose Avatar (Outdated)](AvatarAPI/ChooseAvatar.md)
         - [List Avatars (Outdated)](AvatarAPI/ListAvatars.md)
         - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
