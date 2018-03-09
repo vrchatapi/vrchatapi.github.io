@@ -18,12 +18,9 @@
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
     - World API
-        - [Save World (Outdated)](WorldAPI/SaveWorld.md)
-        - [Get World (Outdated)](WorldAPI/GetWorld.md)
-        - [Get World metadata (soon)]()
-        - [Delete World (Outdated)](WorldAPI/DeleteWorld.md)
-        - [List worlds (Outdated)](WorldAPI/ListWorlds.md)
-        - [Get Instance Info](WorldAPI/InstanceInfo.md)
+        - World
+        - World Instance
+            - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
     - Avatar API
         - [Get by ID (Outdated)](AvatarAPI/GetByID.md)
         - [Choose Avatar (Outdated)](AvatarAPI/ChooseAvatar.md)
