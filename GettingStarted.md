@@ -42,6 +42,8 @@ The second option is probably more recommended
 
 ## Client API Key
 
-Every API requires you to give a special API key. To get it simply call the [Remote Config](RemoteConfig.md) endpoint
+Every API requires you to give a special API key. To get it simply call the [Remote Config](RemoteConfig.md) endpoint.
+
+The API key is passed in a query string named `apiKey`
 
 ?> Last Known key is `JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`
