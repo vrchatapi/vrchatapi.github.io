@@ -65,5 +65,6 @@ Sometimes the location is set to `private`, probably meaning he is in a private 
 ### Permission
 This feature is still unexplored although we are looking into it.
 The following permission nodes are known.
+
     - admin_moderator
     - admin_scripting_access
