@@ -26,10 +26,10 @@
             - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
     - Avatar API
         - [Get by ID](AvatarAPI/GetByID.md)
-        - [Choose Avatar (Outdated)](AvatarAPI/ChooseAvatar.md)
+        - [Choose Avatar](AvatarAPI/ChooseAvatar.md)
         - [List Avatars (Outdated)](AvatarAPI/ListAvatars.md)
         - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
-        - [Delete Avatar (Outdated)](AvatarAPI/DeleteAvatar.md)
+        - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
     - Moderation API
         - World owner
             - [Send Moderation (soon)](nothing)

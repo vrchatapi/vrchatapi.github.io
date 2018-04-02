@@ -1,8 +1,6 @@
 # Choose Avatar
 
-This API allows you to dynamically choose an avatar. 
-
-!> This API only works for avatars that you own! Otherwise it says that the avatar is not available.
+This API allows you to dynamically choose an avatar. This will work on any avatar;
 
 ## Request Method 
 PUT
@@ -16,4 +14,4 @@ id - the avatar id
 Yes
 
 ## Returns 
-Private User Info - *probably so they can quickly update local plauer data*
+The user object
