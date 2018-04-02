@@ -2,7 +2,7 @@
 
 !> **Super Important!** Using this API is allowed for non malicious usage. Just don't abuse the API and they won't restrict it.
 
-?> These docs are for SDK version `2018.02.28.21.21`.
+?> These docs are for SDK version `2018.02.28.21.21` and build tag `build-22-03-18-doug-fisherprofessor`
 
 # Documentation Information
 Sections of the documentation which are labeled **Outdated** means the the article or endpoint is no longer supported be the current API version or we are still working on making sure the endpoint is still working.

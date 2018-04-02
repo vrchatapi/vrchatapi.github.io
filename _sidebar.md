@@ -58,6 +58,3 @@
             - [Delete Version (soon)](nothing) 
             
     - [Analytics API (Outdated)](Analytics.md)
-
-- [API Changelog](changelog/ApiChangelog.md)
-    - 2018.02.28.21.21
