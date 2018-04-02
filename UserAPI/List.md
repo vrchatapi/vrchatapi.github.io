@@ -35,6 +35,7 @@ username | string | the login name
 displayName | string | the display name
 currentAvatarImageUrl | string | url to the avatar preview
 currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
+tags | array of `Permission` | The permissions the user has. 
 developerType | `DeveloperType` | the user type
 location | `WorldLocation` | the world the user is currently in
 
@@ -61,3 +62,9 @@ there could also be a `~` that can have some info about the world instance, thes
 
 Sometimes the location is set to `private`, probably meaning he is in a private world, will have to investigate.
 
+### Permission
+This feature is still unexplored although we are looking into it.
+The following permission nodes are known.
+
+    - admin_moderator
+    - admin_scripting_access
