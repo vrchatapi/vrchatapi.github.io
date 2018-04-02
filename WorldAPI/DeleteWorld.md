@@ -16,4 +16,5 @@ id - the world's id
 Yes
 
 ## Returns 
-The world
+
+?> soon (when I start playing with creating worlds)

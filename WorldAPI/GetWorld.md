@@ -68,4 +68,4 @@ created_at | string (date) | the date the world was created at
 Index | Type | Description
 ------|------|------------
 0 | string | Instance id
-1 | int | people in that instance (?)
+1 | int | people in that instance

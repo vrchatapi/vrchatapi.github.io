@@ -19,7 +19,9 @@
             - [List Users](UserAPI/List.md)
     - World API
         - World
+            - [Get by id](WorldAPI/GetWorld.md)
             - [List Worlds](WorldAPI/ListWorlds.md)
+            - [Delete World](WorldAPI/DeleteWorld.md)
         - World Instance
             - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
     - Avatar API
