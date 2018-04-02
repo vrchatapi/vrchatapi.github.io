@@ -62,9 +62,7 @@ there could also be a `~` that can have some info about the world instance, thes
 
 Sometimes the location is set to `private`, probably meaning he is in a private world, will have to investigate.
 
-### Permission
-This feature is still unexplored although we are looking into it.
-The following permission nodes are known.
+### Tags
 
     - admin_moderator
     - admin_scripting_access
