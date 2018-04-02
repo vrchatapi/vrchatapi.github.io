@@ -22,7 +22,7 @@ Field | Type | Optional | Description
 featured | bool | yes | is the world featured
 sort | `SortOptions` | yes | How to sort the worlds
 user | `UserOptions` | yes | who the creator may be
-userId | string | yes | Filter by creator id
+userId | string | yes | Filter by creator id, use `me` for only worlds owned by current user
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
 search | string | yes | Filter by name

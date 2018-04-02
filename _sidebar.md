@@ -19,6 +19,7 @@
             - [List Users](UserAPI/List.md)
     - World API
         - World
+            - [List Worlds](WorldAPI/ListWorlds.md)
         - World Instance
             - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
     - Avatar API
