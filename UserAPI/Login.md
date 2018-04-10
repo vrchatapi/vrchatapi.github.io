@@ -36,6 +36,7 @@ currentAvatar | string | The id of the current avatar
 currentAvatarImageUrl | string | the url for the avatar preview
 currentAvatarAssetUrl | string | the url for the unity asset
 currentAvatarThumbnailImageUrl | string | the url for the avatar thumbnail
+tags | array of `Permission` | The permissions the user has. 
 acceptedTOSVersion | int | the version of the accepted ToS, used to check if user needs to accept a new ToS
 steamDetails | `SteamDetails` | the steam details of the user, empty if steam is not connected
 hasLoggedInFromClient | boolean | did the user ever use the client 
@@ -54,3 +55,9 @@ updated_at | date | the date that display name was changed
     - trusted
     - internal
     - moderator 
+    
+### Tags
+
+    - admin_moderator
+    - admin_scripting_access
+    - system_avatar_access
