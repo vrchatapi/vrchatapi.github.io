@@ -66,3 +66,4 @@ Sometimes the location is set to `private`, probably meaning he is in a private 
 
     - admin_moderator
     - admin_scripting_access
+    - system_avatar_access
