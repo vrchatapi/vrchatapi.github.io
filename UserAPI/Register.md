@@ -3,7 +3,7 @@
 This API allows you to register new users.
 
 ## Request Method 
-GET
+POST
 
 ## Endpoint
 https://api.vrchat.cloud/api/1/auth/register
