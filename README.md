@@ -9,6 +9,9 @@ This documentation was not created with the help of the official VRChat team. Th
 
 DireDoesGames#6584, itay2805#4629, Ruby Rose#0001
 
+# Discord
+https://discord.gg/rj3YQQu #vrchat-api
+
 # Getting Started
 
 Now that you've read the information you should be ready to get started.
