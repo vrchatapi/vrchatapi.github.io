@@ -20,4 +20,15 @@ n | int | Yes | How many
 offline | boolean | Yes | Should return online friends
 
 ## Returns 
-array of users, same as (same one as returned by the [List Users](UserAPI/List.md) Endpoint)
+array of users
+
+Field | Type | Description
+------|------|------------
+id | string | the user id
+username | string | the login name
+displayName | string | the display name
+currentAvatarImageUrl | string | url to the avatar preview
+currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
+tags | array of `Permission` | The permissions the user has. 
+developerType | `DeveloperType` | the user type
+location | string | World Id With Instance Number and extra stuff at the end
