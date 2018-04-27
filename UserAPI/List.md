@@ -38,6 +38,8 @@ currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
 tags | array of `Permission` | The permissions the user has. 
 developerType | `DeveloperType` | the user type
 
+### Location is only showed for friends now
+
 ### DeveloperType
 
     - none
