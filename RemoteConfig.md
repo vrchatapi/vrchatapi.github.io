@@ -39,6 +39,11 @@ hubWorldId | string | The ID of the hub world
 homeWorldId | string | Default Starting World
 tutorialWorldId | string | The world for when you first install vrchat / does not matter if new user
 disableEventStream | boolean | sends a bunch of anonymous data about your device / world / etc
+disableAvatarGating | boolean | unknown
+plugin | array | unknown
+sdkNotAllowedToPublishMessage | string | when you aren't able to upload avatars or worlds on the sdk, this message appears (only on newer sdk)
+sdkDeveloperFaqUrl | string | Their faq for the sdk 
+sdkDiscordUrl | string | their official vrchat discord
 registrationShitList | array | blacklists names so you can use them to register with
 address | string | Probably VRChat's office address
 contactEmail | string | VRChat team's contact email
