@@ -52,3 +52,4 @@ developerType | `DeveloperType` | the user type
     - admin_scripting_access
     - system_avatar_access
 	- system_world_access
+	- system_legend
