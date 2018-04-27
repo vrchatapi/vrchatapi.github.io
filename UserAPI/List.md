@@ -37,7 +37,6 @@ currentAvatarImageUrl | string | url to the avatar preview
 currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
 tags | array of `Permission` | The permissions the user has. 
 developerType | `DeveloperType` | the user type
-location | `WorldLocation` | the world the user is currently in
 
 ### DeveloperType
 
@@ -46,24 +45,11 @@ location | `WorldLocation` | the world the user is currently in
     - internal
     - moderator 
 
-### WorldLocation
-
-If the user is not connected it will be `offline`
-
-If the user is online the location will be serialized as  `world_id:instance_id`
-
-Sometimes the `instance_id` is set to the user id of that user, probably meaning this is some private instance.
-
-there could also be a `~` that can have some info about the world instance, these are the ones I found
-
-    - hidden(user_id)
-    - friend
-    - nonce(HEX)
-
-Sometimes the location is set to `private`, probably meaning he is in a private world, will have to investigate.
 
 ### Tags
 
     - admin_moderator
     - admin_scripting_access
     - system_avatar_access
+	- system_world_access
+	- system_legend
