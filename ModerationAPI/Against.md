@@ -21,3 +21,10 @@ sourceDisplayname | string | The Persons Name In Vrchat that is sending the mode
 targetUserId | string | The Persons UserId you are sending the moderation too
 targetDisplayName | string | The Persons Name In VRChat You Are Sending The Moderation to
 created | string | Time The Moderation Happened 
+
+### Player Moderation Types
+
+    - mute
+	- unmute
+	- block
+	- unblock
