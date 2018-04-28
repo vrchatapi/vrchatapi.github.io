@@ -9,7 +9,7 @@ This documentation was not created with the help of the official VRChat team. Th
 
 DireDoesGames#6584, itay2805#4629, Ruby Rose#0001
 
-![Discord](http://i0.kym-cdn.com/photos/images/original/001/243/213/52a.png)
+![Discord](https://cdn.discordapp.com/attachments/130414827213553664/439672060600385538/discord.png)
 https://discord.gg/rj3YQQu #vrchat-api
 
 # Getting Started
