@@ -31,14 +31,14 @@
         - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
         - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
     - Moderation API
-		- World
-			- [Send Vote Kick (soon)](nothing)
         - Player
             - [Send moderation](ModerationAPI/SendModerations.md)
 		    - [Send player moderation (soon)](nothing)
             - [Delete moderation (soon)](nothing)
             - [Get against](ModerationAPI/Against.md)
             - [Get player's](ModerationAPI/Players.md)
+		- World
+			- [Send Vote Kick (soon)](nothing)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
