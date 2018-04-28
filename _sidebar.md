@@ -31,16 +31,12 @@
         - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
         - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
     - Moderation API
-        - World owner
-            - [Send Moderation (soon)](nothing)
-            - [Start Vote Kick (soon)](nothing)
-            - [Delete Moderation (soon)](nothing)
-            - [Get Local moderations (soon)](nothing)
         - Player
-            - [Send moderation (soon)](nothing)
+            - [Send moderation (soon)](ModerationAPI/SendModerations.md)
             - [Delete moderation (soon)](nothing)
-            - [Get against (soon)](nothing)
-            - [Get player's](ModerationAPI/Against.md)
+            - [Get against](ModerationAPI/Against.md)
+            - [Get player's](ModerationAPI/Players.md)
+		    - [Get Local moderations](ModerationAPI/LocalModerations.md)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
