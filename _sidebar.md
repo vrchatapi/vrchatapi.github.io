@@ -31,7 +31,7 @@
         - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
         - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
     - Moderation API
-		-World
+		- World
 			- [Send Vote Kick (soon)](nothing)
         - Player
             - [Send moderation](ModerationAPI/SendModerations.md)
