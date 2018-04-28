@@ -32,10 +32,10 @@
         - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
     - Moderation API
 		-World
-		 - [Send Vote Kick (soon)](nothing)
+			- [Send Vote Kick (soon)](nothing)
         - Player
             - [Send moderation](ModerationAPI/SendModerations.md)
-		    - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
+		    - [Send player moderation (soon)](nothing)
             - [Delete moderation (soon)](nothing)
             - [Get against](ModerationAPI/Against.md)
             - [Get player's](ModerationAPI/Players.md)
