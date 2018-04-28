@@ -40,7 +40,7 @@
             - [Send moderation (soon)](nothing)
             - [Delete moderation (soon)](nothing)
             - [Get against (soon)](nothing)
-            - [Get player's (soon)](nothing)
+            - [Get player's](ModerationAPI/Against.md)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
