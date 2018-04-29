@@ -1,5 +1,7 @@
 # Get player's moderations against you
 
+Returns a list with all the moderations against the current user.
+
 ## Request Method 
 GET
 
@@ -14,13 +16,13 @@ Yes
 
 Field | Type | Description
 ------|------|------------
-id | string | The Moderation Id
-type | string | Type Of Moderations, Look Below
-sourceUserId | string | The Persons userId Sending the moderation
-sourceDisplayname | string | The Persons Name In Vrchat that is sending the moderation
-targetUserId | string | The Persons UserId you are sending the moderation too
-targetDisplayName | string | The Persons Name In VRChat You Are Sending The Moderation to
-created | string | Time The Moderation Happened 
+id | string | ID
+type | `Moderation Type` | Type of moderation
+sourceUserId | string | userId of sender
+sourceDisplayname | string | displayname of sender
+targetUserId | string | The target's userid (yours in this case)
+targetDisplayName | string | The target's displayname (yours in this case)
+created | string | Time the moderation was opened 
 
 ### Player Moderation Types
 

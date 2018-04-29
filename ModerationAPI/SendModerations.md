@@ -1,5 +1,6 @@
 # Send moderation
 
+Sends a moderation to another player, requries moderator/internal developerType.
 
 ## Request Method 
 POST
@@ -10,19 +11,17 @@ https://api.vrchat.cloud/api/1/user/:id/moderations
 ## Requires Authentication
 Yes
 
-## Also Requires Moderator/Internal DeveloperType
-
 ## Returns 
 
 Field | Type | Description
 ------|------|------------
-type | string | Type Of Moderations, Look Below
-reason | string | Reason For Moderation
-created | string | Time The Moderation Was Created
-worldId | string | The World The Moderation Is Taking Place
-instanceId | string | The Instance The Moderation Is Taking Place
+type | `Moderation Type` | Type of moderations, Look Below
+reason | string | Reason for moderation
+created | string | Time the moderation was created
+worldId | string | The world the moderation was created in
+instanceId | string | The world instance the moderation was created in
 
-### Moderation Types
+### Moderation Type
 
     - none
 	- warn
