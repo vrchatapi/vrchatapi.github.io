@@ -1,5 +1,5 @@
 # VRChat API Documentation
-!> **Super Important!** Using this API is allowed for non malicious usage. Just don't abuse the API and they won't restrict it.
+!> **Super Important!** Using this API for anything with bad intent or have anything to do with a hacked client is strictly forbidden. You must follow the VRChat TOS when using this API. Do not abuse it.
 
 # Disclaimer
 
