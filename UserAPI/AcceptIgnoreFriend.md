@@ -21,4 +21,16 @@ Yes
 
 ## Returns
 
-Unknown, will have to check
+Object
+
+Field | Type | Description
+------|------|------------
+success | `object` | Message and Status
+
+#### Success Object
+Field | Type | Description
+------|------|------------
+message | string | The message
+status_code | integer | HTTP Status Code
+
+!> Returns the same message for all Notification types
