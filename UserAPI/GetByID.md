@@ -25,9 +25,9 @@ pastDisplayNames | array of `PastDisplayName` | The user's past display names
 currentAvatarImageUrl | string | url to the avatar preview
 currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
 developerType | `DeveloperType` | the user type
-worldId | string | The world id, could be `offline`
-instanceId | string | The instance id, could be `offline`
-location | `WorldLocation` | the world the user is currently in
+worldId | string | The world id, could be `offline`. Friends Only
+instanceId | string | The instance id, could be `offline`. Friends Only
+location | `WorldLocation` | the world the user is currently in. Friends Only
 
 ### DeveloperType
 
