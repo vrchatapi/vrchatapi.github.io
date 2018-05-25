@@ -1,6 +1,6 @@
-**!> This is BETA API and might not work as expected.**
-
 # List Favorites 
+
+!> This is BETA API and might not work as expected.
 
 This API allows you to list all favorites
 
@@ -32,9 +32,8 @@ tags | array | Unknown
 
 ### TypeOptions
 
+It is assumed that once the favourite feature will be released the `user` type will be replaced with `friend` type.
+
     - world
     - friend
-    - avatar
-
-
-**!>** Type `friend` does not work on this endpoint and are told to use `user`, but are pretty sure it will be friend once it is out of beta.
+    - user

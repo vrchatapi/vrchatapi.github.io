@@ -1,6 +1,6 @@
-**!> This is BETA API and might not work as expected.**
-
 # Delete Favorite 
+
+!> This is BETA API and might not work as expected.
 
 This API allows you to delete a favorite
 

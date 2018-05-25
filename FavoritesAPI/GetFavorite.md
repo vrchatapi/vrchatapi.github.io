@@ -1,6 +1,6 @@
-**!> This is BETA API and might not work as expected.**
-
 # Get Favorite 
+
+!> This is BETA API and might not work as expected.
 
 This API allows you to get information about a favorite
 
