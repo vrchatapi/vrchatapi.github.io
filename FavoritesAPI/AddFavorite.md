@@ -4,6 +4,8 @@
 
 This API allows you to add a world or user to your favorite list.
 
+*Max Favorites Per Type: 20*
+
 ## Request Method 
 POST
 
