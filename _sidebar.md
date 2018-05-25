@@ -17,6 +17,11 @@
         - Any user
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
+    - Favorites API
+        - [Add Favorite](FavoritesAPI/AddFavorite.md)
+        - [Get Favorite](FavoritesAPI/GetFavorite.md)
+        - [List Favorites](FavoritesAPI/ListFavorites.md)
+        - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
     - World API
         - World
             - [Get by id](WorldAPI/GetWorld.md)
