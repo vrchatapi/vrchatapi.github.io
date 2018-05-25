@@ -6,11 +6,20 @@ This API allows you to list and search for worlds.
 GET
 
 ## Endpoint
-any world:
+Any World:
     https://api.vrchat.cloud/api/1/worlds
 
-only active worlds"
+Only Active Worlds:
     https://api.vrchat.cloud/api/1/worlds/active
+
+Only Recent Worlds:
+    https://api.vrchat.cloud/api/1/worlds/recent
+    
+Only Favorite Worlds:
+    https://api.vrchat.cloud/api/1/worlds/favorites
+
+    
+    
 
 ## Requires Authentication
 Yes
