@@ -12,7 +12,7 @@ Any World:
 Only Active Worlds:
     https://api.vrchat.cloud/api/1/worlds/active
 
-Only Recent Worlds:
+Only Recently Visited Worlds:
     https://api.vrchat.cloud/api/1/worlds/recent
     
 Only Favorite Worlds:
