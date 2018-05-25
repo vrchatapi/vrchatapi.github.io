@@ -1,8 +1,8 @@
 # Get Favorite 
 
-!> This is BETA API and might not work as expected.
+?> For Beta Client `2018.1.3_openbeta` build 563
 
-This API allows you to get information about a favorite
+This API allows you to get information about a specific favorite.
 
 ## Request Method 
 GET
@@ -20,7 +20,7 @@ Yes
 Field | Type | Description
 ------|------|------------
 id | string | Favorite ID
-type | `TypeOptions` | The type added
+type | `TypeOptions` | The favourite type
 favoriteId | string | The Object Id
 tags | array | Unknown
 
