@@ -25,21 +25,12 @@
     }
   </script>
   
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-
-<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script>
-  const gitalk = new Gitalk({
-    clientID: '8eef82df1549da996c91',
-    clientSecret: '2d8c33f487913b169698f3b1e9eaa442dc6cf78a',
-    repo: 'vrchatapi.github.io',
-    owner: 'VRChatAPI',
-    admin: ['IMystical, Itay2805'],
-    // facebook-like distraction free mode
-    distractionFreeMode: false
-  })
+  <script>
+  window.$docsify = {
+    disqus: 'vrchat'
+  }
 </script>
+<script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
