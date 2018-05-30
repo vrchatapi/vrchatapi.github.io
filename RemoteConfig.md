@@ -55,3 +55,5 @@ serverName | string | the current in use server API
 deploymentGroup | string | unknown
 buildVersionTag | string | current api version
 apiKey | string | The API key, seems to be the same as clientApiKey
+
+[RemoteConfig Live](https://api.vrchat.cloud/api/1/config?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26 ':include :type=iframe width=100% height=400px')
