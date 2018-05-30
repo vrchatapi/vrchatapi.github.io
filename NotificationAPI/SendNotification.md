@@ -1,7 +1,5 @@
 # Send Notification 
 
-!> We tried to test these APIs and we are not sure how they work in-game, even friendrequest wasn't recieved unless we sent a real friend request and not a notification. will have to do some further testing.
-
 This API allows you to send notifications to other players
 
 ## Request Method 
@@ -20,8 +18,8 @@ Yes
 Field | Type | Optional | Description
 ------|------|----------|------------
 type | `NotificationType` | No | The type of notification to send
-message | string | No | The message to send
-details | json as string | Yes | Unknown
+message | string | Yes | The message to send
+details | json as string | Yes | Details for some notifications
 
 ### NotificationType
 
@@ -32,6 +30,14 @@ details | json as string | Yes | Unknown
     - votetokick
     - halp
     - hidden
+
+# Details
+
+NotificationType | Variables
+-----------------|----------
+invite | "worldId:instance"
+votetokick | "userToKickId", "initiatorUserId"
+halp | "halpId","worldId"
 
 ## Returns 
 
