@@ -17,4 +17,6 @@ Yes
 
 ## Returns
 
-*soon*
+{'success': {'message': 'Friendship destroyed', 'status_code': 200}}
+
+{'error': {'message': '"These users are not friends"', 'status_code': 400}}
