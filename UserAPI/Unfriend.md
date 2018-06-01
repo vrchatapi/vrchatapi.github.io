@@ -17,6 +17,23 @@ Yes
 
 ## Returns
 
-{'success': {'message': 'Friendship destroyed', 'status_code': 200}}
+Success/Error:
 
-{'error': {'message': '"These users are not friends"', 'status_code': 400}}
+on success:
+```json
+{
+    "success": {
+            "message": "Friendship destroyed", "status_code": 200
+        }
+}
+```
+
+on error
+```json
+{
+    "error": {
+        "message": "These users are not friends", 
+        "status_code": 400
+    }
+}
+```
