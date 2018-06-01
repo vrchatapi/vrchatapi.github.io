@@ -27,8 +27,10 @@
             - [Get by id](WorldAPI/GetWorld.md)
             - [List Worlds](WorldAPI/ListWorlds.md)
             - [Delete World](WorldAPI/DeleteWorld.md)
+            - [Get metadata by id](WorldAPI/GetMetadata.md)
         - World Instance
             - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
+            - [Get by id with tags](WorldAPI/GetInstance.md)
     - Avatar API
         - [Get by ID](AvatarAPI/GetByID.md)
         - [Choose Avatar](AvatarAPI/ChooseAvatar.md)
