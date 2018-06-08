@@ -1,10 +1,10 @@
-**!> This is BETA API and might not work as expected.**
 
 # Add to Favorites
 
-This API allows you to add a world or user to your favorite list.
+?> For Beta Client `2018.1.3_openbeta` build 563
 
-*Max Favorites Per Type: 20*
+This API allows you to add a favourite of a world, friend or avatar.
+Each type can have up to 20 entries.
 
 ## Request Method 
 POST
@@ -22,7 +22,6 @@ Field | Type | Optional | Description
 type | `TypeOptions` | No | The type we are adding
 favoriteId | string | No | The Object Id
 
-
 ## Returns 
 
 Array of:
@@ -30,7 +29,7 @@ Array of:
 Field | Type | Description
 ------|------|------------
 id | string | Favorite ID
-type | `TypeOptions` | The type added
+type | `TypeOptions` | The favourite type
 favoriteId | string | The Object Id
 tags | array | Unknown
 

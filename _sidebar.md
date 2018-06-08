@@ -17,18 +17,20 @@
         - Any user
             - [Get by id](UserAPI/GetByID.md)
             - [List Users](UserAPI/List.md)
-    - Favorites API
-        - [Add Favorite](FavoritesAPI/AddFavorite.md)
-        - [Get Favorite](FavoritesAPI/GetFavorite.md)
-        - [List Favorites](FavoritesAPI/ListFavorites.md)
-        - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
+    - Favorites API (BETA)
+        - [Add Favorite (BETA)](FavoritesAPI/AddFavorite.md)
+        - [Get Favorite (BETA)](FavoritesAPI/GetFavorite.md)
+        - [List Favorites (BETA)](FavoritesAPI/ListFavorites.md)
+        - [Delete Favorite (BETA)](FavoritesAPI/DeleteFavorite.md)
     - World API
         - World
             - [Get by id](WorldAPI/GetWorld.md)
             - [List Worlds](WorldAPI/ListWorlds.md)
             - [Delete World](WorldAPI/DeleteWorld.md)
+            - [Get metadata by id](WorldAPI/GetMetadata.md)
         - World Instance
             - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
+            - [Get by id with tags](WorldAPI/GetInstance.md)
     - Avatar API
         - [Get by ID](AvatarAPI/GetByID.md)
         - [Choose Avatar](AvatarAPI/ChooseAvatar.md)

@@ -16,8 +16,8 @@ Yes
 Field | Type | Optional | Description
 ------|------|----------|------------
 offset | int | Yes | from where
-n | int | Yes | How many
-offline | boolean | Yes | Should return online friends
+n | int | Yes | How many (maximum of 100)
+offline | boolean | Yes | Should return offline friends
 
 ## Returns 
 array of users

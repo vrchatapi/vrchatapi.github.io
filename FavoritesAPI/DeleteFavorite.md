@@ -1,6 +1,6 @@
-**!> This is BETA API and might not work as expected.**
-
 # Delete Favorite 
+
+?> For Beta Client `2018.1.3_openbeta` build 563
 
 This API allows you to delete a favorite
 
