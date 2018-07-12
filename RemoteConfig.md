@@ -31,19 +31,27 @@ releaseSdkUrl | string | SDK Unitypackage for release
 releaseSdkVersion | string | SDK Version for release
 devSdkUrl | string | SDK Unitypackage for release
 devSdkVersion | string | SDK Version for release
-whiteListedAssetUrls | array | unknown
+whiteListedAssetUrls | array | from where the client is allowed to download assets
 clientApiKey | string | The Key for using the API
 viveWindowsUrl | string | Before VRChat had support for vive you would have to download this in order for it too work
 sdkUnityVersion | string | Unity version of the SDK
 hubWorldId | string | The ID of the hub world
 homeWorldId | string | Default Starting World
 tutorialWorldId | string | The world for when you first install vrchat / does not matter if new user
-disableEventStream | boolean | sends a bunch of anonymous data about your device / world / etc
-disableAvatarGating | boolean | unknown
-plugin | array | unknown
+disableEventStream | boolean | will the client send a bunch of anonymous data about your device / world / etc
+disableAvatarGating | boolean | if set to true everyone can upload avatars, otherwise only users with special permission can
+disableFeedbackGating | boolean | if set to true everyone can give feedback, otherwise only users with special permission can
+plugin | string | unknown, seems to be comma separeted list of strings
 sdkNotAllowedToPublishMessage | string | when you aren't able to upload avatars or worlds on the sdk, this message appears (only on newer sdk)
 sdkDeveloperFaqUrl | string | Their faq for the sdk 
 sdkDiscordUrl | string | their official vrchat discord
+notAllowedToSelectAvatarInPrivateWorldMessage | string | when you try to choose avatar from private worlds this message apears
+userVerificationTimeout | int | timeout for verification (TODO: what kind of verification), assumed in seconds
+userUpdatePeriod | int | timeout between updating, assuming seconds
+userVerificationDelay | int | delay between verifications, assuming seconds
+userVerificationRetry | int | unknown
+worldUpdatePeriod | int | unknown
+moderationQueryPeriod | int | unknown
 address | string | Probably VRChat's office address
 contactEmail | string | VRChat team's contact email
 supportEmail | string | VRChat team's support email
