@@ -4,10 +4,12 @@
 - Endpoints
     - [Remote Config](RemoteConfig.md)
     - User API
+        - [Tags](UserAPI/Tags.md)
         - [Register](UserAPI/Register.md)
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
+            - [User Info](UserAPI/CurrentUserDetails.md)
             - [Update User Info](UserAPI/UpdateInfo.md)
             - Friends
                 - [Get Friends](UserAPI/Friends.md)

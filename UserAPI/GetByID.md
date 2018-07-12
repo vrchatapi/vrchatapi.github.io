@@ -16,18 +16,22 @@ Yes
 
 ## Returns 
 
+!> You will only get the `location`, `worldId` and `instanceId` fields if the user is your friend!
+
 Field | Type | Description
 ------|------|------------
 id | string | the user id
 username | string | the login name
 displayName | string | the display name
-pastDisplayNames | array of `PastDisplayName` | The user's past display names
 currentAvatarImageUrl | string | url to the avatar preview
 currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
 developerType | `DeveloperType` | the user type
+tags | array of string | the user's tags
+status | string | TODO
+statusDescription | string | TODO
+location | `WorldLocation` | the world the user is currently in. Friends Only
 worldId | string | The world id, could be `offline`. Friends Only
 instanceId | string | The instance id, could be `offline`. Friends Only
-location | `WorldLocation` | the world the user is currently in. Friends Only
 
 ### DeveloperType
 
@@ -51,9 +55,3 @@ there could also be a `~` that can have some info about the world instance, thes
     - nonce(HEX)
 
 Sometimes the location is set to `private`, probably meaning he is in a private world, will have to investigate.
-
-### PastDisplayName
-Field | Type | Description
-------|------|------------
-displayName | string | the name
-updated_at | date | the date that display name was changed

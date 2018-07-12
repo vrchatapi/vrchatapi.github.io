@@ -38,7 +38,7 @@ currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
 tags | array of `Permission` | The permissions the user has. 
 developerType | `DeveloperType` | the user type
 
-### Location is only showed for friends now
+!> Location is only shown for friends now
 
 ### DeveloperType
 
@@ -46,12 +46,3 @@ developerType | `DeveloperType` | the user type
     - trusted
     - internal
     - moderator 
-
-
-### Tags
-
-    - admin_moderator
-    - admin_scripting_access
-    - system_avatar_access
-	- system_world_access
-	- system_legend

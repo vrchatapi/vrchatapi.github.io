@@ -31,6 +31,6 @@ username | string | the login name
 displayName | string | the display name
 currentAvatarImageUrl | string | url to the avatar preview
 currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
-tags | array of `Permission` | The permissions the user has. 
-developerType | `DeveloperType` | the user type
+tags | array of strings | The permissions the user has. 
+developerType | string | the user type
 location | string | World Id With Instance Number and extra stuff at the end

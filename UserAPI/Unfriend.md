@@ -23,7 +23,8 @@ on success:
 ```json
 {
     "success": {
-            "message": "Friendship destroyed", "status_code": 200
+            "message": "Friendship destroyed", 
+            "status_code": 200
         }
 }
 ```

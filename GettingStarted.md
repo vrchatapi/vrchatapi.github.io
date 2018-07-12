@@ -34,10 +34,10 @@ VRChat uses the HTTP procotol to get basic information from the server and send 
 
 Most of the APIs require you to be authenticated.
 
-There are two ways to authenticate
+There are two ways to authenticate (technically one)
 
-1. Send the  Authorization header with Basic authentication
-2. After calling the login send a cookie named `auth` with your `authToken`
+1. Send the Authorization header with Basic authentication
+2. After calling the any API with Basic authentication save and reuse the returned `auth` cookie.
 
 The second option is probably more recommended
 
