@@ -67,4 +67,4 @@
             - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
             - [Delete Version (soon)](nothing) 
             
-    - [Analytics API (Outdated)](Analytics.md)
+    - [Analytics API](Analytics.md)
