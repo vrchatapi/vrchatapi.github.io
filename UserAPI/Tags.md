@@ -14,4 +14,6 @@ users with `system_trust_intermediate` have intermediate trust level.
 
 users with `admin_moderator` have moderator trust level.
 
-As for `system_legend` I don't know. 
+users with `system_feedback_access` I assume have access to give feedback direct to the VRChat team.
+
+As for `system_legend` I don't know.
