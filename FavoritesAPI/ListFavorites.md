@@ -35,5 +35,5 @@ tags | array | Unknown
 It is assumed that once the favourite feature will be released the `user` type will be replaced with `friend` type.
 
     - world
-    - user
+    - friend
     - avatar

@@ -4,7 +4,8 @@
 ?> For Beta Client `2018.1.3_openbeta` build 563
 
 This API allows you to add a favourite of a world, friend or avatar.
-Each type can have up to 20 entries.
+
+Friend and Avatar can have up to 20 entires. World can have 32 entries
 
 ## Request Method 
 POST

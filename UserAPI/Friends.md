@@ -6,7 +6,9 @@ This API allows you to get information about your friends
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/user/friends
+All: https://api.vrchat.cloud/api/1/auth/user/friends
+
+Favorite (Beta): https://api.vrchat.cloud/api/1/auth/user/friends/favorite
 
 ## Requires Authentication
 Yes
