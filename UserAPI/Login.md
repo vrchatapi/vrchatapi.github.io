@@ -58,6 +58,10 @@ updated_at | date | the date that display name was changed
     
 ### Tags
 
-    - admin_moderator
-    - admin_scripting_access
-    - system_avatar_access
+user with `admin_scripting_access` or `system_scripting_access` means he has scripting access.
+
+users with `system_avatar_access` can publish avatars.
+
+users with `system_world_access` can publish worldss.
+
+users with `system_trust_basic` have basic trust level.
