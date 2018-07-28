@@ -8,7 +8,9 @@ GET
     https://api.vrchat.cloud/api/1/worlds/:id/:instanceid
 
 id - the world id
+
 instanceid - the world instance id 
+
 (formatted like: number~accesstag(usr_number)~nonce(numbersandletters) or just number)
     
 ## Requires Authentication

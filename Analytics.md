@@ -169,7 +169,7 @@ The event types they send in session:
 
 This are sent along side the other events
 
-# Get By Name
+# Get Number of online users
 
 This API allows you to get the number of currently online users.
 
