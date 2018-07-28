@@ -18,6 +18,7 @@
                 - [Accept/Ignore Friend Request](UserAPI/AcceptIgnoreFriend.md)
         - Any user
             - [Get by id](UserAPI/GetByID.md)
+            - [Get by name](UserAPI/GetByName.md)
             - [List Users](UserAPI/List.md)
     - Favorites API (BETA)
         - [Add Favorite (BETA)](FavoritesAPI/AddFavorite.md)

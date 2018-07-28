@@ -1,6 +1,8 @@
 # Send Notification 
 
-This API allows you to send notifications to other players
+This API allows you to send notifications to other players.
+This API supports the full rich text format from unity.
+https://docs.unity3d.com/Manual/StyledText.html
 
 ## Request Method 
 POST
