@@ -14,7 +14,9 @@ id - the id of the user to get status for
 Yes
 
 ## Returns
+
 A JSON object containing:
+
 Field | Type | Description
 ------|------|------------
 isFriend | bool | Is the user already a friend?

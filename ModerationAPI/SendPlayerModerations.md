@@ -1,23 +1,24 @@
+
 # Sends player moderations
 
-Send Block
+##  Send Block
 
-## Request Method 
+###  Request Method 
 POST
 
-## Endpoint
+###  Endpoint
 https://api.vrchat.cloud/api/1/auth/user/blocks
 
-## Requires Authentication
+### Requires Authentication
 Yes
 
-## Parameters
+### Parameters
 
 Field | Type | Optional | Description
 ------|------|----------|------------
 blocked | string | no | the user id of the user you want to block
 
-## Returns 
+### Returns 
 
 Field | Type | Description
 ------|------|------------
@@ -36,24 +37,24 @@ created | string | Time the moderation was opened
 	- block
 	- unblock
 
-#Send Unblock
+# Send Unblock
 
-## Request Method 
+### Request Method 
 PUT
 
-## Endpoint
+### Endpoint
 https://api.vrchat.cloud/api/1/auth/user/unblocks
 
-## Requires Authentication
+###  Requires Authentication
 Yes
 
-## Parameters
+### Parameters
 
 Field | Type | Optional | Description
 ------|------|----------|------------
 blocked | string | no | the user id of the user you want to unblock
 
-## Returns 
+###  Returns 
 JSONArray containing object "success", inside there is:
 
 Field | Type | Description
@@ -61,25 +62,25 @@ Field | Type | Description
 message | string | "User userid unblocked"
 status_code | int | http response code
 
-#Send block/mute/unmute type
+## Send block/mute/unmute type
 
-## Request Method 
+### Request Method 
 POST
 
-## Endpoint
+### Endpoint
 https://api.vrchat.cloud/api/1/auth/user/playermoderations
 
-## Requires Authentication
+### Requires Authentication
 Yes
 
-## Parameters
+###  Parameters
 
 Field | Type | Optional | Description
 ------|------|----------|------------
 type  | `Moderation Type` | no | The type of playermoderation you want to send
 moderated | string | no | the user id of the user you want the moderation to count for
 
-## Returns 
+### Returns 
 
 Field | Type | Description
 ------|------|------------
