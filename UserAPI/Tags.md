@@ -15,6 +15,7 @@ Name | Permission
 `admin_moderator` | moderator trust level
 `system_legend` | Probably means the user spends alot of time in the game
 `system_probable_troll` | Probably been reported multiple times and is (probably) a troll
+`system_troll` | Probably confirmed troll.
 
 ## Trust Levels
 
