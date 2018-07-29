@@ -13,6 +13,7 @@
             - [Update User Info](UserAPI/UpdateInfo.md)
             - Friends
                 - [Get Friends](UserAPI/Friends.md)
+                - [Get Friend Status](UserAPI/FriendStatus.md)
                 - [Send Friend Request](UserAPI/FriendRequest.md)
                 - [Unfriend](UserAPI/Unfriend.md)
                 - [Accept/Ignore Friend Request](UserAPI/AcceptIgnoreFriend.md)
@@ -43,7 +44,7 @@
     - Moderation API
         - Player
             - [Send moderation](ModerationAPI/SendModerations.md)
-		    - [Send player moderation (soon)](nothing)
+		    - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
             - [Delete moderation (soon)](nothing)
             - [Get against](ModerationAPI/Against.md)
             - [Get player's](ModerationAPI/Players.md)
@@ -68,4 +69,5 @@
             - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
             - [Delete Version (soon)](nothing) 
             
-    - [Analytics API](Analytics.md)
+    - [Analytics API](AnalyticsAPI/Analytics.md)
+            - [Get Number of online users](AnalyticsAPI/GetNumberOfOnlineUsers.md) 
