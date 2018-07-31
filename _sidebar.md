@@ -46,7 +46,8 @@
         - Player
             - [Send moderation](ModerationAPI/SendModerations.md)
 		    - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
-            - [Delete moderation (soon)](nothing)
+            - [Delete moderation](ModerationAPI/DeleteModeration.md)
+            - [Clear all moderations](ModerationAPI/ClearModerations.md)
             - [Get against](ModerationAPI/Against.md)
             - [Get player's](ModerationAPI/Players.md)
 		- World

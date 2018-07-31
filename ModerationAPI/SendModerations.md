@@ -1,6 +1,6 @@
 # Send moderation
 
-Sends a moderation to another player, requries moderator/internal developerType.
+Sends a moderation to another player, requries moderator/internal developerType or admin_moderator tag.
 
 ## Request Method 
 POST
