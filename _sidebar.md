@@ -6,6 +6,7 @@
     - User API
         - [Tags](UserAPI/Tags.md)
         - [Register](UserAPI/Register.md)
+        - [Resend Confirmation Email](UserAPI/ResendEmail.md)
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
