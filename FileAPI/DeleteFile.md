@@ -8,9 +8,9 @@ This API allows you to delete files from the server.
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/file/:fileId
+https://api.vrchat.cloud/api/1/file/`<FILEID>`
 
-fileId - the file id
+FILEID - the file id
 
 ## Requires Authentication
 Yes

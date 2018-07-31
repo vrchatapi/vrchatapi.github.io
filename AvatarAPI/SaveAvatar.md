@@ -13,13 +13,13 @@ Create avatar
 
 ## Endpoint
 Update avatar
-    https://api.vrchat.cloud/api/1/avatars/:id
+    https://api.vrchat.cloud/api/1/avatars/`<ID>`
 
 Create avatar
     https://api.vrchat.cloud/api/1/avatars
     
 
-id - the user id
+ID - the user id
 
 ## Parameters
 Any field in the [avatar](AvatarAPI/GetByID.md)

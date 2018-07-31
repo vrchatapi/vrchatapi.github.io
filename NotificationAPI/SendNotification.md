@@ -1,6 +1,7 @@
 # Send Notification 
 
 This API allows you to send notifications to other players.
+
 This API supports the full rich text format from unity.
 https://docs.unity3d.com/Manual/StyledText.html
 
@@ -8,7 +9,7 @@ https://docs.unity3d.com/Manual/StyledText.html
 POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/:id/notification
+https://api.vrchat.cloud/api/1/user/`<ID>`/notification
 
 id - the user to send notification to
 
