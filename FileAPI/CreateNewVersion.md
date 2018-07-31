@@ -14,7 +14,7 @@ The delta is unknown
 POST
 
 ## Endpoint
-    https://api.vrchat.cloud/api/1/file/`<ID>`
+    https://api.vrchat.cloud/api/1/file/[ID]
     
 
 ID - the file id

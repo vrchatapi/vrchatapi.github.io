@@ -8,7 +8,7 @@ This API allows you to delete an world.
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/worlds/`<ID>`
+https://api.vrchat.cloud/api/1/worlds/[ID]
 
 id - the world's id
 

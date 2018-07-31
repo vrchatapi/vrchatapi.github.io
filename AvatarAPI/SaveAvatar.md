@@ -13,7 +13,7 @@ Create avatar
 
 ## Endpoint
 Update avatar
-    https://api.vrchat.cloud/api/1/avatars/`<ID>`
+    https://api.vrchat.cloud/api/1/avatars/[ID]
 
 Create avatar
     https://api.vrchat.cloud/api/1/avatars

@@ -10,7 +10,7 @@ The endpoint can suggest that the notification still exists, but it will just be
 PUT
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/user/notifications/`<ID>`/hide
+https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/hide
 
 id - the notification id
 

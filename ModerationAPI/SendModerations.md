@@ -6,7 +6,7 @@ Sends a moderation to another player, requries moderator/internal developerType 
 POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/`<ID>`/moderations
+https://api.vrchat.cloud/api/1/user/[ID]/moderations
 
 ID - the id of the user
 

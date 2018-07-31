@@ -12,7 +12,7 @@ To accept use the following endpoint
 PUT
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/user/notifications/`<ID>`/accept
+https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/accept
 
 id - the id of the friend notification
 

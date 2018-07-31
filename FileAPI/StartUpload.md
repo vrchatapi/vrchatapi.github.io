@@ -11,7 +11,7 @@ You must create a version first before actually starting the upload
 PUT
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/file/`<ID>`/`<VERSION>`/`<TYPE>`/start?partNumber=`<PARTNUMBER>`
+https://api.vrchat.cloud/api/1/file/[ID]/[VERSION]/[TYPE]/start?partNumber=[PARTNUMBER]
 
 id - the id of the file
 version - the version of the file

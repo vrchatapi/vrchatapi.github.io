@@ -5,7 +5,7 @@ This API allows you to fetch an instance by passing the instanceid with tags fro
 GET
 
 ## Endpoint
-    https://api.vrchat.cloud/api/1/worlds/`<ID>`/`<INSTANCEID>`
+    https://api.vrchat.cloud/api/1/worlds/[ID]/[INSTANCEID]
 
 id - the world id
 

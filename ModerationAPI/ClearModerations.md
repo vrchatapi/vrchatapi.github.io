@@ -6,7 +6,7 @@ Clears all moderations on a player, requires moderator/internal developerType or
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/`<ID>`/moderations
+https://api.vrchat.cloud/api/1/user/[ID]/moderations
 
 ID - the id of the user
 
