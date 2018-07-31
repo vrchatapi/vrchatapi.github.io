@@ -8,7 +8,7 @@ This API allows you to delete an avatar. This API will not actually delete the c
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/avatars/&lt;ID&gt;
+https://api.vrchat.cloud/api/1/avatars/[ID]
 
 ID - the avatar id
 

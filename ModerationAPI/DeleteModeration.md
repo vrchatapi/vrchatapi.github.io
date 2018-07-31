@@ -6,7 +6,7 @@ Delete a spesific moderation on a player, requires moderator/internal developerT
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/&lt;ID&gt;/moderations/&lt;MODERATIONID&gt;
+https://api.vrchat.cloud/api/1/user/[ID]/moderations/[MODERATIONID]
 
 ID - the id of the user
 MODERATIONID - the id of the moderation to delete

@@ -7,7 +7,7 @@ Usually used to live update content in offical maps.
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/worlds/&lt;ID&gt;/metadata
+https://api.vrchat.cloud/api/1/worlds/[ID]/metadata
 
 id - the world id
 

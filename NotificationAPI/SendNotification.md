@@ -9,7 +9,7 @@ https://docs.unity3d.com/Manual/StyledText.html
 POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/&lt;ID&gt;/notification
+https://api.vrchat.cloud/api/1/user/[ID]/notification
 
 id - the user to send notification to
 
