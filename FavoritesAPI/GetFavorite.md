@@ -8,9 +8,9 @@ This API allows you to get information about a specific favorite.
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/favorites/:id
+https://api.vrchat.cloud/api/1/favorites/`<ID>`
 
-id - The Favorite Id
+ID - The Favorite Id
 
 ## Requires Authentication
 Yes

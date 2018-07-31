@@ -6,9 +6,9 @@ This API allows you to get details about any avatar by ID.
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/avatars/:id
+https://api.vrchat.cloud/api/1/avatars/`<ID>`
 
-id - the avatar id
+ID - the avatar id
 
 ## Requires Authentication
 Yes

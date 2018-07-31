@@ -6,6 +6,7 @@
     - User API
         - [Tags](UserAPI/Tags.md)
         - [Register](UserAPI/Register.md)
+        - [Resend Confirmation Email](UserAPI/ResendEmail.md)
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
@@ -45,7 +46,8 @@
         - Player
             - [Send moderation](ModerationAPI/SendModerations.md)
 		    - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
-            - [Delete moderation (soon)](nothing)
+            - [Delete moderation](ModerationAPI/DeleteModeration.md)
+            - [Clear all moderations](ModerationAPI/ClearModerations.md)
             - [Get against](ModerationAPI/Against.md)
             - [Get player's](ModerationAPI/Players.md)
 		- World

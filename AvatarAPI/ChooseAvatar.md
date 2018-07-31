@@ -6,9 +6,9 @@ This API allows you to dynamically choose an avatar. This will work on any avata
 PUT
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/avatar/:id/select
+https://api.vrchat.cloud/api/1/avatar/`<ID>`/select
 
-id - the avatar id
+ID - the avatar id
 
 ## Requires Authentication
 Yes

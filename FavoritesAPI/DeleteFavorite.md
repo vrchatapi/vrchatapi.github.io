@@ -8,9 +8,9 @@ This API allows you to delete a favorite
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/favorites/:id
+https://api.vrchat.cloud/api/1/favorites/`<ID>`
 
-id - The Favorite Id
+ID - The Favorite Id
 
 ## Requires Authentication
 Yes

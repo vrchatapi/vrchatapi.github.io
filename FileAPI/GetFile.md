@@ -8,7 +8,7 @@ This API allows you to get file info from the server.
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/file/:fileId
+https://api.vrchat.cloud/api/1/file/`<FILEID>`
 
 fileId - the file id
 

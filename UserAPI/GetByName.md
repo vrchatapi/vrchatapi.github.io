@@ -6,7 +6,7 @@ This API allows you to get public user info about a specific user using his name
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/users/USERNAME/name
+https://api.vrchat.cloud/api/1/users/`<USERNAME>`/name
 
 USERNAME - the user 's ingame name
 

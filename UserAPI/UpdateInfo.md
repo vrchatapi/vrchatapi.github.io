@@ -8,7 +8,7 @@ This is probably also used when accepting new TOS.
 PUT
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/users/:id
+https://api.vrchat.cloud/api/1/users/`<ID>`
 
 id - The current user id
 

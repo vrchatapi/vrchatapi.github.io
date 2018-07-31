@@ -8,7 +8,7 @@ This API allows you to set a notification as seen
 PUT
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/user/notifications/:id/see
+https://api.vrchat.cloud/api/1/auth/user/notifications/`<ID>`/see
 
 id - the notification id
 

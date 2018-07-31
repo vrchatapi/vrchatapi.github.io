@@ -8,7 +8,7 @@ This allows to check the upload status of a file version
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/file/:id/:version/:type/status
+https://api.vrchat.cloud/api/1/file/`<ID>`/`<VERSION>`/`<TYPE>`/status
 
 ## Requires Authentication
 Yes
