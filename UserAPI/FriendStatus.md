@@ -6,7 +6,7 @@ This API allows you to get the status of a friend.
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/`<ID>`/friendStatus
+https://api.vrchat.cloud/api/1/user/&lt;ID&gt;/friendStatus
 
 id - the id of the user to get status for
 

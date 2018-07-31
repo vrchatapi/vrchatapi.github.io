@@ -6,7 +6,7 @@ This API allows you to get information about a world
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/worlds/`<ID>`
+https://api.vrchat.cloud/api/1/worlds/&lt;ID&gt;
 
 id - the world id
 

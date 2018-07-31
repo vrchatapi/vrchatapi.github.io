@@ -7,8 +7,8 @@ This is to finish an upload to a file
 ## Request Method 
 PUT
 
-## Endpoint 
-https://api.vrchat.cloud/api/1/file/`<ID>`/`<VERSION>`/`<TYPE>`/finish
+## Endpoint &lt;ID&gt;
+https://api.vrchat.cloud/api/1/file/&lt;ID&gt;/&lt;VERSION&gt;/&lt;TYPE&gt;/finish
 
 id - the id of the file
 version - the version of the file

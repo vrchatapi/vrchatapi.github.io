@@ -8,7 +8,7 @@ If the id is of user who is not your friend, an error will be returned.
 DELETE
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/user/friends/`<ID>`
+https://api.vrchat.cloud/api/1/auth/user/friends/&lt;ID&gt;
 
 id - the id of the user to unfriend
 
