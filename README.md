@@ -2,7 +2,7 @@
 
 # Disclaimer
 
-This is the official response of the VRChat Team (from Tubber more specifically) on the usage of the VRChat API.
+This is the official response of the VRChat Team (from Tupper more specifically) on the usage of the VRChat API.
 
 > Use of the API using applications other than the approved methods (website, VRChat application) are not officially supported. You may use the API for your own application, but keep these guidelines in mind:
 > * We do not provide documentation or support for the API.
