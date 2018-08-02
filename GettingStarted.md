@@ -1,6 +1,6 @@
 # VRChat API Documentation
 
-!> **Super Important!** Using this API is allowed for non malicious usage. Just don't abuse the API and they won't restrict it.
+!> **Super Important!** Using this API is allowed for non malicious usage. Abuse of the API may result in account termination!
 
 ?> These docs are for SDK version `2018.05.04.09.53` and build tag `build-18-05-18-noah-salmon`
 
@@ -14,7 +14,10 @@ Sections labeled **BETA** are API endpoints found in the beta client of VRChat, 
 
 # API Libraries
 
-1. VRChatJava (Java) https://github.com/VRChatAPI/VRChatJava
+1. ~~VRChatJava (Java) https://github.com/VRChatAPI/VRChatJava~~ outdated
+
+2. VRChat.Net (C#) https://github.com/VRChatAPI/VRChat.Net
+
 
 # Links to APIs
 
