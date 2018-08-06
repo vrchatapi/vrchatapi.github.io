@@ -1,22 +1,27 @@
-# Get By Name
+# List Friend Favorites 
 
-This API allows you to get public user info about a specific user using his name
+?> For Beta Client `2018.2.3_openbeta`
+
+This API allows you to list all the current user's friend favorites.
 
 ## Request Method 
 GET
 
 ## Endpoint
-    https://api.vrchat.cloud/api/1/users/[USERNAME]/name
-
-USERNAME - the user 's ingame name
+https://api.vrchat.cloud/api/1/auth/user/friends/favorite
 
 ## Requires Authentication
 Yes
 
+## Parameters
+
+Field | Type | Optional | Description
+------|------|----------|------------
+tag | `TagOptions` | no | The tag group to fetch
 
 ## Returns 
 
-!> You will only get the `location`, `worldId` and `instanceId` fields if the user is your friend!
+Array of:
 
 Field | Type | Description
 ------|------|------------
@@ -33,28 +38,11 @@ location | `WorldLocation` | the world the user is currently in. Friends Only
 worldId | string | The world id, could be `offline`. Friends Only
 instanceId | string | The instance id, could be `offline`. Friends Only
 
-### DeveloperType
+### TagOptions
 
-    - none
-    - trusted
-    - internal
-    - moderator 
-
-### WorldLocation
-
-If the user is not connected it will be `offline`
-
-If the user is online the location will be serialized as  `world_id:instance_id`
-
-Sometimes the `instance_id` is set to the user id of that user, probably meaning this is some private instance.
-
-there could also be a `~` that can have some info about the world instance, these are the ones I found
-
-    - hidden(user_id)
-    - friend
-    - nonce(HEX)
-
-Sometimes the location is set to `private`, probably meaning he is in a private world, will have to investigate.
+    - group_0
+    - group_1
+    - group_2
 
 ### Status
 

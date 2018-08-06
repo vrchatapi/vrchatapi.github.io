@@ -8,7 +8,7 @@ It seems that the response will always be a notification response even if the re
 POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/user/[ID]/friendRequest
+    https://api.vrchat.cloud/api/1/user/[ID]/friendRequest
 
 id - the id of the user to send friend request
 

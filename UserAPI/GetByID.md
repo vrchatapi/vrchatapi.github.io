@@ -6,7 +6,7 @@ This API allows you to get public user info about a specific user using his ID
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/users/[ID]
+    https://api.vrchat.cloud/api/1/users/[ID]
 
 id - the user id
 
@@ -27,8 +27,8 @@ currentAvatarImageUrl | string | url to the avatar preview
 currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
 developerType | `DeveloperType` | the user type
 tags | array of string | the user's tags
-status | string | TODO
-statusDescription | string | TODO
+status | `Status` | The status the user set.
+statusDescription | string | Custom message from the user.
 location | `WorldLocation` | the world the user is currently in. Friends Only
 worldId | string | The world id, could be `offline`. Friends Only
 instanceId | string | The instance id, could be `offline`. Friends Only
@@ -55,3 +55,10 @@ there could also be a `~` that can have some info about the world instance, thes
     - nonce(HEX)
 
 Sometimes the location is set to `private`, probably meaning he is in a private world, will have to investigate.
+
+### Status
+
+    - active  (User can see requests)
+    - join me (User autoaccepts requests)
+    - busy (User ignores all requests)
+    - offline

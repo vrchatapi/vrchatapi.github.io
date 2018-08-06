@@ -1,7 +1,5 @@
 # List Favorites 
 
-?> For Beta Client `2018.1.3_openbeta` build 563
-
 This API allows you to list all the current user's favorites.
 
 ## Request Method 

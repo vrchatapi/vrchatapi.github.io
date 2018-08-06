@@ -1,7 +1,5 @@
 # Get Favorite 
 
-?> For Beta Client `2018.1.3_openbeta` build 563
-
 This API allows you to get information about a specific favorite.
 
 ## Request Method 

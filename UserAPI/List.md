@@ -7,10 +7,10 @@ GET
 
 ## Endpoint
 All users 
-https://api.vrchat.cloud/api/1/users
+    https://api.vrchat.cloud/api/1/users
 
 Active only
-https://api.vrchat.cloud/api/1/users/active
+    https://api.vrchat.cloud/api/1/users/active
 
 ## Requires Authentication
 Yes
