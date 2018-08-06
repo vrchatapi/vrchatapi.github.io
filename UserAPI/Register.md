@@ -6,7 +6,7 @@ This API allows you to register new users.
 POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/register
+    https://api.vrchat.cloud/api/1/auth/register
 
 ## Requires Authentication
 No

@@ -22,11 +22,13 @@
             - [Get by id](UserAPI/GetByID.md)
             - [Get by name](UserAPI/GetByName.md)
             - [List Users](UserAPI/List.md)
-    - Favorites API (BETA)
-        - [Add Favorite (BETA)](FavoritesAPI/AddFavorite.md)
-        - [Get Favorite (BETA)](FavoritesAPI/GetFavorite.md)
-        - [List Favorites (BETA)](FavoritesAPI/ListFavorites.md)
-        - [Delete Favorite (BETA)](FavoritesAPI/DeleteFavorite.md)
+    - Favorites API
+        - [Add Favorite](FavoritesAPI/AddFavorite.md)
+        - [Get Favorite](FavoritesAPI/GetFavorite.md)
+        - [List Favorites](FavoritesAPI/ListAllFavorites.md)
+        - [List Friend Favorites (BETA)](FavoritesAPI/ListFriendFavorites.md)
+        - [List World Favorites (BETA)](FavoritesAPI/ListWorldFavorites.md)
+        - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
     - World API
         - World
             - [Get by id](WorldAPI/GetWorld.md)
@@ -70,6 +72,7 @@
         - Versions
             - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
             - [Delete Version (soon)](nothing) 
-            
+    - Feedback API
+        - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
     - [Analytics API](AnalyticsAPI/Analytics.md)
         - [Get Number of online users](AnalyticsAPI/GetNumberOfOnlineUsers.md) 
