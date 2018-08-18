@@ -11,7 +11,7 @@ GET
 https://api.vrchat.cloud/api/1/auth/user
 
 ## Requires Authentication
-No
+Yes
 
 ## Returns
 
