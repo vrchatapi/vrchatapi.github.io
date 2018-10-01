@@ -40,7 +40,7 @@ status | string | TODO
 statusDescription | string | TODO
 acceptedTOSVersion | int | last accepted TOS version, used to check if needs to re-accept
 steamDetails | `SteamDetails` | If the user is a steam user this is his steam details
-hasLoggedFromClient | bool | logged from the client
+hasLoggedInFromClient | bool | logged from the client
 homeLocation | string | TODO
 tags | array of string | the user [tags](UserAPI/Tags.md)
 developerType | enum as string | the user type
