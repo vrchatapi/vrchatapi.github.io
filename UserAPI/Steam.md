@@ -1,23 +1,30 @@
-# Login
+# Steam
 
-This API allows you to get user data from a VRChat account
+This API allows you to get user data from a Steam account
 
 ## Request Method
-GET
+POST
 
 ## Endpoint
-    https://api.vrchat.cloud/api/1/auth/user
+    https://api.vrchat.cloud/api/1/user/steam
 
 ## Requires Authentication
-Yes
+No
+
+## Parameters
+
+Field | Type | Optional | Description
+------|------|----------|------------
+steamTicket | string | No | The Steamworks ticket from the VRChat game
 
 ## Returns
+
 Field | Type | Description
 ------|------|------------
-id|string|The user's unique identifier
-username|string|The user's username
-displayName|string|The user's display name
-pastDisplayName|string[]|The user's past display names
+id|string|The user unique identifier
+username|string|The user username
+displayName|string|The user display name
+pastDisplayName|string[]|The user past display names
 hasEmail|bool|True if the user have a verified email address
 hasPendingEmail|bool|True if the user have an unverified email address
 obfuscatedEmail|string|The obfuscated email of the user
@@ -31,16 +38,15 @@ currentAvatarImageUrl|string|The url to the weared avatar image
 currentAvatarThumbnailImageUrl|string|The url to the weared avatar thumbnail
 currentAvatar|string|The weared avatar id
 currentAvatarAssetUrl|string|The url to the weared avatar asset
-status|string|The current user's status
-statusDescription|string|The current user's status description
+status|string|The current user status
+statusDescription|string|The current user status description
 acceptedTOSVersion|string|The last accepted TOS version
 steamDetails|Steam Details|The steam details. Empty when using a VRChat account
-hasLoggedInFromClient|bool|Return true if the client use a steam account
+hasLoggedInFromClient|bool|
 homeLocation|string|The user home location id (if set)
-tags|string[]|The user's tags
-developerType|string|The user's developer rank
-last_login|string|The last user's login datetime
+tags|string[]|The user tags
+developerType|string|The user developer rank
+last_login|string|The last user login datetime
 authToken|string|The current session authToken. Empty when using a VRChat account
-
 
 The endpoint also return an auth cookie, that can be used until the socket is disconnected from the web server
