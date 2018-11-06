@@ -3,7 +3,7 @@
 This API allows you to get user data from a Steam account
 
 ## Request Method
-POST
+POST (as json)
 
 ## Endpoint
     https://api.vrchat.cloud/api/1/user/steam
