@@ -9,7 +9,7 @@ GET
     https://api.vrchat.cloud/api/1/auth/user
 
 ## Requires Authentication
-Yes
+Yes (see the [Mozilla Developer page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) for more informations)
 
 ## Returns
 Field | Type | Description
