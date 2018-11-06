@@ -1,4 +1,4 @@
-# Tags 
+# Tags
 
 Tags are way to add users different access and abilities
 
@@ -25,4 +25,12 @@ Name | Permission
 
 ## Trust Levels
 
-TODO
+
+Field | Type
+------|-----
+<none\>|Visitor
+system_trust_basic|New User
+system_trust_known|User
+system_trust_trusted|Known User
+system_trust_veteran|Trusted User
+system_trust_legend|Veteran User (Unused)
