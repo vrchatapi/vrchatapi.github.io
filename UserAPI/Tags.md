@@ -33,4 +33,4 @@ system_trust_basic|New User
 system_trust_known|User
 system_trust_trusted|Known User
 system_trust_veteran|Trusted User
-system_trust_legend|Veteran User (removed)
+system_trust_legend|Veteran User (Unused)
