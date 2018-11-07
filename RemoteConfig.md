@@ -2,7 +2,7 @@
 
 Remote config contains configuration that the clients needs to work properly.
 
-Corrently the most important value from here is the `clientApiKey` as it is used for every other API 
+Currently the most important value here is the `clientApiKey` as it is used for every other API 
 
 ## Request Method 
 GET
@@ -17,51 +17,61 @@ No
 
 Field | Type | Description
 ------|------|------------
-messageOfTheDay | string | Unknown
-timeOutWorldId | string | The ID of the world you get kicked into for timeout
-gearDemoRoomId | string | unknown
-releaseServerVersionStandalone | string | release server version
+messageOfTheDay | string | Unknown (unused)
+timeOutWorldId | string | The client goes to this world if banned from public instances
+gearDemoRoomId | string | Unknown (unused)
+releaseServerVersionStandalone | string | Release server version (unused)
 downloadLinkWindows | string | Where you would originally download the game
-releaseAppVersionStandalone | string | Game version of release
-devAppVersionStandalone | string | Game version of dev
-devServerVersionStandalone | string | dev server version
-devDownloadLinkWindows | string | the developer download link (Useless)
-currentTOSVersion | int | Current TOS version that ues needs to accept
-releaseSdkUrl | string | SDK Unitypackage for release
-releaseSdkVersion | string | SDK Version for release
-devSdkUrl | string | SDK Unitypackage for release
-devSdkVersion | string | SDK Version for release
-whiteListedAssetUrls | array | from where the client is allowed to download assets
-clientApiKey | string | The Key for using the API
-viveWindowsUrl | string | Before VRChat had support for vive you would have to download this in order for it too work
-sdkUnityVersion | string | Unity version of the SDK
-hubWorldId | string | The ID of the hub world
-homeWorldId | string | Default Starting World
-tutorialWorldId | string | The world for when you first install vrchat / does not matter if new user
-disableEventStream | boolean | will the client send a bunch of anonymous data about your device / world / etc
-disableAvatarGating | boolean | if set to true everyone can upload avatars, otherwise only users with special permission can
-disableFeedbackGating | boolean | if set to true everyone can give feedback, otherwise only users with special permission can
-plugin | string | unknown, seems to be comma separeted list of strings
-sdkNotAllowedToPublishMessage | string | when you aren't able to upload avatars or worlds on the sdk, this message appears (only on newer sdk)
-sdkDeveloperFaqUrl | string | Their faq for the sdk 
-sdkDiscordUrl | string | their official vrchat discord
-notAllowedToSelectAvatarInPrivateWorldMessage | string | when you try to choose avatar from private worlds this message apears
+releaseAppVersionStandalone | string | Release game build
+devAppVersionStandalone | string | Development game build
+devServerVersionStandalone | string | Server version for development build
+devDownloadLinkWindows | string | the developer download link (Unused)
+currentTOSVersion | int | Current TOS version
+releaseSdkUrl | string | Public SDK unitypackage link
+releaseSdkVersion | string | Public SDK version
+devSdkUrl | string | Development SDK unitypackage link
+devSdkVersion | string | Development SDK version
+whiteListedAssetUrls | array | Whitelisted download locations for assets
+clientApiKey | string | API key used by the client
+viveWindowsUrl | string | Before VRChat had support for vive you would have to download this in order for it to work, now redirects to the game's Steam store page
+sdkUnityVersion | string | Unity version supported by the SDK
+hubWorldId | string | ID of the hub world
+homeWorldId | string | ID of the default spawn in world
+tutorialWorldId | string | ID of the world used for introduction to the game
+disableEventStream | boolean | If true, the client won't send analytics about your current world (not used in client)
+disableAvatarGating | boolean | If true, anyone can upload avatars, otherwise, only those with specific tags can (new user and higher)
+disableFeedbackGating | boolean | If true, anyone can give feedback, otherwise only users with specific tags can
+disableRegistration | bool | If true, registration is disabled
+plugin | string | Extra plugins to run on the server, comma-separated strings
+sdkNotAllowedToPublishMessage | string | Used in the SDK to notify a user they aren't allowed to upload avatars/worlds yet
+sdkDeveloperFaqUrl | string | Link to the developer FAQ
+sdkDiscordUrl | string | Link to the official VRChat Discord
+notAllowedToSelectAvatarInPrivateWorldMessage | string | Used in game to notify a user they aren't allowed to select avatars in private worlds
 userVerificationTimeout | int | timeout for verification (TODO: what kind of verification), assumed in seconds
 userUpdatePeriod | int | timeout between updating, assuming seconds
 userVerificationDelay | int | delay between verifications, assuming seconds
-userVerificationRetry | int | unknown
+userVerificationRetry | int | Delay before the next verification retry
 worldUpdatePeriod | int | unknown
 moderationQueryPeriod | int | unknown
-address | string | Probably VRChat's office address
-contactEmail | string | VRChat team's contact email
-supportEmail | string | VRChat team's support email
-jobsEmail | string | VRChat team's job positions related email
-copyrightEmail | string | VRChat team's copyright issues related email
-moderationEmail | string | VRChat team's moderation related email
-appName | string | App name (VrChat)
-serverName | string | the current in use server API
-deploymentGroup | string | unknown
-buildVersionTag | string | current api version
-apiKey | string | The API key, seems to be the same as clientApiKey
+defaultAvatar | string | Default avatar ID
+dynamicWorldRows | array of `DynamicWorldRows` | Extra rows to display in the client's 'world' listing
+address | string | VRChat's office address
+contactEmail | string | VRChat's contact email
+supportEmail | string | VRChat's support email
+jobsEmail | string | VRChat's job application email
+copyrightEmail | string | VRChat's copyright issues related email
+moderationEmail | string | VRChat's moderation related email
+disableEmail | bool | unknown
+appName | string | Game name (VrChat)
+serverName | string | Currently used photon server plugin version
+deploymentGroup | string | Currently used photon server plugin codename
+buildVersionTag | string | Build tag for the server plugin
+apiKey | string | API key used by the website
 
-[RemoteConfig Live](https://api.vrchat.cloud/api/1/config?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26 ':include :type=iframe width=100% height=400px')
+### DynamicWorldRows
+
+Field | Type | Description
+------|------|------------
+name | string | displayed text in the client
+tag | string | any worlds having this tag will appear in the row
+index | int | where in the client the row will appear
