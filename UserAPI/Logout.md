@@ -1,3 +1,17 @@
 # Logout
 
-There is no endpoint for logging out, simply make sure to not send the cookie and that's it.
+This API allows you to logout
+
+## Request Method 
+PUT
+
+## Endpoint
+    https://api.vrchat.cloud/api/1/logout
+
+
+## Requires Authentication
+Yes
+
+## Returns
+
+  Nothing, seems to be stuck during sending, cancel the request to log out completely.

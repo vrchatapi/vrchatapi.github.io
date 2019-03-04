@@ -13,9 +13,10 @@ Name | Permission
 `admin_world_restricted` | unknown
 `admin_moderator` | moderator trust level
 `system_feedback_access` | can send feedback
-`system_trust_basic` | basic trust level
-`system_trust_intermediate` | intermediate trust level
-`system_legend` | Probably means the user spends alot of time in the game
+`system_trust_known` | unknown
+`system_trust_basic` and `system_trust_trusted`| basic trust level
+`system_trust_intermediate` and `system_trust_veteran`| intermediate trust level
+`system_legend` and `system_trust_legend`| Probably means the user spends alot of time in the game
 `system_probable_troll` | Probably been reported multiple times and is (probably) a troll
 `system_troll` | Probably confirmed troll.
 `admin_lock_level` | unknown
