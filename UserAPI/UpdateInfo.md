@@ -26,6 +26,8 @@ tags | string or array of strings | yes | change the tags
 networkSessionId | string | yes |  Sets the network session id of the user, the session id is from Photon
 status | `Status` | yes | change the status
 statusDescription | String | yes | change message seen ingame.
+bio | String | yes | Information about you.
+bioLinks | Array | yes | Links.
 
 ### Status
 
@@ -33,7 +35,7 @@ statusDescription | String | yes | change message seen ingame.
     - join me (User autoaccepts requests)
     - busy (User ignores all requests)
     - offline
-
+    
 ## Returns
 
 The new user data (same one as returned by the [Login](UserAPI/Login.md) Endpoint)
