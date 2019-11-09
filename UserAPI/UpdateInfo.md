@@ -35,7 +35,7 @@ bioLinks | Array | yes | Links.
     - join me (User autoaccepts requests)
     - busy (User ignores all requests)
     - offline
-    
+
 ## Returns
 
 The new user data (same one as returned by the [Login](UserAPI/Login.md) Endpoint)
