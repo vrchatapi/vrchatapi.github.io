@@ -26,6 +26,8 @@ tags | string or array of strings | yes | change the tags
 networkSessionId | string | yes |  Sets the network session id of the user, the session id is from Photon
 status | `Status` | yes | change the status
 statusDescription | String | yes | change message seen ingame.
+bio | String | yes | Information about you.
+bioLinks | Array | yes | Links.
 
 ### Status
 
