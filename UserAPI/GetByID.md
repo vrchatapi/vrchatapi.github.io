@@ -32,6 +32,8 @@ statusDescription | string | Custom message from the user.
 location | `WorldLocation` | the world the user is currently in. Friends Only
 worldId | string | The world id, could be `offline`. Friends Only
 instanceId | string | The instance id, could be `offline`. Friends Only
+bio | String | yes | Information about you.
+bioLinks | Array | yes | Links.
 
 ### DeveloperType
 
