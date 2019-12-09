@@ -30,6 +30,7 @@ details | json as string | Yes | Details for some notifications
     - message
     - friendrequest
     - invite
+    - requestInvite
     - votetokick
     - halp
     - hidden
