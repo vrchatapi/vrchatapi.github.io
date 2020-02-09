@@ -28,7 +28,7 @@ details | json as string | Yes | Details for some notifications
 
     - all
     - message
-    - friendrequest
+    - friendrequest (seems to be dead, use https://vrchatapi.github.io/#/UserAPI/FriendRequest instead)
     - invite
     - requestInvite
     - votetokick
