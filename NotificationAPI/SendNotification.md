@@ -28,7 +28,7 @@ details | json as string | Yes | Details for some notifications
 
     - all
     - message
-    - friendrequest
+    - friendrequest (seems to be dead, use https://vrchat.com/api/1/user/id/friendRequest instead)
     - invite
     - requestInvite
     - votetokick
