@@ -1,5 +1,7 @@
 # VRChat API Documentation
 
+As of late, this documentation has become quite outdated, many of the endpoints have changed since the last update, We are looking for some people to assist in maintaining this documentation.
+
 # Disclaimer
 
 This is the official response of the VRChat Team (from Tupper more specifically) on the usage of the VRChat API.
@@ -12,11 +14,8 @@ This is the official response of the VRChat Team (from Tupper more specifically)
 
 As stated, this documentation was not created with the help of the official VRChat team. Therefore this documentation is not an official documentation of the VRChat API and may not be always up to date with the latest versions. If you find that a page or endpoint is not longer valid please create an issue and tell us so we can fix it.
 
-# Credits
+# Get in touch with us!
 
-DireDoesGames#6584, itay2805#4629, Ruby Rose#0001
-
-![Discord](https://cdn.discordapp.com/attachments/130414827213553664/439672060600385538/discord.png)
 https://discord.gg/rj3YQQu #vrchat-api
 
 # Getting Started
