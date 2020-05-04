@@ -21,6 +21,7 @@ updated_at | string | Date and time avatar was last uploaded
 releaseStatus | `ReleaseStatus` | Release status of avatar
 assetUrl | string | Bundled avatar file url
 assetVersion | string | Unknown
+assetUrlObject | JSONArray | Unknown (Returns empty) - Only returns if you are authenticated and own the avatar
 platform | string | Platform avatar was uploaded from
 imported | boolean | Unknown
 imageUrl | string | Cover image of avatar
