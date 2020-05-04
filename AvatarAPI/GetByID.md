@@ -56,4 +56,4 @@ unityVersion | string | The version of unity this avatar was created in
 unitySortNumber | int | the version as number
 assetVersion | int | the version of the asset
 platform | string | the platform of the asset
-created_at | str | the date & time the asset was create
+created_at | str | the date & time the asset was created
