@@ -30,8 +30,10 @@ releaseStatus | `ReleaseStatus` | The release status
 version | int | Avatar version
 featured | boolean | is the avatar featured (not used in-game)
 unityPackages | array of `UnityPackage` | The unity packages
-unityPackageUpdated | boolean | unknown
-unityPackageURL | string | Full unitypackage that can be used in unity as is (.unitypackage). If the avatar is not yours then it will just be empty.
+unityPackageUpdated | boolean | Unknown
+unityPackageUrl | string | Full unitypackage that can be used in unity as is (.unitypackage). Looks to be no longer used.
+unityPackageUrlObject | object (json) | Unknown
+
 
 ### ReleaseStatus
 
@@ -49,8 +51,9 @@ Field | Type | Description
 ------|------|------------
 id | string | package ID
 assetUrl | string | link to the asset (UnityFS)
+assetUrlObject | object (json) | Unknown
 unityVersion | string | The version of unity this avatar was created in
 unitySortNumber | int | the version as number
 assetVersion | int | the version of the asset
 platform | string | the platform of the asset
-created_at | `data` | the date the asset was created at (Sometimes it is missing)  
+created_at | str | the date & time the asset was create
