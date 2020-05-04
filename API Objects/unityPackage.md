@@ -3,7 +3,7 @@
 ## unityPackage object
 
 ```diff
-- unityPackage objects look to be separate truncated versions of their parenting objects (World object, Avatar object, etc)
+! unityPackage objects look to be separate truncated versions of their parenting objects (World object, Avatar object, etc)
 ```
 
 Key | Type | Description
