@@ -34,7 +34,6 @@ unityPackageUpdated | boolean | Unknown
 unityPackageUrl | string | Full unitypackage that can be used in unity as is (.unitypackage). Looks to be no longer used.
 unityPackageUrlObject | object (json) | Unknown
 
-
 ### ReleaseStatus
 
 note that only admins can view `private` and `hidden` avatars
