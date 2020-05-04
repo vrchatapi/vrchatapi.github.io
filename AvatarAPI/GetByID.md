@@ -2,7 +2,7 @@
 
 This API allows you to get details about any avatar by ID.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -13,7 +13,7 @@ ID - the avatar id
 ## Requires Authentication
 Yes
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------
@@ -36,7 +36,7 @@ unityPackageUrlObject | object (json) | Unknown
 
 ### ReleaseStatus
 
-note that only admins can view `private` and `hidden` avatars
+note that only owners can view `private` and admin view `hidden` avatars
 
     - public
     - private
