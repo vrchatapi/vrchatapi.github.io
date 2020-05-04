@@ -2,7 +2,7 @@
 
 This API allows you to get details about any avatar by ID.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -13,7 +13,7 @@ ID - the avatar id
 ## Requires Authentication
 Yes
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------
@@ -30,12 +30,13 @@ releaseStatus | `ReleaseStatus` | The release status
 version | int | Avatar version
 featured | boolean | is the avatar featured (not used in-game)
 unityPackages | array of `UnityPackage` | The unity packages
-unityPackageUpdated | boolean | unknown
-unityPackageURL | string | Full unitypackage that can be used in unity as is (.unitypackage). If the avatar is not yours then it will just be empty.
+unityPackageUpdated | boolean | Unknown
+unityPackageUrl | string | Full unitypackage that can be used in unity as is (.unitypackage). Looks to be no longer used.
+unityPackageUrlObject | object (json) | Unknown
 
 ### ReleaseStatus
 
-note that only admins can view `private` and `hidden` avatars
+note that only owners can view `private` and admin view `hidden` avatars
 
     - public
     - private
@@ -49,8 +50,9 @@ Field | Type | Description
 ------|------|------------
 id | string | package ID
 assetUrl | string | link to the asset (UnityFS)
+assetUrlObject | object (json) | Unknown
 unityVersion | string | The version of unity this avatar was created in
 unitySortNumber | int | the version as number
 assetVersion | int | the version of the asset
 platform | string | the platform of the asset
-created_at | `data` | the date the asset was created at (Sometimes it is missing)  
+created_at | str | the date & time the asset was created
