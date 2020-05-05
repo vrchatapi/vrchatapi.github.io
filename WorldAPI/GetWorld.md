@@ -15,4 +15,4 @@ Yes
 
 ## Returns
 
-[`World object`](../Objects/World.md)
+[`World object`](Objects/World.md?id=world-object)

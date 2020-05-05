@@ -29,7 +29,7 @@ There are a few different types of this object, depending on the type of notific
 
 Key | Type | Description
 ----|------|------------
-worldId | string | `Location` of world invited to (see `Location` [here](../Objects/World.md))
+worldId | string | `Location` of world invited to (see `Location` [here](Objects/World.md?id=location-type))
 
 ### requestInvite
 

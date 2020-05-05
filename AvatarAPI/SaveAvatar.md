@@ -29,4 +29,4 @@ Yes
 
 ## Returns
 
-[`Avatar object`](../Objects/Avatar.md)
+[`Avatar object`](Objects/Avatar.md?id=avatar-object)

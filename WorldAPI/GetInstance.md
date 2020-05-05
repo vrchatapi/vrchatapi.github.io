@@ -9,7 +9,7 @@ GET
 
 id - the world id
 
-instanceid - "instanceName" followed by [`Location 'other parts'`](../Objects/User.md)
+instanceid - "instanceName" followed by [`Location type`](Objects/User.md?id=instance-type) and [`Nonce`](Objects/User.md?id=nonce)
 
 ## Requires Authentication
 Yes

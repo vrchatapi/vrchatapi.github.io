@@ -17,7 +17,7 @@ Yes
 
 ## Returns
 
-[`World object`](../Objects/World.md)
+[`World object`](Objects/World.md?id=world-object)
 
 *** The returned world object does NOT have these 5 keys ***
 

@@ -19,6 +19,6 @@ steamTicket | string | No | The Steamworks ticket from the VRChat game
 
 ## Returns
 
-[`Current User object`](../Objects/User.md)
+[`Current User object`](Objects/User.md?id=current-user-object)
 
 The endpoint also return an auth cookie that can be used until the socket is disconnected from the web server

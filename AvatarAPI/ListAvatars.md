@@ -57,4 +57,4 @@ platform | string | yes | The platform the world support
 
 ## Returns
 
-Array of [`Avatar objects`](../Objects/Avatar.md)
+Array of [`Avatar objects`](Objects/Avatar.md?id=avatar-object)

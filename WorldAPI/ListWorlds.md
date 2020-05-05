@@ -66,4 +66,4 @@ Trending is set as:
 
 ## Returns
 
-Array of [`Limited World objects`](../Objects/World.md)
+Array of [`Limited World objects`](Objects/World.md?id=limited-world-object)

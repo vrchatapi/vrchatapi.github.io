@@ -138,7 +138,7 @@ DeveloperType is a string, being of the following:
 
 ## Location
 
->! Location section will be moved to [`World`](../Objects/World.md)
+>! Location section will be moved to [`World`](Objects/World.md) page
 
 Location is a string made up of possibly multiple parts.
 The first part is usually "worldId:instanceName" and sometimes just "instanceName". Other parts are joined using "~" as a separator

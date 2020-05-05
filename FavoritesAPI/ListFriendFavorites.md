@@ -27,4 +27,4 @@ tag | `TagOptions` | no | The tag group to fetch
 
 ## Returns
 
-Array of [`Limited User objects`](../Objects/User.md)
+Array of [`Limited User objects`](Objects/User.md?id=limited-user-object)
