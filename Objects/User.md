@@ -71,7 +71,7 @@ isFriend | boolean | If the user is a friend of current user (who got this objec
 friendKey | string | Key that probably identifies you as their friend if you have it, or an empty string if isFriend is false
 location | [`Location`](Objects/World.md?id=location) | Type of instance user is in. Offline if user is offline or an empty string if isFriend is false
 worldId | string | World ID of world user is in, offline if user is offline or empty string if isFriend is false
-instanceId | string | Instance ID of instance, with accesstag(id) and nonce(key) if not public, offline if user is offline or empty string if isFriend is false. More details below
+instanceId | [`Location`](Objects/World.md?id=location) | Instance location with no worldId (combination of instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce)). Offline if user is offline or empty string if isFriend is false.
 
 ## Limited User object
 
