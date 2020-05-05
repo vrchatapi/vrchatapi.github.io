@@ -1,3 +1,7 @@
+# Undocumented Endpoints
+
+https://api.vrchat.cloud/api/1/visits
+
 # Sercret Worlds
 
 While documenting the API I found some worlds that are not normally accesible.....
