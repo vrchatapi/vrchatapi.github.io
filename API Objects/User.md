@@ -11,7 +11,7 @@ Key | Type | Description
 ----|------|------------
 username | string | Users username (displayName, but lowercase)
 displayName | string | Users display name
-pastDisplayNames | array | Array of displayNames used in the past
+pastDisplayNames | array | Array of `PastDisplayName` objects
 id | string | User ID of user (Usually prefixed by "usr", except in some rare cases)
 bio | string | Bio of user
 bioLinks | array | Array of URLs (strings) user has added to their account
@@ -99,6 +99,13 @@ isFriend | boolean | If the user is a friend of current user (who got this objec
 Key | Type | Description
 ----|------|------------
 twoFactorAuth | boolean | Probably if user is able to enable TwoFactorAuth
+
+## PastDisplayName object
+
+Field | Type | Description
+------|------|------------
+displayName | string | Old user displayName
+updated_at | string | Date and time displayName was changed from this
 
 # Special type
 

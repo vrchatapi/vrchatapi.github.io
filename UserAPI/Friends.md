@@ -2,7 +2,7 @@
 
 This API allows you to get information about your friends
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -21,16 +21,6 @@ offset | int | Yes | from where
 n | int | Yes | How many (maximum of 100)
 offline | boolean | Yes | Should return offline friends
 
-## Returns 
-array of users
+## Returns
 
-Field | Type | Description
-------|------|------------
-id | string | the user id
-username | string | the login name
-displayName | string | the display name
-currentAvatarImageUrl | string | url to the avatar preview
-currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
-tags | array of strings | The permissions the user has. 
-developerType | string | the user type
-location | string | World Id With Instance Number and extra stuff at the end
+Array of [`Limited User objects`](API%20Objects/User.md)

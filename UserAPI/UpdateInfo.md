@@ -4,7 +4,7 @@ Used to update user information such as the email and birthday.
 
 This is probably also used when accepting new TOS.
 
-## Request Method 
+## Request Method
 PUT
 
 ## Endpoint
@@ -38,4 +38,4 @@ bioLinks | Array | yes | Links.
 
 ## Returns
 
-The new user data (same one as returned by the [Login](UserAPI/Login.md) Endpoint)
+[`Current User object`](API%20Objects/User.md)

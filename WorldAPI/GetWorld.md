@@ -15,4 +15,4 @@ Yes
 
 ## Returns
 
-`World` object
+[`World object`](API%20Objects/World.md)

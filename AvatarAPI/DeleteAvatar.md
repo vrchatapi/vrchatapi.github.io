@@ -17,4 +17,4 @@ Yes
 
 ## Returns
 
-`Avatar` object
+[`Avatar object`](API%20Objects/Avatar.md)

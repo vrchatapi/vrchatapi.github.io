@@ -15,4 +15,4 @@ Yes
 
 ## Returns
 
-`Current User` object
+[`Current User object`](API%20Objects/User.md)
