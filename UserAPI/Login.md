@@ -13,6 +13,6 @@ Yes (see the [Mozilla Developer page](https://developer.mozilla.org/en-US/docs/W
 
 ## Returns
 
-[`Current User object`](API%20Objects/User.md)
+[`Current User object`](../API%20Objects/User.md)
 
 The endpoint also returns an auth cookie that can be used until the socket is disconnected from the web server

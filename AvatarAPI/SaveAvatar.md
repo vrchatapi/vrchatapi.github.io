@@ -29,4 +29,4 @@ Yes
 
 ## Returns
 
-[`Avatar object`](API%20Objects/Avatar.md)
+[`Avatar object`](../API%20Objects/Avatar.md)

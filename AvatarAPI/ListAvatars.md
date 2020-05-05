@@ -57,4 +57,4 @@ platform | string | yes | The platform the world support
 
 ## Returns
 
-Array of [`Avatar objects`](API%20Objects/Avatar.md)
+Array of [`Avatar objects`](../API%20Objects/Avatar.md)

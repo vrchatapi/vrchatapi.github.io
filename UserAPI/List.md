@@ -26,4 +26,4 @@ offset | int | yes | How many users to skip
 
 ## Returns
 
-Array of [`Limited User objects`](API%20Objects/User.md)
+Array of [`Limited User objects`](../API%20Objects/User.md)
