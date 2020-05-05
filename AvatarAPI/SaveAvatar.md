@@ -4,7 +4,7 @@ This avatar allows you to update avatar information.
 
 !> Only works if the avatar is yours!
 
-## Request Method 
+## Request Method
 Update avatar
     PUT
 
@@ -17,7 +17,7 @@ Update avatar
 
 Create avatar
     https://api.vrchat.cloud/api/1/avatars
-    
+
 
 ID - the user id
 
@@ -27,5 +27,6 @@ Any field in the [avatar](AvatarAPI/GetByID.md)
 ## Requires Authentication
 Yes
 
-## Returns 
-The avatar object
+## Returns
+
+[`Avatar object`](../API%20Objects/Avatar.md)
