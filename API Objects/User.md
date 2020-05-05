@@ -144,4 +144,5 @@ The first part is always "worldId:instanceId", and other parts are joined using 
 Other parts are:
 
  - "hidden(userId)" Accesstag of instance
+ - "friends(userId)" Accesstag of instance
  - "nonce(key)" Cryptographic key to secure instance (a.k.a. nonce)
