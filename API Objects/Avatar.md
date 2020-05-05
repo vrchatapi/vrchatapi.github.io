@@ -12,7 +12,7 @@ name | string | Name of avatar
 description | string | Avatar's description
 id | string | Avatar ID (prefixed by 'avtr')
 authorName | string | Name of user who created avatar
-authorId | string | User ID of user who created avatar (prefixed by 'usr')
+authorId | string | User ID of user who created avatar (Normally prefixed by 'usr', some exceptions - see 'The Great Pug' author id)
 tags | array | Array of user defined tags (max of 5)
 version | integer | Upload version of avatar
 featured | boolean | If the avatar is featured
