@@ -138,11 +138,21 @@ DeveloperType is a string, being of the following:
 
 ## Location
 
+>! Location section will be moved to [`World`](../Objects/World.md)
+
 Location is a string made up of possibly multiple parts.
-The first part is always "worldId:instanceId", and other parts are joined using "~" as a separator
+The first part is usually "worldId:instanceName" and sometimes just "instanceName". Other parts are joined using "~" as a separator
 
-Other parts are:
+### Instance type
 
- - "hidden(userId)" Accesstag of instance
- - "friends(userId)" Accesstag of instance
- - "nonce(key)" Cryptographic key to secure instance (a.k.a. nonce)
+Signifies the type of instance. If the instance is public then the location won't have this.
+It is formated as "type(connectingUserId)" where connectingUserId is the id of the user that allows you to join the instance
+
+Types include:
+ - "hidden"
+ - "friends"
+
+### Nonce
+
+Nonce is the Cryptographic key used to lock non-public instances, and is not included in the location of public instances.
+It is formated as "nonce(key)" where the key is the cryptographic key

@@ -1,7 +1,7 @@
 # Get Instance With Tags
 This API allows you to fetch an instance by passing the instanceid with tags from the world api or the user (location) api
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -9,14 +9,12 @@ GET
 
 id - the world id
 
-instanceid - the world instance id 
+instanceid - "instanceName" followed by [`Location 'other parts'`](../Objects/User.md)
 
-(formatted like: number~accesstag(usr_number)~nonce(numbersandletters) or just number)
-    
 ## Requires Authentication
 Yes
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------

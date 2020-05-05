@@ -83,5 +83,5 @@ Instance is an array, with the following structure:
 
 Index | Type | Description
 ------|------|------------
-0 | string | Instance ID
+0 | string | Instance name (5 character number)
 1 | integer | Count of users in instance
