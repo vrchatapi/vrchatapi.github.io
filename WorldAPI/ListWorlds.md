@@ -2,7 +2,7 @@
 
 This API allows you to list and search for worlds.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -14,12 +14,12 @@ Only Active Worlds:
 
 Only Recently Visited Worlds:
     https://api.vrchat.cloud/api/1/worlds/recent
-    
+
 Only Favorite Worlds:
     https://api.vrchat.cloud/api/1/worlds/favorites
 
-    
-    
+
+
 
 ## Requires Authentication
 Yes
@@ -37,7 +37,7 @@ order | `OrderOptions` | yes | Result ordering
 offset | int | yes | How many worlds to skip
 search | string | yes | Filter by name
 tag | Comma seperated strings | yes | Filter by tag
-notag | Comma seperated strings | Tags to exclude 
+notag | Comma seperated strings | Tags to exclude
 releaseStatus | `ReleaseStatus` | yes | Filter by release status
 maxUnityVersion | string | yes | Current unity version the game is using
 minUnityVersion | string | yes | The min unity version the world support
@@ -59,33 +59,11 @@ Trending is set as:
     - order
     - _created_at
     - _updated_at
-    
+
 ### OrderOptions
     - ascending
     - descending
 
-## Returns 
+## Returns
 
-Array of:
-
-Field | Type | Description
-------|------|------------
-id | string | World ID
-name | string | World name
-authorName | string | The name of the creator
-totalLikes | int | How many likes the world has
-totalVisits | int | How many visits the world has
-capacity | int | World player limit
-imageUrl | string | URL to the image of the world
-thumbnailImageURL | string | URL to the image of the world (small)
-isSecure | boolean | unknown (probably password?)
-releaseStatus | `ReleaseStatus` | The status of the world
-organization | string | unknown
-occupants | int | Total amount of people in this world
-
-### ReleaseStatus
-
-    - public
-    - private 
-    - all
-    - hidden
+Array of `Limited World` objects
