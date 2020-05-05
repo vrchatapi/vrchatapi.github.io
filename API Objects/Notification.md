@@ -9,7 +9,8 @@
 Key | Type | Description
 ----|------|------------
 id | string | Notification ID of the notification (prefixed with not)
-senderUsername | string | Username of the user which the notification concerns
+senderUsername | string | Username of the user that sent the notification
+senderUserId | string | User ID of the user that sent the notification
 type | `NotificationType` | Type of notification
 message | string | Probably something to do with a messaging system, is empty for now
 details | `NotificationDetails` | Details about notification (world info, user info, etc)
