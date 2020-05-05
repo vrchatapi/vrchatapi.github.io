@@ -1,10 +1,10 @@
-# Get All Notifications 
+# Get All Notifications
 
 !> We tried to test these APIs and we are not sure how they work in-game, even friendrequest wasn't recieved unless we sent a real friend request and not a notification. will have to do some further testing.
 
 This API allows you to set a notification as seen
 
-## Request Method 
+## Request Method
 PUT
 
 ## Endpoint
@@ -15,6 +15,6 @@ id - the notification id
 ## Requires Authentication
 Yes
 
-## Returns 
+## Returns
 
-the notification (just like the on returned from [Get All Notifications](NotificationAPI/GetAll.md) Endpoint), but the `seen` will be set to `true`.
+[`Notification object`]("../API%20Objects/Notification.md")

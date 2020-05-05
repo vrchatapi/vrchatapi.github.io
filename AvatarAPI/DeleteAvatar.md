@@ -4,7 +4,7 @@ This API allows you to delete an avatar. This API will not actually delete the c
 
 !> Only works if the avatar is yours!
 
-## Request Method 
+## Request Method
 DELETE
 
 ## Endpoint
@@ -15,5 +15,6 @@ ID - the avatar id
 ## Requires Authentication
 Yes
 
-## Returns 
-The avatar
+## Returns
+
+[`Avatar object`](../API%20Objects/Avatar.md)

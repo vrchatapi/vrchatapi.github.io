@@ -15,44 +15,4 @@ Yes
 
 ## Returns
 
-Field | Type | Description
-------|------|------------
-id | string | The avatar ID
-name | string | The avatar Name
-description | string | The avatar's description
-authorId | string | Id of the creator
-authorName | string | Name of the creator
-tags | string | The avatar tags
-assetUrl | string | URL to the asset (UnityFS)
-imageUrl | string | Image of the avatar
-thumbnailImageUrl | string | Image of the avatar (small)
-releaseStatus | `ReleaseStatus` | The release status
-version | int | Avatar version
-featured | boolean | is the avatar featured (not used in-game)
-unityPackages | array of `UnityPackage` | The unity packages
-unityPackageUpdated | boolean | Unknown
-unityPackageUrl | string | Full unitypackage that can be used in unity as is (.unitypackage). Looks to be no longer used.
-unityPackageUrlObject | object (json) | Unknown
-
-### ReleaseStatus
-
-note that only owners can view `private` and admin view `hidden` avatars
-
-    - public
-    - private
-    - hidden
-
-### UnityPackage
-
-This represent different versions of the unity asset
-
-Field | Type | Description
-------|------|------------
-id | string | package ID
-assetUrl | string | link to the asset (UnityFS)
-assetUrlObject | object (json) | Unknown
-unityVersion | string | The version of unity this avatar was created in
-unitySortNumber | int | the version as number
-assetVersion | int | the version of the asset
-platform | string | the platform of the asset
-created_at | str | the date & time the asset was created
+[`Avatar object`](../API%20Objects/Avatar.md)

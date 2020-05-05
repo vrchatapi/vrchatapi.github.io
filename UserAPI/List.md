@@ -2,11 +2,11 @@
 
 This API allows you to list users and use some filters to filter them
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
-All users 
+All users
     https://api.vrchat.cloud/api/1/users
 
 Active only
@@ -24,25 +24,6 @@ developerType | `DeveloperType` | yes | Active user by developer type, `none` fo
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
 
-## Returns 
+## Returns
 
-array of users
-
-Field | Type | Description
-------|------|------------
-id | string | the user id
-username | string | the login name
-displayName | string | the display name
-currentAvatarImageUrl | string | url to the avatar preview
-currentAvatarThumbnailImageUrl | string | url to the avatar thumbnail
-tags | array of `Permission` | The permissions the user has. 
-developerType | `DeveloperType` | the user type
-
-!> Location is only shown for friends now
-
-### DeveloperType
-
-    - none
-    - trusted
-    - internal
-    - moderator 
+Array of [`Limited User objects`](../API%20Objects/User.md)
