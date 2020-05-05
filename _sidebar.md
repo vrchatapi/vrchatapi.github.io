@@ -1,6 +1,12 @@
 - [Disclaimer](README.md)
 - [Getting Started](GettingStarted.md)
 - [Secret Worlds](SecretWorlds.md)
+- Objects
+    - [Avatar](Objects/Avatar.md)
+    - [User](Objects/User.md)
+    - [World](Objects/World.md)
+    - [Notification](Objects/Notification.md)
+    - [unityPackage](Objects/unityPackage.md)
 - Endpoints
     - [Remote Config](RemoteConfig.md)
     - User API
@@ -71,8 +77,8 @@
             - [Upload Status (Outdated)](FileAPI/UploadStatus.md)
         - Versions
             - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
-            - [Delete Version (soon)](nothing) 
+            - [Delete Version (soon)](nothing)
     - Feedback API
         - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
     - [Analytics API](AnalyticsAPI/Analytics.md)
-        - [Get Number of online users](AnalyticsAPI/GetNumberOfOnlineUsers.md) 
+        - [Get Number of online users](AnalyticsAPI/GetNumberOfOnlineUsers.md)
