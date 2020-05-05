@@ -23,4 +23,4 @@ offline | boolean | Yes | Should return offline friends
 
 ## Returns
 
-Array of [`Limited User objects`](../API%20Objects/User.md)
+Array of [`Limited User objects`](../Objects/User.md)
