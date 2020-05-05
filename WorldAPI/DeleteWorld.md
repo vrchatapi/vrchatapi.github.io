@@ -1,10 +1,10 @@
 # Delete World
 
-This API allows you to delete an world.
+This API allows you to delete a world.
 
 !> This API only works if you own the world.
 
-## Request Method 
+## Request Method
 DELETE
 
 ## Endpoint
@@ -15,6 +15,14 @@ id - the world's id
 ## Requires Authentication
 Yes
 
-## Returns 
+## Returns
 
-?> soon (when I start playing with creating worlds)
+[`World object`](../Objects/World.md)
+
+*** The returned world object does NOT have these 5 keys ***
+
+ - publicOccupants
+ - privateOccupants
+ - occupants
+ - instances
+ - favorites
