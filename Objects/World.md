@@ -77,7 +77,7 @@ ReleaseStatus is a string, being one of the following:
  - "private" World can only be played in a private instance with this releaseStatus
  - "hidden" World has been deleted by its owner, only admin can see a world with this releaseStatus (?)
 
-## Instance type
+## Instance
 
 Instance is an array, with the following structure:
 
@@ -85,3 +85,22 @@ Index | Type | Description
 ------|------|------------
 0 | string | Instance name (5 character number)
 1 | integer | Count of users in instance
+
+## Location
+
+Location is a string made up of possibly multiple parts.
+The first part is usually "worldId:instanceName" and sometimes just "instanceName". Other parts are joined using "~" as a separator
+
+### Instance type
+
+Signifies the type of instance. If the instance is public then the location won't have this.
+It is formated as "type(connectingUserId)" where connectingUserId is the id of the user that allows you to join the instance
+
+Types include:
+ - "hidden"
+ - "friends"
+
+### Nonce
+
+Nonce is the Cryptographic key used to lock non-public instances, and is not included in the location of public instances.
+It is formated as "nonce(key)" where the key is the cryptographic key
