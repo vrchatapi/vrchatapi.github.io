@@ -68,6 +68,30 @@ publicationDate | string | Time and date world was made public, or 'none'
 labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
 unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
 
+## Instance object
+
+Key | Type | Description
+----|------|------------
+name | string | Number identifier
+id | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId,
+type | [`instance type`](Objects/World.md?id=instance-type) | Type of instance instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
+active | boolean | If the world is "active" (used often)
+n_users | integer | Number of users in the instance
+capacity | integer | Maximum number of users that can be in the instance
+full | boolean | If the n_users is equal to capacity
+canRequstInvite | boolean | Probably if users can ask to be invited to this instance
+location | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId, instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
+instanceId | [`location`](Objects/World.md?id=location) | Instance location with no worldId (combination of instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
+shortName | string | Shorter name used to share instance url (https://vrchat.com/i/shortName)
+ownerId | string | Either userId of the instance master, or userId of connecting user to non-public instance
+worldId | string | World ID of the world
+tags | array | Array of world tags (strings) defined by world creator, system and admins
+platforms | JSONArray | Consists of 'standalonewindows' and 'android' keys as integers, count of how many of each platform are in the instance
+clientNumber | string | Unknown
+photonRegion | string | Unknown
+permanent | boolean | Unknown
+hidden | string | Unknown
+
 # Special types
 
 ## ReleaseStatus type
