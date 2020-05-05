@@ -1,5 +1,5 @@
 ```diff
-! "Boxed in" types are listed separately below relevant objects listed in this file.
+! Special types are listed separately below relevant objects in this file.
 ```
 
 # Objects
