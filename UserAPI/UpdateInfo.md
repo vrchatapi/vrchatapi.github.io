@@ -38,4 +38,4 @@ bioLinks | Array | yes | Links.
 
 ## Returns
 
-[`Current User object`](API%20Objects/User.md)
+[`Current User object`](../API%20Objects/User.md)
