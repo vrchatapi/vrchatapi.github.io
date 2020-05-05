@@ -18,7 +18,7 @@ version | integer | Upload version of world
 featured | boolean | If world is featured or not
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
-releaseStatus | `ReleaseStatus` | Release status of world
+releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
 vists | integer | Times world has been visited
 publicOccupants | integer | Current users in public instances of this world
 privateOccupants | integer | Current users in private instances of this world
@@ -33,7 +33,7 @@ thumbnailImageUrl | string | Small cover image of world
 organization | string | Unknown
 heat | integer | Unknown (Looks to be connected to popularity somehow)
 namespace | string | Unknown
-instances | array | Array of `Instance`s
+instances | array | Array of [`Instance`](Objects/World.md?id=instance-type)s
 previewYoutubeId | null (?) | Probably something to do with a youtube id for a video that previews a world. Doesn't look to be used currently
 publicationDate | string | Time and date world was made public, or 'none'
 labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
@@ -41,7 +41,7 @@ pluginUrl | string | URL (usually DLL). This is probably used for custom scripts
 pluginUrlObject | JSONArray | Unknown (Always empty)
 unityPackageUrl | string | Full unitypackage file that can be used in unity as is (.unitypackage). Looks to be no longer used
 unityPackageUrlObject | JSONArray | Unknown (Always empty)
-unityPackages | array | Array of `unityPackage` objects (Probably different variants of the world)
+unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
 
 ## Limited World object
 
@@ -54,7 +54,7 @@ authorId | integer | User ID of user who created world
 tags | array of strings | Tags defined by creator, system and admin
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
-releaseStatus | `ReleaseStatus` | Release status of world
+releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
 vists | integer | Times world has been visited
 occupants | integer | Current people in instances of this world
 capacity | integer | User capacity for instances of this world
@@ -66,7 +66,7 @@ organization | string | Unknown
 heat | integer | Unknown (Looks to be connected to popularity somehow)
 publicationDate | string | Time and date world was made public, or 'none'
 labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
-unityPackages | array | Array of `unityPackage` objects
+unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
 
 # Special types
 
@@ -103,4 +103,4 @@ Types include:
 ### Nonce
 
 Nonce is the Cryptographic key used to lock non-public instances, and is not included in the location of public instances.
-It is formated as "nonce(key)" where the key is the cryptographic key
+It is formatted as "nonce(key)" where the key is the cryptographic key
