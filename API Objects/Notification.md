@@ -41,9 +41,13 @@ platform | string | Platform user who sent the notification is on
 ## NotificationType
 
 ```diff
-! Not all NotificationType options are added yet!
+! Not all NotificationType options are finished yet!
 ```
 
 Notification is a string, being one of the following:
+ - "all" Only used as a parameter to return all notification types
  - "invite" Another user is inviting current user to a world
  - "requestInvite" Another user is requesting invite to current users world
+ - "votetokick" Someone is voting to kick another user
+ - "halp" Unknown
+ - "hidden" Unknown
