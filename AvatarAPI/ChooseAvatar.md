@@ -2,7 +2,7 @@
 
 This API allows you to dynamically choose an avatar. This will work on any avatar;
 
-## Request Method 
+## Request Method
 PUT
 
 ## Endpoint
@@ -13,5 +13,6 @@ ID - the avatar id
 ## Requires Authentication
 Yes
 
-## Returns 
-The user object
+## Returns
+
+`Current User` object

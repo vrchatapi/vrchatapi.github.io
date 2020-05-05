@@ -2,7 +2,7 @@
 
 This API allows you to get public user info about a specific user using his ID
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -55,5 +55,6 @@ platform | string | yes | The platform the world support
     - hidden
     - all
 
-## Returns 
-Array of Avatars
+## Returns
+
+Array of `Avatar` objects
