@@ -13,7 +13,7 @@ description | string | Description of world
 id | string | World ID of world (prefixed with 'wrld')
 authorName | string | Name of user who created world
 authorId | integer | User ID of user who created world
-tags | array of strings | Tags defined by creator, system and admin
+tags | array | Array of world tags (strings) defined by world creator, system and admins
 version | integer | Upload version of world
 featured | boolean | If world is featured or not
 created_at | string | Time and date world was first uploaded
@@ -51,7 +51,7 @@ name | string | Name of world
 id | string | World ID of world (prefixed with 'wrld')
 authorName | string | Name of user who created world
 authorId | integer | User ID of user who created world
-tags | array of strings | Tags defined by creator, system and admin
+tags | array | Array of world tags (strings) defined by world creator, system and admins
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
 releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
