@@ -26,6 +26,9 @@ oculusId | string | User oculusId, empty if none
 acceptedTOSVersion | integer | Version of the VRChat Terms-Of-Service user has accepted
 hasBirthday | boolean | If user has a birthday set
 friends | array | Array of friend User IDs
+onlineFriends | array | Array of online friend User IDs
+activeFriends | array | Array of active friend User IDs
+offlineFriends | array | Array of offline friend User IDs
 friendGroupNames | array | Array of names (strings) of groups user has made
 state | [`State`](Objects/User.md?id=state) | Current state of user, only returns if isFriend is true
 status | [`Status`](Objects/User.md?id=status) | Current status of user, only returns if isFriend is true
@@ -99,7 +102,7 @@ twoFactorAuth | boolean | Probably if user is able to enable TwoFactorAuth
 
 ## PastDisplayName
 
-Field | Type | Description
+Key | Type | Description
 ------|------|------------
 displayName | string | Old user displayName
 updated_at | string | Date and time displayName was changed from this

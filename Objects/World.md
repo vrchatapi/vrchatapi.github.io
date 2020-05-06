@@ -19,7 +19,7 @@ featured | boolean | If world is featured or not
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
 releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
-vists | integer | Times world has been visited
+visits | integer | Times world has been visited
 publicOccupants | integer | Current users in public instances of this world
 privateOccupants | integer | Current users in private instances of this world
 occupants | integer | Total current users in instances of this world
@@ -55,7 +55,7 @@ tags | array | Array of world tags (strings) defined by world creator, system an
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
 releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
-vists | integer | Times world has been visited
+visits | integer | Times world has been visited
 occupants | integer | Current people in instances of this world
 capacity | integer | User capacity for instances of this world
 favorites | integer | Number of times world has been favorited
@@ -73,8 +73,8 @@ unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=uni
 Key | Type | Description
 ----|------|------------
 name | string | Number identifier
-id | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId,
-type | [`instance type`](Objects/World.md?id=instance-type) | Type of instance instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
+id | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId, instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
+type | [`instance type`](Objects/World.md?id=instance-type) | Type of instance
 active | boolean | If the world is "active" (used often)
 n_users | integer | Number of users in the instance
 capacity | integer | Maximum number of users that can be in the instance
