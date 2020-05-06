@@ -2,7 +2,7 @@
 
 This API allows you to register new users.
 
-## Request Method 
+## Request Method
 POST
 
 ## Endpoint
@@ -18,9 +18,13 @@ Field | Type | Optional | Description
 username | string | No | The new username
 password | string | No | The new password
 email | string | No | The new email
-birthday | string | Yes | The birthday
-acceptedTOSVersion | string | Yes | accepted ToS version
+recaptchaCode | string | No | Solution to presented reCaptcha
+year | string | Yes | Birthday - Year
+month | string | Yes | Birthday - Month
+day | string | Yes | Birthday - Day
+subscribe | boolean | Yes | If you subscribe to general vrchat emails
+acceptedTOSVersion | string | Yes | Accepted ToS version (Current is ToS version is 6)
 
 ## Returns
 
-The new user data (same one as returned by the [Login](UserAPI/Login.md) Endpoint)
+[`Current User object`](Objects/User.md?id=current-user-object)

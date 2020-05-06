@@ -1,6 +1,6 @@
 
->! Special types are listed separately below relevant objects in this file.
->! Steam and oculus related keys are incomplete at the moment
+!> Special types are listed separately below relevant objects in this file.
+!> Steam and oculus related keys are incomplete at the moment
 
 # Objects
 
@@ -94,7 +94,7 @@ isFriend | boolean | If the user is a friend of current user (who got this objec
 
 ## Feature
 
->! Please note this is incomplete!
+!> Please note this is incomplete!
 
 Key | Type | Description
 ----|------|------------
