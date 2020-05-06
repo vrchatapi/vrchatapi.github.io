@@ -2,7 +2,7 @@
 
 This API allows you to register new users.
 
-## Request Method 
+## Request Method
 POST
 
 ## Endpoint
@@ -23,4 +23,4 @@ acceptedTOSVersion | string | Yes | accepted ToS version
 
 ## Returns
 
-The new user data (same one as returned by the [Login](UserAPI/Login.md) Endpoint)
+[`Current User object`](Objects/User.md?id=current-user-object)

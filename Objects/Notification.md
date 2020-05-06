@@ -1,4 +1,4 @@
->! Special types are listed separately below relevant objects in this file.
+!> Special types are listed separately below relevant objects in this file.
 
 # Objects
 
@@ -17,7 +17,7 @@ created_at | string | Date and time the notification was sent
 
 ## NotificationDetails objects
 
->! Not all NotificationDetails objects are added yet!
+!> Not all NotificationDetails objects are added yet!
 
 There are a few different types of this object, depending on the type of notification
 
@@ -37,7 +37,7 @@ platform | string | Platform user who sent the notification is on
 
 ## Notification
 
->! Not all NotificationType options are finished yet!
+!> Not all NotificationType options are finished yet!
 
 Notification is a string, being one of the following:
  - "all" Only used as a parameter to return all notification types
