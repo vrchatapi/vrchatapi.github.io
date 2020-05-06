@@ -19,4 +19,4 @@ Yes
 
 ## Returns
 
-[`Notification object`]("../API%20Objects/Notification.md")
+[`Notification object`]("Objects/Notification.md?id=notification-object")

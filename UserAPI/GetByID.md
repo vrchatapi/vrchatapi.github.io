@@ -16,4 +16,4 @@ Yes
 
 ## Returns
 
-[`User object`](../API%20Objects/User.md)
+[`User object`](Objects/User.md?id=user-object)

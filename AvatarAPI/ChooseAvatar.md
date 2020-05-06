@@ -15,4 +15,4 @@ Yes
 
 ## Returns
 
-[`Current User object`](../API%20Objects/User.md)
+[`Current User object`](Objects/User.md?id=current-user-object)

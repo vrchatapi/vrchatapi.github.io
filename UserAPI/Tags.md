@@ -20,8 +20,10 @@ Name | Permission
 `system_probable_troll` | Probably been reported multiple times and is (probably) a troll
 `system_troll` | Probably confirmed troll.
 `admin_lock_level` | unknown
-`admin_lock_tags` | unknown
+`admin_lock_tags` | Probably stops system from adding and removing tags
 `admin_official_thumbnail` | Replace avatarimage with vrchat logo
+`show_social_rank` | Show trust rank
+`Chill_Devs_I_Am_Just_Curious_Nothing_Malicious` | Probably got caught with a hacked client or something
 
 
 ## Trust Levels

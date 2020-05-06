@@ -1,7 +1,6 @@
-```diff
-! Special types are listed separately below relevant objects in this file.
-! Steam and oculus related keys are incomplete at the moment
-```
+
+>! Special types are listed separately below relevant objects in this file.
+>! Steam and oculus related keys are incomplete at the moment
 
 # Objects
 
@@ -11,7 +10,7 @@ Key | Type | Description
 ----|------|------------
 username | string | Users username (displayName, but lowercase)
 displayName | string | Users display name
-pastDisplayNames | array | Array of `PastDisplayName` objects
+pastDisplayNames | array | Array of [`PastDisplayName`](Objects/User.md?id=pastdisplayname) objects
 id | string | User ID of user (Usually prefixed by "usr", except in some rare cases)
 bio | string | Bio of user
 bioLinks | array | Array of URLs (strings) user has added to their account
@@ -27,9 +26,12 @@ oculusId | string | User oculusId, empty if none
 acceptedTOSVersion | integer | Version of the VRChat Terms-Of-Service user has accepted
 hasBirthday | boolean | If user has a birthday set
 friends | array | Array of friend User IDs
+onlineFriends | array | Array of online friend User IDs
+activeFriends | array | Array of active friend User IDs
+offlineFriends | array | Array of offline friend User IDs
 friendGroupNames | array | Array of names (strings) of groups user has made
-state | `State` | Current state of user, only returns if isFriend is true
-status | `Status` | Current status of user, only returns if isFriend is true
+state | [`State`](Objects/User.md?id=state) | Current state of user, only returns if isFriend is true
+status | [`Status`](Objects/User.md?id=status) | Current status of user, only returns if isFriend is true
 statusDescription | string | Custom status message of user
 currentAvatar | string | Avatar ID of current avatar
 currentAvatarAssetUrl | string | Url to bundled avatar file (.vrca)
@@ -44,8 +46,8 @@ allowAvatarCopying | boolean | If user has allowed cloning of public avatars the
 accountDeletionDate | string/null | Either date and time account will be deleted or date and time account was deleted. Returns null type when none
 unsubscribe | boolean | If user has unsubscribed from VRChat general emails
 tags | array | Array of strings, defining certain settings and accessibility user has
-feature | `Feature` | `Feature` object, probably current 'features' and if the user has access to them
-developerType | `DeveloperType` | Type of developer user is
+feature | [`Feature`](Objects/User.md?id=feature) | Probably current 'features' and if the user has access to them
+developerType | [`DeveloperType`](Objects/User.md?id=developertype) | Type of developer user is
 isFriend | boolean | If the user is a friend of current user (who got this object in response)
 friendKey | string | Key that probably identifies you as their friend if you have it, or an empty string if isFriend is false
 
@@ -58,8 +60,8 @@ displayName | string | Users display name
 id | string | User ID of user (Usually prefixed by "usr", except in some rare cases)
 bio | string | Bio of user
 bioLinks | array | Array of URLs (strings) user has added to their account
-state | `State` | Current state of user, only returns if isFriend is true
-status | `Status` | Current status of user, only returns if isFriend is true
+state | [`State`](Objects/User.md?id=state) | Current state of user, only returns if isFriend is true
+status | [`Status`](Objects/User.md?id=status) | Current status of user, only returns if isFriend is true
 statusDescription | string | Custom status message of user
 currentAvatarImageUrl | string | Cover image of user's current avatar
 currentAvatarThumbnailImageUrl | string | Small cover image of user's current avatar
@@ -67,12 +69,12 @@ last_login | string | Time and date user last logged in
 last_platform | string | Last platform of VRChat that user logged in from
 allowAvatarCopying | boolean | If user has allowed cloning of public avatars they are using
 tags | array | Array of strings, defining certain settings and accessibility user has
-developerType | `DeveloperType` | Type of developer user is
+developerType | [`DeveloperType`](Objects/User.md?id=developertype) | Type of developer user is
 isFriend | boolean | If the user is a friend of current user (who got this object in response)
 friendKey | string | Key that probably identifies you as their friend if you have it, or an empty string if isFriend is false
-location | `Location` | `Location` type, offline if user is offline or an empty string if isFriend is false
+location | [`Location`](Objects/World.md?id=location) | Type of instance user is in. Offline if user is offline or an empty string if isFriend is false
 worldId | string | World ID of world user is in, offline if user is offline or empty string if isFriend is false
-instanceId | string | Instance ID of instance, with accesstag(id) and nonce(key) if not public, offline if user is offline or empty string if isFriend is false. More details below
+instanceId | [`Location`](Objects/World.md?id=location) | Instance location with no worldId (combination of instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce)). Offline if user is offline or empty string if isFriend is false.
 
 ## Limited User object
 
@@ -82,34 +84,32 @@ username | string | Users username (displayName, but lowercase)
 displayName | string | Users display name
 id | string | User ID of user (Usually prefixed by "usr", except in some rare cases)
 bio | string | Bio of user, set on the VRChat website
-status | `Status` | Current status of user
+status | [`Status`](Objects/User.md?id=status) | Current status of user, only returns if isFriend is true
 currentAvatarImageUrl | string | Cover image of user's current avatar
 currentAvatarThumbnailImageUrl | string | Small cover image of user's current avatar
 last_platform | string | Last platform of VRChat that user logged in from
 tags | array | Array of strings, defining certain settings and accessibility user has
-developerType | `DeveloperType` | Type of developer user is
+developerType | [`DeveloperType`](Objects/User.md?id=developertype) | Type of developer user is
 isFriend | boolean | If the user is a friend of current user (who got this object in response)
 
-## Feature object
+## Feature
 
-```diff
-! Please note this is incomplete!
-```
+>! Please note this is incomplete!
 
 Key | Type | Description
 ----|------|------------
 twoFactorAuth | boolean | Probably if user is able to enable TwoFactorAuth
 
-## PastDisplayName object
+## PastDisplayName
 
-Field | Type | Description
+Key | Type | Description
 ------|------|------------
 displayName | string | Old user displayName
 updated_at | string | Date and time displayName was changed from this
 
 # Special type
 
-## State type
+## State
 
 State is a string, being of one of the following:
 
@@ -117,7 +117,7 @@ State is a string, being of one of the following:
  - "active" User is online, but not in VRChat
  - "offline" User is offline
 
-## Status type
+## Status
 
 Status is a string, being one of the following:
 
@@ -135,14 +135,3 @@ DeveloperType is a string, being of the following:
  - "trusted" Unknown
  - "internal" Is a VRChat developer
  - "moderator" Is a VRChat moderator
-
-## Location
-
-Location is a string made up of possibly multiple parts.
-The first part is always "worldId:instanceId", and other parts are joined using "~" as a separator
-
-Other parts are:
-
- - "hidden(userId)" Accesstag of instance
- - "friends(userId)" Accesstag of instance
- - "nonce(key)" Cryptographic key to secure instance (a.k.a. nonce)
