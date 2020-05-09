@@ -18,6 +18,8 @@ Sections labeled **BETA** are API endpoints found in the beta client of VRChat, 
 
 2. VRChat.Net (C#) https://github.com/VRChatAPI/VRChat.Net
 
+3. VRCpy (Python) https://github.com/VRChatAPI/VRChatPython
+
 
 # Links to APIs
 
