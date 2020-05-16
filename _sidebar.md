@@ -61,6 +61,8 @@
             - [Get player's](ModerationAPI/Players.md)
 		- World
 			- [Send Vote Kick (soon)](nothing)
+    - System API
+        - [Get Online User Count](SystemAPI/Visits.md)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
@@ -82,4 +84,3 @@
     - Feedback API
         - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
     - [Analytics API](AnalyticsAPI/Analytics.md)
-        - [Get Number of online users](AnalyticsAPI/GetNumberOfOnlineUsers.md)
