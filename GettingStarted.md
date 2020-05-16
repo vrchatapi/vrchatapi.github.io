@@ -48,7 +48,7 @@ Using the auth cookie is recommended, as each call with only the auth header wil
 
 ## Client API Key
 
-Every API requires you to give a special API key. To get it simply call the [Remote Config](RemoteConfig.md) endpoint.
+Every API requires you to give a special API key. To get it simply call the [Remote Config](SystemAPI/Config.md) endpoint.
 
 The API key is passed in a query string named `apiKey`
 

@@ -8,7 +8,6 @@
     - [Notification](Objects/Notification.md)
     - [unityPackage](Objects/unityPackage.md)
 - Endpoints
-    - [Remote Config](RemoteConfig.md)
     - User API
         - [Tags](UserAPI/Tags.md)
         - [Register](UserAPI/Register.md)
@@ -62,6 +61,7 @@
 		- World
 			- [Send Vote Kick (soon)](nothing)
     - System API
+        - [Remote Config](SystemAPI/Config.md)
         - [Get Online User Count](SystemAPI/Visits.md)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
