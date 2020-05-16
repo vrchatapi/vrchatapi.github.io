@@ -18,6 +18,8 @@ Sections labeled **BETA** are API endpoints found in the beta client of VRChat, 
 
 2. VRChat.Net (C#) https://github.com/VRChatAPI/VRChat.Net
 
+3. VRCpy (Python) https://github.com/VRChatAPI/VRChatPython
+
 
 # Links to APIs
 
@@ -42,11 +44,11 @@ There are two ways to authenticate (technically one)
 1. Send the Authorization header with Basic authentication
 2. After calling the any API with Basic authentication save and reuse the returned `auth` cookie.
 
-The second option is probably more recommended
+Using the auth cookie is recommended, as each call with only the auth header will use up 1 of (a limited amount) of sessions
 
 ## Client API Key
 
-Every API requires you to give a special API key. To get it simply call the [Remote Config](RemoteConfig.md) endpoint.
+Every API requires you to give a special API key. To get it simply call the [Remote Config](SystemAPI/Config.md) endpoint.
 
 The API key is passed in a query string named `apiKey`
 

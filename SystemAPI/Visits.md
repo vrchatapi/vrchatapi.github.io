@@ -1,13 +1,13 @@
-# Get Number of online users
+# Visits
 
 This API allows you to get the number of currently online users.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
 https://api.vrchat.cloud/api/1/visits
 
-## Returns 
+## Returns
 
-!> The int number of online users.
+!> The integer number of online users.

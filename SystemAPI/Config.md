@@ -2,9 +2,9 @@
 
 Remote config contains configuration that the clients needs to work properly.
 
-Currently the most important value here is the `clientApiKey` as it is used for every other API 
+Currently the most important value here is the `clientApiKey` as it is used for every other API
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint

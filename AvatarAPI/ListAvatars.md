@@ -22,8 +22,8 @@ search | string | yes | Search by name
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
 order | `OrderOptions` | yes | how to order
-releaseStatus | `ReleaseStatus` | yes | The realse status
-sort | `SortOptions` | how to sort
+releaseStatus | `ReleaseStatus` | yes | The release status, defaults to public
+sort | `SortOptions` | yes | how to sort
 maxUnityVersion | string | yes | The max unity version the world support
 minUnityVersion | string | yes | The min unity version the world support
 maxAssetVersion | string | yes | The max asset version the world support

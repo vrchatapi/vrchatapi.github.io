@@ -8,7 +8,6 @@
     - [Notification](Objects/Notification.md)
     - [unityPackage](Objects/unityPackage.md)
 - Endpoints
-    - [Remote Config](RemoteConfig.md)
     - User API
         - [Tags](UserAPI/Tags.md)
         - [Register](UserAPI/Register.md)
@@ -16,6 +15,7 @@
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
+            - [Delete](UserAPI/Delete.md)
             - [User Info](UserAPI/CurrentUserDetails.md)
             - [Update User Info](UserAPI/UpdateInfo.md)
             - Friends
@@ -60,6 +60,10 @@
             - [Get player's](ModerationAPI/Players.md)
 		- World
 			- [Send Vote Kick (soon)](nothing)
+    - System API
+        - [Remote Config](SystemAPI/Config.md)
+        - [Get Online User Count](SystemAPI/Visits.md)
+        - [Get System Time](SystemAPI/Time.md)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
@@ -81,4 +85,3 @@
     - Feedback API
         - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
     - [Analytics API](AnalyticsAPI/Analytics.md)
-        - [Get Number of online users](AnalyticsAPI/GetNumberOfOnlineUsers.md)
