@@ -1,3 +1,5 @@
+# Visits
+
 This API allows you to get the number of currently online users.
 
 ## Request Method
