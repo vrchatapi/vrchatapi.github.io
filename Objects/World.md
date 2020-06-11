@@ -85,6 +85,7 @@ instanceId | [`location`](Objects/World.md?id=location) | Instance location with
 shortName | string | Shorter name used to share instance url (https://vrchat.com/i/shortName)
 ownerId | string | Either userId of the instance master, or userId of connecting user to non-public instance
 worldId | string | World ID of the world
+users | JSONArray | Users in instance (may not be returned)
 tags | array | Array of world tags (strings) defined by world creator, system and admins
 platforms | JSONArray | Consists of 'standalonewindows' and 'android' keys as integers, count of how many of each platform are in the instance
 clientNumber | string | Unknown

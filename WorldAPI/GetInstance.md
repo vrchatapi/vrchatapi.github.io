@@ -17,12 +17,4 @@ Yes
 
 ## Returns
 
-Field | Type | Description
-------|------|------------
-id | string | Instance id with tags
-name | String | Instance ID without tags
-private | JSONArray | Private users (or false)
-friends | JSONArray | Friend users (or false)
-users | JSONArray | Users (or false)
-hidden | string | if tag-hidden shows instance creator else null
-nonce | string | shows the nonce from tags
+[`Instance object`](Objects/World.md?id=instance-object)
