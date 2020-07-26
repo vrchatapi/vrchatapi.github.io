@@ -22,10 +22,10 @@ Create avatar
 ID - the user id
 
 ## Parameters
-Any field in the [avatar](AvatarAPI/GetByID.md)
+Any field in the [avatar](AvatarAPI/GetByID.md) object
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

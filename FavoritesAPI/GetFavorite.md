@@ -1,8 +1,8 @@
-# Get Favorite 
+# Get Favorite
 
 This API allows you to get information about a specific favorite.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -11,9 +11,9 @@ https://api.vrchat.cloud/api/1/favorites/[ID]
 ID - The Favorite Id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------

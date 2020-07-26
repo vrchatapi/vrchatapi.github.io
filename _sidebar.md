@@ -1,5 +1,6 @@
 - [Disclaimer](README.md)
 - [Getting Started](GettingStarted.md)
+- [Authorization](Authorization.md)
 - [Secret Worlds](SecretWorlds.md)
 - Objects
     - [Avatar](Objects/Avatar.md)

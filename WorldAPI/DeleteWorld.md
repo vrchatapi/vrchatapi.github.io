@@ -13,7 +13,7 @@ DELETE
 id - the world's id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

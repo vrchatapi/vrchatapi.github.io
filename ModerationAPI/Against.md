@@ -2,7 +2,7 @@
 
 Returns a list with all the moderations against the current user.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -10,9 +10,9 @@ https://api.vrchat.cloud/api/1/auth/user/playermoderated
 
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------
@@ -22,7 +22,7 @@ sourceUserId | string | userId of sender
 sourceDisplayname | string | displayname of sender
 targetUserId | string | The target's userid (yours in this case)
 targetDisplayName | string | The target's displayname (yours in this case)
-created | string | Time the moderation was opened 
+created | string | Time the moderation was opened
 
 ### Player Moderation Types
 

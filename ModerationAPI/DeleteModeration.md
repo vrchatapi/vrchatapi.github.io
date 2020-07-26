@@ -2,7 +2,7 @@
 
 Delete a spesific moderation on a player, requires moderator/internal developerType or admin_moderator tag.
 
-## Request Method 
+## Request Method
 DELETE
 
 ## Endpoint
@@ -12,9 +12,9 @@ ID - the id of the user
 MODERATIONID - the id of the moderation to delete
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------

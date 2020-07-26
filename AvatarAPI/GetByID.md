@@ -11,7 +11,7 @@ https://api.vrchat.cloud/api/1/avatars/[ID]
 ID - the avatar id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

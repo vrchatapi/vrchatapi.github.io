@@ -4,7 +4,7 @@ This API allows you to send friend request to another user.
 
 It seems that the response will always be a notification response even if the receiver ID does not exists...
 
-## Request Method 
+## Request Method
 POST
 
 ## Endpoint
@@ -13,7 +13,7 @@ POST
 id - the id of the user to send friend request
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

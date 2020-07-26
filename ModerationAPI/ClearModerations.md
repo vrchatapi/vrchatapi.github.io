@@ -2,7 +2,7 @@
 
 Clears all moderations on a player, requires moderator/internal developerType or admin_moderator tag.
 
-## Request Method 
+## Request Method
 DELETE
 
 ## Endpoint
@@ -11,9 +11,9 @@ https://api.vrchat.cloud/api/1/user/[ID]/moderations
 ID - the id of the user
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------

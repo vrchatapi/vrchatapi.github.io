@@ -22,7 +22,7 @@ Only Favorite Worlds:
 
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Parameters
 

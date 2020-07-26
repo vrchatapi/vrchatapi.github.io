@@ -9,7 +9,7 @@ GET
 https://api.vrchat.cloud/api/1/avatars
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Parameters
 

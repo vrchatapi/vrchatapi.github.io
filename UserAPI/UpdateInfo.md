@@ -13,7 +13,7 @@ PUT
 id - The current user id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Parameters
 

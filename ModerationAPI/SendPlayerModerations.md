@@ -3,14 +3,14 @@
 
 ##  Send Block
 
-###  Request Method 
+###  Request Method
 POST
 
 ###  Endpoint
 https://api.vrchat.cloud/api/1/auth/user/blocks
 
 ### Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ### Parameters
 
@@ -18,7 +18,7 @@ Field | Type | Optional | Description
 ------|------|----------|------------
 blocked | string | no | the user id of the user you want to block
 
-### Returns 
+### Returns
 
 Field | Type | Description
 ------|------|------------
@@ -28,7 +28,7 @@ sourceUserId | string | userId of sender (yours in this case)
 sourceDisplayname | string | displayname of sender (yours in this case)
 targetUserId | string | The target's userid
 targetDisplayName | string | The target's displayname
-created | string | Time the moderation was opened 
+created | string | Time the moderation was opened
 
 ### Player Moderation Types
 
@@ -39,7 +39,7 @@ created | string | Time the moderation was opened
 
 # Send Unblock
 
-### Request Method 
+### Request Method
 PUT
 
 ### Endpoint
@@ -54,7 +54,7 @@ Field | Type | Optional | Description
 ------|------|----------|------------
 blocked | string | no | the user id of the user you want to unblock
 
-###  Returns 
+###  Returns
 JSONArray containing object "success", inside there is:
 
 Field | Type | Description
@@ -64,7 +64,7 @@ status_code | int | http response code
 
 ## Send block/mute/unmute type
 
-### Request Method 
+### Request Method
 POST
 
 ### Endpoint
@@ -80,7 +80,7 @@ Field | Type | Optional | Description
 type  | `Moderation Type` | no | The type of playermoderation you want to send
 moderated | string | no | the user id of the user you want the moderation to count for
 
-### Returns 
+### Returns
 
 Field | Type | Description
 ------|------|------------
@@ -90,7 +90,7 @@ sourceUserId | string | userId of sender (yours in this case)
 sourceDisplayname | string | displayname of sender (yours in this case)
 targetUserId | string | The target's userid
 targetDisplayName | string | The target's displayname
-created | string | Time the moderation was opened 
+created | string | Time the moderation was opened
 
 ### Player Moderation Types
 

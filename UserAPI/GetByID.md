@@ -11,7 +11,7 @@ GET
 id - the user id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 
 ## Returns

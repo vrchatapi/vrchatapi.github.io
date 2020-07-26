@@ -13,7 +13,7 @@ https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/see
 id - the notification id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

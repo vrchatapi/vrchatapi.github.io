@@ -4,7 +4,7 @@
 
 This API allows you to get all the feedback for a world.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -15,9 +15,9 @@ WORLDID - The world id you want to fetch info about
 WORLDREVISION - The revision of the world you want to fetch info about.
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------

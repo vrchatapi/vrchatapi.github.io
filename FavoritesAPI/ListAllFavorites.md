@@ -1,15 +1,15 @@
-# List Favorites 
+# List Favorites
 
 This API allows you to list all the current user's favorites.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
 https://api.vrchat.cloud/api/1/favorites/
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Parameters
 
@@ -17,7 +17,7 @@ Field | Type | Optional | Description
 ------|------|----------|------------
 type | `TypeOptions` | Yes | The favourite type
 
-## Returns 
+## Returns
 
 Array of:
 

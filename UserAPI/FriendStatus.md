@@ -2,7 +2,7 @@
 
 This API allows you to get the status of a friend.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -11,7 +11,7 @@ GET
 id - the id of the user to get status for
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

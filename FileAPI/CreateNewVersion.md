@@ -10,12 +10,12 @@ The delta is unknown
 
 !> I was facing some problems testing the File API, so it is best not to use it
 
-## Request Method 
+## Request Method
 POST
 
 ## Endpoint
     https://api.vrchat.cloud/api/1/file/[ID]
-    
+
 
 ID - the file id
 
@@ -44,9 +44,9 @@ fileMd5 | base64 string | file md5 checksum
 fileSizeInBytes | long | file size in bytes
 
 ## Requires Authentication
-Yes
+Yes  (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|-------------

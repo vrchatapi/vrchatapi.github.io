@@ -4,14 +4,14 @@ This API allows you to create files on the server.
 
 !> I was facing some problems testing the File API, so it is best not to use it
 
-## Request Method 
+## Request Method
 POST
 
 ## Endpoint
 https://api.vrchat.cloud/api/1/file
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Parameters
 
@@ -21,7 +21,7 @@ name | string | No | The file name
 mimeType | string | Can be empty | The file's mime type
 extension | string | Can be empty | The file's extension
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|-------------

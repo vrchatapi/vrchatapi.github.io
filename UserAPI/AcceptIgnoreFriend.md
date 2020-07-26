@@ -8,7 +8,7 @@ To ignore a Friend Request simply use the [Delete Notification](NotificationAPI/
 
 To accept use the following endpoint
 
-## Request Method 
+## Request Method
 PUT
 
 ## Endpoint
@@ -17,7 +17,7 @@ https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/accept
 id - the id of the friend notification
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

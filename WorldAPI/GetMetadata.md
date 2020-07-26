@@ -3,7 +3,7 @@
 This API allows you to get meta-information about a world
 Usually used to live update content in offical maps.
 
-## Request Method 
+## Request Method
 GET
 
 ## Endpoint
@@ -12,9 +12,9 @@ https://api.vrchat.cloud/api/1/worlds/[ID]/metadata
 id - the world id
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
-## Returns 
+## Returns
 
 Field | Type | Description
 ------|------|------------

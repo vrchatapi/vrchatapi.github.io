@@ -9,12 +9,8 @@ GET
     https://api.vrchat.cloud/api/1/auth/user
 
 ## Requires Authentication
-Yes (see the [Mozilla Developer page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) for more informations)
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 
 [`Current User object`](Objects/User.md?id=current-user-object)
-
-The endpoint also returns an auth cookie that can be used until the socket is disconnected from the web server
-It's recommended to use the auth cookie, as each request without an auth cookie will count towards a "session" count.
-You can run out of sessions and your account will be rate limited.

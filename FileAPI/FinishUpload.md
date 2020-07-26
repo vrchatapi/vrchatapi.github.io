@@ -4,7 +4,7 @@ This is to finish an upload to a file
 
 !> I was facing some problems testing the File API, so it is best not to use it
 
-## Request Method 
+## Request Method
 PUT
 
 ## Endpoint &lt;ID&gt;
@@ -17,11 +17,10 @@ type - the file type
 ### File Types
 
     - file
-    - delta 
+    - delta
     - signature
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
-

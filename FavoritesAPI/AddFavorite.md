@@ -5,14 +5,14 @@ This API allows you to add a favourite of a world, friend or avatar.
 
 Friend and Avatar can have up to 20 entires. World can have 32 entries
 
-## Request Method 
+## Request Method
 POST
 
 ## Endpoint
 https://api.vrchat.cloud/api/1/favorites
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Parameters
 
@@ -21,7 +21,7 @@ Field | Type | Optional | Description
 type | `TypeOptions` | No | The type we are adding
 favoriteId | string | No | The Object Id
 
-## Returns 
+## Returns
 
 Array of:
 

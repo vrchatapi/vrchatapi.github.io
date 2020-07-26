@@ -13,7 +13,7 @@ id - the world id
 instanceid - "instanceName" followed by [`Location type`](Objects/User.md?id=instance-type) and [`Nonce`](Objects/User.md?id=nonce) (if applicable)
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

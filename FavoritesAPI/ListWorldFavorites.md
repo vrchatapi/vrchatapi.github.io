@@ -11,7 +11,7 @@ GET
 https://api.vrchat.cloud/api/1/worlds/favorites
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 

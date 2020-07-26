@@ -4,7 +4,7 @@ This API allows you to unfriend a friend
 
 If the id is of user who is not your friend, an error will be returned.
 
-## Request Method 
+## Request Method
 DELETE
 
 ## Endpoint
@@ -13,7 +13,7 @@ DELETE
 id - the id of the user to unfriend
 
 ## Requires Authentication
-Yes
+Yes (See [here](Authorization.md) for details)
 
 ## Returns
 
@@ -23,7 +23,7 @@ on success:
 ```json
 {
     "success": {
-            "message": "Friendship destroyed", 
+            "message": "Friendship destroyed",
             "status_code": 200
         }
 }
@@ -33,7 +33,7 @@ on error
 ```json
 {
     "error": {
-        "message": "These users are not friends", 
+        "message": "These users are not friends",
         "status_code": 400
     }
 }
