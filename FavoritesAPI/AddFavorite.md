@@ -30,7 +30,7 @@ Field | Type | Description
 id | string | Favorite ID
 type | `TypeOptions` | The favourite type
 favoriteId | string | The Object Id
-tags | array | Unknown
+tags | array | Group tag (if type = avatar, tags = ["avatars1"])
 
 ### TypeOptions
 
