@@ -21,7 +21,6 @@ assetUrl | string | Bundled avatar file url (.vrca)
 assetVersion | string | Unknown
 assetUrlObject | JSONArray | Unknown (Returns empty) - Only returns if you are authenticated and own the avatar
 platform | string | Platform avatar was uploaded from
-imported | boolean | Unknown
 imageUrl | string | Cover image of avatar
 thumbnailImageUrl | string | Small cover image of avatar
 unityVersion | string | Version of unity avatar was upload from
