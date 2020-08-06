@@ -16,6 +16,7 @@
         - Current user
             - [Login](UserAPI/Login.md)
             - [Logout](UserAPI/Logout.md)
+            - [Verify](UserAPI/Verify.md)
             - [Delete](UserAPI/Delete.md)
             - [User Info](UserAPI/CurrentUserDetails.md)
             - [Update User Info](UserAPI/UpdateInfo.md)
