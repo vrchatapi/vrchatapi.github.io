@@ -2,7 +2,7 @@
 
 !> **Super Important!** Using this API is allowed for non malicious usage. Abuse of the API may result in account termination!
 
-?> These docs are for SDK version `2018.05.04.09.53` and build tag `build-18-05-18-noah-salmon`
+?> These docs are for unity SDK version `2018.4.20f1` and build tag `build-2020-08-05-policy-fastannyong`
 
 # Documentation Information
 
