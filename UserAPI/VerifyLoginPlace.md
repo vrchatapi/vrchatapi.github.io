@@ -17,6 +17,7 @@ No
 All keys are required.
 
 Key | Type | Description
+----|------|-------------
 userId | string | User ID of the user verifying their login
 placeCode | string | Region code of login location
 token | string | Unique identifier
