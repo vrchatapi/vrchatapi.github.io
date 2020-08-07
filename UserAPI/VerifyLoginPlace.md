@@ -6,6 +6,9 @@ This endpoint isn't meant to be programmatically accessed, so returns may not be
 ## Request Method
 GET
 
+## Endpoint
+https://vrchat.com/api/1/auth/verifyLoginPlace
+
 ## Requires Authentication
 No
 
