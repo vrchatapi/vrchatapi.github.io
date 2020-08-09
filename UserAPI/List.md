@@ -19,7 +19,7 @@ Yes (See [here](Authorization.md) for details)
 
 Field | Type | Optional | Description
 ------|------|----------|------------
-search | string | yes | Username to search for
+search | string | no | Username to search for
 developerType | `DeveloperType` | yes | Active user by developer type, `none` for normal users and `internal` for moderators
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
