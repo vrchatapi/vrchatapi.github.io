@@ -6,7 +6,8 @@ Finishes the login sequence for accounts with 2FactorAuth
 POST
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/auth/twofactorauth/totp/verify
+https://api.vrchat.cloud/api/1/auth/twofactorauth/totp/verify For Two-Factor-Auth codes
+https://api.vrchat.cloud/api/1/auth/twofactorauth/otp/verify For recovery codes
 
 ## Requires Authentication
 Yes (See [here](Authorization.md) for details)
