@@ -1,6 +1,7 @@
 # Choose Avatar
 
-This API allows you to dynamically choose an avatar. This will work on any avatar;
+This API allows you to dynamically choose an avatar. This will work on any avatar;  
+Doesn't update in-game instantly.
 
 ## Request Method
 PUT
