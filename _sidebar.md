@@ -67,6 +67,7 @@
         - [Remote Config](SystemAPI/Config.md)
         - [Get Online User Count](SystemAPI/Visits.md)
         - [Get System Time](SystemAPI/Time.md)
+        - [Verify User Auth-Cookie](SystemAPI/Auth.md)
     - Notification API
         - [Send Notification](NotificationAPI/SendNotification.md)
         - [Mark As Read](NotificationAPI/MarkAsSeen.md)
