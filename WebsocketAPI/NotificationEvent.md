@@ -1,6 +1,6 @@
 # Friend Online Event
 
-This event fires when a friend's state changes to offline
+This event fires when receiving a notification
 
 ## Structure
 
