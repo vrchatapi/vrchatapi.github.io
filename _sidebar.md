@@ -86,6 +86,17 @@
         - Versions
             - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
             - [Delete Version (soon)](nothing)
+    - Websocket API
+        - [About](WebsocketAPI/About.md)
+        - Events
+            - [Friend Online](WebsocketAPI/FriendOnlineEvent.md)
+            - [Friend Offline](WebsocketAPI/FriendOfflineEvent.md)
+            - [Friend Active](WebsocketAPI/FriendActiveEvent.md)
+            - [Friend Add](WebsocketAPI/FriendAddEvent.md)
+            - [Friend Delete](WebsocketAPI/FriendDeleteEvent.md)
+            - [Friend Update](WebsocketAPI/FriendUpdateEvent.md)
+            - [Friend Location](WebsocketAPI/FriendLocationEvent.md)
+            - [Notification](WebsocketAPI/NotificationEvent.md)
     - Feedback API
         - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
     - [Analytics API](AnalyticsAPI/Analytics.md)
