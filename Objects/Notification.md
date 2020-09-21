@@ -55,12 +55,13 @@ Notification is a string, being one of the following:
 ### Sendable notifications
  - "requestInvite" To request an invite from another user to their world
  - "invite" An invite from another user to their world
- - "broadcast"
- - "message" Probably for a message system (?)
+ - "broadcast" Not implemented
+ - "message" Not implemented
 
 ### Receivable notifications
  - "all" Only used as a parameter to return all notification types
- - "message" Probably for a message system (?)
+ - "broadcast" Not implemented
+ - "message" Not implemented
  - "friendRequest" Another user wants to be friends with current user
  - "invite" Another user is inviting current user to a world
  - "requestInvite" Another user is requesting invite to current users world
