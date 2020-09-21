@@ -45,13 +45,10 @@ details | json as string | Yes | Details for some notifications
 
 ## Returns
 
+[`Notification Object`](Objects/Notification?id=notification-object), with the extra key-value pairs below
+
 Field | Type | Description
 ------|------|------------
-id | string | Notification ID
-type | `NotificationType` | The notification type
-senderUserId | string | The id of the sender
-receiverUserId | string | The id of the receiver
-message | string | The message
-details | `object` | Unknown
+receiverUserId | [`userId`](Objects/User?id=user-object) | ID of the user who will receive the notification
 jobName | string | unknown, always `write_notification`
 jobColor | string | unknown, always `blue`
