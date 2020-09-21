@@ -25,7 +25,7 @@ There are a few different types of this object, depending on the type of notific
 
 Key | Type | Description
 ----|------|------------
-worldId | string | [`Location`](Objects/World.md?id=location)
+worldId | [`Location`](Objects/World.md?id=location) | Location the invite is to
 
 ### requestInvite
 
