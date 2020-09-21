@@ -41,6 +41,7 @@ platform | string | Platform user who sent the notification is on
 
 Notification is a string, being one of the following:
  - "all" Only used as a parameter to return all notification types
+ - "message" Probably for a message system (?)
  - "friendRequest" Another user wants to be friends with current user
  - "invite" Another user is inviting current user to a world
  - "requestInvite" Another user is requesting invite to current users world
