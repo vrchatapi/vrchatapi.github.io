@@ -53,11 +53,19 @@ halpId | [`worldId`](Objects/World?id=limited-world-object) | ID of world
 !> Not all NotificationType options are finished yet!
 
 Notification is a string, being one of the following:
+
+### Sendable notifications
+ - "requestInvite" To request an invite from another user to their world
+ - "invite" An invite from another user to their world
+ - "broadcast"
+ - "message" Probably for a message system (?)
+
+### Receivable notifications
  - "all" Only used as a parameter to return all notification types
  - "message" Probably for a message system (?)
  - "friendRequest" Another user wants to be friends with current user
  - "invite" Another user is inviting current user to a world
  - "requestInvite" Another user is requesting invite to current users world
  - "votetokick" Someone is voting to kick another user
- - "halp" Unknown
- - "hidden" Unknown
+ - "halp" Unknown (This might not exist anymore!)
+ - "hidden" Unknown (This might not exist anymore!)
