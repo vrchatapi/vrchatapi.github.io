@@ -33,6 +33,19 @@ Key | Type | Description
 ----|------|------------
 platform | string | Platform user who sent the notification is on
 
+### votetokick
+
+Key | Type | Description
+----|------|------------
+userToKickId | [`userId`](Objects/User?id=user-object) | ID of the user to kick
+initiatorUserId | [`userId`](Objects/User?id=user-object) | ID of the user who started vote
+
+### halp
+
+Key | Type | Description
+----|------|------------
+halpId | [`worldId`](Objects/World?id=limited-world-object) | ID of world
+
 # Special types
 
 ## Notification
