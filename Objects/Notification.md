@@ -50,8 +50,6 @@ halpId | [`worldId`](Objects/World?id=limited-world-object) | ID of world
 
 ## Notification
 
-!> Not all NotificationType options are finished yet!
-
 Notification is a string, being one of the following:
 
 ### Sendable notifications
