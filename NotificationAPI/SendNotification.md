@@ -52,3 +52,16 @@ Field | Type | Description
 receiverUserId | [`userId`](Objects/User?id=user-object) | ID of the user who will receive the notification
 jobName | string | unknown, always `write_notification`
 jobColor | string | unknown, always `blue`
+
+# Other notes
+
+When trying to send message or broadcast notifications, you will receive this error:
+
+```json
+{
+    'error': {
+        'message': "The endpoint you've contacted has not been completed, yet.",
+        'status_code': 501
+    }
+}
+```
