@@ -43,17 +43,6 @@ type | [`NotificationType`]("Objects/Notification.md?id=notification") | No | Th
 message | string | Yes | The message to send
 details | json as string | Yes | Details for some notifications
 
-### NotificationType
-
-    - all
-    - message
-    - friendrequest (seems to be dead, use https://vrchatapi.github.io/#/UserAPI/FriendRequest instead)
-    - invite
-    - requestInvite
-    - votetokick
-    - halp
-    - hidden
-
 # Details
 
 NotificationType | Variables
