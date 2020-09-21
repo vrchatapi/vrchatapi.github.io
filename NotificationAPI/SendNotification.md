@@ -43,14 +43,6 @@ type | [`NotificationType`]("Objects/Notification.md?id=notification") | No | Th
 message | string | Yes | The message to send
 details | json as string | Yes | Details for some notifications
 
-# Details
-
-NotificationType | Variables
------------------|----------
-invite | "worldId:instance"
-votetokick | "userToKickId", "initiatorUserId"
-halp | "halpId","worldId"
-
 ## Returns
 
 Field | Type | Description
