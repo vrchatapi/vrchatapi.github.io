@@ -21,7 +21,7 @@ created_at | string | Date and time the notification was sent
 
 There are a few different types of this object, depending on the type of notification
 
-### Inivte
+### Invite
 
 Key | Type | Description
 ----|------|------------
