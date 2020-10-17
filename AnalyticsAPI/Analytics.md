@@ -24,7 +24,7 @@ Sent when an avatar is created or updated.
 considered as out-of-session
 
 Name | Type | Description
------|-------------------
+-----|--------|-----------
 modelId | string | The ID of the avatar
 
 ### SDK_CreateWorld / SDK_UpdateWorld
@@ -34,7 +34,7 @@ Sent when an world is created or updated
 considered as out-of-session
 
 Name | Type | Description
------|-------------------
+-----|----------|---------
 modelId | string | The ID of the world
 
 ### SDK_LoginSuccess
