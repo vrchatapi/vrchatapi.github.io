@@ -91,6 +91,7 @@ last_platform | string | Last platform of VRChat that user logged in from
 tags | array | Array of strings, defining certain settings and accessibility user has
 developerType | [`DeveloperType`](Objects/User.md?id=developertype) | Type of developer user is
 isFriend | boolean | If the user is a friend of current user (who got this object in response)
+location | [`Location`](Objects/World.md?id=location) | Type of instance user is in. Offline if user is offline or an empty string if isFriend is false
 
 ## Feature
 
