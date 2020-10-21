@@ -35,3 +35,12 @@ tags | array | Is only 1 string value that is the name of the favorite group
     - world
     - friend
     - avatar
+
+## Misc
+
+Some other ways to get specific favorite types without the /favorites endpoint.  
+Why these exist? No idea, they are sorta redundant  
+Note that these return the same way as the endpoint above, and take the same parameters (besides type)  
+
+https://api.vrchat.cloud/api/1/worlds/favorites - Favorite worlds
+https://api.vrchat.cloud/api/1/auth/user/friends/favorite - Favorite friends
