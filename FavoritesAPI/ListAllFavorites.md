@@ -15,7 +15,9 @@ Yes (See [here](Authorization.md) for details)
 
 Field | Type | Optional | Description
 ------|------|----------|------------
-type | `TypeOptions` | Yes | The favourite type
+type | `TypeOptions` | Yes | The favorite type
+n | Integer | Yes | Max number of objects to return (<= 100)
+offset | Integer | Yes | Skip offset objects from the start (used for paging!)
 
 ## Returns
 
@@ -24,13 +26,11 @@ Array of:
 Field | Type | Description
 ------|------|------------
 id | string | Favorite ID
-type | `TypeOptions` | The type of the favourite
+type | `TypeOptions` | The type of the favorite
 favoriteId | string | The Object Id
-tags | array | Unknown
+tags | array | Is only 1 string value that is the name of the favorite group
 
 ### TypeOptions
-
-It is assumed that once the favourite feature will be released the `user` type will be replaced with `friend` type.
 
     - world
     - friend
