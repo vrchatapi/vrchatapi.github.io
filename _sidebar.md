@@ -35,8 +35,6 @@
         - [Add Favorite](FavoritesAPI/AddFavorite.md)
         - [Get Favorite](FavoritesAPI/GetFavorite.md)
         - [List Favorites](FavoritesAPI/ListAllFavorites.md)
-        - [List Friend Favorites (BETA)](FavoritesAPI/ListFriendFavorites.md)
-        - [List World Favorites (BETA)](FavoritesAPI/ListWorldFavorites.md)
         - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
     - World API
         - World
