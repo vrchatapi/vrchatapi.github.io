@@ -20,17 +20,17 @@ Yes (See [here](Authorization.md) for details)
 
 Field | Type | Optional | Description
 ------|------|----------|------------
-type | [`NotificationType`](Objects/Notification?id=notification) | No | The type of notification to send
+type | [`NotificationType`](Objects/Notification.md?id=notification) | No | The type of notification to send
 message | string | Yes | The message to send
 details | json as string | Yes | Details for some notifications
 
 ## Returns
 
-[`Notification Object`](Objects/Notification?id=notification-object), with the extra key-value pairs below
+[`Notification Object`](Objects/Notification.md?id=notification-object), with the extra key-value pairs below
 
 Field | Type | Description
 ------|------|------------
-receiverUserId | [`userId`](Objects/User?id=user-object) | ID of the user who will receive the notification
+receiverUserId | [`userId`](Objects/User.md?id=user-object) | ID of the user who will receive the notification
 jobName | string | unknown, always `write_notification`
 jobColor | string | unknown, always `blue`
 

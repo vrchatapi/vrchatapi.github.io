@@ -23,4 +23,4 @@ after | date | Yes | Only return notifications sent after this date
 
 ## Returns
 
-Array of [`Notification objects`](Objects/Notification?id=notification-object)
+Array of [`Notification objects`](Objects/Notification.md?id=notification-object)
