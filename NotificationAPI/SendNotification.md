@@ -20,7 +20,7 @@ Yes (See [here](Authorization.md) for details)
 
 Field | Type | Optional | Description
 ------|------|----------|------------
-type | [`NotificationType`]("Objects/Notification.md?id=notification") | No | The type of notification to send
+type | [`NotificationType`](Objects/Notification?id=notification) | No | The type of notification to send
 message | string | Yes | The message to send
 details | json as string | Yes | Details for some notifications
 

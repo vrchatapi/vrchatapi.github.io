@@ -19,4 +19,4 @@ Yes (See [here](Authorization.md) for details)
 
 ## Returns
 
-[`Notification object`]("Objects/Notification.md?id=notification-object")
+[`Notification object`](Objects/Notification?id=notification-object)
