@@ -11,8 +11,8 @@ https://api.vrchat.cloud/api/1/worlds/[ID]
 id - the world id
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`World object`](Objects/World.md?id=world-object)
+[`World object`](/Objects/World.md#world-object)

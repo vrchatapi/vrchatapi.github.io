@@ -21,6 +21,6 @@ type - the file type
     - signature
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns

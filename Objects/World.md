@@ -18,7 +18,7 @@ version | integer | Upload version of world
 featured | boolean | If world is featured or not
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
-releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
+releaseStatus | [`ReleaseStatus`](/Objects/World.md#releasestatus-type) | Release status of world
 visits | integer | Times world has been visited
 publicOccupants | integer | Current users in public instances of this world
 privateOccupants | integer | Current users in private instances of this world
@@ -33,7 +33,7 @@ thumbnailImageUrl | string | Small cover image of world
 organization | string | Unknown
 heat | integer | Unknown (Looks to be connected to popularity somehow)
 namespace | string | Unknown
-instances | array | Array of [`Instance`](Objects/World.md?id=instance-type)s
+instances | array | Array of [`Instance`](/Objects/World.md#instance-type)
 previewYoutubeId | null (?) | Probably something to do with a youtube id for a video that previews a world. Doesn't look to be used currently
 publicationDate | string | Time and date world was made public, or 'none'
 labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
@@ -41,7 +41,7 @@ pluginUrl | string | URL (usually DLL). This is probably used for custom scripts
 pluginUrlObject | JSONArray | Unknown (Always empty)
 unityPackageUrl | string | Full unitypackage file that can be used in unity as is (.unitypackage). Looks to be no longer used
 unityPackageUrlObject | JSONArray | Unknown (Always empty)
-unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
+unityPackages | array | Array of [`unityPackage`](/Objects/unityPackage.md#unitypackage-object) objects (Probably different variants of the world)
 
 ## Limited World object
 
@@ -54,7 +54,7 @@ authorId | integer | User ID of user who created world
 tags | array | Array of world tags (strings) defined by world creator, system and admins
 created_at | string | Time and date world was first uploaded
 updated_at | string | Time and date world was last uploaded
-releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
+releaseStatus | [`ReleaseStatus`](/Objects/World.md#releasestatus-type) | Release status of world
 visits | integer | Times world has been visited
 occupants | integer | Current people in instances of this world
 capacity | integer | User capacity for instances of this world
@@ -66,22 +66,22 @@ organization | string | Unknown
 heat | integer | Unknown (Looks to be connected to popularity somehow)
 publicationDate | string | Time and date world was made public, or 'none'
 labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
-unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
+unityPackages | array | Array of [`unityPackage`](/Objects/unityPackage.md#unitypackage-object) objects (Probably different variants of the world)
 
 ## Instance object
 
 Key | Type | Description
 ----|------|------------
 name | string | Number identifier
-id | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId, instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
-type | [`instance type`](Objects/World.md?id=instance-type) | Type of instance
+id | [`location`](/Objects/World.md#location) | Instance location (combination of worldId, instanceName, [`instanceType`](/Objects/World.md#instance-type) and [`nonce`](/Objects/World.md#nonce))
+type | [`instance type`](/Objects/World.md#instance-type) | Type of instance
 active | boolean | If the world is "active" (used often)
 n_users | integer | Number of users in the instance
 capacity | integer | Maximum number of users that can be in the instance
 full | boolean | If the n_users is equal to capacity
 canRequstInvite | boolean | Probably if users can ask to be invited to this instance
-location | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId, instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
-instanceId | [`location`](Objects/World.md?id=location) | Instance location with no worldId (combination of instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
+location | [`location`](/Objects/World.md#location) | Instance location (combination of worldId, instanceName, [`instanceType`](/Objects/World.md#instance-type) and [`nonce`](/Objects/World.md#nonce))
+instanceId | [`location`](/Objects/World.md#location) | Instance location with no worldId (combination of instanceName, [`instanceType`](/Objects/World.md#instance-type) and [`nonce`](/Objects/World.md#nonce))
 shortName | string | Shorter name used to share instance url (https://vrchat.com/i/shortName)
 ownerId | string | Either userId of the instance master, or userId of connecting user to non-public instance
 worldId | string | World ID of the world

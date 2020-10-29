@@ -13,7 +13,7 @@ DELETE
 id - the id of the user to unfriend
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 

@@ -16,7 +16,7 @@ version | integer | Upload version of avatar
 featured | boolean | If the avatar is featured
 created_at | string | Date and time avatar was first uploaded
 updated_at | string | Date and time avatar was last uploaded
-releaseStatus | [`ReleaseStatus`](Objects/Avatar.md?id=releasestatus) | Release status of avatar
+releaseStatus | [`ReleaseStatus`](/Objects/Avatar.md#releasestatus) | Release status of avatar
 assetUrl | string | Bundled avatar file url (.vrca)
 assetVersion | string | Unknown
 assetUrlObject | JSONArray | Unknown (Returns empty) - Only returns if you are authenticated and own the avatar
@@ -26,7 +26,7 @@ thumbnailImageUrl | string | Small cover image of avatar
 unityVersion | string | Version of unity avatar was upload from
 unityPackageUrl | string | Full unitypackage file that can be used in unity as is (.unitypackage). Looks to be no longer used
 unityPackageUrlObject | JSONArray | Unknown (Returns empty)
-unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects
+unityPackages | array | Array of [`unityPackage`](/Objects/unityPackage.md#unitypackage-object) objects
 
 # Special types
 

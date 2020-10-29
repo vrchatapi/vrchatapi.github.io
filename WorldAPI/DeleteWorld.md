@@ -13,11 +13,11 @@ DELETE
 id - the world's id
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`World object`](Objects/World.md?id=world-object)
+[`World object`](/Objects/World.md#world-object)
 
 *** The returned world object does NOT have these 5 keys ***
 

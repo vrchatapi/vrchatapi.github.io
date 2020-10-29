@@ -11,7 +11,7 @@ GET
 id - the id of the user to get status for
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 

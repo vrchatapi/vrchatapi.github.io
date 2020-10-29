@@ -15,4 +15,4 @@ Each cookie counts towards a "session" count (which is the amount of active auth
 
 You can run out of sessions, and when you do you will be unable to do more authorization required request without an authorization cookie.
 
-You can expire authorization cookies either by not using them for < period of time > or by using the [`Logout endpoint`](https://vrchatapi.github.io/#/UserAPI/Logout)
+You can expire authorization cookies either by not using them for < period of time > or by using the [`Logout endpoint`](/UserAPI/Logout.md)

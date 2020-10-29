@@ -15,7 +15,7 @@ WORLDID - The world id you want to fetch info about
 WORLDREVISION - The revision of the world you want to fetch info about.
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 

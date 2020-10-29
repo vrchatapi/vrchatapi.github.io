@@ -21,4 +21,4 @@ https://discord.gg/rj3YQQu #vrchat-api
 # Getting Started
 
 Now that you've read the information you should be ready to get started.
-[Getting Started](GettingStarted.md)
+[Getting Started](/GettingStarted.md)

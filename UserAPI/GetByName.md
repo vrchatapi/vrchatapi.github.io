@@ -11,9 +11,9 @@ GET
 USERNAME - the user 's ingame name
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 
 ## Returns
 
-[`User object`](Objects/User.md?id=user-object)
+[`User object`](/Objects/User.md#user-object)
