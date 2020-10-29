@@ -13,7 +13,7 @@ PUT
 id - The current user id
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 
@@ -38,4 +38,4 @@ bioLinks | Array | yes | Links.
 
 ## Returns
 
-[`Current User object`](Objects/User.md?id=current-user-object)
+[`Current User object`](/Objects/User.md#current-user-object)

@@ -14,23 +14,23 @@ https://api.vrchat.cloud/api/1/user/[ID]/notification
 id - the user to send notification to
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 
 Field | Type | Optional | Description
 ------|------|----------|------------
-type | [`NotificationType`](Objects/Notification.md?id=notification) | No | The type of notification to send
+type | [`NotificationType`](/Objects/Notification.md#notification) | No | The type of notification to send
 message | string | Yes | The message to send
 details | json as string | Yes | Details for some notifications
 
 ## Returns
 
-[`Notification Object`](Objects/Notification.md?id=notification-object), with the extra key-value pairs below
+[`Notification Object`](/Objects/Notification.md#notification-object), with the extra key-value pairs below
 
 Field | Type | Description
 ------|------|------------
-receiverUserId | [`userId`](Objects/User.md?id=user-object) | ID of the user who will receive the notification
+receiverUserId | [`userId`](/Objects/User.md#user-object) | ID of the user who will receive the notification
 jobName | string | unknown, always `write_notification`
 jobColor | string | unknown, always `blue`
 

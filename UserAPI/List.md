@@ -13,7 +13,7 @@ Active only
     https://api.vrchat.cloud/api/1/users/active
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 # Parameter
 
@@ -26,4 +26,4 @@ offset | int | yes | How many users to skip
 
 ## Returns
 
-Array of [`Limited User objects`](Objects/User.md?id=limited-user-object)
+Array of [`Limited User objects`](/Objects/User.md#limited-user-object)

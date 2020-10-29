@@ -10,4 +10,4 @@ PUT
     https://api.vrchat.cloud/api/1/logout
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)

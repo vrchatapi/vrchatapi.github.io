@@ -9,8 +9,8 @@ GET
     https://api.vrchat.cloud/api/1/auth/user
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`Current User object`](Objects/User.md?id=current-user-object)
+[`Current User object`](/Objects/User.md#current-user-object)

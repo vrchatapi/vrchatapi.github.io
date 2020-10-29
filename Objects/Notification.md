@@ -9,9 +9,9 @@ Key | Type | Description
 id | string | Notification ID of the notification (prefixed with not)
 senderUsername | string | Username of the user that sent the notification
 senderUserId | string | User ID of the user that sent the notification
-type | [`NotificationType`](Objects/Notification.md?id=notification) | Type of notification
+type | [`NotificationType`](/Objects/Notification.md#notification) | Type of notification
 message | string | Probably something to do with a messaging system, is empty for now
-details | [`NotificationDetails`](Objects/Notification.md?id=notificationdetails-objects) | Details about notification (world info, user info, etc)
+details | [`NotificationDetails`](/Objects/Notification.md#notificationdetails-objects) | Details about notification (world info, user info, etc)
 seen | boolean | If current user has seen the notification
 created_at | string | Date and time the notification was sent
 
@@ -25,7 +25,7 @@ There are a few different types of this object, depending on the type of notific
 
 Key | Type | Description
 ----|------|------------
-worldId | [`Location`](Objects/World.md?id=location) | Location the invite is to
+worldId | [`Location`](/Objects/World.md#location) | Location the invite is to
 
 ### requestInvite
 
@@ -37,14 +37,14 @@ platform | string | Platform user who sent the notification is on
 
 Key | Type | Description
 ----|------|------------
-userToKickId | [`userId`](Objects/User?id=user-object) | ID of the user to kick
-initiatorUserId | [`userId`](Objects/User?id=user-object) | ID of the user who started vote
+userToKickId | [`userId`](/Objects/User#user-object) | ID of the user to kick
+initiatorUserId | [`userId`](/Objects/User#user-object) | ID of the user who started vote
 
 ### halp
 
 Key | Type | Description
 ----|------|------------
-halpId | [`worldId`](Objects/World?id=limited-world-object) | ID of world
+halpId | [`worldId`](/Objects/World#limited-world-object) | ID of world
 
 # Special types
 

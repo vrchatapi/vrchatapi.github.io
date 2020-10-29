@@ -10,8 +10,8 @@ PUT
     https://api.vrchat.cloud/api/1/user/[ID]/delete
 
 ## Requires Authentication
-No (See [here](Authorization.md) for details)
+No (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`Current User object`](Objects/User.md?id=current-user-object)
+[`Current User object`](/Objects/User.md#current-user-object)

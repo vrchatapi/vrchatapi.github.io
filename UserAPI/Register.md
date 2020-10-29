@@ -27,4 +27,4 @@ acceptedTOSVersion | string | Yes | Accepted ToS version (Current is ToS version
 
 ## Returns
 
-[`Current User object`](Objects/User.md?id=current-user-object)
+[`Current User object`](/Objects/User.md#current-user-object)

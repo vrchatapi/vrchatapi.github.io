@@ -10,11 +10,11 @@ GET
 
 id - the world id
 
-instanceid - "instanceName" followed by [`Location type`](Objects/User.md?id=instance-type) and [`Nonce`](Objects/User.md?id=nonce) (if applicable)
+instanceid - "instanceName" followed by [`Location type`](/Objects/User.md#instance-type) and [`Nonce`](/Objects/User.md#nonce) (if applicable)
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`Instance object`](Objects/World.md?id=instance-object)
+[`Instance object`](/Objects/World.md#instance-object)

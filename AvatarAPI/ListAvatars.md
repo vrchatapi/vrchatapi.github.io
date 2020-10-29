@@ -9,7 +9,7 @@ GET
 https://api.vrchat.cloud/api/1/avatars
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 
@@ -57,4 +57,4 @@ platform | string | yes | The platform the world support
 
 ## Returns
 
-Array of [`Avatar objects`](Objects/Avatar.md?id=avatar-object)
+Array of [`Avatar objects`](/Objects/Avatar.md#avatar-object)

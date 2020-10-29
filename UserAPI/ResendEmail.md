@@ -9,4 +9,4 @@ POST
     https://api.vrchat.cloud/api/1/auth/user/resendEmail
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)

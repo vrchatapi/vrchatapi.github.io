@@ -10,7 +10,7 @@ https://api.vrchat.cloud/api/1/auth/user/playermoderated
 
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
