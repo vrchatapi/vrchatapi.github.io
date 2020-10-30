@@ -37,14 +37,14 @@ platform | string | Platform user who sent the notification is on
 
 Key | Type | Description
 ----|------|------------
-userToKickId | [`userId`](/Objects/User#user-object) | ID of the user to kick
-initiatorUserId | [`userId`](/Objects/User#user-object) | ID of the user who started vote
+userToKickId | [`userId`](/Objects/User.md#user-object) | ID of the user to kick
+initiatorUserId | [`userId`](/Objects/User.md#user-object) | ID of the user who started vote
 
 ### halp
 
 Key | Type | Description
 ----|------|------------
-halpId | [`worldId`](/Objects/World#limited-world-object) | ID of world
+halpId | [`worldId`](/Objects/World.md#limited-world-object) | ID of world
 
 # Special types
 
