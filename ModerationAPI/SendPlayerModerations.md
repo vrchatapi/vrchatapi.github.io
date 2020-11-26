@@ -32,10 +32,12 @@ created | string | Time the moderation was opened
 
 ### Player Moderation Types
 
-    - mute
+  - mute
 	- unmute
 	- block
 	- unblock
+  - hideAvatar
+  - showAvatar
 
 # Send Unblock
 

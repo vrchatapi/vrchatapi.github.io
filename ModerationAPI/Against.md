@@ -26,7 +26,9 @@ created | string | Time the moderation was opened
 
 ### Player Moderation Types
 
-    - mute
-	- unmute
-	- block
-	- unblock
+  - mute
+  - unmute
+  - block
+  - unblock
+  - hideAvatar
+  - showAvatar

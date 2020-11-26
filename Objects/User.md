@@ -60,6 +60,7 @@ displayName | string | Users display name
 id | string | User ID of user (Usually prefixed by "usr", except in some rare cases)
 bio | string | Bio of user
 bioLinks | array | Array of URLs (strings) user has added to their account
+userIcon | string | Not implemented yet (vrc+)
 state | [`State`](/Objects/User.md#state) | Current state of user, only returns if isFriend is true
 status | [`Status`](/Objects/User.md#status) | Current status of user, only returns if isFriend is true
 statusDescription | string | Custom status message of user
