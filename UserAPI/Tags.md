@@ -19,6 +19,8 @@ Name | Permission
 `system_legend` and `system_trust_legend`| Probably means the user spends alot of time in the game
 `system_probable_troll` | Probably been reported multiple times and is (probably) a troll
 `system_troll` | Probably confirmed troll.
+`system_supporter` | subscribing to VRChat Plus
+`system_early_adopter` | Probably means similar to "VRChat Plus Early Explorer" badge
 `admin_lock_level` | unknown
 `admin_lock_tags` | Probably stops system from adding and removing tags
 `admin_official_thumbnail` | Replace avatarimage with vrchat logo
