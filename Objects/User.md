@@ -103,16 +103,16 @@
 
 !> Please note this is incomplete!
 
-Key | Type | Description
-----|------|------------
-twoFactorAuth | boolean | Probably if user is able to enable TwoFactorAuth
+| Field       | Type    | Description                                      |
+|-------------|---------|--------------------------------------------------|
+twoFactorAuth | boolean | Probably if user is able to enable TwoFactorAuth |
 
 ## PastDisplayName
 
-Key | Type | Description
-------|------|------------
-displayName | string | Old user displayName
-updated_at | string | Date and time displayName was changed from this
+| Field       | Type   | Description                                     |
+|-------------|--------|-------------------------------------------------|
+| displayName | string | Old user displayName                            |
+| updated_at  | string | Date and time displayName was changed from this |
 
 # Special type
 
