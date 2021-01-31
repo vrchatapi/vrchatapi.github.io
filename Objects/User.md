@@ -39,8 +39,8 @@
 | offlineFriends                 | Array of strings                                                | Each string is a user ID, all users are offline                                                          |
 | onlineFriends                  | Array of strings                                                | Each string is a user ID, all users are online in-game                                                   |
 | pastDisplayNames               | Array of [`PastDisplayName`](/Objects/User.md#pastdisplayname)  | Each string is a user's past display name                                                                |
-| state                          | String                                                          | TODO                                                                                                     |
-| status                         | String                                                          | TODO                                                                                                     |
+| state                          | String                                                          | [`State`](/Objects/User.md#state)                                                                        |
+| status                         | String                                                          | [`Status`](/Objects/User.md#status)                                                                      |
 | statusDescription              | String                                                          | User defined status                                                                                      |
 | steamDetails                   | JSONArray                                                       | Details about user's steam account                                                                       |
 | steamId                        | String                                                          | ID of steam account                                                                                      |
@@ -69,8 +69,8 @@
 | last_login                     | String           | Date-time of last client login; format YYYY-MM-DDTHH:mm:SSZ                                              |
 | last_platform                  | String           | Name for last client platform the user logged in on                                                      |
 | location                       | String           | TODO                                                                                                     |
-| state                          | String           | TODO                                                                                                     |
-| status                         | String           | TODO                                                                                                     |
+| state                          | String           | [`State`](/Objects/User.md#state)                                                                        |
+| status                         | String           | [`Status`](/Objects/User.md#status)                                                                      |
 | statusDescription              | String           | User defined status                                                                                      |
 | tags                           | Array of strings | Each string is a tag given by developers or the game, usually denoting things like trust and permissions |
 | userIcon                       | String           | URL to image file used as user's icon                                                                    |
@@ -93,7 +93,7 @@
 | last_login                     | String           | Date-time of last client login; format YYYY-MM-DDTHH:mm:SSZ                                                |
 | last_platform                  | String           | Name for last client platform the user logged in on                                                        |
 | location                       | String           | TODO                                                                                                       |
-| status                         | String           | TODO                                                                                                       |
+| status                         | String           | [`Status`](/Objects/User.md#status)                                                                        |
 | statusDescription              | String           | User defined status                                                                                        |
 | tags                           | Array of strings | Each string is a tag given by developers or the game, usually | denoting things like trust and permissions |
 | userIcon                       | String           | URL to image file used as user's icon                                                                      |
