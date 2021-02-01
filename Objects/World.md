@@ -1,47 +1,42 @@
-```diff
-! Special types are listed separately below relevant objects in this file.
-```
-
 # Objects
 
 ## World object
 
-Key | Type | Description
-----|------|------------
-name | string | Name of world
-description | string | Description of world
-id | string | World ID of world (prefixed with 'wrld')
-authorName | string | Name of user who created world
-authorId | integer | User ID of user who created world
-tags | array | Array of world tags (strings) defined by world creator, system and admins
-version | integer | Upload version of world
-featured | boolean | If world is featured or not
-created_at | string | Time and date world was first uploaded
-updated_at | string | Time and date world was last uploaded
-releaseStatus | [`ReleaseStatus`](/Objects/World.md#releasestatus-type) | Release status of world
-visits | integer | Times world has been visited
-publicOccupants | integer | Current users in public instances of this world
-privateOccupants | integer | Current users in private instances of this world
-occupants | integer | Total current users in instances of this world
-capacity | integer | User capacity for instances of this world
-favorites | integer | Number of times world has been favorited
-popularity | integer | How popular the world is (Unknown what max and min popularity are)
-assetUrl | string | Bundled world file url (.vrcw)
-assetUrlObject | string | Unknown (Always empty)
-imageUrl | string | Cover image of world
-thumbnailImageUrl | string | Small cover image of world
-organization | string | Unknown
-heat | integer | Unknown (Looks to be connected to popularity somehow)
-namespace | string | Unknown
-instances | array | Array of [`Instance`](/Objects/World.md#instance-type)
-previewYoutubeId | null (?) | Probably something to do with a youtube id for a video that previews a world. Doesn't look to be used currently
-publicationDate | string | Time and date world was made public, or 'none'
-labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
-pluginUrl | string | URL (usually DLL). This is probably used for custom scripts, only found in worlds made by vrchat. Looks like it's unused currently
-pluginUrlObject | JSONArray | Unknown (Always empty)
-unityPackageUrl | string | Full unitypackage file that can be used in unity as is (.unitypackage). Looks to be no longer used
-unityPackageUrlObject | JSONArray | Unknown (Always empty)
-unityPackages | array | Array of [`unityPackage`](/Objects/unityPackage.md#unitypackage-object) objects (Probably different variants of the world)
+| Field                 | Type                   | Description                                                                        |
+|-----------------------|------------------------|------------------------------------------------------------------------------------|
+| assetUrl              | String                 | URL to the world .vrcw file                                                        |
+| assetUrlObject        | JSONArray              | Unknown                                                                            |
+| authorId              | String                 | User ID of the author                                                              |
+| authorName            | String                 | username of the author                                                             |
+| capacity              | String                 | How many users can be inside a single instance of this world                       |
+| created_at            | String                 | When the world was originally uploaded                                             |
+| description           | String                 | Author defined description of the world                                            |
+| favorites             | Integer                | Times this world has been favorited                                                |
+| featured              | Boolean                | If VRChat features this world or not                                               |
+| heat                  | Integer                | Arbitrary number denoting how popular the world is, but not the same as popularity |
+| id                    | String                 | ID of the world                                                                    |
+| imageUrl              | String                 | URL to the preview image of the world                                              |
+| instances             | Array of Arrays        | TODO                                                                               |
+| labsPublicationDate   | String                 | When this world was submitted to Labs                                              |
+| name                  | String                 | Name of the world                                                                  |
+| namespace             | String                 | Unknown                                                                            |
+| occupants             | Integer                | Total number of people in instances of this world                                  |
+| organization          | String                 | vrchat                                                                             |
+| pluginUrl             | String                 | Unknown                                                                            |
+| pluginUrlObject       | JSONArray              | Unknown                                                                            |
+| popularity            | Integer                | Arbitrary number denoting how popular the world is                                 |
+| publicOccupants       | Integer                | Total number of people in public instances of this world                           |
+| publicationDate       | String                 | When world came out of labs and was released                                       |
+| releaseStatus         | String                 | TODO                                                                               |
+| tags                  | Array of strings       | TODO                                                                               |
+| thumbnailImageUrl     | String                 | URL to the thumbnail image of the world                                            |
+| unityPackageUrl       | String                 | Unknown                                                                            |
+| unityPackageUrlObject | JSONArray              | Unknown                                                                            |
+| unityPackages         | Array of unityPackages | TODO                                                                               |
+| updated_at            | String                 | When world was last updated                                                        |
+| version               | Integer                | Current iteration of the world                                                     |
+| visits                | Integer                | How many times the world has been visited                                          |
+
 
 ## Limited World object
 
