@@ -64,28 +64,27 @@
 
 ## Instance object
 
-Key | Type | Description
-----|------|------------
-name | string | Number identifier
-id | [`location`](/Objects/World.md#location) | Instance location (combination of worldId, instanceName, [`instanceType`](/Objects/World.md#instance-type) and [`nonce`](/Objects/World.md#nonce))
-type | [`instance type`](/Objects/World.md#instance-type) | Type of instance
-active | boolean | If the world is "active" (used often)
-n_users | integer | Number of users in the instance
-capacity | integer | Maximum number of users that can be in the instance
-full | boolean | If the n_users is equal to capacity
-canRequstInvite | boolean | Probably if users can ask to be invited to this instance
-location | [`location`](/Objects/World.md#location) | Instance location (combination of worldId, instanceName, [`instanceType`](/Objects/World.md#instance-type) and [`nonce`](/Objects/World.md#nonce))
-instanceId | [`location`](/Objects/World.md#location) | Instance location with no worldId (combination of instanceName, [`instanceType`](/Objects/World.md#instance-type) and [`nonce`](/Objects/World.md#nonce))
-shortName | string | Shorter name used to share instance url (https://vrchat.com/i/shortName)
-ownerId | string | Either userId of the instance master, or userId of connecting user to non-public instance
-worldId | string | World ID of the world
-users | JSONArray | Users in instance (may not be returned)
-tags | array | Array of world tags (strings) defined by world creator, system and admins
-platforms | JSONArray | Consists of 'standalonewindows' and 'android' keys as integers, count of how many of each platform are in the instance
-clientNumber | string | Unknown
-photonRegion | string | Unknown
-permanent | boolean | Unknown
-hidden | string | Unknown
+| Field            | Type               | Description                                        |
+|------------------|--------------------|----------------------------------------------------|
+| active           | Boolean            | Unknown                                            |
+| canRequestInvite | Boolean            | If user can request an invite to this instance     |
+| capacity         | Integer            | Max amount people that can be inside this instance |
+| clientNumber     | String             | Unknown                                            |
+| full             | Boolean            | If the instance is fool                            |
+| hidden           | String             | User ID, don't know what its for                   |
+| id               | String             | worldId:instanceId                                 |
+| instanceId       | String             | ID of the instance                                 |
+| location         | String             | worldId:instanceId                                 |
+| name             | String             | Instance Short Name                                |
+| n_users          | Integer            | Number of users in the instance                    |
+| ownerId          | String             | User ID of the instance owner                      |
+| photonRegion     | String             | Unknown                                            |
+| permanent        | Boolean            | If instance is persistent                          |
+| platforms        | Array of Platforms | TODO                                               |
+| shortName        | String             | Instance short name                                |
+| tags             | Array of strings   | TODO                                               |
+| type             | String             | [`Instance Type`](/Objects/World.md#instancetype)  |
+| worldId          | String             | ID of the world                                    |
 
 # Special types
 
