@@ -1,38 +1,33 @@
-!>  Special types are listed separately below relevant objects in this file.
-
 # Objects
 
-## Avatar object
+## Avatar Object
 
-Key | Type | Description
-----|------|------------
-name | string | Name of avatar
-description | string | Avatar's description
-id | string | Avatar ID (prefixed by 'avtr')
-authorName | string | Name of user who created avatar
-authorId | string | User ID of user who created avatar (Normally prefixed by 'usr', some exceptions - see 'The Great Pug' author id)
-tags | array | Array of user defined tags (max of 5)
-version | integer | Upload version of avatar
-featured | boolean | If the avatar is featured
-created_at | string | Date and time avatar was first uploaded
-updated_at | string | Date and time avatar was last uploaded
-releaseStatus | [`ReleaseStatus`](/Objects/Avatar.md#releasestatus) | Release status of avatar
-assetUrl | string | Bundled avatar file url (.vrca)
-assetVersion | string | Unknown
-assetUrlObject | JSONArray | Unknown (Returns empty) - Only returns if you are authenticated and own the avatar
-platform | string | Platform avatar was uploaded from
-imageUrl | string | Cover image of avatar
-thumbnailImageUrl | string | Small cover image of avatar
-unityVersion | string | Version of unity avatar was upload from
-unityPackageUrl | string | Full unitypackage file that can be used in unity as is (.unitypackage). Looks to be no longer used
-unityPackageUrlObject | JSONArray | Unknown (Returns empty)
-unityPackages | array | Array of [`unityPackage`](/Objects/unityPackage.md#unitypackage-object) objects
+| Field                 | Type                                                                    | Description                                                    |
+|-----------------------|-------------------------------------------------------------------------|----------------------------------------------------------------|
+| assetUrl              | String                                                                  | URL to the avatar .vrca file                                   |
+| assetUrlObject        | JSONArray                                                               | Unknown                                                        |
+| authorId              | String                                                                  | User ID of the avatar author                                   |
+| authorName            | String                                                                  | username of the avatar author                                  |
+| created_at            | String                                                                  | Date-Time the avatar was first uploaded                        |
+| description           | String                                                                  | Author defined description of the avatar                       |
+| featured              | Boolean                                                                 | If the avatar is featued by VRChat                             |
+| id                    | String                                                                  | ID of the avatar                                               |
+| imageUrl              | String                                                                  | URL to the preview image of the avatar                         |
+| name                  | String                                                                  | Name of the avatar                                             |
+| releaseStatus         | String                                                                  | (/Objects/Avatar.md#releasestatus)                             |
+| tags                  | Array of strings                                                        | Admin, System, and author defined tags to categorize avatar    |
+| thumbnailImageUrl     | String                                                                  | URL to the thumbnail image of the avatar                       |
+| unityPackageUrl       | String                                                                  | Unknown                                                        |
+| unityPackageUrlObject | JSONArray                                                               | Unknown                                                        |
+| unityPackages         | Array of [`UnityPackages`](/Objects/unityPackage.md#unitypackageobject) | [`UnityPackages`](/Objects/unityPackage.md#unitypackageobject) |
+| updated_at            | String                                                                  | Time-Date avatar was last updated                              |
+| version               | String                                                                  | Version iteration of avatar                                    |
 
-# Special types
+# Special Types
 
-## ReleaseStatus
+## Release Status
 
-ReleaseStatus is a string, being one of the following:
+Release Status is a string, being one of the following:
  - "public" Everyone can see and use an avatar with this releaseStatus
  - "private" Only owner can see and use an avatar with this releaseStatus
  - "hidden" Avatar has been deleted by its owner, only admin can see an avatar with this releaseStatus
