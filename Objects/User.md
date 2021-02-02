@@ -137,7 +137,7 @@ Status is a string, being one of the following:
 
 ## DeveloperType
 
-DeveloperType is a string, being of the following:
+Developer Type is a string, being of the following:
 
  - "none" User is not a developer
  - "trusted" Unknown

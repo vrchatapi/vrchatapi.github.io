@@ -1,5 +1,3 @@
-!> Special types are listed separately below relevant objects in this file.
-
 # Objects
 
 ## Notification object
@@ -17,7 +15,7 @@ created_at | string | Date and time the notification was sent
 
 ## NotificationDetails objects
 
-!> Not all NotificationDetails objects are added yet!
+!> Not all Notification Details objects are added yet!
 
 There are a few different types of this object, depending on the type of notification
 

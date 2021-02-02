@@ -90,7 +90,7 @@
 
 ## Release Status
 
-ReleaseStatus is a string, being one of the following:
+Release Status is a string, being one of the following:
  - "public" World can be played in public and private instances with this releaseStatus
  - "private" World can only be played in a private instance with this releaseStatus
  - "hidden" World has been deleted by its owner, only admin can see a world with this releaseStatus (?)
