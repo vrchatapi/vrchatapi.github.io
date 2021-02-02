@@ -16,7 +16,7 @@
 | heat                  | Integer                | Arbitrary number denoting how popular the world is, but not the same as popularity |
 | id                    | String                 | ID of the world                                                                    |
 | imageUrl              | String                 | URL to the preview image of the world                                              |
-| instances             | Array of Arrays        | TODO                                                                               |
+| instances             | Array of Instances     | [`Instance`](/Objects/World.md#instance)                                                                           |
 | labsPublicationDate   | String                 | When this world was submitted to Labs                                              |
 | name                  | String                 | Name of the world                                                                  |
 | namespace             | String                 | Unknown                                                                            |
@@ -27,8 +27,8 @@
 | popularity            | Integer                | Arbitrary number denoting how popular the world is                                 |
 | publicOccupants       | Integer                | Total number of people in public instances of this world                           |
 | publicationDate       | String                 | When world came out of labs and was released                                       |
-| releaseStatus         | String                 | TODO                                                                               |
-| tags                  | Array of strings       | TODO                                                                               |
+| releaseStatus         | String                 | [`Release Status`](/Objects/World.md#releasestatus)                                |
+| tags                  | Array of strings       | Admin, system, and author defined tags to categorize the world                     |
 | thumbnailImageUrl     | String                 | URL to the thumbnail image of the world                                            |
 | unityPackageUrl       | String                 | Unknown                                                                            |
 | unityPackageUrlObject | JSONArray              | Unknown                                                                            |
@@ -56,8 +56,8 @@
 | organization        | String                 | vrchat                                                                             |
 | popularity          | Integer                | Arbitrary number denoting how popular the world is                                 |
 | publicationDate     | String                 |  When world came out of labs and was released                                      |
-| releaseStatus       | String                 | TODO                                                                               |
-| tags                | Array of Strings       | TODO                                                                               |
+| releaseStatus       | String                 | [`Release Status`](/Objects/World.md#releasestatus)                                |
+| tags                | Array of Strings       | Admin, system, and author defined tags to categorize the world                     |
 | thumbnailImageUrl   | String                 | URL to the thumbnail image of the world                                            |
 | unityPackages       | Array of unityPackages | TODO                                                                               |
 | updated_at          | String                 | When world was last updated                                                        |
@@ -80,15 +80,15 @@
 | ownerId          | String             | User ID of the instance owner                      |
 | photonRegion     | String             | Unknown                                            |
 | permanent        | Boolean            | If instance is persistent                          |
-| platforms        | Array of Platforms | TODO                                               |
+| platforms        | Array of Platforms | [`Platforms`](/Objects/World.md#platforms)         |
 | shortName        | String             | Instance short name                                |
-| tags             | Array of strings   | TODO                                               |
+| tags             | Array of strings   | Unknown/Unused                                     |
 | type             | String             | [`Instance Type`](/Objects/World.md#instancetype)  |
 | worldId          | String             | ID of the world                                    |
 
 # Special types
 
-## ReleaseStatus type
+## Release Status
 
 ReleaseStatus is a string, being one of the following:
  - "public" World can be played in public and private instances with this releaseStatus
@@ -99,29 +99,34 @@ ReleaseStatus is a string, being one of the following:
 
 Instance is an array, with the following structure:
 
-Index | Type | Description
-------|------|------------
-0 | string | Instance name (5 character number)
-1 | integer | Count of users in instance
+| Index | Type    | Description                                             |
+|-------|---------|---------------------------------------------------------|
+| 0     | string  | [`Instance`](/Objects/World.md#instanceobject) location |
+| 1     | integer | Count of users in instance                              |
 
-## Location
+## Instance ID
 
-Location is a string made up of possibly multiple parts.
-The first part is usually "worldId:instanceName" and sometimes just "instanceName". Other parts are joined using "~" as a separator
+The ID of an instance, made up of 3 parts, 1 always present and 2 that depend on the  
+[Instance Type](/Objects/World.md#instancetype) and separated with the `~` character.  
+It's structure is as follows:  
 
-### Instance type
+ID\~[Instance Type](/Objects/World.md#instancetype)(ownerId)\~nonce([Nonce](/Objects/World.md#nonce))
 
-Signifies the type of instance. If the instance is public then the location won't have this.
-It is formated as "type(connectingUserId)" where connectingUserId is the id of the user that allows you to join the instance
+The last 2 sections are only appended onto the ID when
+
+### Instance Type
+
+Type of instance. Is used to define who can join the instance.
 
 Types include:
  - "hidden"
  - "friends"
+ - "public"
 
 ### Nonce
 
 Nonce is the Cryptographic key used to lock non-public instances, and is not included in the location of public instances.
-It is formatted as "nonce(key)" where the key is the cryptographic key
+It is formatted as "nonce(key)" where `key` is the cryptographic key
 
 ## Platforms
 
