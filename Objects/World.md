@@ -40,28 +40,27 @@
 
 ## Limited World object
 
-Key | Type | Description
-----|------|------------
-name | string | Name of world
-id | string | World ID of world (prefixed with 'wrld')
-authorName | string | Name of user who created world
-authorId | integer | User ID of user who created world
-tags | array | Array of world tags (strings) defined by world creator, system and admins
-created_at | string | Time and date world was first uploaded
-updated_at | string | Time and date world was last uploaded
-releaseStatus | [`ReleaseStatus`](/Objects/World.md#releasestatus-type) | Release status of world
-visits | integer | Times world has been visited
-occupants | integer | Current people in instances of this world
-capacity | integer | User capacity for instances of this world
-favorites | integer | Number of times world has been favorited
-popularity | integer | How popular the world is (Unknown what max and min popularity are)
-imageUrl | string | Cover image of world
-thumbnailImageUrl | string | Small cover image of world
-organization | string | Unknown
-heat | integer | Unknown (Looks to be connected to popularity somehow)
-publicationDate | string | Time and date world was made public, or 'none'
-labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
-unityPackages | array | Array of [`unityPackage`](/Objects/unityPackage.md#unitypackage-object) objects (Probably different variants of the world)
+| Field               | Type                   | Description                                                                        |
+|---------------------|------------------------|------------------------------------------------------------------------------------|
+| authorId            | String                 | User ID of the author                                                              |
+| authorName          | String                 | username of the author                                                             |
+| capacity            | Integer                | How many users can be inside a single instance of this world                       |
+| created_at          | String                 | Times this world has been favorited                                                |
+| favorites           | Integer                | Times this world has been favorited                                                |
+| heat                | Integer                | Arbitrary number denoting how popular the world is, but not the same as popularity |
+| id                  | String                 | ID of the world                                                                    |
+| imageUrl            | String                 | URL to the preview image of the world                                              |
+| labsPublicationDate | String                 | When this world was submitted to Labs                                              |
+| name                | String                 | Name of the world                                                                  |
+| occupants           | Integer                | Total number of people in instances of this world                                  |
+| organization        | String                 | vrchat                                                                             |
+| popularity          | Integer                | Arbitrary number denoting how popular the world is                                 |
+| publicationDate     | String                 |  When world came out of labs and was released                                      |
+| releaseStatus       | String                 | TODO                                                                               |
+| tags                | Array of Strings       | TODO                                                                               |
+| thumbnailImageUrl   | String                 | URL to the thumbnail image of the world                                            |
+| unityPackages       | Array of unityPackages | TODO                                                                               |
+| updated_at          | String                 | When world was last updated                                                        |
 
 ## Instance object
 
