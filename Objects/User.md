@@ -65,17 +65,18 @@
 | fallbackAvatar                 | String           | ID of fallback avatar                                                                                    |
 | friendKey                      | String           | User's friend key, probably used in backend to track friends                                             |
 | id                             | String           | User's ID                                                                                                |
+| instanceId?                    | String           | [`Instance`](/Objects/World.md#instanceobject) instanceId                                                |
 | isFriend                       | Boolean          | If logged in user and this user are friends                                                              |
 | last_login                     | String           | Date-time of last client login; format YYYY-MM-DDTHH:mm:SSZ                                              |
 | last_platform                  | String           | Name for last client platform the user logged in on                                                      |
-| location                       | String           | TODO                                                                                                     |
+| location                       | String           | [`Instance`](/Objects/World.md#instanceobject) location                                                  |
 | state                          | String           | [`State`](/Objects/User.md#state)                                                                        |
 | status                         | String           | [`Status`](/Objects/User.md#status)                                                                      |
 | statusDescription              | String           | User defined status                                                                                      |
 | tags                           | Array of strings | Each string is a tag given by developers or the game, usually denoting things like trust and permissions |
 | userIcon                       | String           | URL to image file used as user's icon                                                                    |
 | username                       | String           | User's login name                                                                                        |
-| worldId                        | String           | TODO                                                                                                     |
+| worldId                        | String           | [`Instance`](/Objects/World.md#instanceobject) worldId                                                   |
 
 ## Limited User object
 
@@ -92,7 +93,7 @@
 | isFriend                       | Boolean          | If logged in user and this user are friends                                                                |
 | last_login                     | String           | Date-time of last client login; format YYYY-MM-DDTHH:mm:SSZ                                                |
 | last_platform                  | String           | Name for last client platform the user logged in on                                                        |
-| location                       | String           | TODO                                                                                                       |
+| location                       | String           | [`Instance`](/Objects/World.md#instanceobject) location                                                  |
 | status                         | String           | [`Status`](/Objects/User.md#status)                                                                        |
 | statusDescription              | String           | User defined status                                                                                        |
 | tags                           | Array of strings | Each string is a tag given by developers or the game, usually | denoting things like trust and permissions |
