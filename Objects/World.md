@@ -122,3 +122,10 @@ Types include:
 
 Nonce is the Cryptographic key used to lock non-public instances, and is not included in the location of public instances.
 It is formatted as "nonce(key)" where the key is the cryptographic key
+
+## Platforms
+
+| Field             | Type    | Description                                                 |
+|-------------------|---------|-------------------------------------------------------------|
+| standalonewindows | Integer | How many standalone windows clients are in the instance     |
+| android           | Integer | How many android (oculus quest) clients are in the instance |
