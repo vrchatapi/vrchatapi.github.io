@@ -19,12 +19,19 @@ Name | Permission
 `system_legend` and `system_trust_legend`| Probably means the user spends alot of time in the game
 `system_probable_troll` | Probably been reported multiple times and is (probably) a troll
 `system_troll` | Probably confirmed troll.
-`system_supporter` | subscribing to VRChat Plus
-`system_early_adopter` | Probably means similar to "VRChat Plus Early Explorer" badge
+`system_supporter` | has an active VRChat Plus subscription
+`system_early_adopter` | Probably means something similar to "VRChat Plus Early Explorer"
 `admin_lock_level` | unknown
 `admin_lock_tags` | Probably stops system from adding and removing tags
 `admin_official_thumbnail` | Replace avatarimage with vrchat logo
 `show_social_rank` | Show trust rank
+`system_UE4_dev_access` | meaningless tag used by tupper
+`system_neuralink_beta` | meaningless tag used by tupper
+`system_extremely_cool_guy` | meaningless tag used by tupper
+`system_stop_being_nosy` | meaningless tag used by tupper
+`system_supporter` | meaningless tag used by tupper
+`system_early_adopter` | meaningless tag used by tupper
+`system_notamod` | meaningless tag used by tupper
 
 
 ## Trust Levels
