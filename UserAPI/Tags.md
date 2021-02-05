@@ -29,8 +29,6 @@ Name | Permission
 `system_neuralink_beta` | meaningless tag used by tupper
 `system_extremely_cool_guy` | meaningless tag used by tupper
 `system_stop_being_nosy` | meaningless tag used by tupper
-`system_supporter` | meaningless tag used by tupper
-`system_early_adopter` | meaningless tag used by tupper
 `system_notamod` | meaningless tag used by tupper
 
 
