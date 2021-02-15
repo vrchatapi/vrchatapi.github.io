@@ -31,6 +31,13 @@ Key | Type | Description
 ----|------|------------
 platform | string | Platform user who sent the notification is on
 
+### requestInviteResponse
+
+Key | Type | Description
+----|------|------------
+inResponseTo | [`userId`](/Objects/User.md#user-object) | ID of user who sent the original invite
+responseMessage | string | Response message
+
 ### votetokick
 
 Key | Type | Description
