@@ -14,7 +14,7 @@ No
 
 ## Returns
 
-System time (string) formatted as "yyyy-MM-ddThh-mm-ss+00:00"
+System time (string) formatted as "yyyy-MM-ddThh:mm:ss+00:00"
 
 Where
 - yyyy is the year
