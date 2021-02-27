@@ -15,8 +15,8 @@ https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/hide
 id - the notification id
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`Notification object`]("Objects/Notification.md?id=notification-object")
+[`Notification object`](/Objects/Notification.md#notification-object)

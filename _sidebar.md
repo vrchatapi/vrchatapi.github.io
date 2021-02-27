@@ -1,7 +1,6 @@
 - [Disclaimer](README.md)
 - [Getting Started](GettingStarted.md)
 - [Authorization](Authorization.md)
-- [Secret Worlds](SecretWorlds.md)
 - Objects
     - [Avatar](Objects/Avatar.md)
     - [User](Objects/User.md)
@@ -35,8 +34,6 @@
         - [Add Favorite](FavoritesAPI/AddFavorite.md)
         - [Get Favorite](FavoritesAPI/GetFavorite.md)
         - [List Favorites](FavoritesAPI/ListAllFavorites.md)
-        - [List Friend Favorites (BETA)](FavoritesAPI/ListFriendFavorites.md)
-        - [List World Favorites (BETA)](FavoritesAPI/ListWorldFavorites.md)
         - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
     - World API
         - World
@@ -100,3 +97,5 @@
     - Feedback API
         - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
     - [Analytics API](AnalyticsAPI/Analytics.md)
+- Archive
+    - [Secret Worlds](Archive/SecretWorlds.md)

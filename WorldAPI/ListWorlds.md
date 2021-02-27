@@ -22,7 +22,7 @@ Only Favorite Worlds:
 
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 
@@ -66,4 +66,4 @@ Trending is set as:
 
 ## Returns
 
-Array of [`Limited World objects`](Objects/World.md?id=limited-world-object)
+Array of [`Limited World objects`](/Objects/World.md#limited-world-object)

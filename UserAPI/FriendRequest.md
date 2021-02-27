@@ -13,8 +13,8 @@ POST
 id - the id of the user to send friend request
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-A [notification](NotificationAPI/SendNotification.md) info. but the type is always `friendRequest`
+A [notification](/NotificationAPI/SendNotification.md) info. but the type is always `friendRequest`

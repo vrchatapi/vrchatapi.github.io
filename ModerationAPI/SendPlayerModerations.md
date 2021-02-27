@@ -10,7 +10,7 @@ POST
 https://api.vrchat.cloud/api/1/auth/user/blocks
 
 ### Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ### Parameters
 
@@ -32,10 +32,12 @@ created | string | Time the moderation was opened
 
 ### Player Moderation Types
 
-    - mute
+  - mute
 	- unmute
 	- block
 	- unblock
+  - hideAvatar
+  - showAvatar
 
 # Send Unblock
 

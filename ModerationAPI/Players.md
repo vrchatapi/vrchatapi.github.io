@@ -9,7 +9,7 @@ GET
 https://api.vrchat.cloud/api/1/auth/user/playermoderations
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
@@ -25,7 +25,9 @@ created | string | Time the moderation was opened
 
 ### Player Moderation Types
 
-    - mute
-	- unmute
-	- block
-	- unblock
+  - mute
+  - unmute
+  - block
+  - unblock
+  - hideAvatar
+  - showAvatar

@@ -22,11 +22,11 @@ Create avatar
 ID - the user id
 
 ## Parameters
-Any field in the [avatar](AvatarAPI/GetByID.md) object
+Any field in the [avatar](/AvatarAPI/GetByID.md) object
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
-[`Avatar object`](Objects/Avatar.md?id=avatar-object)
+[`Avatar object`](/Objects/Avatar.md#avatar-object)

@@ -11,9 +11,9 @@ GET
 id - the user id
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 
 ## Returns
 
-[`User object`](Objects/User.md?id=user-object)
+[`User object`](/Objects/User.md#user-object)

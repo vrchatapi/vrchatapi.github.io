@@ -1,103 +1,96 @@
-```diff
-! Special types are listed separately below relevant objects in this file.
-```
-
 # Objects
 
 ## World object
 
-Key | Type | Description
-----|------|------------
-name | string | Name of world
-description | string | Description of world
-id | string | World ID of world (prefixed with 'wrld')
-authorName | string | Name of user who created world
-authorId | integer | User ID of user who created world
-tags | array | Array of world tags (strings) defined by world creator, system and admins
-version | integer | Upload version of world
-featured | boolean | If world is featured or not
-created_at | string | Time and date world was first uploaded
-updated_at | string | Time and date world was last uploaded
-releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
-visits | integer | Times world has been visited
-publicOccupants | integer | Current users in public instances of this world
-privateOccupants | integer | Current users in private instances of this world
-occupants | integer | Total current users in instances of this world
-capacity | integer | User capacity for instances of this world
-favorites | integer | Number of times world has been favorited
-popularity | integer | How popular the world is (Unknown what max and min popularity are)
-assetUrl | string | Bundled world file url (.vrcw)
-assetUrlObject | string | Unknown (Always empty)
-imageUrl | string | Cover image of world
-thumbnailImageUrl | string | Small cover image of world
-organization | string | Unknown
-heat | integer | Unknown (Looks to be connected to popularity somehow)
-namespace | string | Unknown
-instances | array | Array of [`Instance`](Objects/World.md?id=instance-type)s
-previewYoutubeId | null (?) | Probably something to do with a youtube id for a video that previews a world. Doesn't look to be used currently
-publicationDate | string | Time and date world was made public, or 'none'
-labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
-pluginUrl | string | URL (usually DLL). This is probably used for custom scripts, only found in worlds made by vrchat. Looks like it's unused currently
-pluginUrlObject | JSONArray | Unknown (Always empty)
-unityPackageUrl | string | Full unitypackage file that can be used in unity as is (.unitypackage). Looks to be no longer used
-unityPackageUrlObject | JSONArray | Unknown (Always empty)
-unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
+| Field                 | Type                   | Description                                                                        |
+|-----------------------|------------------------|------------------------------------------------------------------------------------|
+| assetUrl              | String                 | URL to the world .vrcw file                                                        |
+| assetUrlObject        | JSONArray              | Unknown                                                                            |
+| authorId              | String                 | User ID of the author                                                              |
+| authorName            | String                 | username of the author                                                             |
+| capacity              | String                 | How many users can be inside a single instance of this world                       |
+| created_at            | String                 | When the world was originally uploaded                                             |
+| description           | String                 | Author defined description of the world                                            |
+| favorites             | Integer                | Times this world has been favorited                                                |
+| featured              | Boolean                | If VRChat features this world or not                                               |
+| heat                  | Integer                | Arbitrary number denoting how popular the world is, but not the same as popularity |
+| id                    | String                 | ID of the world                                                                    |
+| imageUrl              | String                 | URL to the preview image of the world                                              |
+| instances             | Array of Instances     | [`Instance`](/Objects/World.md#instance)                                                                           |
+| labsPublicationDate   | String                 | When this world was submitted to Labs                                              |
+| name                  | String                 | Name of the world                                                                  |
+| namespace             | String                 | Unknown                                                                            |
+| occupants             | Integer                | Total number of people in instances of this world                                  |
+| organization          | String                 | vrchat                                                                             |
+| pluginUrl             | String                 | Unknown                                                                            |
+| pluginUrlObject       | JSONArray              | Unknown                                                                            |
+| popularity            | Integer                | Arbitrary number denoting how popular the world is                                 |
+| publicOccupants       | Integer                | Total number of people in public instances of this world                           |
+| publicationDate       | String                 | When world came out of labs and was released                                       |
+| releaseStatus         | String                 | [`Release Status`](/Objects/World.md#releasestatus)                                |
+| tags                  | Array of strings       | Admin, system, and author defined tags to categorize the world                     |
+| thumbnailImageUrl     | String                 | URL to the thumbnail image of the world                                            |
+| unityPackageUrl       | String                 | Unknown                                                                            |
+| unityPackageUrlObject | JSONArray              | Unknown                                                                            |
+| unityPackages         | Array of unityPackages | TODO                                                                               |
+| updated_at            | String                 | When world was last updated                                                        |
+| version               | Integer                | Current iteration of the world                                                     |
+| visits                | Integer                | How many times the world has been visited                                          |
+
 
 ## Limited World object
 
-Key | Type | Description
-----|------|------------
-name | string | Name of world
-id | string | World ID of world (prefixed with 'wrld')
-authorName | string | Name of user who created world
-authorId | integer | User ID of user who created world
-tags | array | Array of world tags (strings) defined by world creator, system and admins
-created_at | string | Time and date world was first uploaded
-updated_at | string | Time and date world was last uploaded
-releaseStatus | [`ReleaseStatus`](Objects/World.md?id=releasestatus-type) | Release status of world
-visits | integer | Times world has been visited
-occupants | integer | Current people in instances of this world
-capacity | integer | User capacity for instances of this world
-favorites | integer | Number of times world has been favorited
-popularity | integer | How popular the world is (Unknown what max and min popularity are)
-imageUrl | string | Cover image of world
-thumbnailImageUrl | string | Small cover image of world
-organization | string | Unknown
-heat | integer | Unknown (Looks to be connected to popularity somehow)
-publicationDate | string | Time and date world was made public, or 'none'
-labsPublicationDate | string | Time and date world was made public using the community labs system, or 'none'
-unityPackages | array | Array of [`unityPackage`](Objects/unityPackage.md?id=unitypackage-object) objects (Probably different variants of the world)
+| Field               | Type                   | Description                                                                        |
+|---------------------|------------------------|------------------------------------------------------------------------------------|
+| authorId            | String                 | User ID of the author                                                              |
+| authorName          | String                 | username of the author                                                             |
+| capacity            | Integer                | How many users can be inside a single instance of this world                       |
+| created_at          | String                 | Times this world has been favorited                                                |
+| favorites           | Integer                | Times this world has been favorited                                                |
+| heat                | Integer                | Arbitrary number denoting how popular the world is, but not the same as popularity |
+| id                  | String                 | ID of the world                                                                    |
+| imageUrl            | String                 | URL to the preview image of the world                                              |
+| labsPublicationDate | String                 | When this world was submitted to Labs                                              |
+| name                | String                 | Name of the world                                                                  |
+| occupants           | Integer                | Total number of people in instances of this world                                  |
+| organization        | String                 | vrchat                                                                             |
+| popularity          | Integer                | Arbitrary number denoting how popular the world is                                 |
+| publicationDate     | String                 |  When world came out of labs and was released                                      |
+| releaseStatus       | String                 | [`Release Status`](/Objects/World.md#releasestatus)                                |
+| tags                | Array of Strings       | Admin, system, and author defined tags to categorize the world                     |
+| thumbnailImageUrl   | String                 | URL to the thumbnail image of the world                                            |
+| unityPackages       | Array of unityPackages | TODO                                                                               |
+| updated_at          | String                 | When world was last updated                                                        |
 
 ## Instance object
 
-Key | Type | Description
-----|------|------------
-name | string | Number identifier
-id | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId, instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
-type | [`instance type`](Objects/World.md?id=instance-type) | Type of instance
-active | boolean | If the world is "active" (used often)
-n_users | integer | Number of users in the instance
-capacity | integer | Maximum number of users that can be in the instance
-full | boolean | If the n_users is equal to capacity
-canRequstInvite | boolean | Probably if users can ask to be invited to this instance
-location | [`location`](Objects/World.md?id=location) | Instance location (combination of worldId, instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
-instanceId | [`location`](Objects/World.md?id=location) | Instance location with no worldId (combination of instanceName, [`instanceType`](Objects/World.md?id=instance-type) and [`nonce`](Objects/World.md?id=nonce))
-shortName | string | Shorter name used to share instance url (https://vrchat.com/i/shortName)
-ownerId | string | Either userId of the instance master, or userId of connecting user to non-public instance
-worldId | string | World ID of the world
-users | JSONArray | Users in instance (may not be returned)
-tags | array | Array of world tags (strings) defined by world creator, system and admins
-platforms | JSONArray | Consists of 'standalonewindows' and 'android' keys as integers, count of how many of each platform are in the instance
-clientNumber | string | Unknown
-photonRegion | string | Unknown
-permanent | boolean | Unknown
-hidden | string | Unknown
+| Field            | Type               | Description                                        |
+|------------------|--------------------|----------------------------------------------------|
+| active           | Boolean            | Unknown                                            |
+| canRequestInvite | Boolean            | If user can request an invite to this instance     |
+| capacity         | Integer            | Max amount people that can be inside this instance |
+| clientNumber     | String             | Unknown                                            |
+| full             | Boolean            | If the instance is fool                            |
+| hidden           | String             | User ID, don't know what its for                   |
+| id               | String             | worldId:instanceId                                 |
+| instanceId       | String             | ID of the instance                                 |
+| location         | String             | worldId:instanceId                                 |
+| name             | String             | Instance Short Name                                |
+| n_users          | Integer            | Number of users in the instance                    |
+| ownerId          | String             | User ID of the instance owner                      |
+| photonRegion     | String             | Unknown                                            |
+| permanent        | Boolean            | If instance is persistent                          |
+| platforms        | Array of Platforms | [`Platforms`](/Objects/World.md#platforms)         |
+| shortName        | String             | Instance short name                                |
+| tags             | Array of strings   | Unknown/Unused                                     |
+| type             | String             | [`Instance Type`](/Objects/World.md#instancetype)  |
+| worldId          | String             | ID of the world                                    |
 
 # Special types
 
-## ReleaseStatus type
+## Release Status
 
-ReleaseStatus is a string, being one of the following:
+Release Status is a string, being one of the following:
  - "public" World can be played in public and private instances with this releaseStatus
  - "private" World can only be played in a private instance with this releaseStatus
  - "hidden" World has been deleted by its owner, only admin can see a world with this releaseStatus (?)
@@ -106,26 +99,38 @@ ReleaseStatus is a string, being one of the following:
 
 Instance is an array, with the following structure:
 
-Index | Type | Description
-------|------|------------
-0 | string | Instance name (5 character number)
-1 | integer | Count of users in instance
+| Index | Type    | Description                                             |
+|-------|---------|---------------------------------------------------------|
+| 0     | string  | [`Instance`](/Objects/World.md#instanceobject) location |
+| 1     | integer | Count of users in instance                              |
 
-## Location
+## Instance ID
 
-Location is a string made up of possibly multiple parts.
-The first part is usually "worldId:instanceName" and sometimes just "instanceName". Other parts are joined using "~" as a separator
+The ID of an instance, made up of 3 parts, 1 always present and 2 that depend on the  
+[Instance Type](/Objects/World.md#instancetype) and separated with the `~` character.  
+It's structure is as follows:  
 
-### Instance type
+ID\~[Instance Type](/Objects/World.md#instancetype)(ownerId)\~nonce([Nonce](/Objects/World.md#nonce))
 
-Signifies the type of instance. If the instance is public then the location won't have this.
-It is formated as "type(connectingUserId)" where connectingUserId is the id of the user that allows you to join the instance
+The last 2 sections are only appended onto the ID when
+
+### Instance Type
+
+Type of instance. Is used to define who can join the instance.
 
 Types include:
  - "hidden"
  - "friends"
+ - "public"
 
 ### Nonce
 
 Nonce is the Cryptographic key used to lock non-public instances, and is not included in the location of public instances.
-It is formatted as "nonce(key)" where the key is the cryptographic key
+It is formatted as "nonce(key)" where `key` is the cryptographic key
+
+## Platforms
+
+| Field             | Type    | Description                                                 |
+|-------------------|---------|-------------------------------------------------------------|
+| standalonewindows | Integer | How many standalone windows clients are in the instance     |
+| android           | Integer | How many android (oculus quest) clients are in the instance |

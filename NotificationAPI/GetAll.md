@@ -11,7 +11,7 @@ GET
 https://api.vrchat.cloud/api/1/auth/user/notifications
 
 ## Requires Authentication
-Yes (See [here](Authorization.md) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 
@@ -23,4 +23,4 @@ after | date | Yes | Only return notifications sent after this date
 
 ## Returns
 
-Array of [`Notification objects`]("Objects/Notification.md?id=notification-object")
+Array of [`Notification objects`](/Objects/Notification.md#notification-object)

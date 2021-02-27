@@ -1,4 +1,4 @@
-# Analytics API
+# Analytics API 
 
 !> Note, there are alot more analytics then this in-game, I am slowly going over and checking them so it might take some time until there is a full doc on exactly what the game tracks.
 
@@ -24,7 +24,7 @@ Sent when an avatar is created or updated.
 considered as out-of-session
 
 Name | Type | Description
------|-------------------
+-----|--------|-----------
 modelId | string | The ID of the avatar
 
 ### SDK_CreateWorld / SDK_UpdateWorld
@@ -34,7 +34,7 @@ Sent when an world is created or updated
 considered as out-of-session
 
 Name | Type | Description
------|-------------------
+-----|----------|---------
 modelId | string | The ID of the world
 
 ### SDK_LoginSuccess
