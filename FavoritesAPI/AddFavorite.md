@@ -20,6 +20,7 @@ Field | Type | Optional | Description
 ------|------|----------|------------
 type | `TypeOptions` | No | The type we are adding
 favoriteId | string | No | The Object Id
+tags | array | No | Group tag (if type = world, tags = ["worlds1"])
 
 ## Returns
 
