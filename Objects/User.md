@@ -31,7 +31,7 @@
 | homeLocation                   | String                                                          | ID of user's home world                                                                                  |
 | id                             | String                                                          | User's ID                                                                                                |
 | isFriend                       | Boolean                                                         | If logged in user and this user are friends                                                              |
-| last_login                     | String                                                          | Date-time of last client login; format YYYY-MM-DDTHH:mm:SSZ                                              |
+| last_login                     | String                                                          | Date-time of last client login; format ``YYYY-MM-DDTHH:mm:SSZ``                                              |
 | last_platform                  | String                                                          | Name for last client platform the user logged in on                                                      |
 | obfuscatedEmail                | String                                                          | User's email, but obfuscated                                                                             |
 | obfuscatedPendingEmail         | String                                                          | User's pending email, but obfuscated                                                                     |
