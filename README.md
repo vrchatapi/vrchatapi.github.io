@@ -1,6 +1,9 @@
 # VRChat API Documentation
+This project is an [OPEN Open Source Project](http://openopensource.org)
 
-As of late, this documentation has become quite outdated, many of the endpoints have changed since the last update, We are looking for some people to assist in maintaining this documentation.
+Individuals making significant and valuable contributions are given
+commit-access to the project to contribute as they see fit. This project
+is more like an open wiki than a standard guarded open source project.
 
 # Disclaimer
 
