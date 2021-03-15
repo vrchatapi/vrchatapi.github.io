@@ -99,4 +99,4 @@
 - Archive
     - [Secret Worlds](Archive/SecretWorlds.md)
     - Deleted Endpoints
-        - [Get moderations against](Archive/Against.md)
+        - [Get moderations against](Archive/ModerationAPI/Against.md)
