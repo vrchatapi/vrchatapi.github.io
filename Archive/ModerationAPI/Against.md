@@ -1,4 +1,4 @@
-# This endpoint was remove in March of 2021
+!> **Archive notice** This endpoint was removed in March of 2021
 
 # Get player's moderations against you
 
