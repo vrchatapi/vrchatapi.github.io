@@ -1,3 +1,5 @@
+# This endpoint was remove in March of 2021
+
 # Get player's moderations against you
 
 Returns a list with all the moderations against the current user.

@@ -56,7 +56,6 @@
 		    - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
             - [Delete moderation](ModerationAPI/DeleteModeration.md)
             - [Clear all moderations](ModerationAPI/ClearModerations.md)
-            - [Get against](ModerationAPI/Against.md)
             - [Get player's](ModerationAPI/Players.md)
 		- World
 			- [Send Vote Kick (soon)](nothing)
@@ -99,3 +98,5 @@
     - [Analytics API](AnalyticsAPI/Analytics.md)
 - Archive
     - [Secret Worlds](Archive/SecretWorlds.md)
+    - Deleted Endpoints
+        - [Get moderations against](Archive/Against.md)
