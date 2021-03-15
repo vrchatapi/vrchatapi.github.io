@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css"/>
   <title>VRChat API Documentation</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
@@ -31,11 +32,15 @@
         placeholder: "Type to search",
         noData: "No Results Found!",
         depth: 3
-      }
+      },
+      topBanner: {
+        content: ":wave: Contribute to the documentation via [GitHub](https://github.com/vrchatapi/vrchatapi.github.io) or [Discord](https://discord.gg/rj3YQQu)"
+      },
     }
   </script>
   
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
