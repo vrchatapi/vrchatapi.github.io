@@ -23,8 +23,7 @@
 지금은 3가지 선택지가 있습니다.
 
 1. Dev API - https://dev-api.vrchat.cloud/api/1/ (문서화 되지 않음)
-2. Beta API - https://beta-api.vrchat.cloud/api/1/ (문서화 되지 않음)
-3. Release API - https://api.vrchat.cloud/api/1/
+2. Release API - https://api.vrchat.cloud/api/1/
 
 이 문서에서 저희는 그냥 릴리즈를 사용하지만, 필요에 따라 당신이 직접 변경할 수 도 있습니다.
 

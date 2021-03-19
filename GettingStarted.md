@@ -26,8 +26,7 @@ Sections labeled **BETA** are API endpoints found in the beta client of VRChat, 
 Right now there are 3 different options
 
 1. Dev API - https://dev-api.vrchat.cloud/api/1/ (Not Documented)
-2. Beta API - https://beta-api.vrchat.cloud/api/1/ (Not Documented)
-3. Release API - https://api.vrchat.cloud/api/1/
+2. Release API - https://api.vrchat.cloud/api/1/
 
 In the docs we just use the Release but you can manually change it if needed
 
