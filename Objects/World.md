@@ -70,7 +70,7 @@
 | canRequestInvite | Boolean            | If user can request an invite to this instance     |
 | capacity         | Integer            | Max amount people that can be inside this instance |
 | clientNumber     | String             | Unknown                                            |
-| full             | Boolean            | If the instance is fool                            |
+| full             | Boolean            | If the instance is full                            |
 | hidden           | String             | User ID, don't know what its for                   |
 | id               | String             | worldId:instanceId                                 |
 | instanceId       | String             | ID of the instance                                 |
