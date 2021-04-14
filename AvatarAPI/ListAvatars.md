@@ -18,7 +18,6 @@ Field | Type | Optional | Description
 user | `UserOptions` | yes | to who the avatar belongs
 featured | boolean | yes | is featured (public avatars)
 tag | string | yes | tags
-userId | string | yes | User ID of user who uploaded the avatar
 n | int | yes | How many users to return
 offset | int | yes | How many users to skip
 order | `OrderOptions` | yes | how to order
@@ -38,7 +37,6 @@ platform | string | yes | The platform the world support
 ### UserOptions
 
     - me
-    - friends
 
 ### SortOptions
 
