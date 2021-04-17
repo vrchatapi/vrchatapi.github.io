@@ -9,16 +9,12 @@ Name | Permission
 `admin_scripting_access` and `system_scripting_access` | has scripting access (can upload user made scripts)
 `system_avatar_access` and `admin_avatar_access` | Can publish avatars
 `system_world_access` and `admin_world_access` | Can publish worlds
-`admin_avatar_restricted` | Unknown
-`admin_world_restricted` | Unknown
 `admin_moderator` | VRChat Staff, has moderator permissions (moderators usually do not have this one to cover their identity)
 `system_feedback_access` | User can send Feedback
 `system_probable_troll` | Probably been reported multiple times and is (probably) a troll
 `system_troll` | User is a confirmed troll
 `system_supporter` | User has an active VRC+ subscription
 `system_early_adopter` | User bought VRC+ in the early period of when it came out
-`admin_lock_level` | The users level is locked by staff and will not progress up in rank
-`admin_lock_tags` | Tags are locked and cannot be added nor removed
 `admin_official_thumbnail` | Replaces the users profile picture with the VRChat logo
 `show_social_rank` | Show trust rank
 `system_UE4_dev_access` | Meaningless tag used by Tupper
