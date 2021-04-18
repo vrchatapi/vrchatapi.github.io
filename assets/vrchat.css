@@ -68,9 +68,6 @@ body {
         sans-serif;
     color: var(--text-color-base);
 }
-* {
-    text-decoration: none !important;
-}
 a {
     transition: all 0.2s linear;
 }
