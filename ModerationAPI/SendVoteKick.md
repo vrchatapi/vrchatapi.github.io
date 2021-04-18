@@ -1,6 +1,6 @@
 # Send votekick
 
-Sends a votekick moderation to another player. Requires World and Instance ID.
+Sends a votekick moderation about another player. Requires World and Instance ID.
 
 ## Request Method
 POST
