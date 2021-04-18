@@ -19,7 +19,7 @@ As stated, this documentation was not created with the help of the official VRCh
 
 # Get in touch with us!
 
-https://discord.gg/rj3YQQu #vrchat-api
+https://discord.gg/qjZE9C9fkB #vrchat-api
 
 # Getting Started
 

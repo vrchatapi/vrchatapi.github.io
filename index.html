@@ -34,23 +34,33 @@
       executeScript: true,
       maxLevel: 1,
       name: "VRChat API Documentation",
-      disqus: 'vrchat',
       search: {
         placeholder: "Type to search",
-        noData: "No Results Found!",
+        noData: "No results",
         depth: 3
       },
       topBanner: {
-        content: ":wave: Contribute to the documentation via [GitHub](https://github.com/vrchatapi/vrchatapi.github.io) or [Discord](https://discord.gg/rj3YQQu)",
+        content: ":wave: Contribute to the documentation via [GitHub](https://github.com/vrchatapi/vrchatapi.github.io) or [Discord](https://discord.gg/qjZE9C9fkB)",
         position: "relative",
         backgroundColor: "transparent"
+      },
+      footer: {
+        copy: '\
+          <div style="background-color: #7289DA !important; padding: 1rem; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 1rem;"> \
+            <a href="https://discord.gg/qjZE9C9fkB" target="_blank" style="color: #FFF !important; text-decoration: none;"> \
+              <span>Get in touch with us!</span>\
+              <img height="75px" src="https://discord.com/assets/192cb9459cbc0f9e73e2591b700f1857.svg" style="vertical-align: middle;"> \
+            </a> \
+          </div>',
+        pre: '<hr/>',
+        style: 'text-align: right;',
       },
     }
   </script>
   
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 </body>
 </html>
