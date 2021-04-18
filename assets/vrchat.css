@@ -300,6 +300,7 @@ body .sidebar-toggle span:nth-child(3) {
  */
 .anchor {
     position: relative;
+    text-decoration: none !important;
 }
 .anchor::before {
     content: '\1F449';
