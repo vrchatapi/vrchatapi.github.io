@@ -1,0 +1,500 @@
+/*
+ * OPEN VRChat API Documentation Theme
+ *
+ * 
+ *
+ */
+:root {
+    --white: #fff;
+    --yellow: #ebd23b;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ff5767;
+    --orange: #fd7e14;
+    --green: #67d781;
+    --teal: #20c997;
+    --cyan: #1fd1ed;
+    --gray: #798897;
+    --light: #f8f9fa;
+    --dark: #2d363f;
+    --black: #1a2026;
+    --code: #ebeef0;
+
+    --theme-color: var(--cyan);
+
+    --theme-color-navbar-background: var(--black);
+    --theme-color-navbar-selected: var(--cyan);
+    --theme-color-navbar-link: var(--white);
+    --theme-color-navbar-link-hover: var(--cyan);
+
+    --theme-color-search-background: var(--cyan);
+    --theme-color-search-link-hover: var(--blue);
+
+    --text-color-base: var(--dark);
+    --text-color-link: var(--cyan);
+    --text-color-link-hover: var(--dark);
+}
+
+/*
+ * TABLE OF CONTENTS:
+ *
+ * - General document setup
+ * - Top Banner
+ * - Sidebar Scrollbar styling
+ * - Sidebar Title "Logo"
+ * - Sidebar Search
+ * - Sidebar Table Of Contents
+ * - Sidebar Toggle
+ * - Markdown Header Hover Emoji
+ * - Bottom Discord Invite
+ * - Code & Data Containers
+ * - Copy Code Plugin
+ * - Tables & Lists
+ * - Links
+ *
+ * - Mobile Size Adaptation
+ */
+
+/*
+ * General document setup
+ */
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Arial,
+        sans-serif;
+    color: var(--text-color-base);
+}
+* {
+    text-decoration: none !important;
+}
+a {
+    transition: all 0.2s linear;
+}
+::selection {
+    background: var(--cyan);
+}
+
+/**
+ * Top Banner
+ */
+#TOPBANNER {
+    background-color: var(--gray) !important;
+}
+#TOPBANNER,
+#TOPBANNER a {
+    font-size: 1rem;
+    color: var(--white) !important;
+}
+#TOPBANNER a {
+    text-decoration: underline !important;
+}
+
+/*
+ * Sidebar Scrollbar styling
+ */
+
+aside {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cyan) var(--dark);
+}
+aside::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+aside::-webkit-scrollbar-thumb {
+    background-color: var(--cyan);
+    border-radius: 10px;
+    border: 3px solid var(--dark);
+}
+
+/*
+ * Sidebar Title "Logo"
+ */
+.app-name-link {
+    font-weight: 900;
+}
+
+/*
+ * Sidebar Search
+ */
+div.search {
+    border-bottom: 2px solid #787881;
+    border: none;
+    background-color: var(--theme-color-search-background);
+    padding: 0;
+}
+.sidebar .search input {
+    background: none;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+.sidebar .search input::placeholder {
+    color: var(--dark) !important;
+    opacity: 1;
+}
+.sidebar .search input:focus {
+    background-color: var(--white);
+}
+.search .results-panel.show {
+    background-color: var(--white);
+    color: var(--text-color-base);
+}
+.sidebar .search .matching-post {
+    padding: 0;
+    border-bottom: 0.2rem solid var(--light);
+}
+.sidebar .search .matching-post:first-child {
+    border-top: 0.2rem solid var(--light);
+}
+.search a {
+    padding: 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+.search a:hover {
+    color: var(--theme-color-search-link-hover);
+}
+.search p.empty {
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--light);
+}
+.search .clear-button {
+    text-align: center !important;
+}
+.clear-button > svg {
+    transform: scale(1) !important;
+}
+
+/*
+ * Sidebar Table Of Contents
+ */
+aside.sidebar {
+    border: none;
+    background-color: var(--theme-color-navbar-background);
+    color: #fff;
+}
+.sidebar ul li a {
+    color: var(--theme-color-navbar-link);
+    font-size: 1rem;
+}
+.sidebar ul li.active > a {
+    border-width: 0.1rem;
+}
+.sidebar ul li a:hover {
+    text-decoration: none;
+    color: var(--theme-color-navbar-link-hover);
+}
+.sidebar .sidebar-nav ul li.active > a {
+    color: #fff;
+    border-right: 0.3rem solid var(--theme-color-navbar-selected);
+}
+.sidebar > h1 {
+    font-size: 2rem;
+}
+
+/*
+ * Sidebar Toggle
+ */
+body .sidebar-toggle {
+    background: none;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    padding: 1rem;
+    width: auto;
+}
+body .sidebar-toggle-button {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+body .sidebar-toggle span {
+    transition: all 0.3s linear;
+    background-color: var(--theme-color);
+    height: 0.25rem;
+    width: 1.5rem;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    transform-origin: 0;
+}
+body.close .sidebar-toggle span {
+    transform-origin: center;
+}
+body .sidebar-toggle span:nth-child(1) {
+    top: 0;
+}
+body .sidebar-toggle span:nth-child(2) {
+    top: 0.65rem;
+}
+body .sidebar-toggle span:nth-child(3) {
+    top: 1.25rem;
+}
+.sidebar-toggle .sidebar-toggle-button:hover {
+    opacity: 1;
+}
+.sidebar-toggle:hover span:nth-child(1) {
+    transform: rotate(45deg);
+    width: 1.75rem;
+}
+.sidebar-toggle:hover span:nth-child(2) {
+    opacity: 0;
+}
+.sidebar-toggle:hover span:nth-child(3) {
+    transform: rotate(-45deg);
+    width: 1.75rem;
+}
+.close .sidebar-toggle:hover span:nth-child(1) {
+    transform: rotate(0);
+    width: 1.5rem;
+    top: 0.65rem;
+}
+.close .sidebar-toggle:hover span:nth-child(2) {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+.close .sidebar-toggle:hover span:nth-child(3) {
+    transform: rotate(0);
+    width: 1.5rem;
+    top: 0.65rem;
+}
+@media screen and (max-width: 768px) {
+    body .sidebar-toggle {
+        background-color: var(--white);
+    }
+    body.close .sidebar-toggle {
+        background-color: transparent;
+        padding: 1rem;
+    }
+    .sidebar-toggle:hover span:nth-child(1) {
+        transform: rotate(0);
+        width: 1.5rem;
+        top: 0.65rem;
+    }
+    .sidebar-toggle:hover span:nth-child(2) {
+        opacity: 1;
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+    .sidebar-toggle:hover span:nth-child(3) {
+        transform: rotate(0);
+        width: 1.5rem;
+        top: 0.65rem;
+    }
+    .close .sidebar-toggle:hover span:nth-child(1) {
+        transform: rotate(45deg);
+        width: 1.75rem;
+    }
+    .close .sidebar-toggle:hover span:nth-child(2) {
+        opacity: 0;
+    }
+    .close .sidebar-toggle:hover span:nth-child(3) {
+        transform: rotate(-45deg);
+        width: 1.75rem;
+    }
+}
+
+/*
+ * Markdown Header Hover Emoji
+ */
+.anchor {
+    position: relative;
+}
+.anchor::before {
+    content: '\1F449';
+    position: absolute;
+    top: 0;
+    left: -1.25em;
+    opacity: 0;
+    font-size: 0.875em;
+}
+.anchor:hover::before {
+    opacity: 1;
+}
+
+/*
+ * Bottom Discord Invite
+ */
+.discord-container {
+    background-color: #7289da !important;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.discord-container a {
+    border-bottom: 0 !important;
+}
+
+/*
+ * Code & Data Containers
+ */
+.markdown-section blockquote {
+    margin: 1em 0;
+}
+.markdown-section em,
+.markdown-section blockquote {
+    color: var(--gray);
+}
+.markdown-section pre,
+.markdown-section pre > code {
+    background-color: var(--dark);
+    color: var(--white);
+    font-size: 1em;
+    line-height: 1.5;
+}
+.markdown-section code {
+    color: var(--blue);
+    border-radius: 0;
+    font-size: 0.9em;
+    padding: 6px 10px;
+    background-color: var(--code);
+    display: inline-block;
+    font-family: 'Source Code Pro', monospace;
+}
+.markdown-section pre {
+    padding: 2rem;
+}
+.markdown-section pre > code {
+    padding: 0;
+}
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--gray);
+}
+.token.property,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: var(--cyan);
+}
+.token.boolean {
+    color: var(--orange);
+}
+.token.tag {
+    color: var(--red);
+}
+.token.string {
+    color: var(--green);
+}
+.token.punctuation {
+    color: var(--cyan);
+}
+.token.selector,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: var(--light);
+}
+.token.function {
+    color: var(--pink);
+}
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+    color: var(--teal);
+}
+.token.attr-value {
+    color: var(--green);
+}
+.token.keyword {
+    color: var(--yellow);
+}
+
+/*
+ * Copy Code Plugin
+ */
+.docsify-copy-code-button {
+    background: var(--theme-color);
+    font-size: 1rem;
+}
+
+/*
+ * Tip and Warn
+ */
+.markdown-section p.tip {
+    border-left: 4px solid var(--orange);
+    background-color: var(--yellow);
+}
+.markdown-section p.tip::before {
+    background-color: var(--orange);
+}
+.markdown-section p.warn {
+    background-color: var(--green);
+}
+
+/*
+ * Tables & Lists
+ */
+.markdown-section hr {
+    border-bottom: 5px solid transparent;
+}
+th {
+    text-align: left;
+}
+.markdown-section table {
+    display: table;
+}
+.markdown-section table tr {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #f1f1f2;
+}
+.markdown-section table tr:nth-child(2n) {
+    background-color: var(--light);
+}
+.markdown-section table td p {
+    margin: 0;
+}
+.markdown-section ol,
+.markdown-section p,
+.markdown-section ul {
+    line-height: inherit;
+}
+
+/*
+ * Links
+ */
+.markdown-section a {
+    text-decoration: none;
+    border-bottom: 0.1rem solid var(--text-color-link);
+    transition: all 0.3s ease;
+}
+.markdown-section a:hover {
+    border-color: var(--text-color-link);
+    color: var(--text-color-link-hover);
+}
+
+/*
+ * Mobile Size Adaptation
+ */
+
+@media screen and (min-width: 769px) {
+    .markdown-section {
+        max-width: 75rem;
+        padding: 1rem 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 112.5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        font-size: 125%;
+    }
+}
