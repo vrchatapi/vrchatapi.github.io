@@ -58,7 +58,7 @@
             - [Clear all moderations](ModerationAPI/ClearModerations.md)
             - [Get player's](ModerationAPI/Players.md)
 		- World
-			- [Send Vote Kick (soon)](nothing)
+            - [Send Vote Kick](ModerationAPI/SendVoteKick.md)
     - System API
         - [Remote Config](SystemAPI/Config.md)
         - [Get Online User Count](SystemAPI/Visits.md)
