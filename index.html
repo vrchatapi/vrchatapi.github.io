@@ -8,12 +8,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css"/>
-  <style>
-    #TOPBANNER {
-      width: calc(100% - 300px) !important;
-      margin-left: 300px !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/vrchat.css">
   <title>VRChat API Documentation</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
@@ -42,11 +37,10 @@
       topBanner: {
         content: ":wave: Contribute to the documentation via [GitHub](https://github.com/vrchatapi/vrchatapi.github.io) or [Discord](https://discord.gg/qjZE9C9fkB)",
         position: "relative",
-        backgroundColor: "transparent"
       },
       footer: {
         copy: '\
-          <div style="background-color: #7289DA !important; padding: 1rem; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 1rem;"> \
+          <div class="discord-container"> \
             <a href="https://discord.gg/qjZE9C9fkB" target="_blank" style="color: #FFF !important; text-decoration: none;"> \
               <span>Get in touch with us!</span>\
               <img height="75px" src="https://discord.com/assets/192cb9459cbc0f9e73e2591b700f1857.svg" style="vertical-align: middle;"> \
@@ -60,6 +54,7 @@
   
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@latest/dist/docsify-copy-code.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 </body>
