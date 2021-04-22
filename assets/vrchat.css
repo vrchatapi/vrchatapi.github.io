@@ -53,8 +53,6 @@
  * - Copy Code Plugin
  * - Tables & Lists
  * - Links
- *
- * - Mobile Size Adaptation
  */
 
 /*
@@ -64,7 +62,7 @@
 body {
     font-size: 100%;
     line-height: 1.5;
-    font-family: 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Arial,
+    font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", Arial,
         sans-serif;
     color: var(--text-color-base);
 }
@@ -74,12 +72,38 @@ a {
 ::selection {
     background: var(--cyan);
 }
+@media (min-width: 1200px) {
+    body {
+        font-size: 112.5%;
+    }
+}
+@media (min-width: 1400px) {
+    body {
+        font-size: 125%;
+    }
+}
+.markdown-section {
+	padding: 1rem 1rem;
+	margin: 0 auto;
+	max-width: 95%;
+}
+@media screen and (min-width: 769px) {
+    .markdown-section {
+		display: table;
+		overflow-x: initial;
+        max-width: 75rem;
+        padding: 1rem 3rem;
+		max-width: 80%;
+    }
+}
 
 /**
  * Top Banner
  */
 #TOPBANNER {
     background-color: var(--gray) !important;
+	height: auto;
+	line-height: 1;
 }
 #TOPBANNER,
 #TOPBANNER a {
@@ -303,7 +327,7 @@ body .sidebar-toggle span:nth-child(3) {
     text-decoration: none !important;
 }
 .anchor::before {
-    content: '\1F449';
+    content: "\1F449";
     position: absolute;
     top: 0;
     left: -1.25em;
@@ -320,13 +344,23 @@ body .sidebar-toggle span:nth-child(3) {
 .discord-container {
     background-color: #7289da !important;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     text-align: center;
     margin-bottom: 1rem;
 }
 .discord-container a {
     border-bottom: 0 !important;
+}
+@media (min-width: 1200px) {
+    .discord-container {
+        font-size: 1.75rem;
+    }
+}
+@media (min-width: 1400px) {
+    .discord-container {
+        font-size: 2rem;
+    }
 }
 
 /*
@@ -353,7 +387,7 @@ body .sidebar-toggle span:nth-child(3) {
     padding: 6px 10px;
     background-color: var(--code);
     display: inline-block;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
 }
 .markdown-section pre {
     padding: 2rem;
@@ -442,7 +476,8 @@ th {
     text-align: left;
 }
 .markdown-section table {
-    display: table;
+    display: block;
+	overflow-x: auto;
 }
 .markdown-section table tr {
     border-width: 0.1rem;
@@ -468,31 +503,9 @@ th {
     text-decoration: none;
     border-bottom: 0.1rem solid var(--text-color-link);
     transition: all 0.3s ease;
+	color: var(--blue);
 }
 .markdown-section a:hover {
     border-color: var(--text-color-link);
     color: var(--text-color-link-hover);
-}
-
-/*
- * Mobile Size Adaptation
- */
-
-@media screen and (min-width: 769px) {
-    .markdown-section {
-        max-width: 75rem;
-        padding: 1rem 3rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    body {
-        font-size: 112.5%;
-    }
-}
-
-@media (min-width: 1400px) {
-    body {
-        font-size: 125%;
-    }
 }
