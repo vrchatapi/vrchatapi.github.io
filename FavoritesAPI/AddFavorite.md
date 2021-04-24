@@ -12,7 +12,7 @@ POST
 https://api.vrchat.cloud/api/1/favorites
 
 ## Requires Authentication
-Yes (See [here](/Authorization.md) for details)
+Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
 
 ## Parameters
 
