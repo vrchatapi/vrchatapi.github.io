@@ -11,7 +11,7 @@ GET
 USERNAME - the user 's ingame name
 
 ## Requires Authentication
-Yes (See [here](/Authorization.md) for details)
+Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
 
 
 ## Returns

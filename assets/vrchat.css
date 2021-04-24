@@ -64,7 +64,7 @@
 body {
     font-size: 100%;
     line-height: 1.5;
-    font-family: 'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Arial,
+    font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", Arial,
         sans-serif;
     color: var(--text-color-base);
 }
@@ -112,6 +112,7 @@ aside::-webkit-scrollbar-thumb {
  */
 .app-name-link {
     font-weight: 900;
+    font-size: 2rem;
 }
 
 /*
@@ -173,10 +174,12 @@ aside.sidebar {
     border: none;
     background-color: var(--theme-color-navbar-background);
     color: #fff;
+    font-weight: 700;
 }
 .sidebar ul li a {
     color: var(--theme-color-navbar-link);
     font-size: 1rem;
+    font-weight: 400;
 }
 .sidebar ul li.active > a {
     border-width: 0.1rem;
@@ -189,8 +192,8 @@ aside.sidebar {
     color: #fff;
     border-right: 0.3rem solid var(--theme-color-navbar-selected);
 }
-.sidebar > h1 {
-    font-size: 2rem;
+.app-sub-sidebar li::before {
+    content: "";
 }
 
 /*
@@ -303,7 +306,7 @@ body .sidebar-toggle span:nth-child(3) {
     text-decoration: none !important;
 }
 .anchor::before {
-    content: '\1F449';
+    content: "\1F449";
     position: absolute;
     top: 0;
     left: -1.25em;
@@ -353,13 +356,15 @@ body .sidebar-toggle span:nth-child(3) {
     padding: 6px 10px;
     background-color: var(--code);
     display: inline-block;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
 }
 .markdown-section pre {
     padding: 2rem;
 }
 .markdown-section pre > code {
     padding: 0;
+    word-break: break-word;
+    white-space: normal;
 }
 .token.comment,
 .token.block-comment,
@@ -424,6 +429,10 @@ body .sidebar-toggle span:nth-child(3) {
 .markdown-section p.tip {
     border-left: 4px solid var(--orange);
     background-color: var(--yellow);
+}
+.markdown-section p.tip > a {
+    color: var(--red);
+    border-bottom-color: var(--red);
 }
 .markdown-section p.tip::before {
     background-color: var(--orange);
