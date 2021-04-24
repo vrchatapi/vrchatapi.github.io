@@ -398,7 +398,7 @@ body .sidebar-toggle span:nth-child(3) {
 .markdown-section pre > code {
     padding: 0;
     word-break: break-word;
-    white-space: normal;
+    white-space: break-spaces;
 }
 .token.comment,
 .token.block-comment,
