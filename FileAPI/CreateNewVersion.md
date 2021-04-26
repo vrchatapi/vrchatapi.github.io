@@ -44,7 +44,7 @@ fileMd5 | base64 string | file md5 checksum
 fileSizeInBytes | long | file size in bytes
 
 ## Requires Authentication
-Yes  (See [here](/Authorization.md) for details)
+Yes  (See [here](/GettingStarted/QuickStart?id=authorization) for details)
 
 ## Returns
 

@@ -1,101 +1,101 @@
-- [Disclaimer](README.md)
-- [Getting Started](GettingStarted.md)
-- [Authorization](Authorization.md)
+- Getting started
+    - [Overview](README.md)
+    - [Quick Start](GettingStarted/QuickStart.md)
+    - [Examples](GettingStarted/Examples.md)
 - Objects
     - [Avatar](Objects/Avatar.md)
     - [User](Objects/User.md)
     - [World](Objects/World.md)
     - [Notification](Objects/Notification.md)
-    - [unityPackage](Objects/unityPackage.md)
-- Endpoints
-    - User API
-        - [Tags](UserAPI/Tags.md)
-        - [Register](UserAPI/Register.md)
-        - [Resend Confirmation Email](UserAPI/ResendEmail.md)
-        - [Verify Logon Place](UserAPI/VerifyLoginPlace.md)
-        - Current user
-            - [Login](UserAPI/Login.md)
-            - [Logout](UserAPI/Logout.md)
-            - [Verify](UserAPI/Verify.md)
-            - [Delete](UserAPI/Delete.md)
-            - [User Info](UserAPI/CurrentUserDetails.md)
-            - [Update User Info](UserAPI/UpdateInfo.md)
-            - Friends
-                - [Get Friends](UserAPI/Friends.md)
-                - [Get Friend Status](UserAPI/FriendStatus.md)
-                - [Send Friend Request](UserAPI/FriendRequest.md)
-                - [Unfriend](UserAPI/Unfriend.md)
-                - [Accept/Ignore Friend Request](UserAPI/AcceptIgnoreFriend.md)
-        - Any user
-            - [Get by id](UserAPI/GetByID.md)
-            - [Get by name](UserAPI/GetByName.md)
-            - [List Users](UserAPI/List.md)
-    - Favorites API
-        - [Add Favorite](FavoritesAPI/AddFavorite.md)
-        - [Get Favorite](FavoritesAPI/GetFavorite.md)
-        - [List Favorites](FavoritesAPI/ListAllFavorites.md)
-        - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
-    - World API
-        - World
-            - [Get by id](WorldAPI/GetWorld.md)
-            - [List Worlds](WorldAPI/ListWorlds.md)
-            - [Delete World](WorldAPI/DeleteWorld.md)
-            - [Get metadata by id](WorldAPI/GetMetadata.md)
-        - World Instance
-            - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
-            - [Get by id with tags](WorldAPI/GetInstance.md)
-    - Avatar API
-        - [Get by ID](AvatarAPI/GetByID.md)
-        - [Choose Avatar](AvatarAPI/ChooseAvatar.md)
-        - [List Avatars (Outdated)](AvatarAPI/ListAvatars.md)
-        - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
-        - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
-    - Moderation API
-        - Player
-            - [Send moderation](ModerationAPI/SendModerations.md)
-		    - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
-            - [Delete moderation](ModerationAPI/DeleteModeration.md)
-            - [Clear all moderations](ModerationAPI/ClearModerations.md)
-            - [Get player's](ModerationAPI/Players.md)
-		- World
-            - [Send Vote Kick](ModerationAPI/SendVoteKick.md)
-    - System API
-        - [Remote Config](SystemAPI/Config.md)
-        - [Get Online User Count](SystemAPI/Visits.md)
-        - [Get System Time](SystemAPI/Time.md)
-        - [Verify User Auth-Cookie](SystemAPI/Auth.md)
-    - Notification API
-        - [Send Notification](NotificationAPI/SendNotification.md)
-        - [Mark As Read](NotificationAPI/MarkAsSeen.md)
-        - [Delete Notification](NotificationAPI/Delete.md)
-        - [Get All Notifications](NotificationAPI/GetAll.md)
-    - File API
-        - [Mime Types (Outdated)](FileAPI/MimeTypes.md)
-        - Files
-            - [Create File (Outdated)](FileAPI/CreateFile.md)
-            - [Get File (Outdated)](FileAPI/GetFile.md)
-            - [Delete File (Outdated)](FileAPI/DeleteFile.md)
-            - [Download File (Outdated)](FileAPI/DownloadFile.md)
-            - [Start Upload (Outdated)](FileAPI/StartUpload.md)
-            - [Finish Upload (Outdated)](FileAPI/FinishUpload.md)
-            - [Upload Status (Outdated)](FileAPI/UploadStatus.md)
-        - Versions
-            - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
-            - [Delete Version (soon)](nothing)
-    - Websocket API
-        - [About](WebsocketAPI/About.md)
-        - Events
-            - [Friend Online](WebsocketAPI/FriendOnlineEvent.md)
-            - [Friend Offline](WebsocketAPI/FriendOfflineEvent.md)
-            - [Friend Active](WebsocketAPI/FriendActiveEvent.md)
-            - [Friend Add](WebsocketAPI/FriendAddEvent.md)
-            - [Friend Delete](WebsocketAPI/FriendDeleteEvent.md)
-            - [Friend Update](WebsocketAPI/FriendUpdateEvent.md)
-            - [Friend Location](WebsocketAPI/FriendLocationEvent.md)
-            - [Notification](WebsocketAPI/NotificationEvent.md)
-    - Feedback API
-        - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
-    - [Analytics API](AnalyticsAPI/Analytics.md)
+    - [Unity Package](Objects/unityPackage.md)
+- User API
+    - [Tags](UserAPI/Tags.md)
+    - [Register](UserAPI/Register.md)
+    - [Resend Confirmation Email](UserAPI/ResendEmail.md)
+    - [Verify Logon Place](UserAPI/VerifyLoginPlace.md)
+    - Current user
+        - [Login](UserAPI/Login.md)
+        - [Logout](UserAPI/Logout.md)
+        - [Verify](UserAPI/Verify.md)
+        - [Delete](UserAPI/Delete.md)
+        - [User Info](UserAPI/CurrentUserDetails.md)
+        - [Update User Info](UserAPI/UpdateInfo.md)
+        - Friends
+            - [Get Friends](UserAPI/Friends.md)
+            - [Get Friend Status](UserAPI/FriendStatus.md)
+            - [Send Friend Request](UserAPI/FriendRequest.md)
+            - [Unfriend](UserAPI/Unfriend.md)
+            - [Accept/Ignore Friend Request](UserAPI/AcceptIgnoreFriend.md)
+    - Any user
+        - [Get by id](UserAPI/GetByID.md)
+        - [Get by name](UserAPI/GetByName.md)
+        - [List Users](UserAPI/List.md)
+- Favorites API
+    - [Add Favorite](FavoritesAPI/AddFavorite.md)
+    - [Get Favorite](FavoritesAPI/GetFavorite.md)
+    - [List Favorites](FavoritesAPI/ListAllFavorites.md)
+    - [Delete Favorite](FavoritesAPI/DeleteFavorite.md)
+- World API
+    - World
+        - [Get by id](WorldAPI/GetWorld.md)
+        - [List Worlds](WorldAPI/ListWorlds.md)
+        - [Delete World](WorldAPI/DeleteWorld.md)
+        - [Get metadata by id](WorldAPI/GetMetadata.md)
+    - World Instance
+        - [World Instance Tags](WorldAPI/WorldInstanceTags.md)
+        - [Get by id with tags](WorldAPI/GetInstance.md)
+- Avatar API
+    - [Get by ID](AvatarAPI/GetByID.md)
+    - [Choose Avatar](AvatarAPI/ChooseAvatar.md)
+    - [List Avatars (Outdated)](AvatarAPI/ListAvatars.md)
+    - [Save Avatar (Outdated)](AvatarAPI/SaveAvatar.md)
+    - [Delete Avatar](AvatarAPI/DeleteAvatar.md)
+- Moderation API
+    - Player
+        - [Send moderation](ModerationAPI/SendModerations.md)
+        - [Send player moderation](ModerationAPI/SendPlayerModerations.md)
+        - [Delete moderation](ModerationAPI/DeleteModeration.md)
+        - [Clear all moderations](ModerationAPI/ClearModerations.md)
+        - [Get player's](ModerationAPI/Players.md)
+    - World
+        - [Send Vote Kick](ModerationAPI/SendVoteKick.md)
+- System API
+    - [Remote Config](SystemAPI/Config.md)
+    - [Get Online User Count](SystemAPI/Visits.md)
+    - [Get System Time](SystemAPI/Time.md)
+    - [Verify User Auth-Cookie](SystemAPI/Auth.md)
+- Notification API
+    - [Send Notification](NotificationAPI/SendNotification.md)
+    - [Mark As Read](NotificationAPI/MarkAsSeen.md)
+    - [Delete Notification](NotificationAPI/Delete.md)
+    - [Get All Notifications](NotificationAPI/GetAll.md)
+- File API
+    - [Mime Types (Outdated)](FileAPI/MimeTypes.md)
+    - Files
+        - [Create File (Outdated)](FileAPI/CreateFile.md)
+        - [Get File (Outdated)](FileAPI/GetFile.md)
+        - [Delete File (Outdated)](FileAPI/DeleteFile.md)
+        - [Download File (Outdated)](FileAPI/DownloadFile.md)
+        - [Start Upload (Outdated)](FileAPI/StartUpload.md)
+        - [Finish Upload (Outdated)](FileAPI/FinishUpload.md)
+        - [Upload Status (Outdated)](FileAPI/UploadStatus.md)
+    - Versions
+        - [Create Version (Outdated)](FileAPI/CreateNewVersion.md)
+        - [Delete Version (soon)](nothing)
+- Websocket API
+    - [About](WebsocketAPI/About.md)
+    - Events
+        - [Friend Online](WebsocketAPI/FriendOnlineEvent.md)
+        - [Friend Offline](WebsocketAPI/FriendOfflineEvent.md)
+        - [Friend Active](WebsocketAPI/FriendActiveEvent.md)
+        - [Friend Add](WebsocketAPI/FriendAddEvent.md)
+        - [Friend Delete](WebsocketAPI/FriendDeleteEvent.md)
+        - [Friend Update](WebsocketAPI/FriendUpdateEvent.md)
+        - [Friend Location](WebsocketAPI/FriendLocationEvent.md)
+        - [Notification](WebsocketAPI/NotificationEvent.md)
+- Feedback API
+    - [Get World Feedback](FeedbackAPI/GetWorldFeedback.md)  
+- [Analytics API](AnalyticsAPI/Analytics.md)
 - Archive
     - [Secret Worlds](Archive/SecretWorlds.md)
     - Deleted Endpoints

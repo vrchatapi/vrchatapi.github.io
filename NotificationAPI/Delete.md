@@ -15,7 +15,7 @@ https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/hide
 id - the notification id
 
 ## Requires Authentication
-Yes (See [here](/Authorization.md) for details)
+Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
 
 ## Returns
 
