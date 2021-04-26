@@ -25,6 +25,6 @@ partNumber - optional, for larger files it allows to do a multiplart upload
     - signature
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns

@@ -13,7 +13,7 @@ Active only
     https://api.vrchat.cloud/api/1/users/active
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 # Parameter
 

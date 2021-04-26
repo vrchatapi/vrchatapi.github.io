@@ -11,7 +11,7 @@ GET
 https://api.vrchat.cloud/api/1/file/[ID]/[VERSION]/[TYPE]/status
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 unknown - currently it keep sending back server error

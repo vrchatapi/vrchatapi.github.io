@@ -17,7 +17,7 @@ https://api.vrchat.cloud/api/1/auth/user/notifications/[ID]/accept
 id - the id of the friend notification
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 

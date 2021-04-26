@@ -11,7 +11,7 @@ GET
 id - the user id
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 
 ## Returns

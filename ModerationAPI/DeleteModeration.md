@@ -12,7 +12,7 @@ ID - the id of the user
 MODERATIONID - the id of the moderation to delete
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 

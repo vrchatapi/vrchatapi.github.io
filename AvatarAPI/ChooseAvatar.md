@@ -12,7 +12,7 @@ https://api.vrchat.cloud/api/1/avatars/[ID]/select
 ID - the avatar id
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 
