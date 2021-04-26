@@ -52,7 +52,13 @@
         style: 'text-align: right;',
       },
     };
-    (location.hash == "#/" || location.hash == "") ? location.hash = "#/README" : {};
+    const redirects = [
+      ["#/", "#/README"], 
+      ["", "#/README"], 
+      ["#/ModerationAPI/Against", "#/Archive/ModerationAPI/Against"],
+      ["#/GettingStarted", "#/GettingStarted/QuickStart"],
+    ];
+    redirects.forEach(r => location.hash == r[0] ? location.hash = r[1] : {});
   </script>
   
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
