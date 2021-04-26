@@ -53,7 +53,7 @@ $ curl https://vrchat.com/api/1/users?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26
 
 ## Authorization
 
-!> **Session Limit**: Each authentication with login credentials counts as a separate session, out of which you have a limited amount. Make sure to save and reuse the authcookie whenever you can, and avoid sendign the Authorization header unless strictly neccesary.
+!> **Session Limit**: Each authentication with login credentials counts as a separate session, out of which you have a limited amount. Make sure to save and reuse the authcookie whenever you can, and avoid sending the Authorization header unless strictly neccesary.
 
 Most of the APIs require you to be authenticated, and VRChat does authorization using the [`Authorization header`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization). The username and password are encoded using base64, and then sent to the API endpoint `/api/1/auth/user`.
 
