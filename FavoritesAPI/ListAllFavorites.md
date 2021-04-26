@@ -9,7 +9,7 @@ GET
 https://api.vrchat.cloud/api/1/favorites/
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 

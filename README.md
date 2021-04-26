@@ -7,7 +7,7 @@ Individuals making significant and valuable contributions are given
 commit-access to the project to contribute as they see fit. This project
 is more like an open wiki than a standard guarded open source project.
 
-## Disclaimer
+# Disclaimer
 
 This is the official response of the VRChat Team (from Tupper more specifically) on the usage of the VRChat API.
 
@@ -19,11 +19,11 @@ This is the official response of the VRChat Team (from Tupper more specifically)
 
 As stated, this documentation was not created with the help of the official VRChat team. Therefore this documentation is not an official documentation of the VRChat API and may not be always up to date with the latest versions. If you find that a page or endpoint is not longer valid please create an issue and tell us so we can fix it.
 
-## Get in touch with us!
+# Get in touch with us!
 
 https://discord.gg/qjZE9C9fkB #vrchat-api
 
-## Getting Started
+# Getting Started
 
 Now that you've read the information you should be ready to get started.
-[Quick Start](/GettingStarted/QuickStart.md)
+[Getting Started](/GettingStarted.md)

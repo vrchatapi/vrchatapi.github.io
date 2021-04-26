@@ -14,7 +14,7 @@ https://api.vrchat.cloud/api/1/user/[ID]/notification
 id - the user to send notification to
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Parameters
 

@@ -25,7 +25,7 @@ ID - the user id
 Any field in the [avatar](/AvatarAPI/GetByID.md) object
 
 ## Requires Authentication
-Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+Yes (See [here](/Authorization.md) for details)
 
 ## Returns
 

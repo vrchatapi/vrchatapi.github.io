@@ -10,7 +10,7 @@ PUT
     https://api.vrchat.cloud/api/1/user/[ID]/delete
 
 ## Requires Authentication
-No (See [here](/GettingStarted/QuickStart?id=authorization) for details)
+No (See [here](/Authorization.md) for details)
 
 ## Returns
 
