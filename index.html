@@ -52,13 +52,19 @@
         style: 'text-align: right;',
       },
     };
+    
     const redirects = [
-      ["#/", "#/README"], 
+      ["#", "#/README"], 
       ["", "#/README"], 
       ["#/ModerationAPI/Against", "#/Archive/ModerationAPI/Against"],
       ["#/GettingStarted", "#/GettingStarted/QuickStart"],
     ];
-    redirects.forEach(r => location.hash == r[0] ? location.hash = r[1] : {});
+    
+    redirects.forEach(([source, target]) => {
+      const sources = [source, `${source}/`];
+      if (!sources.includes(location.hash)) return;
+      location.hash = target;
+    });
   </script>
   
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
