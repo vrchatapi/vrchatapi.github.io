@@ -60,11 +60,16 @@
       ["#/GettingStarted", "#/GettingStarted/QuickStart"],
     ];
     
-    redirects.forEach(([source, target]) => {
-      const sources = [source, `${source}/`];
-      if (!sources.includes(location.hash)) return;
-      location.hash = target;
-    });
+    function routeChange () {
+      redirects.forEach(([source, target]) => {
+        const sources = [source, `${source}/`];
+        if (!sources.includes(location.hash)) return;
+        
+        location.hash = target;
+      });
+    }
+    
+    window.addEventListener("hashchange", () => routeChange);
   </script>
   
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
