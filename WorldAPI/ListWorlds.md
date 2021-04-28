@@ -22,7 +22,7 @@ Only Favorite Worlds:
 
 
 ## Requires Authentication
-Yes (See [here](/Authorization.md) for details)
+Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
 
 ## Parameters
 

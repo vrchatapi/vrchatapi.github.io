@@ -9,7 +9,7 @@ GET
 https://api.vrchat.cloud/api/1/auth
 
 ## Requires Authentication
-Yes (See [here](/Authorization.md) for details), must be with auth cookie!
+Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details), must be with auth cookie!
 
 ## Returns
 
