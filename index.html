@@ -69,7 +69,8 @@
       });
     }
     
-    window.addEventListener("hashchange", () => routeChange);
+    window.addEventListener("hashchange", routeChange);
+    window.addEventListener("load", routeChange);
   </script>
   
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
