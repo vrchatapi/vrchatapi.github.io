@@ -42,7 +42,7 @@
 | state                          | String                                                          | [`State`](/Objects/User.md#state)                                                                        |
 | status                         | String                                                          | [`Status`](/Objects/User.md#status)                                                                      |
 | statusDescription              | String                                                          | User defined status                                                                                      |
-| statusHistory | Array of strings | User defined status history |
+| statusHistory                  | Array of strings                                                | User defined status history                                                                              |
 | steamDetails                   | JSONArray                                                       | Details about user's steam account                                                                       |
 | steamId                        | String                                                          | ID of steam account                                                                                      |
 | tags                           | Array of strings                                                | Each string is a tag given by developers or the game, usually denoting things like trust and permissions |
