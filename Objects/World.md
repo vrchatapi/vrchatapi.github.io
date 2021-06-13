@@ -78,11 +78,12 @@
 | name             | String             | Instance Short Name                                |
 | n_users          | Integer            | Number of users in the instance                    |
 | ownerId          | String             | User ID of the instance owner                      |
-| photonRegion     | String             | Unknown                                            |
+| photonRegion     | String             | [`Region`](/Objects/World.md#regions)              |
 | permanent        | Boolean            | If instance is persistent                          |
 | platforms        | Array of Platforms | [`Platforms`](/Objects/World.md#platforms)         |
-| shortName        | String             | Instance short name                                |
-| tags             | Array of strings   | Unknown/Unused                                     |
+| region           | String             | [`Region`](/Objects/World.md#regions)              |
+| shortName        | String             | Instance short name, used for the vrch.at link     |
+| tags             | Array of strings   | Indicates if debugging is allowed                  |
 | type             | String             | [`Instance Type`](/Objects/World.md#instancetype)  |
 | worldId          | String             | ID of the world                                    |
 
@@ -110,7 +111,7 @@ The ID of an instance, made up of 3 parts, 1 always present and 2 that depend on
 [Instance Type](/Objects/World.md#instancetype) and separated with the `~` character.  
 It's structure is as follows:  
 
-ID\~[Instance Type](/Objects/World.md#instancetype)(ownerId)\~nonce([Nonce](/Objects/World.md#nonce))
+ID\~[Instance Type](/Objects/World.md#instancetype)(ownerId)\~nonce([Nonce](/Objects/World.md#nonce))~region([Region](/Objects/World.md#region))
 
 The last 2 sections are only appended onto the ID when
 
@@ -134,3 +135,16 @@ It is formatted as "nonce(key)" where `key` is the cryptographic key
 |-------------------|---------|-------------------------------------------------------------|
 | standalonewindows | Integer | How many standalone windows clients are in the instance     |
 | android           | Integer | How many android (oculus quest) clients are in the instance |
+
+## Region
+
+Region indicates the geographical location of the photon servers used for a World [`Instance`](/Objects/World.md#instanceobject).
+Selected region is indicated by `~region(eu)` as part of the Instance ID. If no `~region` parameter is provided then `usw` is used by default.
+
+The current known Photon regions are:
+
+| Region    | Hosted in | Token |
+|-----------|-----------|-------|
+| USA, West | San José  | usw   |
+| Europe    | Amsterdam | eu    |
+| Japan     | Tokyo     | jp    |
