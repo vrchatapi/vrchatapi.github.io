@@ -42,11 +42,11 @@ Every API requires you to give a special API key. To get it simply call the [Rem
 ?> The last known key is `JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26`
 
 ```bash
-$ curl https://vrchat.com/api/1/users
+$ curl https://api.vrchat.cloud/api/1/users
 {"error":{"message":"\"No API Key provided!\"","status_code":401}}
 # FAIL: Missing apiKey, as this is a GET request we will provide it as a URL parameter.
 
-$ curl https://vrchat.com/api/1/users?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26
+$ curl https://api.vrchat.cloud/api/1/users?apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26
 {"error":{"message":"\"Missing Credentials\"","status_code":401}}
 # SUCCESS: We will now proced to authenticating.
 ```
