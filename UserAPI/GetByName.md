@@ -1,6 +1,6 @@
 # Get By Name
 
-This API allows you to get public user info about a specific user using his name
+Get public user information about a specific user using their name.
 
 ## Request Method
 GET

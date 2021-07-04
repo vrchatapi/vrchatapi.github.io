@@ -1,6 +1,6 @@
 # Login
 
-This API allows you to get user data from a VRChat account
+This API allows you to get user data from a VRChat account.
 
 ## Request Method
 GET

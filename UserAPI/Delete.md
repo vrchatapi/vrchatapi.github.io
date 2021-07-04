@@ -1,7 +1,10 @@
 # Delete
 
-This API allows you to delete your account.
-Account deletion is 14 days from this request, and will be cancelled if you do an authenticated request with the account afterwards.
+Deletes the account with given ID. Normal users only have permission to delete their own account. Account deletion is 14 days from this request, and will be cancelled if you do an authenticated request with the account afterwards.
+
+**VRC+ NOTE:** Despite the 14-days cooldown, any VRC+ subscription will be cancelled **immediately**.
+
+**METHOD NOTE:** Despite this being a Delete action, the method type required is PUT.
 
 ## Request Method
 PUT

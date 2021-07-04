@@ -1,6 +1,6 @@
 # Friends
 
-This API allows you to get information about your friends
+This API allows you to get information about your friends.
 
 ## Request Method
 GET

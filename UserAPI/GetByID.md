@@ -1,6 +1,6 @@
 # Get By ID
 
-This API allows you to get public user info about a specific user using his ID
+Get public user information about a specific user using their ID.
 
 ## Request Method
 GET

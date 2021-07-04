@@ -1,6 +1,6 @@
 # Search
 
-This API allows you to list users and use some filters to filter them
+This API allows you to list users and use some filters to filter them.
 
 ## Request Method
 GET
