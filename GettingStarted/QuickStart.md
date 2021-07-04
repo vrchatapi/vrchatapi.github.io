@@ -70,9 +70,9 @@ dXNlcm5hbWU6cGFzc3dvcmQ=
 
 # Request an authcookie
 # The 'auth' cookie is saved to "cookiejar.txt", this makes it easier to re-use in future commands.
-# Replace the base64-encoded string "Rm9vcmFjazptYXhmYXgyNTI1ISE" with the one generated in one of the previous commands.
+# Replace the base64-encoded string "dXNlcm5hbWU6cGFzc3dvcmQ" with the one generated in one of the previous commands.
 # Also replace "My User Agent" with a custom and unique agent name to identify yourself!
-$ curl -c cookiejar.txt -A "My User Agent" -H "Authorization: Basic Rm9vcmFjazptYXhmYXgyNTI1ISE=" https://api.vrchat.cloud/api/1/auth/user
+$ curl -c cookiejar.txt -A "My User Agent" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" https://api.vrchat.cloud/api/1/auth/user
 ```
 
 For this we will first encode the username and password as base64. We will then authenticate against the API and save the resulting `apiKey` and `auth` cookies to `cookiejar.txt`. We will be using this file in future commands when interacting with the API. In case the auth token expires, simply delete the file and run the command again.
