@@ -100,3 +100,4 @@
     - [Secret Worlds](Archive/SecretWorlds.md)
     - Deleted Endpoints
         - [Get moderations against](Archive/ModerationAPI/Against.md)
+        - [Search active users](Archive/UserAPI/ListActive.md)
