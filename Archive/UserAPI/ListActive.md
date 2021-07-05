@@ -1,12 +1,14 @@
-# Search
+!> **Archive notice** This endpoint was restricted sometime in first half of 2021. This now requires Admin Credentials.
 
-This API allows you to list users and use some filters to filter them.
+# Search Active
+
+This API allows you to list active users and use some filters to filter them.
 
 ## Request Method
 GET
 
 ## Endpoint
-https://api.vrchat.cloud/api/1/users
+https://api.vrchat.cloud/api/1/users/active
 
 ## Requires Authentication
 Yes (See [here](/GettingStarted/QuickStart?id=authorization) for details)
