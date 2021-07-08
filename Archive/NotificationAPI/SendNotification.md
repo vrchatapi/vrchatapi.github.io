@@ -1,3 +1,5 @@
+!> **Archive notice** This endpoint has been restricted. It now always requires Admin Credentials.
+
 # Send Notification
 
 This API allows you to send notifications to other players.
