@@ -1,4 +1,4 @@
-!> **Archive notice** This endpoint was restricted sometime in first half of 2021. This now requires Admin Credentials.
+!> **Archive notice** This endpoint was restricted sometime in first half of 2021. It now always requires Admin Credentials.
 
 # Search Active
 
