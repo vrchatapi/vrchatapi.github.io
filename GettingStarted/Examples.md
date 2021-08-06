@@ -30,27 +30,27 @@ After successful query you should get an entire [`Current User object`](/Objects
 
 This tutorial asumes you already have [Insomnia](https://insomnia.rest/download) downloaded and installed. We will begin with creating a new "Request Collection" and name it "VRChat".
 
-![Create a Collection](../assets/examples_insomnia1.png)
+![Create a Collection](../assets/img/examples/examples_insomnia1.png)
 
 We will now create our first Request in order to authenticate with the API. Click "New Request" (cyan rectangle) and name it "Authenticate". We will let it be of type GET and click Create.
 
-![Create first Request](../assets/examples_insomnia2.png)
+![Create first Request](../assets/img/examples/examples_insomnia2.png)
 
 Select `Basic > "Basic Auth"` and enter your VRChat username and password. The target URL should be set to `https://api.vrchat.cloud/api/1/auth/user` and click Send.
 
-![Set username/password](../assets/examples_insomnia3.png)
+![Set username/password](../assets/img/examples/examples_insomnia3.png)
 
 !> **Ethical practice!** Make sure to always set a custom `User-Agent` under Headers, to properly identify your requests.  <!-- Intentional two spaces for newlines -->
 Good-practice is to set a short unique name for your application, as well as a contact method such as Discord.  <!-- Intentional two spaces for newlines -->
-![Set a User-Agent header](../assets/examples_insomnia7.png)
+![Set a User-Agent header](../assets/img/examples/examples_insomnia7.png)
 
 If successful then we should have gotten 3 new cookies, as indicated by the cyan rectangle below. In the future you can click "Cookies" **top-left** (pink rectangle) to see your cookies. We can also see in the response body our **userId** (yellow rectangle), it is important to keep this as we will need it for the next request.
 
-![Successful authentication](../assets/examples_insomnia4.png)
+![Successful authentication](../assets/img/examples/examples_insomnia4.png)
 
 Next we will create our second Request to update our Biography, click "New Request" indicated by the purple rectangle. We will name this one "Update Bio", we will set it to method type **PUT** and of body type **JSON**:
 
-![Create second Request](../assets/examples_insomnia5.png)
+![Create second Request](../assets/img/examples/examples_insomnia5.png)
 
 Set the `User-Agent` again, although this time it is **important NOT to** set Auth again. Entering your username/password again will make you constantly request new session tokens, depleting your pool of available sessions and getting you rate-limited until the previous ones expire. Instead we will automatically authenticate with the cookies aquired in the previous Authentication request.
 
@@ -64,7 +64,7 @@ To finally update the Bio we set the URL to `https://api.vrchat.cloud/api/1/user
 
 Click "Send" and we can see in the bottom right the Bio has now been updated to the new text:
 
-![Update the Bio](../assets/examples_insomnia6.png)
+![Update the Bio](../assets/img/examples/examples_insomnia6.png)
 
 ?> **Congratulations!** You have now ready to explore the API. Please keep in mind the strict rate-limit, and that any abuse can lead to permanent account termination.
 
