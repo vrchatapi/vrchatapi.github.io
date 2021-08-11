@@ -15,7 +15,7 @@ Name | Permission
 `system_troll` | User is a confirmed troll
 `system_supporter` | User has an active VRC+ subscription
 `system_early_adopter` | User bought VRC+ in the early period of when it came out
-`system_legend` | User is an Experienced player and was active before Summer 2018 (can no longer be achieved)
+`system_legend` | User is an Experienced player and was active during the Summer of 2018 (can no longer be achieved)
 `admin_official_thumbnail` | Replaces the users profile picture with the VRChat logo
 `show_social_rank` | Show trust rank
 `system_UE4_dev_access` | Meaningless tag used by Tupper
