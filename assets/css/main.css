@@ -2,7 +2,21 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap);
 
 :root {
-    --black: #000000;
+    --red-6: #f5222d;
+
+    --yellow-6: #fadb14;
+
+    --gren-6: #52c41a;
+
+    --blue-6: #1890ff;
+
+    --gray-13: #000000;
+
+    --red: var(--red-6);
+    --yellow: var(--yellow-6);
+    --green: var(--gren-6);
+    --blue: var(--blue-6);
+    --black: var(--gray-13);
 }
 
 body,
@@ -49,10 +63,18 @@ pre[class*='language-'] {
     hyphens: none;
 }
 
+a {
+    color: var(--blue-6);
+}
+
 .btn, .dropdown-menu {
     border-radius: 0 !important;
 }
 
 .bg-dark {
     background-color: var(--black) !important;
+}
+
+.border-light {
+    border-color: #e6f7ff !important;
 }

@@ -1,0 +1,206 @@
+:host {
+    --red-6: #f5222d;
+
+    --orange-6: #fa8c16;
+
+    --yellow-6: #fadb14;
+
+    --gren-6: #52c41a;
+
+    --blue-6: #1890ff;
+
+    --purple-6: #722ed1;
+
+    --gray-1: #ffffff;
+    --gray-13: #000000;
+
+    --red: var(--red-6);
+    --orange: var(--orange-6);
+    --yellow: var(--yellow-6);
+    --green: var(--gren-6);
+    --blue: var(--blue-6);
+    --purple: var(--purple-6);
+    --white: var(--gray-1);
+    --black: var(--gray-13);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--black);
+}
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--black);
+}
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--black);
+}
+p {
+    font-weight: 400;
+    font-size: 17x;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.regular-font {
+    font-size: 17x;
+    line-height: 24px;
+    color: var(--black);
+}
+
+code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 16px;
+    line-height: 24px;
+}
+.m-markdown code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #f7f7f8;
+}
+.m-markdown-small code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--black);
+}
+a {
+    color: var(--blue);
+}
+.string {
+    color: #167b6a;
+}
+
+.method-fg.get {
+    color: var(--white);
+    background-color: var(--blue);
+    font-weight: 600;
+    padding: 2px 4px 2px 4px;
+}
+.method-fg.put {
+    color: var(--white);
+    background-color: var(--yellow);
+    font-weight: 600;
+    padding: 2px 4px 2px 4px;
+}
+.method-fg.post {
+    color: var(--white);
+    background-color: var(--green);
+    font-weight: 600;
+    padding: 2px 4px 2px 4px;
+}
+.method-fg.delete {
+    color: var(--white);
+    background-color: var(--red);
+    font-weight: 600;
+    padding: 2px 4px 2px 4px;
+}
+.nav-bar-path.active {
+    border-left: 5px solid var(--black);
+}
+input[type='text'] {
+    background-color: #f7f7f8;
+    border: 1px solid #8d94a5;
+    color: var(--black);
+}
+input[type='password'] {
+    background-color: #f7f7f8;
+    border: 1px solid #8d94a5;
+    color: var(--black);
+}
+.tab-content .col {
+    background-color: #cb62e3;
+}
+.tree {
+    border: 1px solid #e3e8ee;
+}
+.json-tree {
+    border: 1px solid #e3e8ee;
+}
+.m-markdown th {
+    font-weight: 700;
+    color: var(--black);
+}
+.m-markdown td {
+    border-bottom: 1px solid var(--black);
+}
+.m-btn {
+    background-color: #00e5bf;
+    border: 1px solid #00e5bf;
+    color: var(--black);
+    box-shadow: 0 0 0 0 #fff;
+}
+.m-btn:hover {
+    background-color: #25f4d1;
+    border: 1px solid #25f4d1;
+    color: var(--black);
+    box-shadow: inset 0 0 0 transparent;
+}
+.m-btn.primary {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    box-shadow: inset 0 0 0 transparent;
+}
+.main-content {
+    background-color: #fff;
+}
+#api-title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--black);
+}
+#api-title > span {
+    font-size: 17px !important;
+    font-weight: 600;
+    color: var(--black);
+}
+.nav-bar-path .active {
+    border: 7px solid #167b6a;
+}
+.stri {
+    color: #000;
+    font-weight: 600;
+}
+.callout-error {
+    padding: 1.25rem;
+    background-color: #fff5fa;
+    border: 1px solid #e60073;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-warn {
+    padding: 1.25rem;
+    background-color: #fffee5;
+    border: 1px solid #9e9600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-info {
+    padding: 1.25rem;
+    background-color: #f0f3ff;
+    border: 1px solid #002db4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-success {
+    padding: 1.25rem;
+    background-color: #f5fffd;
+    border: 1px solid #00a88c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#api-info {
+    display: none !important;
+}
