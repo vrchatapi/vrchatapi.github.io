@@ -19,6 +19,11 @@
     --black: var(--gray-13);
 }
 
+#content {
+    height: calc(100vh - 84px);
+    width: 100vw;
+}
+
 body,
 h1,
 h2,

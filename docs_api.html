@@ -7,7 +7,7 @@ layout: default
 
 <rapi-doc
   spec-url="https://vrchatapi.github.io/specification/openapi.yaml"
-  sort-endpoints-by = "method"
+  sort-endpoints-by = "path"
 
   theme = "light"
   bg-color="#ffffff"
@@ -28,7 +28,7 @@ layout: default
   layout = "row"
   render-style = "focused"
   on-nav-tag-click="show-description"
-  schema-style = "table"
+  schema-style = "tree"
   schema-description-expanded = "true"
 
   info-description-headings-in-navbar = "true"
@@ -46,7 +46,7 @@ layout: default
   fetch-credentials = "include"
 >
 
-<div slot="footer" class="border-top border-1 border-light pt-1 text-dark">
+<div slot="footer" class="border-top border-1 border-light mt-3 pt-2 pb-3 text-dark">
   <div class="row pt-2">
     <div class="col ps-5">VRChat API Documentation - made with ❤️ by the Community</div>
 
@@ -71,28 +71,53 @@ layout: default
     </div>
 
   </div>
-  
-  <div class="py-4"></div>
-  <div class="py-3"></div>
-  <div class="py-1"></div>
 </div>
 
 </rapi-doc>
 
 <script>
+  function applyCustomCss(root) {
+    if (root == undefined) {
+      root = document;
+    } else {
+      let nodeName = root.nodeName;
+      root = root.shadowRoot;
+
+      // Apply CSS
+      let cnt = root.querySelectorAll("link[href='/assets/css/rapidoc.css']").length;
+      if (cnt == 0) {
+        console.log("Applying it to", nodeName)
+        let link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/assets/css/rapidoc.css';
+        link.media = 'all';
+        root.appendChild(link);
+      }
+    }
+
+    // Look for more roots
+    for (let el of root.querySelectorAll('*')) {
+      if (el.shadowRoot) {
+          applyCustomCss(el);
+      }
+    }
+
+    // Inject ourself on-click for injection during runtime
+    for (let button of root.querySelectorAll('button')) {
+      button.addEventListener("click", () => {
+        setTimeout(() => {
+          applyCustomCss();
+        }, 1);
+      });
+    }
+  }
+
   window.addEventListener('DOMContentLoaded', (event) => {
       const rapidocEl = document.querySelector('rapi-doc');
       rapidocEl.addEventListener('spec-loaded', (e) => {
         setTimeout(() => {
-          let root = document.querySelector("rapi-doc").shadowRoot;
-
-          var link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.type = 'text/css';
-          link.href = '/assets/css/rapidoc.css';
-          link.media = 'all';
-
-          root.appendChild(link);
+          applyCustomCss();
         }, 1);
       });
     });
