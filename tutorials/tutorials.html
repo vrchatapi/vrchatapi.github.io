@@ -1,0 +1,44 @@
+---
+layout: page
+permalink: /tutorials
+title: VRChat API Tutorials
+---
+
+<div class="container">
+
+    <nav aria-label="breadcrumb" class="mt-5">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tutorials</li>
+        </ol>
+    </nav>
+
+    <h1 class="fw-bold display-2">Tutorials</h1>
+
+    <p class="pt-3">
+        These tutorials help you get started using VRChat's API.
+    </p>
+
+    {% for cat in site.tutorial-categories %}
+    <h3 class="fw-bold">{{ cat.name }}</h3>
+    <ul class="list-group mb-5">
+    {% for page in site.pages %}
+        {% if page.layout == "tutorial" %}
+            {% if page.category == cat.id %}
+            <li class="list-group-item">
+                {% if page.difficulty == "easy" %}
+                    <span class="badge bg-green me-3">Easy</span>
+                {% elsif page.difficulty == "medium" %}
+                    <span class="badge bg-gold me-3">Medium</span>
+                {% elsif page.difficulty == "hard" %}
+                    <span class="badge bg-red me-3">Hard</span>
+                {% endif %}
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+            {% endif %}   <!-- cat-match-p -->
+        {% endif %}   <!-- resource-p -->
+    {% endfor %}  <!-- page -->
+    </ul>
+    {% endfor %}  <!-- cat -->
+
+</div>

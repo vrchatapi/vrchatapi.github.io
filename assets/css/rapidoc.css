@@ -1,7 +1,11 @@
 :host {
     --red-6: #f5222d;
 
+    --volcano-6: #fa541c;
+
     --orange-6: #fa8c16;
+
+    --gold-6: #faad14;
 
     --yellow-6: #fadb14;
 
@@ -15,10 +19,14 @@
     --gray-1: #ffffff;
     --gray-4: #f0f0f0;
     --gray-6: #bfbfbf;
+    --gray-8: #595959;
+    --gray-10: #262626;
     --gray-13: #000000;
 
     --red: var(--red-6);
+    --volcano: var(--volcano-6);
     --orange: var(--orange-6);
+    --gold: var(--gold-6);
     --yellow: var(--yellow-6);
     --green: var(--gren-6);
     --blue: var(--blue-6);

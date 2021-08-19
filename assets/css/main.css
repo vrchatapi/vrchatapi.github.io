@@ -23,6 +23,7 @@
     --gray-4: #f0f0f0;
     --gray-6: #bfbfbf;
     --gray-8: #595959;
+    --gray-10: #262626;
     --gray-13: #000000;
 
     --red: var(--red-6);
@@ -94,13 +95,39 @@ pre[class*='language-'] {
     hyphens: none;
 }
 
-a {
+a, .nav-link {
     color: var(--blue-dark);
     text-decoration: none;
 }
 
 .btn, .dropdown-menu {
     border-radius: 0 !important;
+}
+
+
+.bg-red {
+    background-color: var(--red);
+}
+.bg-volcano {
+    background-color: var(--volcano);
+}
+.bg-orange {
+    background-color: var(--orange);
+}
+.bg-gold {
+    background-color: var(--gold);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+.bg-purple {
+    background-color: var(--purple);
 }
 
 .bg-dark {
@@ -164,4 +191,8 @@ small.legal {
     line-height: 1;
     display: block;
     color: var(--gray-8);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--gray-10);
 }
