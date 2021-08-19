@@ -1,21 +1,40 @@
-@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,500;0,700;1,400&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap);
 
 :root {
     --red-6: #f5222d;
+
+    --volcano-6: #fa541c;
+
+    --orange-6: #fa8c16;
+
+    --gold-6: #faad14;
 
     --yellow-6: #fadb14;
 
     --gren-6: #52c41a;
 
     --blue-6: #1890ff;
+    --blue-8: #0050b3;
 
+    --purple-6: #722ed1;
+
+    --gray-1: #ffffff;
+    --gray-4: #f0f0f0;
+    --gray-6: #bfbfbf;
+    --gray-8: #595959;
     --gray-13: #000000;
 
     --red: var(--red-6);
+    --volcano: var(--volcano-6);
+    --orange: var(--orange-6);
+    --gold: var(--gold-6);
     --yellow: var(--yellow-6);
     --green: var(--gren-6);
     --blue: var(--blue-6);
+    --blue-dark: var(--blue-8);
+    --purple: var(--purple-6);
+    --white: var(--gray-1);
     --black: var(--gray-13);
 }
 
@@ -24,6 +43,13 @@
     width: 100vw;
 }
 
+.display-1 {
+    font-size: 6rem;
+}
+
+body {
+    font-size: 1.2rem;
+}
 body,
 h1,
 h2,
@@ -69,7 +95,8 @@ pre[class*='language-'] {
 }
 
 a {
-    color: var(--blue-6);
+    color: var(--blue-dark);
+    text-decoration: none;
 }
 
 .btn, .dropdown-menu {
@@ -79,7 +106,62 @@ a {
 .bg-dark {
     background-color: var(--black) !important;
 }
+.bg-secondary {
+    background-color: var(--gray-4) !important;
+}
 
-.border-light {
-    border-color: #e6f7ff !important;
+.border-secondary, hr {
+    border-color: var(--gray-6) !important;
+}
+
+.btn-red {
+    background-color: var(--red);
+    color: var(--white);
+}
+.btn-volcano {
+    background-color: var(--volcano);
+}
+.btn-orange {
+    background-color: var(--orange);
+}
+.btn-gold {
+    background-color: var(--gold);
+}
+.btn-yellow {
+    background-color: var(--yellow);
+}
+.btn-volcano:hover, .btn-orange:hover, .btn-gold:hover, .btn-yellow:hover {
+    color: var(--white);
+}
+.btn-green {
+    background-color: var(--green);
+    color: var(--white);
+}
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn-blue-dark {
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+.btn-purple {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+blockquote {
+    border-left: 5px solid var(--blue-dark);
+    background-color: var(--gray-4);
+    padding: 12px 0 12px 18px;
+}
+blockquote > p:first-child {
+    margin-top: 0;
+}
+
+small.legal {
+    font-size: 0.7rem;
+    line-height: 1;
+    display: block;
+    color: var(--gray-8);
 }

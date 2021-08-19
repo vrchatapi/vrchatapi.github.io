@@ -6,8 +6,8 @@ layout: default
 <script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
 
 <rapi-doc
-  spec-url="https://vrchatapi.github.io/specification/openapi.yaml"
-  sort-endpoints-by = "path"
+  spec-url="http://localhost:5000/dist/openapi.yaml"
+  sort-endpoints-by = "none"
 
   theme = "light"
   bg-color="#ffffff"
@@ -46,32 +46,7 @@ layout: default
   fetch-credentials = "include"
 >
 
-<div slot="footer" class="border-top border-1 border-light mt-3 pt-2 pb-3 text-dark">
-  <div class="row pt-2">
-    <div class="col ps-5">VRChat API Documentation - made with ❤️ by the Community</div>
-
-    <div class="col-2 row text-center">
-      <div class="col"><a href="https://discord.gg/qjZE9C9fkB">Support</a></div>
-      <div class="col"><a href="https://github.com/VRChatAPI">Legal</a></div>
-      <div class="col"><a href="https://discord.gg/qjZE9C9fkB">Contact</a></div>
-    </div>
-    <div class="col-1">
-      <a href="https://github.com/vrchatapi">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.00012207C5.37423 0.00012207 0 5.37435 0 12.0001C0 17.3007 3.46012 21.7915 8.17178 23.4112C8.76074 23.4848 8.9816 23.1167 8.9816 22.8222C8.9816 22.5277 8.9816 21.7915 8.9816 20.7609C5.66871 21.4971 4.93252 19.1412 4.93252 19.1412C4.41718 17.7425 3.60736 17.3744 3.60736 17.3744C2.50307 16.6382 3.68098 16.6382 3.68098 16.6382C4.8589 16.7118 5.52147 17.8897 5.52147 17.8897C6.62577 19.7302 8.31902 19.2148 8.9816 18.9204C9.05522 18.1106 9.42331 17.5952 9.71779 17.3007C7.06749 17.0063 4.26994 15.9756 4.26994 11.3375C4.26994 10.0124 4.71166 8.98172 5.52147 8.09828C5.44785 7.87742 5.00614 6.62589 5.66871 5.00626C5.66871 5.00626 6.69939 4.71178 8.9816 6.25779C9.93865 5.96331 10.9693 5.88969 12 5.88969C13.0307 5.88969 14.0614 6.03693 15.0184 6.25779C17.3006 4.71178 18.3313 5.00626 18.3313 5.00626C18.9939 6.62589 18.5521 7.87742 18.4785 8.1719C19.2147 8.98172 19.7301 10.086 19.7301 11.4112C19.7301 16.0492 16.9325 17.0063 14.2822 17.3007C14.7239 17.6688 15.092 18.405 15.092 19.5093C15.092 21.129 15.092 22.3805 15.092 22.8222C15.092 23.1167 15.3129 23.4848 15.9018 23.4112C20.6871 21.7915 24.0736 17.3007 24.0736 12.0001C24 5.37435 18.6258 0.00012207 12 0.00012207Z" fill="#191717"></path>
-            </g>
-            <defs>
-                <clipPath id="clip0">
-                    <rect width="24" height="24" fill="white" transform="translate(0 0.00012207)"></rect>
-                </clipPath>
-            </defs>
-        </svg>
-      </a>
-    </div>
-
-  </div>
-</div>
+{% include footer.html %}
 
 </rapi-doc>
 

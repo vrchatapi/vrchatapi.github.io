@@ -13,6 +13,7 @@
     --purple-6: #722ed1;
 
     --gray-1: #ffffff;
+    --gray-4: #f0f0f0;
     --gray-6: #bfbfbf;
     --gray-13: #000000;
 
@@ -26,7 +27,8 @@
     --white: var(--gray-1);
     --black: var(--gray-13);
 
-    --border-color: var(--gray-6);
+    --border-color: transparent;
+    --bg2: transparent;
 }
 
 h1 {
@@ -72,15 +74,15 @@ code {
     color: var(--black);
     font-size: 16px;
     line-height: 24px;
-    background-color: #f7f7f8;
+    background-color: var(--gray-4);
 }
 .m-markdown-small code {
     font-family: Inconsolata, Courier New, Courier, monospace;
     font-weight: 400;
     color: var(--black);
 }
-a {
-    color: var(--blue);
+a, .m-markdown a, m-markdown-small a {
+    color: var(--blue-dark);
 }
 .string {
     color: var(--green);
@@ -141,6 +143,14 @@ input[type='password'] {
 }
 .m-markdown td {
     border-bottom: 1px solid var(--black);
+}
+.m-markdown blockquote {
+    border-left: 5px solid var(--blue-dark);
+    background-color: var(--gray-4);
+    padding: 12px 0 12px 18px;
+}
+.m-markdown blockquote > p:first-child {
+    margin-top: 0;
 }
 .m-btn {
     background-color: var(--blue-dark);
