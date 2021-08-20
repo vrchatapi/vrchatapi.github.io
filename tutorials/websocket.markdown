@@ -6,7 +6,8 @@ category: general
 difficulty: hard
 ---
 
-The Websocket API is
+The VRChat Websocket API is used receiving updates regarding the API, such as a friend has been added an invite received.
+The WebSocket is **receive-only**, meaning that you can only listen for messages. Sending messages is undefined behavior.
 
 ## Connecting
 
@@ -47,8 +48,6 @@ To get the full payload it is required to **again** parse the contents of `conte
 
 ## Events
 
-The known events
-
 ### Friend Online Event
 
 {% highlight javascript %}
@@ -64,29 +63,95 @@ The known events
 ### Friend Offline Event
 
 {% highlight javascript %}
+{
+    "content": {
+        "userId": "<userId>"
+    },
+    "type": "friend-offline"
+}
+{% endhighlight %}
+
+### Friend Active Event
+
+{% highlight javascript %}
+{
+    "content": {
+        "userId": "<userId>",
+        "user": <userObject>
+    },
+    "type": "friend-active"
+}
 {% endhighlight %}
 
 ### Friend Add Event
 
 {% highlight javascript %}
+{
+    "content": {
+        "userId": "<userId>",
+        "user": <userObject>
+    },
+    "type": "friend-add"
+}
 {% endhighlight %}
 
 ### Friend Delete Event
 
 {% highlight javascript %}
+{
+    "content": {
+        "userId": "<userId>"
+    },
+    "type": "friend-delete"
+}
 {% endhighlight %}
 
 ### Friend Update Event
 
 {% highlight javascript %}
+{
+    "content": {
+        "userId": "<userId>",
+        "user": <userObject>
+    },
+    "type": "friend-update"
+}
 {% endhighlight %}
 
 ### Friend Location Event
 
 {% highlight javascript %}
+{
+    "content": {
+        "userId": "<userId>",
+        "user": <userObject>,
+        "world": <worldObject>,
+        "location": "<worldId:locationId>",
+        "instance": "<locationId>",
+        "canRequestInvite": <boolean>
+    },
+    "type": "friend-location"
+}
 {% endhighlight %}
 
-### Notification
+### Notification Received Event
+
+Notifications are used for e.g. Invites, Invite Requests and Invite Responeses.
 
 {% highlight javascript %}
+{
+    "content": <notificationObject>,
+    "type": "notification"
+}
+{% endhighlight %}
+
+### Notification Seen Event
+
+Lets the listener know a notification has been marked as seen.
+
+{% highlight javascript %}
+{
+    "content": <notificationId>,
+    "type": "see-notification"
+}
 {% endhighlight %}
