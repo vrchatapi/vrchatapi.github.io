@@ -81,6 +81,14 @@ code {
     font-size: 16px;
     line-height: 24px;
 }
+pre code {
+    color: var(--gray-1);
+}
+pre {
+    padding: 1.5rem;
+    background-color: var(--gray-10);
+    color: var(--gray-1)
+}
 
 a, a.list-group-item {
     color: var(--blue-dark);
