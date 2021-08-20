@@ -264,3 +264,35 @@ small.legal {
 .rounded {
     border-radius: 1rem !important;
 }
+
+.callout {
+    line-height: 24px;
+}
+.callout-error, .callout-danger {
+    padding: 1.25rem;
+    background-color: #fff5fa;
+    border: 1px solid var(--red);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-warn, .callout-warning {
+    padding: 1.25rem;
+    background-color: #fffee5;
+    border: 1px solid var(--yellow);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-info, .callout-primary {
+    padding: 1.25rem;
+    background-color: #f0f3ff;
+    border: 1px solid var(--blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-success {
+    padding: 1.25rem;
+    background-color: #f5fffd;
+    border: 1px solid var(--green);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -6,52 +6,95 @@ category: general
 difficulty: easy
 ---
 
-## Title 1
+## Welcome to the VRChat API
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat nunc auctor arcu pretium, at aliquam libero egestas. Integer eget eleifend ante. Vivamus ac lectus in turpis suscipit vulputate. Phasellus condimentum ante sagittis, fringilla mauris sed, bibendum arcu. Sed dapibus nulla non aliquet rutrum. Nunc rhoncus, purus eget eleifend dictum, urna dolor consectetur nisi, in fringilla nisi nisl quis eros. Nullam sodales purus venenatis, euismod libero at, ullamcorper ante.
+The VRChat API can be used to programmatically retrieve or update information regarding your profile, friends, avatars, worlds and more. The API is designed around the REST ideology, providing semi-simple and usually predictable URIs to access and modify objects. This Getting Started quick-start guide is the fastest to get started using the API.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat nunc auctor arcu pretium, at aliquam libero egestas. Integer eget eleifend ante. Vivamus ac lectus in turpis suscipit vulputate. Phasellus condimentum ante sagittis, fringilla mauris sed, bibendum arcu. Sed dapibus nulla non aliquet rutrum. Nunc rhoncus, purus eget eleifend dictum, urna dolor consectetur nisi, in fringilla nisi nisl quis eros. Nullam sodales purus venenatis, euismod libero at, ullamcorper ante.
+## Where to Begin
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat nunc auctor arcu pretium, at aliquam libero egestas. Integer eget eleifend ante. Vivamus ac lectus in turpis suscipit vulputate. Phasellus condimentum ante sagittis, fringilla mauris sed, bibendum arcu. Sed dapibus nulla non aliquet rutrum. Nunc rhoncus, purus eget eleifend dictum, urna dolor consectetur nisi, in fringilla nisi nisl quis eros. Nullam sodales purus venenatis, euismod libero at, ullamcorper ante.
+These beginning steps will help you to set up the necessary environment, download the API specification, and start exploring the API.
+Start with creating a simple API request and then viewing the response. 
+or more advanced guides, view all the tutorials available under [Tutorials](/tutorials) or click the "Next" button to the right.
 
-Nulla mattis eu quam a gravida. In scelerisque lorem sed rutrum gravida. Nam molestie nibh vel vestibulum molestie. Nunc viverra turpis vitae odio posuere tempor. Aliquam in diam neque. Nullam et metus elit. Pellentesque aliquam lacinia justo pretium condimentum. Phasellus non venenatis neque. Vestibulum eget facilisis nulla. Suspendisse sit amet egestas nunc.
+## Setup Environment
 
-Fusce fermentum sed purus eget efficitur. Nulla facilisi. Donec vulputate fermentum eleifend. Duis id turpis ut eros lobortis mattis. Vestibulum vestibulum luctus risus, ut pharetra magna. In massa risus, accumsan non tincidunt at, pellentesque nec tellus. Vivamus ex ligula, iaculis non malesuada a, semper id turpis. In et dapibus lectus. Maecenas placerat massa libero, eu vulputate ligula consequat et. Nunc pellentesque nibh et lacus accumsan, eget vestibulum ex ultrices. Mauris lobortis velit ac neque cursus congue. Praesent tempus nulla vel justo consectetur, at interdum risus hendrerit. Praesent ut tellus faucibus, ultricies lectus et, aliquam libero. 
+### Download Insomnia
 
-## Title 2
+Insomnia is a popular and fast REST client that's available for Windows, Linux and Mac.
+You can use Insomnia for exploring the API in a user-friendly interface.
+The program automatically handles authentication, cookie management and environment variables.
 
-Nullam laoreet ultricies neque, a feugiat nisl tincidunt nec. Vivamus efficitur erat diam, non elementum lorem posuere sit amet. Integer eget nulla a urna efficitur pharetra sit amet ac nulla. Suspendisse non justo suscipit orci imperdiet tincidunt sed auctor libero. Vestibulum at aliquet arcu. Phasellus ac nulla magna. Nam luctus velit ac sollicitudin malesuada. Donec ac ex sit amet augue convallis rhoncus id in libero. Donec a metus elementum, tristique ipsum sed, finibus est. Nam euismod dignissim neque, sit amet condimentum mauris fermentum sit amet. Nam posuere euismod scelerisque. Cras pretium tempor ipsum, vitae ullamcorper nunc vulputate nec. Praesent non suscipit sapien. Curabitur vehicula tempor purus in tempus.
+<a target="_blank" href="https://insomnia.rest/download" class="btn btn-purple fw-bold btn-lg">Download Insomnia</a>
 
-Sed quis diam accumsan, consectetur nunc a, dictum orci. Nam efficitur, dui eget pharetra dapibus, purus nunc viverra metus, ut maximus orci justo sed libero. Etiam a leo ac quam elementum vestibulum. Aliquam at bibendum sapien. Aliquam viverra ac est at malesuada. Cras luctus elementum pulvinar. Maecenas viverra nisl a odio hendrerit tempor. Proin semper turpis nunc, a gravida diam mattis eget. Nulla eu bibendum erat, vel iaculis massa. Integer laoreet mi at porttitor malesuada. Vestibulum eget ex enim. Integer non quam nec ligula tempus sagittis. Etiam nec ornare neque. Curabitur eget semper turpis. Nunc eleifend urna turpis, at faucibus lacus sodales sit amet. Vivamus venenatis nibh finibus, commodo risus at, dignissim arcu.
+Simply click the downloaded EXE (or binary for your operating system) and Insomnia will install automatically.
+Once installed you should see a window similar to the one in the picture below.
+Theme can be changed in the top right corner by clicking the "Gear" icon.
+The remaining of this tutorial we be using the "Hyper" theme, but the steps remain the same.
 
-Praesent condimentum lacus arcu, a condimentum lorem porttitor a. Duis eget nisl sit amet tellus porttitor dictum at sed arcu. Cras vel bibendum erat. Suspendisse potenti. Donec risus sapien, pellentesque quis metus non, ornare tempor velit. Fusce ac semper urna. Donec tristique consequat lectus. Donec a nulla venenatis, vestibulum velit rhoncus, placerat diam. Aliquam ut quam condimentum, semper ligula quis, condimentum metus. Donec dapibus sagittis metus ac elementum. Nam fringilla erat mauris, et sollicitudin velit auctor et. Suspendisse gravida tristique dolor at convallis. 
+![](/assets/img/tutorials/getting-started/insomnia1.png){:.rounded.img-fluid}
 
-Sed quis diam accumsan, consectetur nunc a, dictum orci. Nam efficitur, dui eget pharetra dapibus, purus nunc viverra metus, ut maximus orci justo sed libero. Etiam a leo ac quam elementum vestibulum. Aliquam at bibendum sapien. Aliquam viverra ac est at malesuada. Cras luctus elementum pulvinar. Maecenas viverra nisl a odio hendrerit tempor. Proin semper turpis nunc, a gravida diam mattis eget. Nulla eu bibendum erat, vel iaculis massa. Integer laoreet mi at porttitor malesuada. Vestibulum eget ex enim. Integer non quam nec ligula tempus sagittis. Etiam nec ornare neque. Curabitur eget semper turpis. Nunc eleifend urna turpis, at faucibus lacus sodales sit amet. Vivamus venenatis nibh finibus, commodo risus at, dignissim arcu.
+### Download the API Specification
 
-Praesent condimentum lacus arcu, a condimentum lorem porttitor a. Duis eget nisl sit amet tellus porttitor dictum at sed arcu. Cras vel bibendum erat. Suspendisse potenti. Donec risus sapien, pellentesque quis metus non, ornare tempor velit. Fusce ac semper urna. Donec tristique consequat lectus. Donec a nulla venenatis, vestibulum velit rhoncus, placerat diam. Aliquam ut quam condimentum, semper ligula quis, condimentum metus. Donec dapibus sagittis metus ac elementum. Nam fringilla erat mauris, et sollicitudin velit auctor et. Suspendisse gravida tristique dolor at convallis. 
+Next, we are going to fetch the API specification for VRChatAPI.
+This is a community-written file in the "OpenAPI" format which defines all the public endpoints you can access and how to use them.
 
-### Title 3
+![](/assets/img/tutorials/getting-started/insomnia2.png){:.rounded.img-fluid}
 
-Nullam semper nibh ac ex sollicitudin, eget tempor ligula suscipit. Fusce non risus elit. Maecenas in nunc eros. Suspendisse tempor tincidunt lacus eget euismod. Pellentesque et est dolor. Quisque tincidunt odio ac eros tristique, at convallis justo porta. Sed rhoncus, est gravida dapibus facilisis, tellus augue ornare mi, at pretium quam tellus sit amet erat. Morbi ut ultricies orci. Aliquam ultricies tellus non dignissim suscipit. Maecenas sem nisi, imperdiet a ante sed, tincidunt ornare nisi. Nunc eu justo metus. Ut quis odio eget elit dapibus vulputate. Aliquam quis neque vel risus sodales euismod vel quis eros. Aenean vulputate ante velit, imperdiet dignissim neque sodales id. Nulla posuere placerat enim, non pharetra diam finibus eu. Sed dapibus, ex vitae euismod volutpat, ex quam volutpat metus, vel molestie libero velit eget dolor.
+Click in the top right corner "Create > URL", and in the following pop-up box enter the following URL and press "Fetch and Import":
 
-Quisque non purus feugiat, ornare odio sit amet, faucibus orci. Quisque sed lacus non elit bibendum auctor quis vel eros. Phasellus tempor odio ut sollicitudin varius. Nunc sed molestie massa. Donec congue laoreet odio, id tincidunt nibh pulvinar vitae. Donec eu semper velit. Vivamus condimentum diam non libero fermentum rutrum. Proin ut lorem velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam tincidunt lectus non auctor lobortis. Nunc rutrum risus elementum, dignissim purus ut, accumsan tortor. Nunc ac ex gravida, elementum ante quis, finibus sem. Donec id ante sed lorem eleifend dictum.
+```
+https://vrchatapi.github.io/specification/openapi.yaml
+```
 
-Sed ultricies sem viverra, maximus tortor vel, rutrum arcu. Nullam imperdiet efficitur finibus. Nunc lorem massa, scelerisque sed lacus sit amet, tristique fringilla sem. Sed auctor aliquam elit at fermentum. Suspendisse quis iaculis tortor, sed tincidunt est. Integer iaculis tellus ex, sit amet laoreet sem lobortis sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Mauris id tempus erat. Curabitur semper nisi nec fermentum egestas. Vivamus metus tortor, malesuada vitae convallis interdum, tempus non est. Maecenas consequat, tellus vitae auctor volutpat, leo tortor porta odio, ac hendrerit lectus libero in ante. Nunc malesuada metus imperdiet libero pharetra, eu porttitor ipsum congue. 
+On the next window you will be asked if you want to import it as "Request Collection" or "Design Document".
+As you will be using the API and not designing it, you want to press **Request Collection** here.
 
-Nullam semper nibh ac ex sollicitudin, eget tempor ligula suscipit. Fusce non risus elit. Maecenas in nunc eros. Suspendisse tempor tincidunt lacus eget euismod. Pellentesque et est dolor. Quisque tincidunt odio ac eros tristique, at convallis justo porta. Sed rhoncus, est gravida dapibus facilisis, tellus augue ornare mi, at pretium quam tellus sit amet erat. Morbi ut ultricies orci. Aliquam ultricies tellus non dignissim suscipit. Maecenas sem nisi, imperdiet a ante sed, tincidunt ornare nisi. Nunc eu justo metus. Ut quis odio eget elit dapibus vulputate. Aliquam quis neque vel risus sodales euismod vel quis eros. Aenean vulputate ante velit, imperdiet dignissim neque sodales id. Nulla posuere placerat enim, non pharetra diam finibus eu. Sed dapibus, ex vitae euismod volutpat, ex quam volutpat metus, vel molestie libero velit eget dolor.
+![](/assets/img/tutorials/getting-started/insomnia3.png){:.rounded.img-fluid}
 
-Quisque non purus feugiat, ornare odio sit amet, faucibus orci. Quisque sed lacus non elit bibendum auctor quis vel eros. Phasellus tempor odio ut sollicitudin varius. Nunc sed molestie massa. Donec congue laoreet odio, id tincidunt nibh pulvinar vitae. Donec eu semper velit. Vivamus condimentum diam non libero fermentum rutrum. Proin ut lorem velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam tincidunt lectus non auctor lobortis. Nunc rutrum risus elementum, dignissim purus ut, accumsan tortor. Nunc ac ex gravida, elementum ante quis, finibus sem. Donec id ante sed lorem eleifend dictum.
+That's it! Now click on "VRChat API Documentation" to proceed.
 
-Sed ultricies sem viverra, maximus tortor vel, rutrum arcu. Nullam imperdiet efficitur finibus. Nunc lorem massa, scelerisque sed lacus sit amet, tristique fringilla sem. Sed auctor aliquam elit at fermentum. Suspendisse quis iaculis tortor, sed tincidunt est. Integer iaculis tellus ex, sit amet laoreet sem lobortis sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Mauris id tempus erat. Curabitur semper nisi nec fermentum egestas. Vivamus metus tortor, malesuada vitae convallis interdum, tempus non est. Maecenas consequat, tellus vitae auctor volutpat, leo tortor porta odio, ac hendrerit lectus libero in ante. Nunc malesuada metus imperdiet libero pharetra, eu porttitor ipsum congue. 
+## Sending your First Request
 
-## Title 2b
+Now we are going to send our first request! As a very simple, but also necessary, demo we will fetch the System Config.
+The System Config contains information such announcements, the world lists, download links to the latest SDKs, and much more!
+But importantly it also contains the required `apiKey` and fetching the System Config sets this key as a cookie.
 
-Ut viverra nec nunc id varius. Integer maximus massa urna, non varius ex dapibus vel. Suspendisse aliquam ligula nec dapibus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus enim sed urna interdum auctor. Cras tincidunt et tortor eget porta. Duis elementum dolor vitae eros elementum, a dictum metus efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat finibus risus, ac volutpat nunc dignissim scelerisque. Nullam luctus leo non ante consequat, id vestibulum dui iaculis. Aliquam erat volutpat. Morbi sit amet tellus ipsum. Morbi mattis malesuada risus, eget pellentesque nisl tristique eu. Aenean in laoreet nisi.
+Now, under "**system**" folder on the left, locate the endpoint called "**Fetch API Config**" and simply press "**Send**".
 
-Ut viverra nec nunc id varius. Integer maximus massa urna, non varius ex dapibus vel. Suspendisse aliquam ligula nec dapibus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus enim sed urna interdum auctor. Cras tincidunt et tortor eget porta. Duis elementum dolor vitae eros elementum, a dictum metus efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat finibus risus, ac volutpat nunc dignissim scelerisque. Nullam luctus leo non ante consequat, id vestibulum dui iaculis. Aliquam erat volutpat. Morbi sit amet tellus ipsum. Morbi mattis malesuada risus, eget pellentesque nisl tristique eu. Aenean in laoreet nisi.
+![](/assets/img/tutorials/getting-started/insomnia4.png){:.rounded.img-fluid}
 
-Ut viverra nec nunc id varius. Integer maximus massa urna, non varius ex dapibus vel. Suspendisse aliquam ligula nec dapibus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus enim sed urna interdum auctor. Cras tincidunt et tortor eget porta. Duis elementum dolor vitae eros elementum, a dictum metus efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat finibus risus, ac volutpat nunc dignissim scelerisque. Nullam luctus leo non ante consequat, id vestibulum dui iaculis. Aliquam erat volutpat. Morbi sit amet tellus ipsum. Morbi mattis malesuada risus, eget pellentesque nisl tristique eu. Aenean in laoreet nisi.
+The API key is required for all further requests. The key is not personal, and has been the same for the last 8 years.
+You can view the request response on the right, as well as the Headers that were returned and Cookies which were set.
+Cookies are global, and you can view your cookie storage by clicking "Cookies" in the **top-left** corner of the window.
 
-Ut viverra nec nunc id varius. Integer maximus massa urna, non varius ex dapibus vel. Suspendisse aliquam ligula nec dapibus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus enim sed urna interdum auctor. Cras tincidunt et tortor eget porta. Duis elementum dolor vitae eros elementum, a dictum metus efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat finibus risus, ac volutpat nunc dignissim scelerisque. Nullam luctus leo non ante consequat, id vestibulum dui iaculis. Aliquam erat volutpat. Morbi sit amet tellus ipsum. Morbi mattis malesuada risus, eget pellentesque nisl tristique eu. Aenean in laoreet nisi.
+Next we are going to Authenticate, as being logged in is required for most requests.
+Click the "**authentication**" folder on the left, locate the endpoint "**Login and/or Get Current User Info**".
+In VRChat the same endpoint is used for authentication as getting your own user information.
+If you are not logged in then it will generate an `authtoken` cookie for you and return your user info.
+If you already are logged in then nothing will happen and it will only return your user info.
 
-END
+Click on the "**Basic**" tab, click *behind* the prefilled `httpUsername` and `httpPassword` and delete the variables.
+Enter instead your own username and password and click "**Send**".
+
+![](/assets/img/tutorials/getting-started/insomnia5.png){:.rounded.img-fluid}
+
+If you do not have 2FA enabled (strongly recommend you do!) then you should see your own user information returned on the right side.
+If you **do** have 2FA enabled (good job!) you need to locate the "**Verify 2FA code**" endpoint on the left, click on the "JSON" tab in the middle,
+and then replace `string` with the real code from your 2FA generator app. If everything validated correctly you should see `verified: true` in the response.
+You can now go back to the "Get Current User Info" endpoint and try get your own info again.
+
+<div class="callout callout-warning mb-3">
+  <strong>⚠️ Account Lockout Warning!</strong><br>
+  If you got an error, please stop and contact help on Discord, as spamming the 2FA can get your account temporarily locked!
+</div>
+
+![](/assets/img/tutorials/getting-started/insomnia6.png){:.rounded.img-fluid.w-50}
+
+**That was all! 🎉 Congratulations on getting started with the VRChat API!**
+
+But you are not done! In fact, your journey starts now! You can now begin to start exploring the API and play around with what is possible.
+Most of the endpoints are self-explanatory, and if you have any questions, you can always check in the [API Documentation](/docs/api) or contact on Discord.
+Please keep the number of requests you send per minute to a minimum. If you send requests too quickly you will get rate limited.
+
+Please also keep in mind that any actions you take is your own responsibility, and that deleted resources such as worlds or avatars cannot be recovered.
+The writer of this tutorial accidentally deleted every single player moderation (mute, block, show avatar) they've made during the last 2 years. But that's a story for another time...
