@@ -3,6 +3,7 @@
 
 :root {
     --red-6: #f5222d;
+    --red-8: #a8071a;
 
     --volcano-6: #fa541c;
 
@@ -27,6 +28,7 @@
     --gray-13: #000000;
 
     --red: var(--red-6);
+    --red-dark: var(--red-8);
     --volcano: var(--volcano-6);
     --orange: var(--orange-6);
     --gold: var(--gold-6);
@@ -62,6 +64,7 @@ p {
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     letter-spacing: 0;
 }
+
 code,
 kbd,
 pre,
@@ -69,41 +72,25 @@ samp {
     font-family: Inconsolata, Courier New, Courier, monospace;
 }
 code {
-    line-height: 27px;
-    font-weight: 400;
-    background-color: #e5e5e5;
-    padding: 2px 6px;
     font-family: Inconsolata, Courier New, Courier, monospace;
-}
-code[class*='language-'],
-pre[class*='language-'] {
-    color: #cbcbcb;
-    background: 0 0;
-    font-family: Inconsolata, 'Courier New', Courier, monospace;
-    font-size: 0.75 em;
-    text-align: left;
-    white-space: pre-wrap;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+    font-weight: 400;
+    color: var(--red-dark);
+    font-size: 16px;
+    line-height: 24px;
 }
 
-a, .nav-link {
+a, a.list-group-item {
     color: var(--blue-dark);
+    text-decoration: none;
+}
+.nav-link {
+    color: var(--black);
     text-decoration: none;
 }
 
 .btn, .dropdown-menu {
     border-radius: 0 !important;
 }
-
 
 .bg-red {
     background-color: var(--red);
@@ -175,6 +162,9 @@ a, .nav-link {
 .btn-purple {
     background-color: var(--purple);
     color: var(--white);
+}
+.btn-light, .bg-light {
+    background-color: var(--gray-4) !important;
 }
 
 blockquote {

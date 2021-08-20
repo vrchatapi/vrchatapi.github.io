@@ -1,5 +1,6 @@
 :host {
     --red-6: #f5222d;
+    --red-8: #a8071a;
 
     --volcano-6: #fa541c;
 
@@ -24,6 +25,7 @@
     --gray-13: #000000;
 
     --red: var(--red-6);
+    --red-dark: var(--red-8);
     --volcano: var(--volcano-6);
     --orange: var(--orange-6);
     --gold: var(--gold-6);
@@ -69,10 +71,16 @@ p {
     color: var(--black);
 }
 
+code,
+kbd,
+pre,
+samp {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+}
 code {
     font-family: Inconsolata, Courier New, Courier, monospace;
     font-weight: 400;
-    color: var(--black);
+    color: var(--red-dark);
     font-size: 16px;
     line-height: 24px;
 }
