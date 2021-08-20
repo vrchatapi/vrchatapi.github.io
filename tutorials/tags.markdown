@@ -4,6 +4,13 @@ permalink: /tutorials/tags
 title: Tags
 category: general
 difficulty: medium
+links:
+    - title: VRChat Safety and Trust System
+      url: https://medium.com/@vrchat/vrchat-safety-and-trust-system-4073f05ab602
+    - title: "VRChat Safety and Trust System: Changes and Feedback"
+      url: https://medium.com/@vrchat/vrchat-safety-and-trust-system-changes-and-feedback-a3a9e54ec572
+    - title: Why "Legendary" might not be a rank after all
+      url: https://github.com/vrchatapi/vrchatapi.github.io/pull/74
 ---
 
 Tags are a way to grant access, assign restrictions, or attach other kinds of metadata to various to objects e.g. worlds, users and avatars.
@@ -37,6 +44,10 @@ Tag | Description
 `system_trust_veteran` | User is "Trusted User" (purple) Trust rank
 `system_trust_legend` | User is "Veteran User" (previously gold) Trust rank
 `show_social_rank` | Shows the users Trust rank in-game
+
+Trust rank tags have an offset of 1 with their name, so `system_trust_trusted` is actually only `Known User` (orange). The arrows in the following picture highlight the offset naming inaccuracy. The naming system is because of legacy reasons. Visistors have no trust rank at all. It is common for people User and above to be missing the tag for New User.
+
+![Trust ranks](https://i.imgur.com/dBoxDVG.png){:.rounded.w-50.mx-auto.d-block}
 
 ## World Tags
 

@@ -51,7 +51,7 @@ layout: default
             </div>
 
             <nav id="tutorial-navbar" class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
-                <a class="navbar-brand fw-bold" href="#">{{ page.title }}</a>
+                <a class="navbar-brand fw-bold py-2" href="#">{{ page.title }}</a>
 
                 <hr class="mt-1">
 
@@ -63,11 +63,24 @@ layout: default
                     submenu_class="nav nav-pills flex-column ms-4 my-1" %}
             </nav>
 
-            <div class=" bg-light p-3 mt-5">
-                AAA
-            </div>
+            <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+                <div class="navbar-brand fw-bold py-2" href="#">Links</div>
 
-            <div class=" bg-light p-3 mt-5">
+                <hr class="mt-1">
+
+                <nav class="nav nav-pills flex-column">
+                {% for link in page.links %}
+                    {% if link.title %}
+                        {% assign link_title = link.title %}
+                    {% else %}
+                        {% assign link_title = link.url %}
+                    {% endif %}
+                    <a class="nav-link" target="_blank" href="{{ link.url }}">{{ link_title }}</a>
+                {% endfor %}
+                </nav>
+            </nav>
+
+            <div class=" bg-light p-3 mt-3">
                 {% include footer_thin.html %}
             </div>
         </div>

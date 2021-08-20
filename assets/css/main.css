@@ -186,3 +186,7 @@ small.legal {
 .nav-pills .nav-link.active {
     background-color: var(--gray-10);
 }
+
+.rounded {
+    border-radius: 1rem !important;
+}
