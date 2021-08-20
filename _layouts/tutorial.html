@@ -26,8 +26,28 @@ layout: default
             <a href="/tutorials" class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
 
             <div class="row text-uppercase ">
-                <div class="col"><a href="/tutorials" class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-                <div class="col"><a href="/tutorials" class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+                {% assign tutorials = site.pages | where_exp:"item","item.layout == tutorial" %}
+                {% assign tutorials_in_cat = site.pages | where_exp:"item","item.category == page.category" %}
+                {% for p in tutorials_in_cat %}
+                    {% if p.title == page.title %}
+                    {{ prev.title }}
+                        {% if forloop.first == true %}
+                            {% assign prev_link = "/tutorials" %}
+                        {% else %}
+                            {% assign prev_i = forloop.index1 | minus: 2 %}
+                            {% assign prev = tutorials_in_cat[prev_i] %}
+                            {% assign prev_link = prev.url %}
+                        {% endif %}
+                        {% if forloop.last == true %}
+                            {% assign next_link = "/tutorials" %}
+                        {% else %}
+                            {% assign next = tutorials_in_cat[forloop.index] %}
+                            {% assign next_link = next.url %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                <div class="col"><a href="{{ prev_link }}" class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+                <div class="col"><a href="{{ next_link }}" class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
             </div>
 
             <nav id="tutorial-navbar" class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
