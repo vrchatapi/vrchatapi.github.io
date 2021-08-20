@@ -4,13 +4,6 @@ permalink: /tutorials/tags
 title: Tags
 category: general
 difficulty: medium
-links:
-    - title: VRChat Safety and Trust System
-      url: https://medium.com/@vrchat/vrchat-safety-and-trust-system-4073f05ab602
-    - title: "VRChat Safety and Trust System: Changes and Feedback"
-      url: https://medium.com/@vrchat/vrchat-safety-and-trust-system-changes-and-feedback-a3a9e54ec572
-    - title: Why "Legendary" might not be a rank after all
-      url: https://github.com/vrchatapi/vrchatapi.github.io/pull/74
 ---
 
 Tags are a way to grant access, assign restrictions, or attach other kinds of metadata to various to objects e.g. worlds, users and avatars.
@@ -70,3 +63,38 @@ Tag | Description
 `system_labs` | World has been submitted to Community Labs
 `system_created_recently` | World was recently created
 `system_updated_recently` | World has been recently updated and will show up in "Updated Recently" worlds row if also system approved
+
+## Language Tags
+
+Language tags primarily appear on User profiles, with each user being allowed to have at most 3 language tags. Language tags can also appear on Instances, showing the languages the people in that instance speak.
+
+Tag | Description
+----|------------
+`language_eng` | English / English
+`language_kor` | 한국어 / Korean
+`language_rus` | Русский / Russian
+`language_spa` | Español / Spanish
+`language_por` | Português / Portuguese
+`language_zho` | 中文 / Chinese
+`language_deu` | Deutsch / German
+`language_jpn` | 日本語 / Japanese
+`language_fra` | Français / French
+`language_swe` | Svenska / Swedish
+`language_nld` | Nederlands / Dutch
+`language_pol` | Polski / Polish
+`language_dan` | Dansk / Danish
+`language_nor` | Norsk / Norwegian
+`language_ita` | Italiano / Italian
+`language_tha` | ภาษาไทย / Thai
+`language_fin` | Suomi / Finnish
+`language_hun` | Magyar / Hungarian
+`language_ces` | Čeština / Czech
+`language_tur` | Türkçe / Turkish
+`language_ara` | العربية / Arabic
+`language_ron` | Română / Romanian
+`language_vie` | Tiếng Việt / Vietnamese
+`language_ase` | American Sign Language
+`language_bfi` | British Sign Language
+`language_dse` | Dutch Sign Language
+`language_fsl` | French Sign Language
+`language_kvk` | Korean Sign Language
