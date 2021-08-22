@@ -16,3 +16,17 @@ tutorial-categories:
     name: General
   - id: nodejs
     name: Node SDK
+
+sdks:
+  - id: node
+    name: Node
+    description: NodeJS is a JavaScript runtime allowing you to write JavaScript or TypeScript on the backend.
+  - id: dart
+    name: Dart
+    description: Dart is a client-side language allowing compilation for both Android, iOS and web. Also possible to run from terminal.
+  - id: rust
+    name: Rust
+    description: Rust is a fast and secure language with no runtime nor garbace-collector, whos memory-management makes memory bugs impossible.
+  - id: csharp
+    name: C#
+    description: C# is C#

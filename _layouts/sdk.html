@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<div class="container-fluid px-5">
+
+    <div class="row">
+        <div class="col-8">
+
+            <div class="position-relative overflow-auto pe-5 pb-5" style="height: calc(100vh - 84px)">
+
+                <nav aria-label="breadcrumb" class="mt-5">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/sdks">SDK</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+                    </ol>
+                </nav>
+
+                <h1 class="fw-bold display-2">{{ page.title }}</h1>
+
+                {{ content }}
+            </div>
+        </div>
+        <div class="col-4">
+            <a id="sdk-autofill-go-to-github" href="#" class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">
+                Go to GitHub Repository
+            </a>
+
+            <nav id="tutorial-navbar" class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+                <a class="navbar-brand fw-bold py-2" href="#">{{ page.title }}</a>
+
+                <hr class="mt-1">
+
+                <nav class="nav nav-pills flex-column">
+                    <div class="nav-link">
+                        Stars: <span id="sdk-autofill-stars"></span>
+                    </div>
+                    <div class="nav-link">
+                        Last updated: <span id="sdk-autofill-since-updated"></span>
+                    </div>
+                    <div class="nav-link">
+                        License: <span id="sdk-autofill-license"></span>
+                    </div>
+                    <div class="nav-link">Setup Environment</div>
+                    <nav class="nav nav-pills flex-column ms-4 my-1">
+                        <a href="#download-insomnia" class="nav-link">Download Insomnia</a>
+                        <a href="#download-the-api-specification" class="nav-link">Download the API Specification</a>
+                    </nav>
+                    <a href="#sending-your-first-request" class="nav-link">Sending your First Request</a>
+                </nav>
+            </nav>
+
+            <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+                <div class="navbar-brand fw-bold py-2" href="#">Links</div>
+
+                <hr class="mt-1">
+
+                <nav class="nav nav-pills flex-column">
+                    {% for link in tutorials_in_cat %}
+                    {% if link.title %}
+                    {% assign link_title = link.title %}
+                    {% else %}
+                    {% assign link_title = link.url %}
+                    {% endif %}
+                    {% if link.title == page.title %}
+                    {% assign link_active = "active" %}
+                    {% else %}
+                    {% assign link_active = "" %}
+                    {% endif %}
+                    <a class="nav-link {{ link_active }}" href="{{ link.url }}">{{ link_title }}</a>
+                    {% endfor %}
+                </nav>
+            </nav>
+
+            <div class=" bg-light p-3 mt-3">
+                {% include footer_thin.html %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const intervals = [
+            { label: 'year', seconds: 31536000 },
+            { label: 'month', seconds: 2592000 },
+            { label: 'day', seconds: 86400 },
+            { label: 'hour', seconds: 3600 },
+            { label: 'minute', seconds: 60 },
+            { label: 'second', seconds: 1 }
+        ];
+
+        function timeSince(date) {
+            const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+            const interval = intervals.find(i => i.seconds < seconds);
+            const count = Math.floor(seconds / interval.seconds);
+            return `${count} ${interval.label}${count !== 1 ? 's' : ''} ago`;
+        }
+
+        fetch('https://api.github.com/repos/vrchatapi/{{ page.repo }}')
+            .then(response => response.json())
+            .then(body => {
+                console.log(body);
+                document.getElementById("sdk-autofill-go-to-github").href = body.html_url;
+                document.getElementById("sdk-autofill-stars").innerText = body.stargazers_count;
+                let since_updated = timeSince(new Date(body.updated_at));
+                document.getElementById("sdk-autofill-since-updated").innerText = since_updated;
+                document.getElementById("sdk-autofill-license").innerText = body.license.spdx_id;
+            });
+    </script>
+
+</div>
