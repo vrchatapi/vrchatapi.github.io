@@ -51,7 +51,7 @@ As you will be using the API and not designing it, you want to press **Request C
 
 ![](/assets/img/tutorials/getting-started/insomnia3.png){:.rounded.img-fluid}
 
-That's it! Now click on "VRChat API Documentation" to proceed.
+Now you're ready to go! Now click on "VRChat API Documentation" to proceed.
 
 ## Sending your First Request
 
@@ -90,7 +90,7 @@ You can now go back to the "Get Current User Info" endpoint and try get your own
 
 ![](/assets/img/tutorials/getting-started/insomnia6.png){:.rounded.img-fluid.w-50}
 
-**That was all! 🎉 Congratulations on getting started with the VRChat API!**
+**That's it! 🎉 Congratulations on getting started with the VRChat API!**
 
 But you are not done! In fact, your journey starts now! You can now begin to start exploring the API and play around with what is possible.
 Most of the endpoints are self-explanatory, and if you have any questions, you can always check in the [API Documentation](/docs/api) or contact on Discord.
