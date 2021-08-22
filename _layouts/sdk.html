@@ -39,18 +39,26 @@ layout: default
 
                 <hr class="mt-1">
 
-                <nav class="nav nav-pills flex-column">
-                    <div class="nav-link">
-                        Stars: {{ repo.stargazers_count }}
+                <nav class="row text-center text-nowrap">
+                    <div class="col">
+                        Stars
+                        <br>
+                        <strong>{{ repo.stargazers_count }}</strong>
                     </div>
-                    <div class="nav-link">
-                        Last updated: <span data="relative-date">{{ repo.updated_at }}</span>
+                    <div class="col">
+                        Last updated
+                        <br>
+                        <strong><span data="relative-date">{{ repo.updated_at }}</span></strong>
                     </div>
-                    <div class="nav-link">
-                        License: {{ repo.license.spdx_id }}
+                    <div class="col">
+                        License
+                        <br>
+                        <strong>{{ repo.license.spdx_id }}</strong>
                     </div>
-                    <div class="nav-link">
-                        Release Version: {{ site.data.github[file_releases][0].tag_name | default: 'None' | remove: "v" }}
+                    <div class="col">
+                        Release Version
+                        <br>
+                        <strong>{{ site.data.github[file_releases][0].tag_name | default: 'None' | remove: "v" }}</strong>
                     </div>
                 </nav>
             </nav>

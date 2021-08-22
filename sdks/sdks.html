@@ -9,21 +9,23 @@ title: VRChat API SDKs
     <nav aria-label="breadcrumb" class="mt-5">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Languages</li>
+            <li class="breadcrumb-item active" aria-current="page">SDK</li>
         </ol>
     </nav>
 
     <h1 class="fw-bold display-2">Languages</h1>
 
     <p class="pt-3">
-        Langage SDKs allow you to quickly get started using the API in your favorite language without having to
+        Langage SDKs allow you to quickly get started using the API in your language of choice, rather than having to
         (re-)implement all the HTTP methods from scratch.
     </p>
 
+    <hr class="mt-5" />
+
     {% for sdk in site.sdks %}
-    <div class="container pt-5">
+    <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 pt-5">
                 <h1 class="fw-bold">
                     {% include lang_{{ sdk.id }}.html width="100" class="m-3" %}
                     {{ sdk.name }} SDK
@@ -33,7 +35,7 @@ title: VRChat API SDKs
                     Go to Docs
                 </a>
             </div>
-            <div class="col-8">
+            <div class="col-8 pt-3">
                 {% for p in site.pages %}
                     {% if p.sdk == sdk.id %}
                         {{ p.content }}
