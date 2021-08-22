@@ -20,26 +20,30 @@ title: VRChat API SDKs
         (re-)implement all the HTTP methods from scratch.
     </p>
 
-    <h3 class="fw-bold">SDKs</h3>
-
-    <div class="row">
-        {% for sdk in site.sdks %}
-        <div class="col-4 mb-3">
-            <div class="card" style="height: 100%;">
-                {% include lang_{{ sdk.id }}.html width="200" class="m-5 mx-auto" %}
-                <div class="card-body">
-                    <h4 class="card-title fw-bold">{{ sdk.name }} SDK</h4>
-                    <a href="/sdks/{{ sdk.id }}" class="btn btn-gold btn-lg d-block fw-bold mb-3">
-                        Go to Docs
-                    </a>
-                    <p class="card-text">
-                        {{ sdk.description }}
-                    </p>
-                </div>
+    {% for sdk in site.sdks %}
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-4">
+                <h1 class="fw-bold">
+                    {% include lang_{{ sdk.id }}.html width="100" class="m-3" %}
+                    {{ sdk.name }} SDK
+                </h1>
+                {{ sdk.description }}
+                <a href="/sdks/{{ sdk.id }}" class="btn btn-gold btn-lg d-block fw-bold mt-5 mb-3">
+                    Go to Docs
+                </a>
+            </div>
+            <div class="col-8">
+                {% for p in site.pages %}
+                    {% if p.sdk == sdk.id %}
+                        {{ p.content }}
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
 
+        <hr />
     </div>
+    {% endfor %}
 
 </div>

@@ -2,27 +2,52 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const fetch = require('node-fetch');
 
+const client_auth_id = process.env.GITHUB_USER
+const client_auth_secret = process.env.GITHUB_TOKEN
+let auth = "Basic " + Buffer.from(client_auth_id+":"+client_auth_secret).toString('base64')
+
+let headers = {
+    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+    "Authorization": auth
+}
+
 function downloadRepoInfo(repoName, callback) {
-    fetch('https://api.github.com/repos/vrchatapi/' + repoName)
+    fetch('https://api.github.com/repos/vrchatapi/' + repoName, {
+        method: 'GET',
+        headers: headers,
+    })
     .then(response => response.json())
-    .then(callback);
+    .then(callback)
+    .catch(console.err);
 }
 
 function downloadRepoReleases(repoName, callback) {
-    fetch('https://api.github.com/repos/vrchatapi/' + repoName + '/releases')
+    fetch('https://api.github.com/repos/vrchatapi/' + repoName + '/releases', {
+        method: 'GET',
+        headers: headers,
+    })
     .then(response => response.json())
-    .then(callback);
+    .then(callback)
+    .catch(console.err);
 }
 
 function downloadRepoREADME(repoName, callback) {
-    fetch('https://api.github.com/repos/vrchatapi/' + repoName + '/git/trees/main')
+    fetch('https://api.github.com/repos/vrchatapi/' + repoName + '/git/trees/main', {
+        method: 'GET',
+        headers: headers,
+    })
     .then(response => response.json())
     .then(body => {
         let file = body.tree.filter(f => repoName == "vrchatapi-dart" ? (f.path == "vrchat_dart/README.md") : (f.path == "README.md"))[0];
-        fetch(file.url)
+        fetch(file.url, {
+            method: 'GET',
+            headers: headers,
+        })
             .then(response => response.json())
-            .then(callback);
-    });
+            .then(callback)
+            .catch(console.err);
+    })
+    .catch(console.err);
 }
 
 try {
