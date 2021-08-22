@@ -87,36 +87,13 @@ title: VRChat API Documentation
             </div>
             <div class="col">
                 <div class="row row-cols-3 text-center fw-bold">
+                    {% for sdk in site.sdks %}
                     <div class="col pb-5">
-                        {% include lang_node.html width="50" class="mb-3" %}
+                        {% include lang_{{ sdk.id }}.html width="50" class="mb-3" %}
                         <br>
-                        <a target="_blank" href="/sdks/node">Node SDK</a>
+                        <a href="/sdks/{{ sdk.id }}">{{ sdk.name }} SDK</a>
                     </div>
-                    <div class="col pb-5">
-                        {% include lang_python.html width="50" class="mb-3" %}
-                        <br>
-                        Python SDK
-                    </div>
-                    <div class="col pb-5">
-                        {% include lang_java.html width="50" class="mb-3" %}
-                        <br>
-                        Java SDK
-                    </div>
-                    <div class="col pb-5">
-                        {% include lang_dart.html width="50" class="mb-3" %}
-                        <br>
-                        <a target="_blank" href="/sdks/dart">Dart SDK</a>
-                    </div>
-                    <div class="col pb-5">
-                        {% include lang_rust.html width="50" class="mb-3" %}
-                        <br>
-                        <a target="_blank" href="/sdks/rust">Rust SDK</a>
-                    </div>
-                    <div class="col pb-5">
-                        {% include lang_csharp.html width="50" class="mb-3" %}
-                        <br>
-                        <a target="_blank" href="/sdks/csharp">C# SDK</a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

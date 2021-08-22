@@ -24,12 +24,14 @@ title: VRChat API SDKs
 
     <div class="row">
         {% for sdk in site.sdks %}
-        <div class="col">
+        <div class="col-4 mb-3">
             <div class="card" style="height: 100%;">
-                {% include lang_{{ sdk.id }}.html width="200" class="m-5" %}
+                {% include lang_{{ sdk.id }}.html width="200" class="m-5 mx-auto" %}
                 <div class="card-body">
-                    <h5 class="card-title fw-bold">{{ sdk.name }} SDK</h5>
-                    <a href="/sdks/{{ sdk.id }}" class="btn btn-gold btn-lg d-block fw-bold mb-3">Node SDK</a>
+                    <h4 class="card-title fw-bold">{{ sdk.name }} SDK</h4>
+                    <a href="/sdks/{{ sdk.id }}" class="btn btn-gold btn-lg d-block fw-bold mb-3">
+                        Go to Docs
+                    </a>
                     <p class="card-text">
                         {{ sdk.description }}
                     </p>

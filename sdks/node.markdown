@@ -2,7 +2,8 @@
 layout: sdk
 permalink: /sdks/node
 title: Node SDK
-repo: vrchatapi-javascript
+sdk: node
+links:
+- title: NPM
+  target: https://www.npmjs.com/package/vrchat
 ---
-
-Hi world

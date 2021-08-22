@@ -20,13 +20,25 @@ tutorial-categories:
 sdks:
   - id: node
     name: Node
+    repo: vrchatapi-javascript
     description: NodeJS is a JavaScript runtime allowing you to write JavaScript or TypeScript on the backend.
+  - id: python
+    name: Python
+    repo: vrchatapi-python
+    description: Python is an easy to learn scripting language for developing terminal or backend applications.
+  - id: java
+    name: Java
+    repo: vrchatapi-java
+    description: Java is a high-level, class-based OOP language for both desktop, backend and Android.
   - id: dart
     name: Dart
+    repo: vrchatapi-dart
     description: Dart is a client-side language allowing compilation for both Android, iOS and web. Also possible to run from terminal.
   - id: rust
     name: Rust
+    repo: vrchatapi-rust
     description: Rust is a fast and secure language with no runtime nor garbace-collector, whos memory-management makes memory bugs impossible.
   - id: csharp
     name: C#
-    description: C# is C#
+    repo: vrchatapi-csharp
+    description: C# is a high-level, class-based OOP langauge, part of .NET, and builds for desktop and Unity.

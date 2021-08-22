@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% assign file_readme = page.sdk | prepend: 'readme_' %}
+{% assign file_releases = page.sdk | prepend: 'releases_' %}
+{% assign file_repo = page.sdk | prepend: 'repo_' %}
+{% assign repo = site.data.github[file_repo] %}
+
 <div class="container-fluid px-5">
 
     <div class="row">
@@ -19,11 +24,13 @@ layout: default
 
                 <h1 class="fw-bold display-2">{{ page.title }}</h1>
 
-                {{ content }}
+                <div id="sdk-readme-content">
+                    {{ site.data.github[file_readme].decoded | markdownify }}
+                </div>
             </div>
         </div>
         <div class="col-4">
-            <a id="sdk-autofill-go-to-github" href="#" class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">
+            <a target="_blank" href="{{ repo.html_url }}" class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">
                 Go to GitHub Repository
             </a>
 
@@ -34,15 +41,17 @@ layout: default
 
                 <nav class="nav nav-pills flex-column">
                     <div class="nav-link">
-                        Stars: <span id="sdk-autofill-stars"></span>
+                        Stars: {{ repo.stargazers_count }}
                     </div>
                     <div class="nav-link">
-                        Last updated: <span id="sdk-autofill-since-updated"></span>
+                        Last updated: <span data="relative-date">{{ repo.updated_at }}</span>
                     </div>
                     <div class="nav-link">
-                        License: <span id="sdk-autofill-license"></span>
+                        License: {{ repo.license.spdx_id }}
                     </div>
-                    <div class="nav-link">Setup Environment</div>
+                    <div class="nav-link">
+                        Release Version: {{ site.data.github[file_releases][0].tag_name | default: 'None' | remove: "v" }}
+                    </div>
                 </nav>
             </nav>
 
@@ -52,18 +61,10 @@ layout: default
                 <hr class="mt-1">
 
                 <nav class="nav nav-pills flex-column">
-                    {% for link in tutorials_in_cat %}
-                    {% if link.title %}
-                    {% assign link_title = link.title %}
-                    {% else %}
-                    {% assign link_title = link.url %}
-                    {% endif %}
-                    {% if link.title == page.title %}
-                    {% assign link_active = "active" %}
-                    {% else %}
-                    {% assign link_active = "" %}
-                    {% endif %}
-                    <a class="nav-link {{ link_active }}" href="{{ link.url }}">{{ link_title }}</a>
+                    {% for link in page.links %}
+                    <a target="_blank" href="{{ link.target }}" class="nav-link">
+                        {{ link.title }}
+                    </a>
                     {% endfor %}
                 </nav>
             </nav>
@@ -75,7 +76,6 @@ layout: default
     </div>
 
     <script>
-
         const intervals = [
             { label: 'year', seconds: 31536000 },
             { label: 'month', seconds: 2592000 },
@@ -92,16 +92,13 @@ layout: default
             return `${count} ${interval.label}${count !== 1 ? 's' : ''} ago`;
         }
 
-        fetch('https://api.github.com/repos/vrchatapi/{{ page.repo }}')
-            .then(response => response.json())
-            .then(body => {
-                console.log(body);
-                document.getElementById("sdk-autofill-go-to-github").href = body.html_url;
-                document.getElementById("sdk-autofill-stars").innerText = body.stargazers_count;
-                let since_updated = timeSince(new Date(body.updated_at));
-                document.getElementById("sdk-autofill-since-updated").innerText = since_updated;
-                document.getElementById("sdk-autofill-license").innerText = body.license.spdx_id;
-            });
+        // Add "img-fluid" to images
+        document.getElementById("sdk-readme-content").querySelectorAll("img").forEach(el => el.classList.add("img-fluid"));
+
+        // Calculate relative dates
+        document.querySelectorAll("*[data=relative-date]").forEach(function (e) {
+            e.innerText = timeSince(new Date(e.innerText));
+        });
     </script>
 
 </div>
