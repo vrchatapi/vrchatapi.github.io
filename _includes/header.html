@@ -24,6 +24,9 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/docs/api">HTTP API</a></li>
                         <li><a class="dropdown-item" href="/docs/api/pdf">PDF Specification</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="#">Getting Started</a></li>
                         <li><a class="dropdown-item" href="/docs/tutorials">Tutorials</a></li>
                     </ul>
@@ -34,16 +37,9 @@
                         Languages
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/languages/node">NodeJS</a></li>
-                        <li><a class="dropdown-item" href="#">Python (WIP)</a></li>
-                        <li><a class="dropdown-item" href="#">Java (WIP)</a></li>
-                        <li><a class="dropdown-item" href="/languages/dart">Dart</a></li>
-                        <li><a class="dropdown-item" href="/languages/rust">Rust</a></li>
-                        <li><a class="dropdown-item" href="/languages/csharp">C#</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        {% for sdk in site.sdks %}
+                        <li><a class="dropdown-item" href="/sdks/{{ sdk.id }}">{{ sdk.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
             </ul>
