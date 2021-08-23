@@ -3,6 +3,9 @@ layout: sdk
 permalink: /sdk/rust
 title: Rust SDK
 sdk: rust
+links:
+- title: crates.io
+  target: https://crates.io/crates/vrchatapi
 ---
 
 ```rust
