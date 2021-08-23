@@ -118,3 +118,102 @@ title: VRChat API Documentation
         <a href="/docs/api" class="btn btn-volcano fw-bold text-uppercase btn-lg">Check out tutorials</a>
     </div>
 </div>
+
+<script>
+    // LEGACY REDIRECTING
+
+    const redirects = [
+        ["", ""],
+        ["README", ""],
+        ["GettingStarted/QuickStart", "/tutorials/getting-started"],
+        ["GettingStarted/Examples", "/tutorials/getting-started"],
+        ["Objects/Avatar", "/docs/api#tag--avatars"],
+        ["Objects/User", "/docs/api#tag--users"],
+        ["Objects/World", "/docs/api#tag--worlds"],
+        ["Objects/Notification", "/docs/api#tag--notifications"],
+        ["Objects/unityPackage", "/docs/api#tag--files"],
+        ["UserAPI/Tags", "/tutorials/tags"],
+        ["UserAPI/Register", "/docs/api#post-/auth/register"],
+        ["UserAPI/ResendEmail", "/docs/api#post-/auth/user/resendEmail"],
+        ["UserAPI/VerifyLoginPlace", "/docs/api#get-/auth/verifyLoginPlace"],
+        ["UserAPI/Login", "/docs/api#get-/auth/user"],
+        ["UserAPI/Logout", "/docs/api#put-/logout"],
+        ["UserAPI/Verify", "/docs/api#post-/auth/twofactorauth/otp/verify"],
+        ["UserAPI/Delete", "/docs/api#put-/user/-userId-/delete"],
+        ["UserAPI/CurrentUserDetails", "/docs/api#get-/auth/user"],
+        ["UserAPI/UpdateInfo", "/docs/api#put-/users/-userId-"],
+        ["UserAPI/Friends", "/docs/api#get-/auth/user/friends"],
+        ["UserAPI/FriendStatus", "/docs/api#get-/user/-userId-/friendStatus"],
+        ["UserAPI/FriendRequest", "/docs/api#post-/user/-userId-/friendRequest"],
+        ["UserAPI/Unfriend", "/docs/api#delete-/auth/user/friends/-userId-"],
+        ["UserAPI/AcceptIgnoreFriend", "/docs/api#put-/auth/user/notifications/-notificationId-/accept"],
+        ["UserAPI/GetByID", "/docs/api#get-/users/-userId-"],
+        ["UserAPI/GetByName", "/docs/api#get-/users/-username-/name"],
+        ["UserAPI/List", "/docs/api#get-/users"],
+        ["FavoritesAPI/AddFavorite", "/docs/api#post-/favorites"],
+        ["FavoritesAPI/GetFavorite", "/docs/api#get-/favorites/-favoriteId-"],
+        ["FavoritesAPI/ListAllFavorites", "/docs/api#get-/favorites"],
+        ["FavoritesAPI/DeleteFavorite", "/docs/api#delete-/favorites/-favoriteId-"],
+        ["WorldAPI/GetWorld", "/docs/api#get-/worlds/-worldId-"],
+        ["WorldAPI/ListWorlds", "/docs/api#get-/worlds"],
+        ["WorldAPI/DeleteWorld", "/docs/api#delete-/worlds/-worldId-"],
+        ["WorldAPI/GetMetadata", "/docs/api#get-/worlds/-worldId-/metadata"],
+        ["WorldAPI/WorldInstanceTags", "/tutorials/instances"],
+        ["WorldAPI/GetInstance", "/docs/api#get-/worlds/-worldId-/-instanceId-"],
+        ["AvatarAPI/GetByID", "/docs/api#get-/avatars/-avatarId-"],
+        ["AvatarAPI/ChooseAvatar", "/docs/api#put-/avatars/-avatarId-/select"],
+        ["AvatarAPI/ListAvatars", "/docs/api#get-/avatars"],
+        ["AvatarAPI/SaveAvatar", "/docs/api#put-/avatars/-avatarId-"],
+        ["AvatarAPI/DeleteAvatar", "/docs/api#delete-/avatars/-avatarId-"],
+        ["ModerationAPI/SendModerations", ""], // Internal admin...
+        ["ModerationAPI/SendPlayerModerations", "/docs/api#post-/auth/user/playermoderations"],
+        ["ModerationAPI/DeleteModeration", "/docs/api#delete-/auth/user/playermoderations/-playerModerationId-"],
+        ["ModerationAPI/ClearModerations", "/docs/api#delete-/auth/user/playermoderations"],
+        ["ModerationAPI/Players", "/docs/api#get-/auth/user/playermoderations"],
+        ["ModerationAPI/SendVoteKick", "/docs/api#post-/user/-userId-/name"],
+        ["SystemAPI/Config", "/docs/api#get-/config"],
+        ["SystemAPI/Visits", "/docs/api#get-/visits"],
+        ["SystemAPI/Time", "/docs/api#get-/time"],
+        ["SystemAPI/Auth", "/docs/api#get-/auth"],
+        ["NotificationAPI/SendNotification", ""], // Internal admin...
+        ["NotificationAPI/MarkAsSeen", "/docs/api#put-/auth/user/notifications/-notificationId-/see"],
+        ["NotificationAPI/Delete", "/docs/api#put-/auth/user/notifications/-notificationId-/hide"],
+        ["NotificationAPI/GetAll", "/docs/api#get-/auth/user/notifications"],
+        ["FileAPI/MimeTypes", "/docs/api#tag--files"],
+        ["FileAPI/CreateFile", "/docs/api#post-/file"],
+        ["FileAPI/GetFile", "/docs/api#get-/file/-fileId-"],
+        ["FileAPI/DeleteFile", "/docs/api#delete-/file/-fileId-"],
+        ["FileAPI/DownloadFile", "/docs/api#get-/file/-fileId-"],
+        ["FileAPI/StartUpload", "/docs/api#put-/file/-fileId-/-versionId-/-fileType-/start"],
+        ["FileAPI/FinishUpload", "/docs/api#put-/file/-fileId-/-versionId-/-fileType-/finish"],
+        ["FileAPI/UploadStatus", "/docs/api#get-/file/-fileId-/-versionId-/-fileType-/status"],
+        ["FileAPI/CreateNewVersion", "/docs/api#post-/file/-fileId-"],
+        ["WebsocketAPI/About", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendOnlineEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendOfflineEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendActiveEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendAddEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendDeleteEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendUpdateEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendLocationEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/NotificationEvent", "/tutorials/websocket"],
+        ["FeedbackAPI/GetWorldFeedback", ""],
+        ["AnalyticsAPI/Analytics", ""],
+        ["Archive/SecretWorlds", ""],
+        ["Archive/ModerationAPI/Against", ""],
+        ["Archive/UserAPI/ListActive", ""],
+    ];
+
+    function routeChange() {
+        redirects.forEach(([source, target]) => {
+            const sources = [`#/${source}`, `#/${source}/`];
+            if (!sources.includes(location.hash)) return;
+
+            console.log("OK!", target);
+            window.location = target;
+        });
+    }
+
+    window.addEventListener("hashchange", routeChange);
+    window.addEventListener("load", routeChange);
+</script>
