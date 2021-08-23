@@ -41,7 +41,7 @@
     --black: var(--gray-13);
 
     --border-color: transparent;
-    --bg2: transparent;
+    --bg2: var(--gray-4);
 }
 
 h1 {
