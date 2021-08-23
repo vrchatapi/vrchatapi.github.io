@@ -14,18 +14,18 @@ highlighter: rouge
 tutorial-categories:
   - id: general
     name: General
-  - id: node
-    name: Node SDK
-#  - id: python
-#    name: Python SDK
-  - id: java
-    name: Java SDK
-  - id: dart
-    name: Dart SDK
-  - id: rust
-    name: Rust SDK
-  - id: csharp
-    name: C# SDK
+  # - id: node
+  #   name: Node SDK
+  # - id: python
+  #   name: Python SDK
+  # - id: java
+  #   name: Java SDK
+  # - id: dart
+  #   name: Dart SDK
+  # - id: rust
+  #   name: Rust SDK
+  # - id: csharp
+  #   name: C# SDK
 
 sdks:
   - id: node
