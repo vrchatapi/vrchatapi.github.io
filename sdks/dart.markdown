@@ -1,6 +1,6 @@
 ---
 layout: sdk
-permalink: /sdks/dart
+permalink: /sdk/dart
 title: Dart SDK
 sdk: dart
 ---

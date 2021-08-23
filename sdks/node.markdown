@@ -1,6 +1,6 @@
 ---
 layout: sdk
-permalink: /sdks/node
+permalink: /sdk/node
 title: Node SDK
 sdk: node
 links:

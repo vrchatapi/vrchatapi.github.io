@@ -1,6 +1,6 @@
 ---
 layout: sdk
-permalink: /sdks/rust
+permalink: /sdk/rust
 title: Rust SDK
 sdk: rust
 ---

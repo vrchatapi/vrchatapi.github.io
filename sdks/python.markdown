@@ -1,6 +1,6 @@
 ---
 layout: sdk
-permalink: /sdks/python
+permalink: /sdk/python
 title: Python SDK
 sdk: python
 ---

@@ -1,6 +1,6 @@
 ---
 layout: sdk
-permalink: /sdks/csharp
+permalink: /sdk/csharp
 title: C# SDK
 sdk: csharp
 ---

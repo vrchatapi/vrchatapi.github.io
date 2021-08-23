@@ -1,6 +1,6 @@
 ---
 layout: sdk
-permalink: /sdks/java
+permalink: /sdk/java
 title: Java SDK
 sdk: java
 ---
