@@ -44,7 +44,7 @@
     --black: var(--gray-13);
 }
 
-#content {
+#content, #api-content-mobile, #api-content-desktop {
     height: calc(100vh - 84px);
     width: 100vw;
 }
