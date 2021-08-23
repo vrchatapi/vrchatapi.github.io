@@ -4,7 +4,7 @@ permalink: /sdk/dart
 title: Dart SDK
 sdk: dart
 links:
-- title: pub.dev
+- title: pub.dev/packages/vrchat_dart
   target: https://pub.dev/packages/vrchat_dart
 ---
 
