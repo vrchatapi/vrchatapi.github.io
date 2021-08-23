@@ -12,11 +12,6 @@ Configuration.Default.Password = "password";
 
 try
 {
-    // Calling "GetConfig" will fetch the API key needed for further requests.
-    SystemApi api = new SystemApi();
-    var config = await api.GetConfigAsync();
-    Console.WriteLine($"Received config {config.ClientApiKey}.");
-
     // Calling "GetCurrentUser" will log you in.
     AuthenticationApi authApi = new AuthenticationApi();
     var user = await authApi.GetCurrentUserAsync();

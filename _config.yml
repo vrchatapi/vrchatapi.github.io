@@ -20,8 +20,8 @@ tutorial-categories:
 #    name: Python SDK
   - id: java
     name: Java SDK
-#  - id: dart
-#    name: Dart SDK
+  - id: dart
+    name: Dart SDK
   - id: rust
     name: Rust SDK
   - id: csharp
@@ -40,10 +40,10 @@ sdks:
     name: Java
     repo: vrchatapi-java
     description: Java is a high-level, class-based OOP language for both desktop, backend and Android.
-#  - id: dart
-#    name: Dart
-#    repo: vrchatapi-dart
-#    description: Dart is a client-side language allowing compilation for both Android, iOS and web. Also possible to run from terminal.
+  - id: dart
+    name: Dart
+    repo: vrchatapi-dart
+    description: Dart is a client-side language allowing compilation for both Android, iOS, web, and terminal.
   - id: rust
     name: Rust
     repo: vrchatapi-rust

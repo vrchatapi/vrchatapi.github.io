@@ -6,20 +6,15 @@ sdk: rust
 ---
 
 ```rust
-// Import VRChat API SDK
-pub use vrchatapi::apis;
+// Step 1. We begin with creating a Configuration
+// This contains the username and password for authentication.
+let config = apis::configuration::Configuration::default();
 
-fn main() {
-    // Step 1. We begin with creating a Configuration
-    // This contains the username and password for authentication.
-    let config = apis::configuration::Configuration::default();
+// Step 2. VRChat consists of several API's
+// e.g. (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)
+// Here we call the SystemAPI to fetch the number of users online.
+let online = apis::system_api::get_current_online_users(&config).unwrap();
 
-    // Step 2. VRChat consists of several API's
-    // e.g. (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)
-    // Here we call the SystemAPI to fetch the number of users online.
-    let online = apis::system_api::get_current_online_users(&config).unwrap();
-
-    // Step 3. Print out the result!
-    println!("Current Online Users: {}", online);
-}
+// Step 3. Print out the result!
+println!("Current Online Users: {}", online);
 ```

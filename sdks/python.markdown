@@ -4,6 +4,7 @@ permalink: /sdk/python
 title: Python SDK
 sdk: python
 ---
+
 ```python
 import time
 import vrchatapi
@@ -14,7 +15,6 @@ configuration = vrchatapi.Configuration(
     username = 'username',
     password = 'password'
 )
-configuration.api_key['apiKeyCookie'] = 'JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26'
 
 # Enter a context with an instance of the API client
 with vrchatapi.ApiClient(configuration) as api_client:
