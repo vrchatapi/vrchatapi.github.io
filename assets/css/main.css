@@ -52,6 +52,16 @@
 .display-1 {
     font-size: 6rem;
 }
+.display-2 {
+    font-size: 4rem;
+}
+.tmid-parent {
+    display: table !important;
+}
+.tmid-child {
+    display: table-cell;
+    vertical-align: middle;
+}
 
 body {
     font-size: 1.2rem;
