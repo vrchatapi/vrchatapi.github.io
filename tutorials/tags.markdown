@@ -40,7 +40,7 @@ Tag | Description
 
 Trust rank tags have an offset of 1 with their name, so `system_trust_trusted` is actually only `Known User` (orange). The arrows in the following picture highlight the offset naming inaccuracy. The naming system is because of legacy reasons. Visistors have no trust rank at all. It is common for people User and above to be missing the tag for New User.
 
-![Trust ranks](https://i.imgur.com/dBoxDVG.png){:.rounded.w-50.mx-auto.d-block}
+![Trust ranks](https://i.imgur.com/dBoxDVG.png){:.rounded.img-fluid}
 
 ## World Tags
 

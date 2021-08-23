@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item me-5">
-                    <a class="nav-link fs-5 active fw-bold" aria-current="page"
+                    <a target="_blank" class="nav-link fs-5 active fw-bold"
                         href="https://github.com/vrchatapi">GitHub</a>
                 </li>
                 <li class="nav-item me-5 dropdown">
@@ -22,14 +22,14 @@
                         Reference
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/docs/api">HTTP API</a></li>
-                        <li><a class="dropdown-item" href="/docs/api/pdf">PDF Specification</a></li>
-                        <li><a class="dropdown-item" href="/docs/api/swagger">Swagger UI</a></li>
+                        <li><a class="dropdown-item py-3" href="/docs/api">HTTP API</a></li>
+                        <li><a class="dropdown-item py-3" href="/docs/api/pdf">PDF Specification</a></li>
+                        <li><a class="dropdown-item py-3" href="/docs/api/swagger">Swagger UI</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="/tutorials/getting-started">Getting Started</a></li>
-                        <li><a class="dropdown-item" href="/tutorials">Tutorials</a></li>
+                        <li><a class="dropdown-item py-3" href="/tutorials/getting-started">Getting Started</a></li>
+                        <li><a class="dropdown-item py-3" href="/tutorials">Tutorials</a></li>
                     </ul>
                 </li>
                 <li class="nav-item me-5 dropdown">
@@ -39,12 +39,12 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {% for sdk in site.sdks %}
-                        <li><a class="dropdown-item" href="/sdk/{{ sdk.id }}">{{ sdk.name }}</a></li>
+                        <li><a class="dropdown-item py-3" href="/sdk/{{ sdk.id }}">{{ sdk.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
             </ul>
-            <a class="d-flex text-decoration-none" href="https://discord.gg/qjZE9C9fkB">
+            <a target="_blank" class="d-flex text-decoration-none" href="https://discord.gg/qjZE9C9fkB">
                 <button class="btn btn-outline-light me-3 px-4 py-3" type="submit">Join Discord</button>
             </a>
         </div>

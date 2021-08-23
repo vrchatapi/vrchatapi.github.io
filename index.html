@@ -4,23 +4,25 @@ title: VRChat API Documentation
 ---
 
 <div class="bg-light">
-    <div class="container py-5">
-        <h1 class="display-1 fw-bold pt-5">VRChat API<br>Documentation</h1>
-        <h3 class="fw-light pt-3">Here you'll find handy documentation about the API and SDKs.<br>Choose below, or scroll down to select by feature.</h3>
+    <div class="container pb-3 pt-md-5">
+        <h1 class="display-1 fw-bold pt-5 d-block d-md-none">VRChat API<br>Docs</h1>
+        <h1 class="display-1 fw-bold pt-5 d-none d-md-block">VRChat API<br>Documentation</h1>
+        
+        <h3 class="fw-light pt-3">Here you'll find handy documentation about the API and SDKs.<br class="d-none d-md-inline"> Choose below, or scroll down to select by feature.</h3>
 
         <div class="pt-4"></div>
 
         <div class="row my-5">
-            <div class="col d-grid">
+            <div class="col-6 col-md-3 d-grid mb-3">
                 <a class="btn btn-lg fw-bold fs-3 py-3 btn-yellow" href="/docs/api">API Docs</a>
             </div>
-            <div class="col d-grid">
+            <div class="col-6 col-md-3 d-grid mb-3">
                 <a class="btn btn-lg fw-bold fs-3 py-3 btn-gold" href="/tutorials/getting-started">Getting Started</a>
             </div>
-            <div class="col d-grid">
+            <div class="col-6 col-md-3 d-grid mb-3">
                 <a class="btn btn-lg fw-bold fs-3 py-3 btn-orange" href="/sdk">Language SDKs</a>
             </div>
-            <div class="col d-grid">
+            <div class="col-6 col-md-3 d-grid mb-3">
                 <a class="btn btn-lg fw-bold fs-3 py-3 btn-volcano" href="/tutorials">Tutorials</a>
             </div>
         </div>
@@ -28,21 +30,21 @@ title: VRChat API Documentation
 </div>
 
 <div class="bg-white">
-    <div class="container pt-5">
+    <div class="container pt-5 pt-5 px-4 px-md-0">
         <h1 class="fw-bold">API Docs</h1>
 
         
-        <p class="pt-3">The API documentation project allows developers to build features that connect them to VRChat.
+        <p class="pt-3 pb-4 pb-md-0">The API documentation project allows developers to build features that connect them to VRChat.
         The documentation is written in a standardised format called <a href="https://www.openapis.org/">OpenAPI</a>,
         providing capabilities for automatic documentation and SDK generation in a variety of languages.</p>
 
         <div class="bg-secondary">
         <div class="row py-5 mb-3">
-            <div class="col-6 ps-5">
+            <div class="col-12 col-md-6 ps-3 ps-md-5 pe-3 pe-md-0 pb-3 pb-md-0">
                 <img src="https://i.imgur.com/JYLokfb.png" class="img-fluid" />
             </div>
-            <div class="col-5">
-                <blockquote class="mb-0">
+            <div class="col-12 col-md-5">
+                <blockquote class="mb-0 mx-3 mx-md-0">
                 The OpenAPI Specification defines a standard, programming language-agnostic interface description for HTTP APIs,
                 which allows both humans and computers to discover and understand the capabilities of a service without requiring access
                 to source code, additional documentation, or inspection of network traffic. When properly defined via OpenAPI, a consumer
@@ -64,7 +66,7 @@ title: VRChat API Documentation
         <hr class="mt-5" />
     </div>
 
-    <div class="container pt-5">
+    <div class="container pt-5 px-4 px-md-0">
         <h1 class="fw-bold">Getting Started</h1>
 
         <p class="pt-3">
@@ -80,12 +82,12 @@ title: VRChat API Documentation
         <hr class="mt-5" />
     </div>
 
-    <div class="container pt-5">
+    <div class="container pt-5 px-4 px-md-0">
         <div class="row">
-            <div class="col-4">
-                <h1 class="fw-bold">Developer<br>Tools</h1>
+            <div class="col-12 col-md-4">
+                <h1 class="fw-bold mb-5">Developer<br>Tools</h1>
             </div>
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <div class="row row-cols-3 text-center fw-bold">
                     {% for sdk in site.sdks %}
                     <div class="col pb-5">
@@ -101,7 +103,7 @@ title: VRChat API Documentation
         <hr />
     </div>
 
-    <div class="container py-5">
+    <div class="container py-5 px-4 px-md-0">
         <h1 class="fw-bold">Additional Tutorials</h1>
 
         <p class="pt-3">

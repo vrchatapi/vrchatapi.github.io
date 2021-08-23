@@ -1,0 +1,50 @@
+<a target="_blank" href="{{ repo.html_url }}" class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">
+    Go to GitHub Repository
+</a>
+
+<nav id="tutorial-navbar" class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+    <a class="navbar-brand fw-bold py-2" href="#">{{ page.title }}</a>
+
+    <hr class="mt-1">
+
+    <nav class="row text-center text-nowrap">
+        <div class="col">
+            Stars
+            <br>
+            <strong>{{ repo.stargazers_count }}</strong>
+        </div>
+        <div class="col">
+            Last updated
+            <br>
+            <strong><span data="relative-date">{{ repo.updated_at }}</span></strong>
+        </div>
+        <div class="col">
+            License
+            <br>
+            <strong>{{ repo.license.spdx_id }}</strong>
+        </div>
+        <div class="col">
+            Release Version
+            <br>
+            <strong>{{ site.data.github[file_releases][0].tag_name | default: 'None' | remove: "v" }}</strong>
+        </div>
+    </nav>
+</nav>
+
+<nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+    <div class="navbar-brand fw-bold py-2" href="#">Links</div>
+
+    <hr class="mt-1">
+
+    <nav class="nav nav-pills flex-column">
+        {% for link in page.links %}
+        <a target="_blank" href="{{ link.target }}" class="nav-link">
+            {{ link.title }}
+        </a>
+        {% endfor %}
+    </nav>
+</nav>
+
+<div class=" bg-light p-3 mt-3">
+    {% include footer_thin.html %}
+</div>
