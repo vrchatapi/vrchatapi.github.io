@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 const client_auth_id = process.env.GITHUB_USER
 const client_auth_secret = process.env.GITHUB_TOKEN
-let auth = "Basic " + Buffer.from(client_auth_id+":"+client_auth_secret).toString('base64')
+let auth = "Basic " + Buffer.from(client_auth_id + ":" + client_auth_secret).toString('base64')
 
 let headers = {
     "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
@@ -16,9 +16,9 @@ function downloadRepoInfo(repoName, callback) {
         method: 'GET',
         headers: headers,
     })
-    .then(response => response.json())
-    .then(callback)
-    .catch(console.err);
+        .then(response => response.json())
+        .then(callback)
+        .catch(console.err);
 }
 
 function downloadRepoReleases(repoName, callback) {
@@ -26,9 +26,9 @@ function downloadRepoReleases(repoName, callback) {
         method: 'GET',
         headers: headers,
     })
-    .then(response => response.json())
-    .then(callback)
-    .catch(console.err);
+        .then(response => response.json())
+        .then(callback)
+        .catch(console.err);
 }
 
 function downloadRepoREADME(repoName, callback) {
@@ -36,18 +36,36 @@ function downloadRepoREADME(repoName, callback) {
         method: 'GET',
         headers: headers,
     })
-    .then(response => response.json())
-    .then(body => {
-        let file = body.tree.filter(f => repoName == "vrchatapi-dart" ? (f.path == "vrchat_dart/README.md") : (f.path == "README.md"))[0];
-        fetch(file.url, {
-            method: 'GET',
-            headers: headers,
+        .then(response => response.json())
+        .then(body => {
+            function returnFile(url) {
+                fetch(url, {
+                    method: 'GET',
+                    headers: headers,
+                })
+                    .then(response => response.json())
+                    .then(callback)
+                    .catch(console.err);
+            }
+
+            if (repoName == "vrchatapi-dart") {
+                let file = body.tree.filter(f => f.path == "vrchat_dart")[0];
+                fetch(file.url, {
+                    method: 'GET',
+                    headers: headers,
+                })
+                    .then(response => response.json())
+                    .then(body => {
+                        let file = body.tree.filter(f => f.path == "README.md")[0];
+                        returnFile(file.url);
+                    })
+                    .catch(console.err);
+            } else {
+                let file = body.tree.filter(f => f.path == "README.md")[0];
+                returnFile(file.url);
+            }
         })
-            .then(response => response.json())
-            .then(callback)
-            .catch(console.err);
-    })
-    .catch(console.err);
+        .catch(console.err);
 }
 
 try {
@@ -56,15 +74,15 @@ try {
 
     data.sdks.forEach(sdk => {
         console.log(sdk.repo)
-        downloadRepoInfo(sdk.repo, function(body) {
+        downloadRepoInfo(sdk.repo, function (body) {
             fs.writeFileSync('_data/github/repo_' + sdk.id + '.json', JSON.stringify(body));
         });
 
-        downloadRepoReleases(sdk.repo, function(body) {
+        downloadRepoReleases(sdk.repo, function (body) {
             fs.writeFileSync('_data/github/releases_' + sdk.id + '.json', JSON.stringify(body));
         });
 
-        downloadRepoREADME(sdk.repo, function(body) {
+        downloadRepoREADME(sdk.repo, function (body) {
             body.decoded = Buffer.from(body.content, 'base64').toString('utf8');
             fs.writeFileSync('_data/github/readme_' + sdk.id + '.json', JSON.stringify(body));
         });
