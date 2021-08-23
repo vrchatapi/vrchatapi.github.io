@@ -43,7 +43,7 @@ sdks:
   - id: dart
     name: Dart
     repo: vrchatapi-dart
-    description: Dart is a client-side language allowing compilation for both Android, iOS, web, and terminal.
+    description: Dart is a client-side language allowing compilation for Android, iOS, web, and terminal.
   - id: rust
     name: Rust
     repo: vrchatapi-rust
