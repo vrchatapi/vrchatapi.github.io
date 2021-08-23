@@ -98,3 +98,16 @@ Tag | Description
 `language_dse` | Dutch Sign Language
 `language_fsl` | French Sign Language
 `language_kvk` | Korean Sign Language
+
+## Useless tags
+
+Tag | Description
+----|------------
+`system_UE4_dev_access` | Meaningless tag used by Tupper
+`system_neuralink_beta` | Meaningless tag used by Tupper
+`system_extremely_cool_guy` | Meaningless tag used by Tupper
+`system_stop_being_nosy` | Meaningless tag used by Tupper
+`system_notamod` | Meaningless tag used by Tupper
+`system_no_seriously_im_not_a_mod_how_many_times_do_i_have_to_tell_people` | Meaningless tag used by Tupper
+`system_the_tag_is_just_named_that` | Meaningless tag used by Tupper
+`system_haha_you_have_to_document_this_one_too` | Meaningless tag used by Tupper
