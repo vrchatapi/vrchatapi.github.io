@@ -4,7 +4,7 @@ permalink: /sdk/node
 title: Node SDK
 sdk: node
 links:
-- title: npmjs.com/package/vrchat
+- title: NPM
   target: https://www.npmjs.com/package/vrchat
 ---
 
