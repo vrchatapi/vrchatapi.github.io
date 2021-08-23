@@ -18,8 +18,8 @@ tutorial-categories:
     name: Node SDK
 #  - id: python
 #    name: Python SDK
-#  - id: java
-#    name: Java SDK
+  - id: java
+    name: Java SDK
 #  - id: dart
 #    name: Dart SDK
   - id: rust
@@ -36,10 +36,10 @@ sdks:
 #    name: Python
 #    repo: vrchatapi-python
 #    description: Python is an easy to learn scripting language for developing terminal or backend applications.
-#  - id: java
-#    name: Java
-#    repo: vrchatapi-java
-#    description: Java is a high-level, class-based OOP language for both desktop, backend and Android.
+  - id: java
+    name: Java
+    repo: vrchatapi-java
+    description: Java is a high-level, class-based OOP language for both desktop, backend and Android.
 #  - id: dart
 #    name: Dart
 #    repo: vrchatapi-dart
