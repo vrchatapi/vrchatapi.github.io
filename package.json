@@ -1,0 +1,27 @@
+{
+  "name": "vrchatapi.github.io",
+  "version": "1.0.0",
+  "description": "![VRChat API Banner](/assets/img/api_banner_1500x400.png)",
+  "main": "download-data.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "run": "node download-data.js",
+    "start": "node download-data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vrchatapi/vrchatapi.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vrchatapi/vrchatapi.github.io/issues"
+  },
+  "homepage": "https://github.com/vrchatapi/vrchatapi.github.io#readme",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^2.6.1"
+  }
+}

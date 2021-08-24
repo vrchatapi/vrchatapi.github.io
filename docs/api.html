@@ -1,0 +1,69 @@
+---
+layout: default
+permalink: /docs/api
+title: VRChat HTTP Documentation
+---
+
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+
+<div id="api-content-mobile" class="d-block d-md-none">
+  {% include rapidoc_api.html render_style="view" %}
+</div>
+<div id="api-content-desktop" class="d-none d-md-block">
+  {% include rapidoc_api.html render_style="focused" %}
+</div>
+
+{% include footer.html %}
+
+</rapi-doc>
+
+<script>
+  function applyCustomCss(root) {
+    if (root == undefined) {
+      root = document;
+    } else {
+      let nodeName = root.nodeName;
+      root = root.shadowRoot;
+
+      // Apply CSS
+      let cnt = root.querySelectorAll("link[href='/assets/css/rapidoc.css']").length;
+      if (cnt == 0) {
+        console.log("Applying it to", nodeName)
+        let link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/assets/css/rapidoc.css';
+        link.media = 'all';
+        root.appendChild(link);
+      }
+    }
+
+    // Look for more roots
+    for (let el of root.querySelectorAll('*')) {
+      if (el.shadowRoot) {
+          applyCustomCss(el);
+      }
+    }
+
+    // Inject ourself on-click for injection during runtime
+    for (let button of root.querySelectorAll('button')) {
+      button.addEventListener("click", () => {
+        setTimeout(() => {
+          applyCustomCss();
+        }, 1);
+      });
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+      const rapidocEl = document.querySelector('rapi-doc');
+      rapidocEl.addEventListener('spec-loaded', (e) => {
+        setTimeout(() => {
+          applyCustomCss();
+        }, 1);
+      });
+    });
+</script>
+
+
+<link rel="stylesheet" href="/assets/css/main.css">

@@ -1,0 +1,241 @@
+:host {
+    --red-6: #f5222d;
+    --red-8: #a8071a;
+
+    --volcano-6: #fa541c;
+
+    --orange-6: #fa8c16;
+
+    --gold-6: #faad14;
+
+    --yellow-6: #fadb14;
+
+    --gren-6: #52c41a;
+
+    --blue-6: #1890ff;
+    --blue-8: #0050b3;
+
+    --purple-6: #722ed1;
+
+    --magenta-6: #eb2f96;
+
+    --gray-1: #ffffff;
+    --gray-4: #f0f0f0;
+    --gray-6: #bfbfbf;
+    --gray-8: #595959;
+    --gray-10: #262626;
+    --gray-13: #000000;
+
+    --red: var(--red-6);
+    --red-dark: var(--red-8);
+    --volcano: var(--volcano-6);
+    --orange: var(--orange-6);
+    --gold: var(--gold-6);
+    --yellow: var(--yellow-6);
+    --green: var(--gren-6);
+    --blue: var(--blue-6);
+    --blue-dark: var(--blue-8);
+    --purple: var(--purple-6);
+    --magenta: var(--magenta);
+    --white: var(--gray-1);
+    --black: var(--gray-13);
+
+    --border-color: transparent;
+    --bg2: var(--gray-4);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--black);
+}
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--black);
+}
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--black);
+}
+p {
+    font-weight: 400;
+    font-size: 17x;
+    line-height: 24px;
+}
+
+.regular-font {
+    font-size: 17x;
+    line-height: 24px;
+    color: var(--black);
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+}
+code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--red-dark);
+    font-size: 16px;
+    line-height: 24px;
+}
+.m-markdown code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 16px;
+    line-height: 24px;
+    background-color: var(--gray-4);
+}
+.m-markdown-small code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--black);
+}
+a, .m-markdown a, m-markdown-small a {
+    color: var(--blue-dark);
+}
+.string {
+    color: var(--green);
+}
+.bool, .boolean {
+    color: var(--orange)
+}
+
+.method-fg.get {
+    color: var(--white) !important;
+    background-color: var(--blue);
+    font-weight: 600;
+    padding: 4px 6px 4px 6px;
+}
+.method-fg.put {
+    color: var(--black) !important;
+    background-color: var(--yellow);
+    font-weight: 600;
+    padding: 4px 6px 4px 6px;
+}
+.method-fg.post {
+    color: var(--white) !important;
+    background-color: var(--green);
+    font-weight: 600;
+    padding: 4px 6px 4px 6px;
+}
+.method-fg.delete {
+    color: var(--white) !important;
+    background-color: var(--red);
+    font-weight: 600;
+    padding: 4px 6px 4px 6px;
+}
+.nav-bar-path.active {
+    border-left: 5px solid var(--black);
+}
+input[type='text'] {
+    background-color: #f7f7f8;
+    border: 1px solid #8d94a5;
+    color: var(--black);
+}
+input[type='password'] {
+    background-color: #f7f7f8;
+    border: 1px solid #8d94a5;
+    color: var(--black);
+}
+.tab-content .col {
+    background-color: var(--purple);
+}
+.tree {
+    border: 1px solid var(--gray-6);
+}
+.json-tree {
+    border: 1px solid var(--gray-6);
+}
+.m-markdown th {
+    font-weight: 700;
+    color: var(--black);
+}
+.m-markdown td {
+    border-bottom: 1px solid var(--black);
+}
+.m-markdown blockquote {
+    border-left: 5px solid var(--blue-dark);
+    background-color: var(--gray-4);
+    padding: 12px 0 12px 18px;
+}
+.m-markdown blockquote > p:first-child {
+    margin-top: 0;
+}
+.m-btn {
+    background-color: var(--white) !important;
+    border: 1px solid var(--white) !important;
+    color: var(--black) !important;
+}
+.m-btn:hover {
+    background-color: var(--black) !important;
+    border: 1px solid var(--black) !important;
+    color: var(--white) !important;
+}
+.m-btn.primary {
+    background-color: var(--black) !important;
+    border: 1px solid var(--black) !important;
+    color: var(--white) !important;
+}
+.m-btn.primary:hover {
+    background-color: var(--gray-8) !important;
+    border: 1px solid var(--gray-8) !important;
+    color: var(--white) !important;
+}
+.main-content {
+    background-color: #fff;
+}
+#api-title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--black);
+}
+#api-title > span {
+    font-size: 17px !important;
+    font-weight: 600;
+    color: var(--black);
+}
+.nav-bar-path .active {
+    border: 7px solid var(--blue);
+}
+.callout-error {
+    padding: 1.25rem;
+    background-color: #fff5fa;
+    border: 1px solid var(--red);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-warn {
+    padding: 1.25rem;
+    background-color: #fffee5;
+    border: 1px solid var(--yellow);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-info {
+    padding: 1.25rem;
+    background-color: #f0f3ff;
+    border: 1px solid var(--blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-success {
+    padding: 1.25rem;
+    background-color: #f5fffd;
+    border: 1px solid var(--green);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#api-info {
+    display: none !important;
+}

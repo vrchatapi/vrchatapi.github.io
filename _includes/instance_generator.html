@@ -1,0 +1,225 @@
+<div class="bg-light p-3 d-none d-md-block">
+
+    <div class="row g-3 align-items-center">
+        <div class="col-3 col-lg-2">
+            <label for="instance-generator-WorldID" class="col-form-label d-block text-end">World ID</label>
+        </div>
+        <div class="col-8 d-lg-none"></div>
+        <div class="col-12 col-lg-4 mt-0 mt-lg-3 border-start border-3 border-red">
+            <input type="text" id="instance-generator-WorldID" class="form-control"
+                value="wrld_ba913a96-fac4-4048-a062-9aa5db092812" onkeyup="generateInstanceURL()">
+        </div>
+        <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
+            <span class="form-text">
+                Must be a valid World ID.
+            </span>
+        </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-4 col-lg-2">
+            <label for="instance-generator-InstanceID" class="col-form-label d-block text-end">Instance Name</label>
+        </div>
+        <div class="col-8 d-lg-none"></div>
+        <div class="col-12 col-lg-4 mt-0 mt-lg-3 border-start border-3 border-orange">
+            <input type="text" id="instance-generator-InstanceID" class="form-control" value="12345"
+                onkeyup="generateInstanceURL()">
+        </div>
+        <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
+            <span class="form-text">
+                Typically a 5-digit number, but can be any alphanumeric string <code>[a-zA-Z0-9_-]</code>.
+            </span>
+        </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-4 col-lg-2">
+            <label for="instance-generator-InstanceType" class="col-form-label d-block text-end">Instance Type</label>
+        </div>
+        <div class="col-8 d-lg-none"></div>
+        <div class="col-12 col-lg-4 mt-0 mt-lg-3 border-start border-3 border-green">
+            <div class="input-group">
+                <select class="form-select form-control" id="instance-generator-InstanceType" onchange="generateInstanceURL()">
+                    <option value="public" selected>Public</option>
+                    <option value="friends+">Friends+</option>
+                    <option value="friends">Friends</option>
+                    <option value="invite+">Invite+</option>
+                    <option value="invite">Invite</option>
+                </select>
+            </div>
+        </div>
+        <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
+            <span class="form-text">
+                Instance Type defines who can join or be invited into the instance.
+            </span>
+        </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-3 col-lg-2">
+            <label for="instance-generator-OwnerID" class="col-form-label d-block text-end">Owner ID</label>
+        </div>
+        <div class="col-8 d-lg-none"></div>
+        <div class="col-12 col-lg-4 mt-0 mt-lg-3 border-start border-3 border-blue">
+            <input type="text" id="instance-generator-OwnerID" class="form-control" value="usr_c1644b5b-3ca4-45b4-97c6-a2a0de70d469"
+                onkeyup="generateInstanceURL()">
+        </div>
+        <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
+            <span class="form-text">
+                Must be a valid User ID.
+            </span>
+        </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-3 col-lg-2">
+            <label for="instance-generator-Region" class="col-form-label d-block text-end">Region</label>
+        </div>
+        <div class="col-8 d-lg-none"></div>
+        <div class="col-12 col-lg-4 mt-0 mt-lg-3 border-start border-3 border-purple">
+            <div class="input-group">
+                <select class="form-select form-control" id="instance-generator-Region" onchange="generateInstanceURL()">
+                    <option value="us" selected>United States West</option>
+                    <option value="eu">Europe</option>
+                    <option value="jp">Japan</option>
+                </select>
+            </div>
+        </div>
+        <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
+            <span class="form-text">
+                Regional of the Photon servers.
+            </span>
+        </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-3 col-lg-2">
+            <label for="instance-generator-Nonce" class="col-form-label d-block text-end">Nonce</label>
+        </div>
+        <div class="col-8 d-lg-none"></div>
+        <div class="col-12 col-lg-4 mt-0 mt-lg-3 border-start border-3 border-magenta">
+            <input type="text" id="instance-generator-Nonce" class="form-control" value="" onkeyup="generateInstanceURL()" disabled>
+        </div>
+        <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
+            <span class="form-text">
+                Nonce
+            </span>
+        </div>
+    </div>
+
+    <label for="instance-generator-OutputQuery" class="form-label mt-3">Generated World Link</label>
+    <div class="input-group mb-3">
+        <span class="input-group-text d-none d-lg-flex">https://vrchat.com/home/launch?</span>
+        <div type="text" class="form-control bg-white" id="instance-generator-OutputQuery" disabled>
+        </div>
+    </div>
+</div>
+<br>
+
+<script>
+    // Cryptographically stronger version
+    function uuidv4() {
+        const a = crypto.getRandomValues(new Uint16Array(8));
+        let i = 0;
+        return '00-0-4-1-000'.replace(/[^-]/g, 
+                s => (a[i++] + s * 0x10000 >> s).toString(16).padStart(4, '0')
+        );
+    }
+
+    function generateInstanceURL() {
+        let ownerIdElement = document.getElementById("instance-generator-OwnerID");
+        let nonceElement = document.getElementById("instance-generator-Nonce");
+        let output = document.getElementById("instance-generator-OutputQuery");
+
+        let worldId = document.getElementById("instance-generator-WorldID").value;
+        let instanceName = document.getElementById("instance-generator-InstanceID").value;
+        let instanceType = document.getElementById("instance-generator-InstanceType").value;
+        let ownerId = ownerIdElement.value;
+        let region = document.getElementById("instance-generator-Region").value;
+        let nonce = nonceElement.value;
+
+        if (nonce.trim() == "") {
+            nonceElement.value = uuidv4();
+        }
+
+        switch (instanceType) {
+            case "public":
+                ownerIdElement.disabled = true;
+                nonceElement.disabled = true;
+                break;
+            case "friends+":
+            case "friends":
+            case "invite+":
+            case "invite":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                break;
+        }
+
+        if ((instanceName.match(/^([a-zA-Z0-9_-]+)$/) || [])[1] == undefined) {
+            output.innerHTML = "<span class='text-red'>Invalid instance name.</span>";
+            return;
+        }
+
+        let res_type = "";
+        let res_hidden = "";
+        let res_nonce = "";
+        let res_canRequestInvite = false;
+
+        let instanceId = instanceName;
+        switch (instanceType) {
+            case "public":
+                ownerIdElement.disabled = true;
+                nonceElement.disabled = true;
+                break;
+            case "friends+":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "hidden";
+                res_hidden = ownerId;
+                res_nonce = nonce;
+                break;
+            case "friends":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "friends";
+                res_hidden = ownerId;
+                res_nonce = nonce;
+                break;
+            case "invite+":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "private";
+                res_canRequestInvite = true;
+                res_hidden = ownerId;
+                res_nonce = nonce;
+                break;
+            case "invite":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "private";
+                res_hidden = ownerId;
+                res_nonce = nonce;
+                break;
+        }
+
+        let result = "";
+        result += "worldId=<span class='text-danger'>" + worldId + "</span>";
+        result += "&instanceId=<span class='text-orange'>" + instanceId + "</span>";
+        if (res_hidden != "") {
+            result += "<span class='text-green'>~" + res_type + "(<span class='text-blue'>" + res_hidden + "</span>)</span>";
+        }
+        if (res_canRequestInvite) {
+            result += "<span class='text-green'>~canRequestInvite</span>";
+        }
+        if (region != "") {
+            result += "<span class='text-purple'>~region(" + region + ")</span>";
+        }
+        if (res_nonce != "") {
+            result += "<span class='text-magenta'>~nonce(" + res_nonce + ")</span>";
+        }
+
+        output.innerHTML = result;
+    }
+    generateInstanceURL();
+</script>
