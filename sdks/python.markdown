@@ -5,26 +5,22 @@ title: Python SDK
 sdk: python
 ---
 
-```python
-import time
-import vrchatapi
-from vrchatapi.api import authentication_api
-from pprint import pprint
-
+```py
+# Step 1. We begin with creating a Configuration
+# This contains the username and password for authentication.
 configuration = vrchatapi.Configuration(
     username = 'username',
-    password = 'password'
+    password = 'password',
 )
 
-# Enter a context with an instance of the API client
+# Step 2. VRChat consists of several API's
+# e.g. (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)
+# Here we instantiate the Authentication API which is required for logging in.
 with vrchatapi.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = authentication_api.AuthenticationApi(api_client)
+    auth_api = authentication_api.AuthenticationApi(api_client)
 
-    try:
-        # Login and/or Get Current User Info
-        api_response = api_instance.get_current_user()
-        pprint(api_response)
-    except vrchatapi.ApiException as e:
-        print("Exception when calling AuthenticationApi->get_current_user: %s\n" % e)
+    # Step 3. Call get_current_user on Authentication API.
+    # This logs you in if the user isn't already logged in.
+    current_user = auth_api.get_current_user()
+    print("Logged in as:", current_user.display_name)
 ```

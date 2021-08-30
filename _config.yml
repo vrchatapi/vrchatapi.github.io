@@ -29,10 +29,10 @@ sdks:
     name: Node
     repo: vrchatapi-javascript
     description: NodeJS is a JavaScript runtime allowing you to write JavaScript or TypeScript on the backend.
-#  - id: python
-#    name: Python
-#    repo: vrchatapi-python
-#    description: Python is an easy to learn scripting language for developing terminal or backend applications.
+  - id: python
+    name: Python
+    repo: vrchatapi-python
+    description: Python is an easy to learn scripting language for developing terminal or backend applications.
   - id: java
     name: Java
     repo: vrchatapi-java
