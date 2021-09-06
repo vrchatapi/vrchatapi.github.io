@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/vrchatapi/vrchatapi.github.io#readme",
   "dependencies": {
+    "front-matter": "^4.0.2",
     "js-yaml": "^4.1.0",
     "node-fetch": "^2.6.1",
     "xmlbuilder": "^15.1.1"
