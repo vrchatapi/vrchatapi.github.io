@@ -136,7 +136,7 @@ To get the full payload it is required to **again** parse the contents of `conte
 
 ### Notification Received Event
 
-Notifications are used for e.g. Invites, Invite Requests and Invite Responeses.
+Notifications are used for e.g. Invites, Friend Requests, Invite Requests and Invite Responeses.
 
 {% highlight javascript %}
 {
