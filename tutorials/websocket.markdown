@@ -155,3 +155,18 @@ Lets the listener know a notification has been marked as seen.
     "type": "see-notification"
 }
 {% endhighlight %}
+
+### Notification Response
+
+Similar to `Notification Received Event`, except this carries an ID (`responseId`) of the notificaiton (which is required to fetch seperately) that was sent in response to an earlier notification (`notificationId`). This is used e.g., when responding to an Invite.
+
+{% highlight javascript %}
+{
+    "content": {
+        "notificationId": <notificationId>,
+        "receiverId": <userId>,
+        "responseId": <notification>
+    },
+    "type": "response-notification"
+}
+{% endhighlight %}
