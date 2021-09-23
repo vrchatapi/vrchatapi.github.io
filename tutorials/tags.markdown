@@ -111,7 +111,7 @@ Tag | Description
 `system_no_seriously_im_not_a_mod_how_many_times_do_i_have_to_tell_people` | Meaningless tag used by Tupper
 `system_the_tag_is_just_named_that` | Meaningless tag used by Tupper
 `system_haha_you_have_to_document_this_one_too` | Meaningless tag used by Tupper
-`Never gonna give you up"` | Meaningless tag used by Fusl
+`Never gonna give you up` | Meaningless tag used by Fusl
 `system_not_cute` | Meaningless tag used by Fusl
 `'; DROP DATABASE tags; -- ` | Meaningless tag used by Fusl
 `'; DROP TABLE tags; -- ` | Meaningless tag used by Fusl
