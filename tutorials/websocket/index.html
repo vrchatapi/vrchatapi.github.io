@@ -1,0 +1,314 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,minimum-scale=1">
+<meta name=author content="Websocket API | VRChat API Documentation">
+<meta name=description content="The VRChat Websocket API is used receiving updates regarding the API, such as a friend has been added an invite received. The WebSocket is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
+Connecting Connecting to the VRChat webhook server is done via the URL: wss://pipeline.vrchat.cloud/?authToken=authcookie_...
+The auth-token query parameter is the authorization cookie you receive when logging into VRChat.
+Message structure Messages through VRChat&rsquo;s Websocket API are delivered as strings.">
+<meta name=keywords content="vrchat,api,vrchatapi">
+<meta name=generator content="Hugo 0.88.1">
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/main.css>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<title>Websocket API | VRChat API Documentation</title>
+<meta property="og:title" content="Websocket API">
+<meta property="og:description" content="The VRChat Websocket API is used receiving updates regarding the API, such as a friend has been added an invite received. The WebSocket is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
+Connecting Connecting to the VRChat webhook server is done via the URL: wss://pipeline.vrchat.cloud/?authToken=authcookie_...
+The auth-token query parameter is the authorization cookie you receive when logging into VRChat.
+Message structure Messages through VRChat&rsquo;s Websocket API are delivered as strings.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vrchatapi.github.io/tutorials/websocket/"><meta property="article:section" content="tutorials">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Websocket API">
+<meta name=twitter:description content="The VRChat Websocket API is used receiving updates regarding the API, such as a friend has been added an invite received. The WebSocket is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
+Connecting Connecting to the VRChat webhook server is done via the URL: wss://pipeline.vrchat.cloud/?authToken=authcookie_...
+The auth-token query parameter is the authorization cookie you receive when logging into VRChat.
+Message structure Messages through VRChat&rsquo;s Websocket API are delivered as strings.">
+<script async defer src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-FBCK0H6BHS')</script>
+</head>
+<body class=overflow-hidden>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class=container-fluid>
+<a class=navbar-brand href=/>
+<img src=/assets/img/website_logo.png alt="VRChat API Project" width=250 class="d-inline d-md-none my-1">
+<img src=/assets/img/website_logo.png alt="VRChat API Project" height=50 class="d-none d-md-inline my-1">
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<li class="nav-item me-5">
+<a target=_blank class="nav-link fs-5 active fw-bold" href=https://github.com/vrchatapi>GitHub</a>
+</li>
+<li class="nav-item me-5 dropdown">
+<a class="nav-link fs-5 dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown aria-expanded=false>
+Reference
+</a>
+<ul class=dropdown-menu aria-labelledby=navbarDropdown>
+<li><a class="dropdown-item py-3" href=/docs/api>HTTP API</a></li>
+<li><a target=_blank class="dropdown-item py-3" href=https://vrchat.vercel.app/>
+Swagger UI
+</a></li>
+<li>
+<hr class=dropdown-divider>
+</li>
+<li><a class="dropdown-item py-3" href=/tutorials/getting-started>Getting Started</a></li>
+<li><a class="dropdown-item py-3" href=/tutorials>Tutorials</a></li>
+</ul>
+</li>
+<li class="nav-item me-5 dropdown">
+<a class="nav-link fs-5 dropdown-toggle" href=# id=languagesDropdown role=button data-bs-toggle=dropdown aria-expanded=false>
+Languages
+</a>
+<ul class=dropdown-menu aria-labelledby=languagesDropdown>
+</ul>
+</li>
+</ul>
+<a target=_blank href=https://discord.gg/qjZE9C9fkB class="d-flex text-decoration-none btn btn-outline-light me-3 px-4 py-3" type=submit>
+Join Discord
+</a>
+</div>
+</div>
+</nav>
+<main id=content style=position:fixed>
+<div class="container-fluid px-3 px-md-5">
+<div class=row>
+<div class="col-12 col-md-8">
+<div class="position-relative overflow-auto pe-3 pe-md-5 pb-3 pb-md-5" tabindex=0 style="height:calc(100vh - 84px)">
+<nav aria-label=breadcrumb class=mt-5>
+<ol class=breadcrumb>
+<li class=breadcrumb-item><a href=/>Home</a></li>
+<li class=breadcrumb-item><a href=/tutorials>Tutorials</a></li>
+<li class="breadcrumb-item active" aria-current=page>Websocket API</li>
+</ol>
+</nav>
+<h1 class="fw-bold display-2">Websocket API</h1>
+<p>The VRChat Websocket API is used receiving updates regarding the API, such as a friend has been added an invite received.
+The WebSocket is <strong>receive-only</strong>, meaning that you can only listen for messages. Sending messages is undefined behavior.</p>
+<h2 id=connecting>Connecting</h2>
+<p>Connecting to the VRChat webhook server is done via the URL:
+<code>wss://pipeline.vrchat.cloud/?authToken=authcookie_...</code></p>
+<p>The auth-token query parameter is the authorization cookie you receive when logging into VRChat.</p>
+<h2 id=message-structure>Message structure</h2>
+<p>Messages through VRChat&rsquo;s Websocket API are delivered as strings.
+For example, the friend-offline event would be formated as:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#e6db74>&#34;{content:\&#34;{\&#34;userId\&#34;: \&#34;usr_...\&#34;}\&#34;}&#34;</span>
+</code></pre></div><p>After parsing the message:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;{\&#34;userId\&#34;: \&#34;usr_...\&#34;}&#34;</span>,
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-offline&#34;</span>
+}
+</code></pre></div><p>The value of content is <strong>also</strong> delivered as a string.
+To get the full payload it is required to <strong>again</strong> parse the contents of <code>content</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;usr_...&#34;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-offline&#34;</span>
+}
+</code></pre></div><h2 id=events>Events</h2>
+<h3 id=friend-online-event>Friend Online Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;user&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>userObject</span><span style=color:#f92672>&gt;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-online&#34;</span>
+}
+</code></pre></div><h3 id=friend-offline-event>Friend Offline Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-offline&#34;</span>
+}
+</code></pre></div><h3 id=friend-active-event>Friend Active Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;user&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>userObject</span><span style=color:#f92672>&gt;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-active&#34;</span>
+}
+</code></pre></div><h3 id=friend-add-event>Friend Add Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;user&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>userObject</span><span style=color:#f92672>&gt;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-add&#34;</span>
+}
+</code></pre></div><h3 id=friend-delete-event>Friend Delete Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-delete&#34;</span>
+}
+</code></pre></div><h3 id=friend-update-event>Friend Update Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;user&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>userObject</span><span style=color:#f92672>&gt;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-update&#34;</span>
+}
+</code></pre></div><h3 id=friend-location-event>Friend Location Event</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;userId&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;userId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;user&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>userObject</span><span style=color:#f92672>&gt;</span>,
+        <span style=color:#e6db74>&#34;world&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>worldObject</span><span style=color:#f92672>&gt;</span>,
+        <span style=color:#e6db74>&#34;location&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;worldId:locationId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;instance&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&lt;locationId&gt;&#34;</span>,
+        <span style=color:#e6db74>&#34;canRequestInvite&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#66d9ef>boolean</span><span style=color:#f92672>&gt;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;friend-location&#34;</span>
+}
+</code></pre></div><h3 id=notification-received-event>Notification Received Event</h3>
+<p>Notifications are used for e.g. Invites, Friend Requests, Invite Requests and Invite Responeses.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>notificationObject</span><span style=color:#f92672>&gt;</span>,
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;notification&#34;</span>
+}
+</code></pre></div><h3 id=notification-seen-event>Notification Seen Event</h3>
+<p>Lets the listener know a notification has been marked as seen.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>notificationId</span><span style=color:#f92672>&gt;</span>,
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;see-notification&#34;</span>
+}
+</code></pre></div><h3 id=notification-response>Notification Response</h3>
+<p>Similar to <code>Notification Received Event</code>, except this carries an ID (<code>responseId</code>) of the notificaiton (which is required to fetch seperately) that was sent in response to an earlier notification (<code>notificationId</code>). This is used e.g., when responding to an Invite.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+    <span style=color:#e6db74>&#34;content&#34;</span><span style=color:#f92672>:</span> {
+        <span style=color:#e6db74>&#34;notificationId&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>notificationId</span><span style=color:#f92672>&gt;</span>,
+        <span style=color:#e6db74>&#34;receiverId&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>userId</span><span style=color:#f92672>&gt;</span>,
+        <span style=color:#e6db74>&#34;responseId&#34;</span><span style=color:#f92672>:</span> <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>notification</span><span style=color:#f92672>&gt;</span>
+    },
+    <span style=color:#e6db74>&#34;type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;response-notification&#34;</span>
+}
+</code></pre></div>
+<div class="d-block d-md-none">
+<hr class=my-5>
+<a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
+<div class="row text-uppercase">
+<div class=col><a href=https://vrchatapi.github.io/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+<div class=col><a href=/tutorials class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+</div>
+<nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+<div class="navbar-brand fw-bold py-2" href=#>General</div>
+<hr class=mt-1>
+<nav class="nav nav-pills flex-column">
+<a class=nav-link href=https://vrchatapi.github.io/tutorials/getting-started/>
+<span class="badge rounded-pill bg-green me-2"> </span>
+Getting Started
+</a>
+<a class=nav-link href=https://vrchatapi.github.io/tutorials/instances/>
+<span class="badge rounded-pill bg-gold me-2"> </span>
+Instances
+</a>
+<a class=nav-link href=https://vrchatapi.github.io/tutorials/tags/>
+<span class="badge rounded-pill bg-gold me-2"> </span>
+Tags
+</a>
+<a class="nav-link active" href=https://vrchatapi.github.io/tutorials/websocket/>
+<span class="badge rounded-pill bg-red me-2"> </span>
+Websocket API
+</a>
+</nav>
+</nav>
+<div class="bg-light p-3 mt-3">
+<div id=footer slot=footer class="pt-2 pb-3">
+<div class="row pt-2 align-items-center">
+<div class="col-12 ps-4">
+<div class=text-center>VRChat API Documentation<br>made with ❤️ by the Community</div>
+<small class="legal mt-2">
+"VRChat" and the VRChat logo are registered trademarks of VRChat Incorporated in the United States.
+All trademarks referred to herein are the property of their respective owners.
+All company, product and service names used in this website are for identification purposes only, in
+accordance with Fair Use.
+Use of these names, logos, and brands does not imply endorsement.
+</small>
+</div>
+<div class="col-4 pt-4 text-center">
+<a href=https://discord.gg/qjZE9C9fkB>Support</a>
+</div>
+<div class="col-4 pt-4 text-center">
+<a href=mailto:me@ruby.js.org>Inquiries</a>
+</div>
+<div class="col-4 pt-4 pe-5">
+<a href=https://github.com/vrchatapi class="mx-auto d-block" style=width:30px><svg viewBox="0 0 128 128" width="30"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347.0-60.388 27.035-60.388 60.388.0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905.0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843.0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98.0.0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21.0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183.0 8.08-.07 14.583-.07 16.572.0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877.0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4 d-none d-md-block">
+<a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
+<div class="row text-uppercase">
+<div class=col><a href=https://vrchatapi.github.io/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+<div class=col><a href=/tutorials class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+</div>
+<nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
+<div class="navbar-brand fw-bold py-2" href=#>General</div>
+<hr class=mt-1>
+<nav class="nav nav-pills flex-column">
+<a class=nav-link href=https://vrchatapi.github.io/tutorials/getting-started/>
+<span class="badge rounded-pill bg-green me-2"> </span>
+Getting Started
+</a>
+<a class=nav-link href=https://vrchatapi.github.io/tutorials/instances/>
+<span class="badge rounded-pill bg-gold me-2"> </span>
+Instances
+</a>
+<a class=nav-link href=https://vrchatapi.github.io/tutorials/tags/>
+<span class="badge rounded-pill bg-gold me-2"> </span>
+Tags
+</a>
+<a class="nav-link active" href=https://vrchatapi.github.io/tutorials/websocket/>
+<span class="badge rounded-pill bg-red me-2"> </span>
+Websocket API
+</a>
+</nav>
+</nav>
+<div class="bg-light p-3 mt-3">
+<div id=footer slot=footer class="pt-2 pb-3">
+<div class="row pt-2 align-items-center">
+<div class="col-12 ps-4">
+<div class=text-center>VRChat API Documentation<br>made with ❤️ by the Community</div>
+<small class="legal mt-2">
+"VRChat" and the VRChat logo are registered trademarks of VRChat Incorporated in the United States.
+All trademarks referred to herein are the property of their respective owners.
+All company, product and service names used in this website are for identification purposes only, in
+accordance with Fair Use.
+Use of these names, logos, and brands does not imply endorsement.
+</small>
+</div>
+<div class="col-4 pt-4 text-center">
+<a href=https://discord.gg/qjZE9C9fkB>Support</a>
+</div>
+<div class="col-4 pt-4 text-center">
+<a href=mailto:me@ruby.js.org>Inquiries</a>
+</div>
+<div class="col-4 pt-4 pe-5">
+<a href=https://github.com/vrchatapi class="mx-auto d-block" style=width:30px><svg viewBox="0 0 128 128" width="30"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347.0-60.388 27.035-60.388 60.388.0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905.0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843.0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98.0.0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21.0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183.0 8.08-.07 14.583-.07 16.572.0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877.0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js integrity=sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM crossorigin=anonymous></script>
+<script>window.addEventListener("load",function(){[...document.querySelectorAll("*")].filter(a=>a.nodeName=="TABLE").map(a=>{console.log("Adding table to table",a),a.classList.add("table")})})</script>
+</body>
+</html>
