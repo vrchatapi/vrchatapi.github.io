@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="author" content="{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}">
+    <meta name="description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    <meta name="keywords" content="vrchat,api,vrchatapi">
+    {{ hugo.Generator }}
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom VRChatAPI CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- Link to favicon.ico -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+
+    {{/* NOTE: These Hugo Internal Templates can be found starting at
+    https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FBCK0H6BHS');
+    </script>
+</head>
+
+<body class="overflow-hidden">
+
+    {{ partial "header.html" . }}
+
+    <main id="content" style="position: fixed;" class="{{ .Params.content_class }}">
+
+        {{ $templateName := "" }}
+        {{ if .File }}
+        {{ $templateName = (replace (replace .File.Dir "/" "") "\\" "") }}
+        {{ end }}
+        {{ if eq $templateName "" }}
+            <div class="overflow-auto h-100">
+                {{ block "main" . }}{{ end }}
+                <div class="container">
+                    {{ partialCached "footer.html" . }}
+                </div>
+            </div>
+        {{ else }}
+            {{ block "main" . }}{{ end }}
+        {{ end }}
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            [...document.querySelectorAll("*")].filter(el => el.nodeName == "TABLE").map(el => {
+                console.log("Adding table to table", el);
+                el.classList.add("table");
+            });
+        });
+    </script>
+</body>
+
+</html>

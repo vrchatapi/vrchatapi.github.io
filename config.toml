@@ -1,0 +1,19 @@
+baseURL = 'https://vrchatapi.github.io/'
+languageCode = 'en-us'
+title = 'VRChat API Documentation'
+description = 'The VRChat API  allows developers to build features that connect them to VRChat.'
+
+disableKinds = ["categories", "tags", "RSS", "taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[params]
+    [params.tutorial_categories.general]
+    id = "general"
+    name = "General"
+
+    [params.tutorial_categories.node]
+    id = "node"
+    name = "Node SDK"
+
+[markup.goldmark.renderer]
+    unsafe = true

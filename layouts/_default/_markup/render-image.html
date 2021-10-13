@@ -1,0 +1,3 @@
+<p class="md__image">
+    <img class="img-fluid rounded" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+</p>

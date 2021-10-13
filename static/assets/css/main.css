@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,500;0,700;1,400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap);
+
+:root {
+    --red-6: #f5222d;
+    --red-8: #a8071a;
+
+    --volcano-6: #fa541c;
+
+    --orange-6: #fa8c16;
+
+    --gold-6: #faad14;
+
+    --yellow-6: #fadb14;
+
+    --gren-6: #52c41a;
+
+    --blue-6: #1890ff;
+    --blue-8: #0050b3;
+
+    --purple-6: #722ed1;
+
+    --magenta-6: #eb2f96;
+
+    --gray-1: #ffffff;
+    --gray-2: #fafafa;
+    --gray-3: #f5f5f5;
+    --gray-4: #f0f0f0;
+    --gray-5: #d9d9d9;
+    --gray-6: #bfbfbf;
+    --gray-7: #8c8c8c;
+    --gray-8: #595959;
+    --gray-9: #434343;
+    --gray-10: #262626;
+    --gray-11: #1f1f1f;
+    --gray-12: #141414;
+    --gray-13: #000000;
+
+    --red: var(--red-6);
+    --red-dark: var(--red-8);
+    --volcano: var(--volcano-6);
+    --orange: var(--orange-6);
+    --gold: var(--gold-6);
+    --yellow: var(--yellow-6);
+    --green: var(--gren-6);
+    --blue: var(--blue-6);
+    --blue-dark: var(--blue-8);
+    --purple: var(--purple-6);
+    --magenta: var(--magenta-6);
+    --white: var(--gray-1);
+    --black: var(--gray-13);
+}
+
+#content, #api-content-mobile, #api-content-desktop {
+    height: calc(100vh - 84px);
+    width: 100vw;
+}
+
+.display-1 {
+    font-size: 6rem;
+}
+.display-2 {
+    font-size: 4rem;
+}
+.tmid-parent {
+    display: table !important;
+}
+.tmid-child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+body {
+    font-size: 1.2rem;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    letter-spacing: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+}
+code {
+    font-family: Inconsolata, Courier New, Courier, monospace;
+    font-weight: 400;
+    color: var(--red-dark);
+    font-size: 16px;
+    line-height: 24px;
+}
+pre code {
+    color: var(--gray-1);
+}
+pre {
+    padding: 1.5rem;
+    background-color: var(--gray-10);
+    color: var(--gray-1)
+}
+
+a, a.list-group-item {
+    color: var(--blue-dark);
+    text-decoration: none;
+}
+.nav-link {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.btn, .dropdown-menu {
+    border-radius: 0 !important;
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+.bg-volcano {
+    background-color: var(--volcano);
+}
+.bg-orange {
+    background-color: var(--orange);
+}
+.bg-gold {
+    background-color: var(--gold);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-magenta {
+    background-color: var(--magenta);
+}
+.bg-light {
+    background-color: var(--gray-4) !important;
+}
+
+.bg-dark {
+    background-color: var(--black) !important;
+}
+.bg-secondary {
+    background-color: var(--gray-4) !important;
+}
+
+.border-secondary, hr {
+    border-color: var(--gray-6) !important;
+}
+
+.btn-red {
+    background-color: var(--red);
+    color: var(--white);
+}
+.btn-volcano {
+    background-color: var(--volcano);
+}
+.btn-orange {
+    background-color: var(--orange);
+}
+.btn-gold {
+    background-color: var(--gold);
+}
+.btn-yellow {
+    background-color: var(--yellow);
+}
+.btn-volcano:hover, .btn-orange:hover, .btn-gold:hover, .btn-yellow:hover {
+    color: var(--white);
+}
+.btn-green {
+    background-color: var(--green);
+    color: var(--white);
+}
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn-blue-dark {
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+.btn-purple {
+    background-color: var(--purple);
+    color: var(--white);
+}
+.btn-magenta {
+    background-color: var(--magenta);
+    color: var(--white);
+}
+.btn-light {
+    background-color: var(--gray-4) !important;
+}
+.btn-dark {
+    background-color: var(--black) !important;
+}
+
+.border-red {
+    border-color: var(--red) !important;
+}
+.border-volcano {
+    border-color: var(--volcano) !important;
+}
+.border-orange {
+    border-color: var(--orange) !important;
+}
+.border-gold {
+    border-color: var(--gold) !important;
+}
+.border-yellow {
+    border-color: var(--yellow) !important;
+}
+.border-green {
+    border-color: var(--green) !important;
+}
+.border-blue {
+    border-color: var(--blue) !important;
+}
+.border-purple {
+    border-color: var(--purple) !important;
+}
+.border-magenta {
+    border-color: var(--magenta) !important;
+}
+
+.text-red {
+    color: var(--red) !important;
+}
+.text-volcano {
+    color: var(--volcano) !important;
+}
+.text-orange {
+    color: var(--orange) !important;
+}
+.text-gold {
+    color: var(--gold) !important;
+}
+.text-yellow {
+    color: var(--yellow) !important;
+}
+.text-green {
+    color: var(--green) !important;
+}
+.text-blue {
+    color: var(--blue) !important;
+}
+.text-purple {
+    color: var(--purple) !important;
+}
+.text-magenta {
+    color: var(--magenta) !important;
+}
+
+blockquote {
+    border-left: 5px solid var(--blue-dark);
+    background-color: var(--gray-4);
+    padding: 12px 0 12px 18px;
+}
+blockquote > p:first-child {
+    margin-top: 0;
+}
+
+small.legal {
+    font-size: 0.7rem;
+    line-height: 1;
+    display: block;
+    color: var(--gray-8);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--black);
+}
+
+.rounded {
+    border-radius: 1rem !important;
+}
+
+.callout {
+    line-height: 24px;
+}
+.callout-error, .callout-danger {
+    padding: 1.25rem;
+    background-color: #fff5fa;
+    border: 1px solid var(--red);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-warn, .callout-warning {
+    padding: 1.25rem;
+    background-color: #fffee5;
+    border: 1px solid var(--yellow);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-info, .callout-primary {
+    padding: 1.25rem;
+    background-color: #f0f3ff;
+    border: 1px solid var(--blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.callout-success {
+    padding: 1.25rem;
+    background-color: #f5fffd;
+    border: 1px solid var(--green);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
