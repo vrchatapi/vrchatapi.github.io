@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="container">
+
+    <nav aria-label="breadcrumb" class="mt-5">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tutorials</li>
+        </ol>
+    </nav>
+
+    <h1 class="fw-bold display-2">Tutorials</h1>
+
+    <p class="pt-3">
+        These tutorials will help you get started using the VRChat API.
+    </p>
+
+    {{ range $cat := $.Site.Params.tutorial_categories }}
+    <h3 class="fw-bold">{{ $cat.name }}</h3>
+    <ul class="list-group mb-5">
+        {{ range $page := where (where $.Data.Pages "Params.category" $cat.id) "Params.difficulty" "easy" }}
+        <a href="{{ $page.Permalink }}" class="list-group-item">
+            <span class="badge bg-green me-3">Easy</span>
+            {{ $page.LinkTitle }}
+        </a>
+        {{ end }}
+        {{ range $page := where (where $.Data.Pages "Params.category" $cat.id) "Params.difficulty" "medium" }}
+        <a href="{{ $page.Permalink }}" class="list-group-item">
+            <span class="badge bg-gold me-3">Medium</span>
+            {{ $page.LinkTitle }}
+        </a>
+        {{ end }}
+        {{ range $page := where (where $.Data.Pages "Params.category" $cat.id) "Params.difficulty" "hard" }}
+        <a href="{{ $page.Permalink }}" class="list-group-item">
+            <span class="badge bg-red me-3">Hard</span>
+            {{ $page.LinkTitle }}
+        </a>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+</div>
+{{ end }}

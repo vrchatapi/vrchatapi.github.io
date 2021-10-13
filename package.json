@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "update-data": "node _src/download-data.js",
-    "sitemap": "node _src/sitemap.mjs"
+    "update-data": "node src/download-data.js",
+    "sitemap": "node src/sitemap.mjs"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/vrchatapi/vrchatapi.github.io#readme",
   "dependencies": {
-    "front-matter": "^4.0.2",
-    "js-yaml": "^4.1.0",
     "node-fetch": "^2.6.1",
-    "xmlbuilder": "^15.1.1"
+    "toml": "^3.0.0",
+    "xmlbuilder": "^15.1.1",
+    "yaml": "^1.10.2"
   }
 }

@@ -1,0 +1,216 @@
+{{ define "main" }}
+<div class="bg-light">
+    <div class="container pb-3 pt-md-5">
+        <h1 class="display-2 fw-bold pt-5 d-block d-md-none">VRChat<br>API Docs</h1>
+        <h1 class="display-1 fw-bold pt-5 d-none d-md-block">VRChat API<br>Documentation</h1>
+        
+        <h3 class="fw-light pt-3">Here you'll find handy documentation about the API and SDKs.<br class="d-none d-md-inline"> Choose below, or scroll down to select by feature.</h3>
+
+        <div class="pt-4"></div>
+
+        <div class="row my-5">
+            <div class="col-6 col-md-3 d-grid mb-3 tmid-parent">
+                <a class="btn btn-lg fw-bold fs-3 py-3 btn-yellow tmid-child" href="/docs/api">API Docs</a>
+            </div>
+            <div class="col-6 col-md-3 d-grid mb-3 tmid-parent">
+                <a class="btn btn-lg fw-bold fs-3 py-3 btn-gold tmid-child" href="/tutorials/getting-started">Getting Started</a>
+            </div>
+            <div class="col-6 col-md-3 d-grid mb-3 tmid-parent">
+                <a class="btn btn-lg fw-bold fs-3 py-3 btn-orange tmid-child" href="/sdk">Language SDKs</a>
+            </div>
+            <div class="col-6 col-md-3 d-grid mb-3 tmid-parent">
+                <a class="btn btn-lg fw-bold fs-3 py-3 btn-volcano tmid-child" href="/tutorials">Tutorials</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container pt-5 pt-5 px-4 px-md-0">
+        <h1 class="fw-bold">API Docs</h1>
+
+        
+        <p class="pt-3 pb-4 pb-md-0">The API documentation project allows developers to build features that connect them to VRChat.
+        The documentation is written in a standardised format called <a href="https://www.openapis.org/">OpenAPI</a>,
+        providing capabilities for automatic documentation and SDK generation in a variety of languages.</p>
+
+        <div class="bg-secondary">
+        <div class="row py-5 mb-3">
+            <div class="col-12 col-md-6 ps-3 ps-md-5 pe-3 pe-md-0 pb-3 pb-md-0">
+                <img src="https://i.imgur.com/JYLokfb.png" alt="VRChat Stoplight Editor" class="img-fluid" />
+            </div>
+            <div class="col-12 col-md-5">
+                <blockquote class="mb-0 mx-3 mx-md-0">
+                The OpenAPI Specification defines a standard, programming language-agnostic interface description for HTTP APIs,
+                which allows both humans and computers to discover and understand the capabilities of a service without requiring access
+                to source code, additional documentation, or inspection of network traffic. When properly defined via OpenAPI, a consumer
+                can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interface
+                descriptions have done for lower-level programming, the OpenAPI Specification removes guesswork in calling a service.
+                </blockquote>
+            </div>
+        </div>
+        </div>
+
+        <p>The produced outcome is something of surprising quality and allows us to work quickly and efficiently in keeping the documentation up to date.
+        Adding new endpoints or correcting something that's outdated can be fixed and downstreamed into all the SDKs in matter of minutes.
+        This helps to ensure that even during periods of low contribution it is still possible to keep the documentation up to speed with the public API.</p>
+
+        <br>
+
+        <a href="/docs/api" class="btn btn-yellow fw-bold text-uppercase btn-lg">Open API docs</a>
+
+        <hr class="mt-5" />
+    </div>
+
+    <div class="container pt-5 px-4 px-md-0">
+        <h1 class="fw-bold">Getting Started</h1>
+
+        <p class="pt-3">
+            The Quickstart is the fastest way to start using VRChat's API.
+            If you are a first-time user, it is strongly recommended to follow the Quickstart instructions.
+            Focusing on getting your environment up and running, and getting your account logged in, allows you to start exploring and playing around with the data immediately.
+        </p>
+
+        <br>
+
+        <a href="/tutorials/getting-started" class="btn btn-gold fw-bold text-uppercase btn-lg">Start with the basics</a>
+
+        <hr class="mt-5" />
+    </div>
+
+    <div class="container pt-5 px-4 px-md-0">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h1 class="fw-bold mb-5">Developer<br>Tools</h1>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="row row-cols-3 text-center fw-bold">
+                    {{ range $sdk := where (where $.Site.Pages.ByWeight "Section" "sdk") "Kind" "page" }}
+                    <a href="/sdk/{{ $sdk.Params.sdk }}" class="col pb-5">
+                        {{ $sdk_icon_path := (print "lang_" $sdk.Params.sdk ".html") }}
+                        {{ partial $sdk_icon_path (dict "width" "100" "class" "mb-3") }}
+                        <br>
+                        <div>{{ $sdk.Params.title }}</div>
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <hr />
+    </div>
+
+    <div class="container py-5 px-4 px-md-0">
+        <h1 class="fw-bold">Additional Tutorials</h1>
+
+        <p class="pt-3">
+            Once you've got your environment or SDK set up there is additional collection of tutorials to help you get started using the API.
+            This covers most common actions such as changing your bio, fetching information about friends, or even uploading a cover picture to a world.
+            The tutorial library contains a series of guides for performing the most basic actions in the most popular languages.
+            Please reach out if you wish to do something more advanced that is not documented.
+        </p>
+
+        <br>
+
+        <a href="/docs/api" class="btn btn-volcano fw-bold text-uppercase btn-lg">Check out tutorials</a>
+    </div>
+</div>
+
+<script>
+    // LEGACY REDIRECTING
+
+    const redirects = [
+        ["", ""],
+        ["README", ""],
+        ["GettingStarted/QuickStart", "/tutorials/getting-started"],
+        ["GettingStarted/Examples", "/tutorials/getting-started"],
+        ["Objects/Avatar", "/docs/api#tag--avatars"],
+        ["Objects/User", "/docs/api#tag--users"],
+        ["Objects/World", "/docs/api#tag--worlds"],
+        ["Objects/Notification", "/docs/api#tag--notifications"],
+        ["Objects/unityPackage", "/docs/api#tag--files"],
+        ["UserAPI/Tags", "/tutorials/tags"],
+        ["UserAPI/Register", "/docs/api#post-/auth/register"],
+        ["UserAPI/ResendEmail", "/docs/api#post-/auth/user/resendEmail"],
+        ["UserAPI/VerifyLoginPlace", "/docs/api#get-/auth/verifyLoginPlace"],
+        ["UserAPI/Login", "/docs/api#get-/auth/user"],
+        ["UserAPI/Logout", "/docs/api#put-/logout"],
+        ["UserAPI/Verify", "/docs/api#post-/auth/twofactorauth/otp/verify"],
+        ["UserAPI/Delete", "/docs/api#put-/user/-userId-/delete"],
+        ["UserAPI/CurrentUserDetails", "/docs/api#get-/auth/user"],
+        ["UserAPI/UpdateInfo", "/docs/api#put-/users/-userId-"],
+        ["UserAPI/Friends", "/docs/api#get-/auth/user/friends"],
+        ["UserAPI/FriendStatus", "/docs/api#get-/user/-userId-/friendStatus"],
+        ["UserAPI/FriendRequest", "/docs/api#post-/user/-userId-/friendRequest"],
+        ["UserAPI/Unfriend", "/docs/api#delete-/auth/user/friends/-userId-"],
+        ["UserAPI/AcceptIgnoreFriend", "/docs/api#put-/auth/user/notifications/-notificationId-/accept"],
+        ["UserAPI/GetByID", "/docs/api#get-/users/-userId-"],
+        ["UserAPI/GetByName", "/docs/api#get-/users/-username-/name"],
+        ["UserAPI/List", "/docs/api#get-/users"],
+        ["FavoritesAPI/AddFavorite", "/docs/api#post-/favorites"],
+        ["FavoritesAPI/GetFavorite", "/docs/api#get-/favorites/-favoriteId-"],
+        ["FavoritesAPI/ListAllFavorites", "/docs/api#get-/favorites"],
+        ["FavoritesAPI/DeleteFavorite", "/docs/api#delete-/favorites/-favoriteId-"],
+        ["WorldAPI/GetWorld", "/docs/api#get-/worlds/-worldId-"],
+        ["WorldAPI/ListWorlds", "/docs/api#get-/worlds"],
+        ["WorldAPI/DeleteWorld", "/docs/api#delete-/worlds/-worldId-"],
+        ["WorldAPI/GetMetadata", "/docs/api#get-/worlds/-worldId-/metadata"],
+        ["WorldAPI/WorldInstanceTags", "/tutorials/instances"],
+        ["WorldAPI/GetInstance", "/docs/api#get-/worlds/-worldId-/-instanceId-"],
+        ["AvatarAPI/GetByID", "/docs/api#get-/avatars/-avatarId-"],
+        ["AvatarAPI/ChooseAvatar", "/docs/api#put-/avatars/-avatarId-/select"],
+        ["AvatarAPI/ListAvatars", "/docs/api#get-/avatars"],
+        ["AvatarAPI/SaveAvatar", "/docs/api#put-/avatars/-avatarId-"],
+        ["AvatarAPI/DeleteAvatar", "/docs/api#delete-/avatars/-avatarId-"],
+        ["ModerationAPI/SendModerations", ""], // Internal admin...
+        ["ModerationAPI/SendPlayerModerations", "/docs/api#post-/auth/user/playermoderations"],
+        ["ModerationAPI/DeleteModeration", "/docs/api#delete-/auth/user/playermoderations/-playerModerationId-"],
+        ["ModerationAPI/ClearModerations", "/docs/api#delete-/auth/user/playermoderations"],
+        ["ModerationAPI/Players", "/docs/api#get-/auth/user/playermoderations"],
+        ["ModerationAPI/SendVoteKick", "/docs/api#post-/user/-userId-/name"],
+        ["SystemAPI/Config", "/docs/api#get-/config"],
+        ["SystemAPI/Visits", "/docs/api#get-/visits"],
+        ["SystemAPI/Time", "/docs/api#get-/time"],
+        ["SystemAPI/Auth", "/docs/api#get-/auth"],
+        ["NotificationAPI/SendNotification", ""], // Internal admin...
+        ["NotificationAPI/MarkAsSeen", "/docs/api#put-/auth/user/notifications/-notificationId-/see"],
+        ["NotificationAPI/Delete", "/docs/api#put-/auth/user/notifications/-notificationId-/hide"],
+        ["NotificationAPI/GetAll", "/docs/api#get-/auth/user/notifications"],
+        ["FileAPI/MimeTypes", "/docs/api#tag--files"],
+        ["FileAPI/CreateFile", "/docs/api#post-/file"],
+        ["FileAPI/GetFile", "/docs/api#get-/file/-fileId-"],
+        ["FileAPI/DeleteFile", "/docs/api#delete-/file/-fileId-"],
+        ["FileAPI/DownloadFile", "/docs/api#get-/file/-fileId-"],
+        ["FileAPI/StartUpload", "/docs/api#put-/file/-fileId-/-versionId-/-fileType-/start"],
+        ["FileAPI/FinishUpload", "/docs/api#put-/file/-fileId-/-versionId-/-fileType-/finish"],
+        ["FileAPI/UploadStatus", "/docs/api#get-/file/-fileId-/-versionId-/-fileType-/status"],
+        ["FileAPI/CreateNewVersion", "/docs/api#post-/file/-fileId-"],
+        ["WebsocketAPI/About", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendOnlineEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendOfflineEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendActiveEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendAddEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendDeleteEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendUpdateEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/FriendLocationEvent", "/tutorials/websocket"],
+        ["WebsocketAPI/NotificationEvent", "/tutorials/websocket"],
+        ["FeedbackAPI/GetWorldFeedback", ""],
+        ["AnalyticsAPI/Analytics", ""],
+        ["Archive/SecretWorlds", ""],
+        ["Archive/ModerationAPI/Against", ""],
+        ["Archive/UserAPI/ListActive", ""],
+    ];
+
+    function routeChange() {
+        redirects.forEach(([source, target]) => {
+            const sources = [`#/${source}`, `#/${source}/`];
+            if (!sources.includes(location.hash)) return;
+
+            window.location = target;
+        });
+    }
+
+    window.addEventListener("hashchange", routeChange);
+    window.addEventListener("load", routeChange);
+</script>
+{{ end }}

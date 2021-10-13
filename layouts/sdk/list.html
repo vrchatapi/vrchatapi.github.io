@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="container">
+
+    <nav aria-label="breadcrumb" class="mt-5">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">SDK</li>
+        </ol>
+    </nav>
+
+    <h1 class="fw-bold display-2">Languages</h1>
+
+    <p class="pt-3">
+        Langage SDKs allow you to quickly get started using the API in your language of choice, rather than having to
+        (re-)implement all the HTTP methods from scratch.
+    </p>
+
+    <hr class="mt-5" />
+
+    {{ range $page := $.Data.Pages.ByWeight }}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 pt-3 pt-md-5">
+                <h1 class="fw-bold">
+                    {{ partial (print "lang_" $page.Params.sdk ".html") (dict "width" "100" "class" "m-3") }}
+                    {{ $page.LinkTitle }}
+                </h1>
+                {{ $page.Params.description }}
+                <a href="/sdk/{{ $page.Params.sdk }}" class="btn btn-gold btn-lg d-block fw-bold mt-3 mt-md-5 mb-3">
+                    Go to Docs
+                </a>
+            </div>
+            <div class="col-12 col-md-8 pt-3 d-none d-sm-block">
+                {{ $page.Content }}
+            </div>
+        </div>
+
+        <hr />
+    </div>
+    {{ end }}
+
+</div>
+{{ end }}
