@@ -1,4 +1,4 @@
-![VRChat API Banner](/assets/img/api_banner_1500x400.png)
+![VRChat API Banner](/static/assets/img/api_banner_1500x400.png)
 
 # 💙 VRChat API Documentation 💙
 
