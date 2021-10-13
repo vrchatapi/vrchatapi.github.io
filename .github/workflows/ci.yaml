@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 name: GitHub Pages
@@ -18,7 +18,7 @@ jobs:
       - name: Build Website with Hugo
         run: hugo --minify
       - name: Deploy Website to Pages branch
-        if: ${{ startsWith(github.ref, 'refs/heads/master') }}
+        if: ${{ startsWith(github.ref, 'refs/heads/main') }}
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: pages
