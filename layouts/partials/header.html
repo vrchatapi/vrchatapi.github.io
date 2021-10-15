@@ -42,9 +42,11 @@
                         Languages
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="languagesDropdown">
-                        <!--{ for sdk in site.sdks %}
-                        <li><a class="dropdown-item py-3" href="/sdk/{ sdk.id }">{ sdk.name }</a></li>
-                        {% endfor }-->
+                        {{ range $sdk := sort $.Site.Params.tutorial_categories "order"}}
+                        {{ if ne $sdk.id "general" }}
+                        <li><a class="dropdown-item py-3" href="/sdk/{{ $sdk.id }}">{{ $sdk.name }}</a></li>
+                        {{ end }}
+                        {{ end }}
                     </ul>
                 </li>
             </ul>
