@@ -10,10 +10,37 @@ ignoreErrors = ["error-disable-taxonomy"]
     [params.tutorial_categories.general]
     id = "general"
     name = "General"
+    order = 0
 
-    [params.tutorial_categories.node]
-    id = "node"
+    [params.tutorial_categories.javascript]
+    id = "javascript"
     name = "Node SDK"
+    order = 1
+
+    [params.tutorial_categories.python]
+    id = "python"
+    name = "Python SDK"
+    order = 2
+
+    [params.tutorial_categories.java]
+    id = "java"
+    name = "Java SDK"
+    order = 3
+
+    [params.tutorial_categories.dart]
+    id = "dart"
+    name = "Dart SDK"
+    order = 4
+
+    [params.tutorial_categories.rust]
+    id = "rust"
+    name = "Rust SDK"
+    order = 5
+
+    [params.tutorial_categories.csharp]
+    id = "csharp"
+    name = "C# SDK"
+    order = 6
 
 [markup.goldmark.renderer]
     unsafe = true
