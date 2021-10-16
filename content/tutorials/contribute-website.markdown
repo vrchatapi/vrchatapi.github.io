@@ -8,9 +8,9 @@ difficulty: hard
 
 The documentation effort is primarily divided into two projects, the [website](https://github.com/vrchatapi/vrchatapi.github.io) and the [specification](https://github.com/vrchatapi/specification).
 
-The `website` project contains the source code building up the website, all of the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.
+The `website` project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.
 
-The `specification` is an [OpenAPI](https://swagger.io/docs/specification/about/) document specifying the API in the tiniest detail. OpenAPI is both a human and machine-readable format, and allows us to do a lot of cool post-processing stuff with it. The primary usage is generating the entire [API documentation page](/docs/api/), but it is also used to automatically generate the several language SDK's we maintain. Once a new endpoint is documented it can be automatically updated on the website and in all of the SDKs at once. This is where you want to contribute if you have found an error in the API docs or want to add a new endpoint. For more information, please see [Contributing to the API](/tutorials/contribute-api).
+The `specification` is an [OpenAPI](https://swagger.io/docs/specification/about/) document specifying the API in the tiniest detail. OpenAPI is both a human and machine-readable format and allows us to do a lot of cool post-processing stuff with it. The primary usage is generating the entire [API documentation page](/docs/api/), but it is also used to automatically generate the several language SDK's we maintain. Once a new endpoint is documented it can be automatically updated on the website and in all the SDKs at once. This is where you want to contribute if you have found an error in the API docs or want to add a new endpoint. For more information, please see [Contributing to the API](/tutorials/contribute-api).
 
 **Pre-requisites:**
 * [VSCode](https://code.visualstudio.com/)
@@ -18,11 +18,11 @@ The `specification` is an [OpenAPI](https://swagger.io/docs/specification/about/
 
 ## 1. Cloning the repository
 
-First we need to fetch the project. Begin with "Forking" the project. This creates a copy which you can work on before submitting the changes back into the main project.
+First, we need to fetch the project. Begin with "Forking" the project. This creates a copy which you can work on before submitting the changes back into the main project.
 
 ![](/assets/img/tutorials/contribute-website/fork.png)
 
-Second we need to clone it to our computer. To do this it is recommended to use [GitHub Desktop](https://desktop.github.com/):
+Second, we need to clone it to our computer. To do this it is recommended to use [GitHub Desktop](https://desktop.github.com/):
 
 * Windows: [**https://central.github.com/deployments/desktop/desktop/latest/win32**](https://central.github.com/deployments/desktop/desktop/latest/win32)
 * Linux: [https://github.com/shiftkey/desktop/releases](https://github.com/shiftkey/desktop/releases)
@@ -33,7 +33,7 @@ Please follow the [**Getting Started with GitHub Desktop**](https://docs.github.
 
 ---
 
-Alterantively it is also possible to clone via terminal if you have git installed:
+Alternatively it is also possible to clone via terminal if you have git installed:
 
 ```bash
 git clone git@github.com:YOUR_USERNAME/vrchatapi.github.io.git
@@ -41,9 +41,9 @@ git clone git@github.com:YOUR_USERNAME/vrchatapi.github.io.git
 
 ## 2. Starting the local development server
 
-The website is built with a blogging engine called `Hugo`. While we don't use the typical blogging structure, Hugo allows us to include reusable modules such as the Navbar and Footer, and define layouts for pages while writing the main content in Markdown. This significantly simplifies maintenance and contributing, as people only have to learn Markdown rather than go digging in HTML.
+The website is built with a blogging engine called `Hugo`. While we don't use the typical blogging structure, Hugo allows us to include reusable modules such as the Navbar and Footer and define layouts for pages while writing the main content in Markdown. This significantly simplifies maintenance and contributing, as people only must learn Markdown rather than go digging in HTML.
 
-Hugo is distrubed as a portable binary and is already included in the project, so you don't have to install anything. Simply run the following command at it will start a local webserver on [http://localhost:1313](http://localhost:1313).
+Hugo is distributed as a portable binary and is already included in the project, so you don't have to install anything. Simply run the following command at it will start a local webserver on [http://localhost:1313](http://localhost:1313).
 
 ```bash
 ./hugo.exe server
@@ -119,4 +119,4 @@ You will be shown a final confirmation page showing the difference, and that we 
 
 **That's it!** 🎉
 
-Your PR will then be reviewed, and requested changes can be updated in the same commit-push procedure as above.
+Your PR will then be reviewed, and any requested changes can be updated in the same commit-push procedure as above.
