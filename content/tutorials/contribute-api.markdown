@@ -59,7 +59,7 @@ Go back to the "API" tab and click on the file `openapi > components > paths > a
 
 ![](/assets/img/tutorials/contribute-api/avatars_spec.png)
 
-All of the contact info, license and globla properties is empty. This is because "avatars" section is only a small part of the overall API. In an effort to make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.
+All of the contact info, license and global properties is empty. This is because "avatars" section is only a small part of the overall API. In an effort to make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.
 
 The research by waterflame concluded that the `/selectFallback` endpoint has the same inputs and outputs as the existing `/select` endpoint. We will therefore proceed with clicking the `</> Code` button top-right to switch into text mode, and then select the `/avatars/{avatarsId}/select` endpoint in the lower left corner. This will show most of the endpoint in blue:
 
@@ -130,7 +130,7 @@ npm install -g http-server
 http-server dist/ --cors 
 ```
 
-Your version of the specification is now available at `http://localhost:8080/openapi.yaml`. Switch VSCode window to the website projec,t and modify the `spec-url` URL at the top of the `layouts/docs/single.html` file to point to this file instead.
+Your version of the specification is now available at `http://localhost:8080/openapi.yaml`. Switch VSCode window to the website project and modify the `spec-url` URL at the top of the `layouts/docs/single.html` file to point to this file instead.
 
 (Note: The API Docs will not automatically reload if you rebundle the API spec.)
 
