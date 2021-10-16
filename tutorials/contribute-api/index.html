@@ -5,7 +5,7 @@
 <meta name=author content="Contributing to the API | VRChat API Documentation">
 <meta name=description content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
 Structure The documentation effort is primarily divided into two projects, the website and the specification.
-The website project contains the source code building up the website, all of the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
+The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
 <meta name=keywords content="vrchat,api,vrchatapi">
 <meta name=generator content="Hugo 0.88.1">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
@@ -15,14 +15,14 @@ The website project contains the source code building up the website, all of the
 <meta property="og:title" content="Contributing to the API">
 <meta property="og:description" content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
 Structure The documentation effort is primarily divided into two projects, the website and the specification.
-The website project contains the source code building up the website, all of the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
+The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://vrchatapi.github.io/tutorials/contribute-api/"><meta property="article:section" content="tutorials">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Contributing to the API">
 <meta name=twitter:description content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
 Structure The documentation effort is primarily divided into two projects, the website and the specification.
-The website project contains the source code building up the website, all of the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
+The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
 <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-FBCK0H6BHS')</script>
 </head>
@@ -93,8 +93,8 @@ Join Discord
 <p><strong>Please read <a href=/tutorials/contribute-website>&ldquo;Contributing to the Website&rdquo;</a> first. You will need a local instance of the website to preview what the docs will look like.</strong></p>
 <h2 id=structure>Structure</h2>
 <p>The documentation effort is primarily divided into two projects, the <a href=https://github.com/vrchatapi/vrchatapi.github.io>website</a> and the <a href=https://github.com/vrchatapi/specification>specification</a>.</p>
-<p>The <code>website</code> project contains the source code building up the website, all of the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials. For more information, please see <a href=/tutorials/contribute-website>Contributing to the Website</a>.</p>
-<p>The <code>specification</code> is an <a href=https://swagger.io/docs/specification/about/>OpenAPI</a> document specifying the API in the tiniest detail. OpenAPI is both a human and machine-readable format, and allows us to do a lot of cool post-processing stuff with it. The primary usage is generating the entire <a href=/docs/api/>API documentation page</a>, but it is also used to automatically generate the several language SDK&rsquo;s we maintain. Once a new endpoint is documented it can be automatically updated on the website and in all of the SDKs at once. This is where you want to contribute if you have found an error in the API docs or want to add a new endpoint.</p>
+<p>The <code>website</code> project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials. For more information, please see <a href=/tutorials/contribute-website>Contributing to the Website</a>.</p>
+<p>The <code>specification</code> is an <a href=https://swagger.io/docs/specification/about/>OpenAPI</a> document specifying the API in the tiniest detail. OpenAPI is both a human and machine-readable format and allows us to do a lot of cool post-processing stuff with it. The primary usage is generating the entire <a href=/docs/api/>API documentation page</a>, but it is also used to automatically generate the several language SDK&rsquo;s we maintain. Once a new endpoint is documented it can be automatically updated on the website and in all the SDKs at once. This is where you want to contribute if you have found an error in the API docs or want to add a new endpoint.</p>
 <p><strong>Pre-requisites:</strong></p>
 <ul>
 <li>Git/<a href=https://desktop.github.com/>Github Desktop</a> and knowledge of forking and making a PR.</li>
@@ -109,7 +109,7 @@ Join Discord
 <li>Web version: <a href=https://stoplight.io/welcome>https://stoplight.io/welcome</a></li>
 </ul>
 <p>While it is possible to modify the spec in a normal editor like VSCode, it is strongly recommended to use Stoplight, as it will additionally check for linting errors and speed up your workflow. Stoplight Studio still allows you to edit in text-mode if you prefer that.</p>
-<p>The following <strong>optional</strong> video goes into better explenation of what OpenAPI is:</p>
+<p>The following <strong>optional</strong> video goes into better explanation of what OpenAPI is:</p>
 <iframe width=560 height=315 src=https://www.youtube-nocookie.com/embed/pRS9LRBgjYg title="YouTube video player" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id=3-open-project>3. Open project</h2>
 <p>Open the <code>specification</code> folder you cloned earlier. It is very important to open the root folder, and not the <code>openapi</code> folder.</p>
@@ -128,13 +128,13 @@ Join Discord
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/avatars_spec.png alt>
 </p></p>
-<p>All of the contact info, license and global properties is empty. This is because &ldquo;avatars&rdquo; section is only a small part of the overall API. In an effort to make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.</p>
+<p>All of the contact info, license and global properties are empty. This is because &ldquo;avatars&rdquo; section is only a small part of the overall API. To make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.</p>
 <p>The research by waterflame concluded that the <code>/selectFallback</code> endpoint has the same inputs and outputs as the existing <code>/select</code> endpoint. We will therefore proceed with clicking the <code>&lt;/> Code</code> button top-right to switch into text mode, and then select the <code>/avatars/{avatarsId}/select</code> endpoint in the lower left corner. This will show most of the endpoint in blue:</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/select_endpoint.png alt>
 </p></p>
 <p>We then proceed with copying the entire endpoint, including the parameters and the URL header, and pasting it right below.
-We also make sure to update the path to <code>/selectFallback</code> instead of <code>/select</code>, and also update the <code>summary</code> (which will be the title), the <code>operationId</code> (which will be the function call in many SDK&rsquo;s), and the description. Once you are done it should look something like:</p>
+We also make sure to update the path to <code>/selectFallback</code> instead of <code>/select</code>, and update the <code>summary</code> (which will be the title), the <code>operationId</code> (which will be the function call in many SDK&rsquo;s), and the description. Once you are done it should look something like:</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/selectfallback_endpoint.png alt>
 </p></p>
@@ -147,7 +147,7 @@ We also make sure to update the path to <code>/selectFallback</code> instead of 
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/error.png alt>
 </p></p>
-<p>We then go back to the &ldquo;API&rdquo; section, select the <code>avatars.yaml</code> file, click <code>"&lt;/> Code"</code> and then select the <code>/selectFallback</code> endpoint bottom-left. We now add the additional error message we created, where the responses tab should look like the following. In case something is miss-spelled you will see an error in the top-right corner.</p>
+<p>We then go back to the &ldquo;API&rdquo; section, select the <code>avatars.yaml</code> file, click <code>"&lt;/> Code"</code> and then select the <code>/selectFallback</code> endpoint bottom-left. We now add the additional error message we created, where the responses tab should look like the following. In case something is misspelled you will see an error in the top-right corner.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>      <span style=color:#f92672>responses</span>:
         <span style=color:#f92672>&#39;200&#39;</span>:
           <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>../responses/CurrentUserResponse.yaml</span>
@@ -158,13 +158,13 @@ We also make sure to update the path to <code>/selectFallback</code> instead of 
         <span style=color:#f92672>&#39;404&#39;</span>:
           <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>../responses/avatars/AvatarNotFoundError.yaml</span>
 </code></pre></div><p>Finally, as mentioned before the specification is split up into multiple files. We therefore need to add our new URL to the main file, so it knows where to look for all the resources. We do this by editing the <code>openapi > components > paths.yaml</code> file.
-Search for &ldquo;select, and add our new endpoint below the existing one. It should look like the following when done:
+Search for &ldquo;select&rdquo;, and add the new endpoint below the existing one. It should look like the following when done:
 (Note: <code>~1</code> is used as slashes in the $ref reference pointer.)</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#e6db74>&#39;/avatars/{avatarId}/select&#39;</span>:
   <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1select</span>
 <span style=color:#e6db74>&#39;/avatars/{avatarId}/selectFallback&#39;</span>:
   <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1selectFallback</span>
-</code></pre></div><p>That&rsquo;s it! We are now ready to commit the changes and create a PR. If you are using the Web version, do it with the &ldquo;Commit&rdquo; button top-left, or if you are on desktop with your favorite Git software.</p>
+</code></pre></div><p>That&rsquo;s it! We are now ready to commit the changes and create a PR. If you are using the Web version, do it with the &ldquo;Commit&rdquo; button top left, or if you are on desktop with your favorite Git software.</p>
 <h2 id=5-preview-the-api-documentation>5. Preview the API Documentation</h2>
 <p>The following is <strong>optional</strong>, but allows you to preview what the documentation will look like before you submit a PR.</p>
 <p><strong>Requirements:</strong> NodeJS. You don&rsquo;t need to know any JavaScript programming, but you will need it installed. <a href=https://nodejs.org/en/download/>Download at nodejs.org</a>.</p>
@@ -182,7 +182,7 @@ npm install -g http-server
 <span style=color:#75715e># The &#34;--cors&#34; part at the end allows the website on port 1313 to reach the spec on the different port 8080.</span>
 http-server dist/ --cors 
 </code></pre></div><p>Your version of the specification is now available at <code>http://localhost:8080/openapi.yaml</code>. Switch VSCode window to the website project and modify the <code>spec-url</code> URL at the top of the <code>layouts/docs/single.html</code> file to point to this file instead.</p>
-<p>(Note: The API Docs will not automatically reload if you rebundle the API spec.)</p>
+<p>(Note: The API Docs will not automatically reload if you re-bundle the API spec.)</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/result.png alt>
 </p></p>
