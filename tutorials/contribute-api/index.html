@@ -128,7 +128,7 @@ Join Discord
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/avatars_spec.png alt>
 </p></p>
-<p>All of the contact info, license and globla properties is empty. This is because &ldquo;avatars&rdquo; section is only a small part of the overall API. In an effort to make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.</p>
+<p>All of the contact info, license and global properties is empty. This is because &ldquo;avatars&rdquo; section is only a small part of the overall API. In an effort to make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.</p>
 <p>The research by waterflame concluded that the <code>/selectFallback</code> endpoint has the same inputs and outputs as the existing <code>/select</code> endpoint. We will therefore proceed with clicking the <code>&lt;/> Code</code> button top-right to switch into text mode, and then select the <code>/avatars/{avatarsId}/select</code> endpoint in the lower left corner. This will show most of the endpoint in blue:</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/select_endpoint.png alt>
@@ -181,7 +181,7 @@ npm install -g http-server
 <span style=color:#75715e># Start it in the &#34;dist/&#34; folder</span>
 <span style=color:#75715e># The &#34;--cors&#34; part at the end allows the website on port 1313 to reach the spec on the different port 8080.</span>
 http-server dist/ --cors 
-</code></pre></div><p>Your version of the specification is now available at <code>http://localhost:8080/openapi.yaml</code>. Switch VSCode window to the website projec,t and modify the <code>spec-url</code> URL at the top of the <code>layouts/docs/single.html</code> file to point to this file instead.</p>
+</code></pre></div><p>Your version of the specification is now available at <code>http://localhost:8080/openapi.yaml</code>. Switch VSCode window to the website project and modify the <code>spec-url</code> URL at the top of the <code>layouts/docs/single.html</code> file to point to this file instead.</p>
 <p>(Note: The API Docs will not automatically reload if you rebundle the API spec.)</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/result.png alt>
