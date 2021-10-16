@@ -3,7 +3,7 @@
 
 <rapi-doc
     id="rapi-doc"
-    spec-url="https://vrchatapi.github.io/specification/openapi.yaml"
+    spec-url={{ getenv "SPEC_URL" | default "https://vrchatapi.github.io/specification/openapi.yaml" }}
     sort-endpoints-by = "none"
 
     theme = "light"

@@ -127,12 +127,21 @@ npm install -g http-server
 
 # Start it in the "dist/" folder
 # The "--cors" part at the end allows the website on port 1313 to reach the spec on the different port 8080.
-http-server dist/ --cors 
+http-server dist/ --cors
 ```
 
-Your version of the specification is now available at `http://localhost:8080/openapi.yaml`. Switch VSCode window to the website project and modify the `spec-url` URL at the top of the `layouts/docs/single.html` file to point to this file instead.
+Your version of the specification is now available at `http://localhost:8080/openapi.yaml`. Switch VSCode window to the website project and restart the hugo server with the following command:
 
-(Note: The API Docs will not automatically reload if you re-bundle the API spec.)
+```bash
+# Windows cmd.exe
+set SPEC_URL=http://localhost:8080/openapi.yaml
+./hugo.exe server
+
+# Linux or Git Bash
+SPEC_URL=http://localhost:8080/openapi.yaml ./hugo server
+```
+
+(Note: The API Docs will **not** automatically reload if you re-bundle the API spec.)
 
 ![](/assets/img/tutorials/contribute-api/result.png)
 
