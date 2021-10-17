@@ -57,6 +57,8 @@ Tag | Description
 `admin_hide_popular` | World will be hidden from "Popular Worlds" row
 `admin_jam_*` | World has been manually selected by staff to appear in the "World Jam" row
 `admin_vket*` | Special tag used for Virtual Market worlds to appear in own dedicated row
+`admin_muzzfest` | Special tag used for the MUZZFEST world to show it in its own world row
+`debug_allowed` | World [Debugging](https://user-images.githubusercontent.com/5008081/136931542-84fe3806-6933-4a0f-b816-d3a8052298a8.png) has been enabled by author, allowing to see state of triggers
 `system_approved` | World has been automatically approved through the Community Labs
 `system_labs` | World has been submitted to Community Labs
 `system_created_recently` | World was recently created
