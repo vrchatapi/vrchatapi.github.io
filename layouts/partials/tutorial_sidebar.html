@@ -48,44 +48,44 @@
 
     <hr class="mt-1">
     {{ .TableOfContents }}
-    <style>
-        #TableOfContents ul {
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 0;
-            margin-bottom: 0;
-            list-style: none;
-            flex-direction: column !important;
-        }
-
-        #TableOfContents li {
-            display: block;
-            padding: .5rem 1rem;
-            background: 0 0;
-            border: 0;
-            border-radius: .25rem;
-        }
-
-        #TableOfContents li>ul {
-            margin-left: .5rem !important;
-            margin-top: 0.75rem !important;
-            margin-bottom: 0.25rem !important;
-        }
-
-        #TableOfContents li>ul>li:last-child {
-            padding-bottom: 0;
-        }
-
-        #TableOfContents a {
-            color: var(--black);
-            text-decoration: none;
-        }
-
-        #TableOfContents a:hover {
-            color: var(--blue);
-        }
-    </style>
 </nav>-->
+<style>
+    #TableOfContents ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        flex-direction: column !important;
+    }
+
+    #TableOfContents li {
+        display: block;
+        padding: .5rem 1rem;
+        background: 0 0;
+        border: 0;
+        border-radius: .25rem;
+    }
+
+    #TableOfContents li>ul {
+        margin-left: .5rem !important;
+        margin-top: 0.75rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    #TableOfContents li>ul>li:last-child {
+        padding-bottom: 0;
+    }
+
+    #TableOfContents a {
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    #TableOfContents a:hover {
+        color: var(--blue);
+    }
+</style>
 
 <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
     {{ range $cat := $.Site.Params.tutorial_categories }}
