@@ -7,6 +7,7 @@
 <meta name=keywords content="vrchat,api,vrchatapi">
 <meta name=generator content="Hugo 0.88.1">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/api_custom_highlight.css>
 <link rel=stylesheet href=/assets/css/main.css>
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
 <title>C# SDK | VRChat API Documentation</title>
@@ -101,52 +102,52 @@ Join Discord
 </blockquote>
 <p>As stated, this documentation was not created with the help of the official VRChat team. Therefore this documentation is not an official documentation of the VRChat API and may not be always up to date with the latest versions. If you find that a page or endpoint is not longer valid please create an issue and tell us so we can fix it.</p>
 <h2 id=getting-started>Getting Started</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=color:#66d9ef>using</span> io.github.vrchatapi.Api;
-<span style=color:#66d9ef>using</span> io.github.vrchatapi.Client;
-<span style=color:#66d9ef>using</span> System;
-<span style=color:#66d9ef>using</span> System.Diagnostics;
-<span style=color:#66d9ef>using</span> System.Threading.Tasks;
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=k>using</span> <span class=nn>io.github.vrchatapi.Api</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>io.github.vrchatapi.Client</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Diagnostics</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Threading.Tasks</span><span class=p>;</span>
 
-<span style=color:#66d9ef>namespace</span> Example
-{
-    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Program</span>
-    {
-        <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> Main(<span style=color:#66d9ef>string</span>[] args)
-        {
-            MainAsync().Wait();
-            Console.ReadKey();
-        }
+<span class=k>namespace</span> <span class=nn>Example</span>
+<span class=p>{</span>
+    <span class=k>class</span> <span class=nc>Program</span>
+    <span class=p>{</span>
+        <span class=k>static</span> <span class=k>void</span> <span class=n>Main</span><span class=p>(</span><span class=kt>string</span><span class=p>[]</span> <span class=n>args</span><span class=p>)</span>
+        <span class=p>{</span>
+            <span class=n>MainAsync</span><span class=p>().</span><span class=n>Wait</span><span class=p>();</span>
+            <span class=n>Console</span><span class=p>.</span><span class=n>ReadKey</span><span class=p>();</span>
+        <span class=p>}</span>
 
-        <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>async</span> Task MainAsync()
-        {
-            <span style=color:#75715e>// Configure API key authorization: apiKeyCookie
-</span><span style=color:#75715e></span>            Configuration.Default.Username = VRCUsername;
-            Configuration.Default.Password = VRCPassword;
+        <span class=k>static</span> <span class=k>async</span> <span class=n>Task</span> <span class=n>MainAsync</span><span class=p>()</span>
+        <span class=p>{</span>
+            <span class=c1>// Configure API key authorization: apiKeyCookie
+</span><span class=c1></span>            <span class=n>Configuration</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>Username</span> <span class=p>=</span> <span class=n>VRCUsername</span><span class=p>;</span>
+            <span class=n>Configuration</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>Password</span> <span class=p>=</span> <span class=n>VRCPassword</span><span class=p>;</span>
 
-            <span style=color:#66d9ef>try</span>
-            {
-                <span style=color:#75715e>// Calling &#34;GetCurrentUser&#34; will log you in.
-</span><span style=color:#75715e></span>                AuthenticationApi authApi = <span style=color:#66d9ef>new</span> AuthenticationApi();
-                <span style=color:#66d9ef>var</span> user = <span style=color:#66d9ef>await</span> authApi.GetCurrentUserAsync();
-                Console.WriteLine(<span style=color:#e6db74>$&#34;Logged in user {user.DisplayName}, Current Avatar {user.CurrentAvatar}&#34;</span>);
+            <span class=k>try</span>
+            <span class=p>{</span>
+                <span class=c1>// Calling &#34;GetCurrentUser&#34; will log you in.
+</span><span class=c1></span>                <span class=n>AuthenticationApi</span> <span class=n>authApi</span> <span class=p>=</span> <span class=k>new</span> <span class=n>AuthenticationApi</span><span class=p>();</span>
+                <span class=kt>var</span> <span class=n>user</span> <span class=p>=</span> <span class=k>await</span> <span class=n>authApi</span><span class=p>.</span><span class=n>GetCurrentUserAsync</span><span class=p>();</span>
+                <span class=n>Console</span><span class=p>.</span><span class=n>WriteLine</span><span class=p>(</span><span class=s>$&#34;Logged in user {user.DisplayName}, Current Avatar {user.CurrentAvatar}&#34;</span><span class=p>);</span>
 
-                UsersApi userApi = <span style=color:#66d9ef>new</span> UsersApi();
-                <span style=color:#66d9ef>var</span> getUser = <span style=color:#66d9ef>await</span> userApi.GetUserAsync(user.Id);
-                Console.WriteLine(<span style=color:#e6db74>$&#34;Found user {getUser.DisplayName}, joined {getUser.DateJoined}&#34;</span>);
+                <span class=n>UsersApi</span> <span class=n>userApi</span> <span class=p>=</span> <span class=k>new</span> <span class=n>UsersApi</span><span class=p>();</span>
+                <span class=kt>var</span> <span class=n>getUser</span> <span class=p>=</span> <span class=k>await</span> <span class=n>userApi</span><span class=p>.</span><span class=n>GetUserAsync</span><span class=p>(</span><span class=n>user</span><span class=p>.</span><span class=n>Id</span><span class=p>);</span>
+                <span class=n>Console</span><span class=p>.</span><span class=n>WriteLine</span><span class=p>(</span><span class=s>$&#34;Found user {getUser.DisplayName}, joined {getUser.DateJoined}&#34;</span><span class=p>);</span>
 
-                WorldsApi worldApi = <span style=color:#66d9ef>new</span> WorldsApi();
-                <span style=color:#66d9ef>var</span> world = <span style=color:#66d9ef>await</span> worldApi.GetWorldAsync(<span style=color:#e6db74>&#34;wrld_ba913a96-fac4-4048-a062-9aa5db092812&#34;</span>);
-                Console.WriteLine(<span style=color:#e6db74>$&#34;Found world {world.Name}, visits: {world.Visits}&#34;</span>);
-            }
-            <span style=color:#66d9ef>catch</span> (ApiException e)
-            {
-                Debug.Print(<span style=color:#e6db74>&#34;Exception when calling API: &#34;</span> + e.Message);
-                Debug.Print(<span style=color:#e6db74>&#34;Status Code: &#34;</span> + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
+                <span class=n>WorldsApi</span> <span class=n>worldApi</span> <span class=p>=</span> <span class=k>new</span> <span class=n>WorldsApi</span><span class=p>();</span>
+                <span class=kt>var</span> <span class=n>world</span> <span class=p>=</span> <span class=k>await</span> <span class=n>worldApi</span><span class=p>.</span><span class=n>GetWorldAsync</span><span class=p>(</span><span class=s>&#34;wrld_ba913a96-fac4-4048-a062-9aa5db092812&#34;</span><span class=p>);</span>
+                <span class=n>Console</span><span class=p>.</span><span class=n>WriteLine</span><span class=p>(</span><span class=s>$&#34;Found world {world.Name}, visits: {world.Visits}&#34;</span><span class=p>);</span>
+            <span class=p>}</span>
+            <span class=k>catch</span> <span class=p>(</span><span class=n>ApiException</span> <span class=n>e</span><span class=p>)</span>
+            <span class=p>{</span>
+                <span class=n>Debug</span><span class=p>.</span><span class=n>Print</span><span class=p>(</span><span class=s>&#34;Exception when calling API: &#34;</span> <span class=p>+</span> <span class=n>e</span><span class=p>.</span><span class=n>Message</span><span class=p>);</span>
+                <span class=n>Debug</span><span class=p>.</span><span class=n>Print</span><span class=p>(</span><span class=s>&#34;Status Code: &#34;</span> <span class=p>+</span> <span class=n>e</span><span class=p>.</span><span class=n>ErrorCode</span><span class=p>);</span>
+                <span class=n>Debug</span><span class=p>.</span><span class=n>Print</span><span class=p>(</span><span class=n>e</span><span class=p>.</span><span class=n>StackTrace</span><span class=p>);</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+<span class=p>}</span>
 </code></pre></div><h2 id=contributing>Contributing</h2>
 <p>Contributions are welcome, but do not add features that should be handled by the OpenAPI specification.</p>
 <p>Join the <a href=https://discord.gg/Ge2APMhPfD>Discord server</a> to get in touch with us.</p>

@@ -9,6 +9,7 @@ The specification is an OpenAPI document specifying the API in the tiniest detai
 <meta name=keywords content="vrchat,api,vrchatapi">
 <meta name=generator content="Hugo 0.88.1">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/api_custom_highlight.css>
 <link rel=stylesheet href=/assets/css/main.css>
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
 <title>Contributing to the Website | VRChat API Documentation</title>
@@ -113,34 +114,34 @@ Join Discord
 <p>Please follow the <a href=https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop><strong>Getting Started with GitHub Desktop</strong></a> tutorial for how to clone the fork you just made.</p>
 <hr>
 <p>Alternatively it is also possible to clone via terminal if you have git installed:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone git@github.com:YOUR_USERNAME/vrchatapi.github.io.git
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git clone git@github.com:YOUR_USERNAME/vrchatapi.github.io.git
 </code></pre></div><h2 id=2-starting-the-local-development-server>2. Starting the local development server</h2>
 <p>The website is built with a blogging engine called <code>Hugo</code>. While we don&rsquo;t use the typical blogging structure, Hugo allows us to include reusable modules such as the Navbar and Footer and define layouts for pages while writing the main content in Markdown. This significantly simplifies maintenance and contributing, as people only must learn Markdown rather than go digging in HTML.</p>
 <p>Hugo is distributed as a portable binary and is already included in the project, so you don&rsquo;t have to install anything. Simply run the following command at it will start a local webserver on <a href=http://localhost:1313>http://localhost:1313</a>.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>./hugo.exe server
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>./hugo.exe server
 </code></pre></div><p>This will start a debugging server, which will automatically reload the page whenever you edit any of the files.</p>
 <h2 id=3-create-a-new-tutorial>3. Create a new Tutorial</h2>
 <p>Being with creating a new post by running the following command:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>./hugo.exe new tutorials/my-test-tutorial.markdown
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>./hugo.exe new tutorials/my-test-tutorial.markdown
 </code></pre></div><p>We see a new file called <code>my-test-tutorial.markdown</code> with the following template copied in:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>---
-<span style=color:#f92672>title</span>: <span style=color:#ae81ff>Tutorial Title</span>
-<span style=color:#f92672>category</span>: <span style=color:#ae81ff>general</span>
-<span style=color:#f92672>difficulty</span>: <span style=color:#ae81ff>easy</span>
----
-
-</code></pre></div><p>Proceed with changing the category and difficult and add some content.
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nn>---</span><span class=w>
+</span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=l>Tutorial Title</span><span class=w>
+</span><span class=w></span><span class=nt>category</span><span class=p>:</span><span class=w> </span><span class=l>general</span><span class=w>
+</span><span class=w></span><span class=nt>difficulty</span><span class=p>:</span><span class=w> </span><span class=l>easy</span><span class=w>
+</span><span class=w></span><span class=nn>---</span><span class=w>
+</span><span class=w>
+</span></code></pre></div><p>Proceed with changing the category and difficult and add some content.
 Look for <code>id</code>&rsquo;s in <code>config.toml</code> for which categories are available.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>---
-<span style=color:#f92672>title</span>: <span style=color:#ae81ff>My Test Tutorial</span>
-<span style=color:#f92672>category</span>: <span style=color:#ae81ff>javascript</span>
-<span style=color:#f92672>difficulty</span>: <span style=color:#ae81ff>easy</span>
----
-
-<span style=color:#75715e>## Hello world</span>
-
-<span style=color:#ae81ff>This is an example text.</span>
-</code></pre></div><p>We now see it show up in the list of tutorials:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nn>---</span><span class=w>
+</span><span class=w></span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=l>My Test Tutorial</span><span class=w>
+</span><span class=w></span><span class=nt>category</span><span class=p>:</span><span class=w> </span><span class=l>javascript</span><span class=w>
+</span><span class=w></span><span class=nt>difficulty</span><span class=p>:</span><span class=w> </span><span class=l>easy</span><span class=w>
+</span><span class=w></span><span class=nn>---</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=c>## Hello world</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=l>This is an example text.</span><span class=w>
+</span></code></pre></div><p>We now see it show up in the list of tutorials:</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-website/shows_up_in_list.png alt>
 </p></p>
@@ -150,7 +151,7 @@ Look for <code>id</code>&rsquo;s in <code>config.toml</code> for which categorie
 </p></p>
 <h2 id=4-adding-an-image>4. Adding an Image</h2>
 <p>To add an image, start with creating a folder for the tutorial under <code>static/assets/img/tutorials/</code> and must be named exactly the same as the tutorial file, but without the <code>.markdown</code> part, so <code>static/assets/img/tutorials/my-test-tutorial</code>. Then link to it in the post with the following syntax:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>![](/assets/img/tutorials/my-test-tutorial/example.png)
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>![](/assets/img/tutorials/my-test-tutorial/example.png)
 </code></pre></div><h2 id=5-contributing-to-the-project>5. Contributing to the project</h2>
 <p>We are now ready to contribute back to the main project. Start with writing a title and description for the changes you&rsquo;ve done. The title should be short and concise.</p>
 <p><p class=md__image>
@@ -171,34 +172,35 @@ Look for <code>id</code>&rsquo;s in <code>config.toml</code> for which categorie
 <hr class=my-5>
 <a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
 <div class="row text-uppercase">
-<div class=col><a href=https://vrchatapi.github.io/tutorials/contribute-api/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-<div class=col><a href=https://vrchatapi.github.io/tutorials/websocket/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+<div class=col><a href=/tutorials/contribute-api/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+<div class=col><a href=/tutorials/websocket/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
 </div>
+<style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style>
 <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
 <div class="navbar-brand fw-bold py-2" href=#>General</div>
 <hr class=mt-1>
 <nav class="nav nav-pills flex-column">
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/getting-started/>
+<a class=nav-link href=/tutorials/getting-started/>
 <span class="badge rounded-pill bg-green me-2"> </span>
 Getting Started
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/instances/>
+<a class=nav-link href=/tutorials/instances/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Instances
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/tags/>
+<a class=nav-link href=/tutorials/tags/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Tags
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/contribute-api/>
+<a class=nav-link href=/tutorials/contribute-api/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the API
 </a>
-<a class="nav-link active" href=https://vrchatapi.github.io/tutorials/contribute-website/>
+<a class="nav-link active" href=/tutorials/contribute-website/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the Website
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/websocket/>
+<a class=nav-link href=/tutorials/websocket/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Websocket API
 </a>
@@ -236,34 +238,35 @@ Use of these names, logos, and brands does not imply endorsement.
 <div class="col-12 col-md-4 d-none d-md-block">
 <a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
 <div class="row text-uppercase">
-<div class=col><a href=https://vrchatapi.github.io/tutorials/contribute-api/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-<div class=col><a href=https://vrchatapi.github.io/tutorials/websocket/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+<div class=col><a href=/tutorials/contribute-api/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+<div class=col><a href=/tutorials/websocket/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
 </div>
+<style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style>
 <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
 <div class="navbar-brand fw-bold py-2" href=#>General</div>
 <hr class=mt-1>
 <nav class="nav nav-pills flex-column">
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/getting-started/>
+<a class=nav-link href=/tutorials/getting-started/>
 <span class="badge rounded-pill bg-green me-2"> </span>
 Getting Started
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/instances/>
+<a class=nav-link href=/tutorials/instances/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Instances
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/tags/>
+<a class=nav-link href=/tutorials/tags/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Tags
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/contribute-api/>
+<a class=nav-link href=/tutorials/contribute-api/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the API
 </a>
-<a class="nav-link active" href=https://vrchatapi.github.io/tutorials/contribute-website/>
+<a class="nav-link active" href=/tutorials/contribute-website/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the Website
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/websocket/>
+<a class=nav-link href=/tutorials/websocket/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Websocket API
 </a>

@@ -7,6 +7,7 @@
 <meta name=keywords content="vrchat,api,vrchatapi">
 <meta name=generator content="Hugo 0.88.1">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/api_custom_highlight.css>
 <link rel=stylesheet href=/assets/css/main.css>
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
 <title>Python SDK | VRChat API Documentation</title>
@@ -102,32 +103,32 @@ Join Discord
 <p>As stated, this documentation was not created with the help of the official VRChat team. Therefore this documentation is not an official documentation of the VRChat API and may not be always up to date with the latest versions. If you find that a page or endpoint is not longer valid please create an issue and tell us so we can fix it.</p>
 <h2 id=getting-started>Getting Started</h2>
 <p>First add the package to to your project:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pip install vrchatapi
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>pip install vrchatapi
 </code></pre></div><p>Below is an example on how to login to the API and fetch your own user information.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Step 1. We begin with creating a Configuration, which contains the username and password for authentication.</span>
-<span style=color:#f92672>import</span> vrchatapi
-<span style=color:#f92672>from</span> vrchatapi.api <span style=color:#f92672>import</span> authentication_api, users_api
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=c1># Step 1. We begin with creating a Configuration, which contains the username and password for authentication.</span>
+<span class=kn>import</span> <span class=nn>vrchatapi</span>
+<span class=kn>from</span> <span class=nn>vrchatapi.api</span> <span class=kn>import</span> <span class=n>authentication_api</span><span class=p>,</span> <span class=n>users_api</span>
 
-configuration <span style=color:#f92672>=</span> vrchatapi<span style=color:#f92672>.</span>Configuration(
-    username <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;username&#39;</span>,
-    password <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;password&#39;</span>,
-)
+<span class=n>configuration</span> <span class=o>=</span> <span class=n>vrchatapi</span><span class=o>.</span><span class=n>Configuration</span><span class=p>(</span>
+    <span class=n>username</span> <span class=o>=</span> <span class=s1>&#39;username&#39;</span><span class=p>,</span>
+    <span class=n>password</span> <span class=o>=</span> <span class=s1>&#39;password&#39;</span><span class=p>,</span>
+<span class=p>)</span>
 
-<span style=color:#75715e># Step 2. VRChat consists of several API&#39;s (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)</span>
-<span style=color:#75715e># Here we enter a context of the API Client and instantiate the Authentication API which is required for logging in.</span>
+<span class=c1># Step 2. VRChat consists of several API&#39;s (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)</span>
+<span class=c1># Here we enter a context of the API Client and instantiate the Authentication API which is required for logging in.</span>
 
-<span style=color:#75715e># Enter a context with an instance of the API client</span>
-<span style=color:#66d9ef>with</span> vrchatapi<span style=color:#f92672>.</span>ApiClient(configuration) <span style=color:#66d9ef>as</span> api_client:
+<span class=c1># Enter a context with an instance of the API client</span>
+<span class=k>with</span> <span class=n>vrchatapi</span><span class=o>.</span><span class=n>ApiClient</span><span class=p>(</span><span class=n>configuration</span><span class=p>)</span> <span class=k>as</span> <span class=n>api_client</span><span class=p>:</span>
 
-    <span style=color:#75715e># Instantiate instances of API classes</span>
-    auth_api <span style=color:#f92672>=</span> authentication_api<span style=color:#f92672>.</span>AuthenticationApi(api_client)
+    <span class=c1># Instantiate instances of API classes</span>
+    <span class=n>auth_api</span> <span class=o>=</span> <span class=n>authentication_api</span><span class=o>.</span><span class=n>AuthenticationApi</span><span class=p>(</span><span class=n>api_client</span><span class=p>)</span>
 
-    <span style=color:#66d9ef>try</span>:
-        <span style=color:#75715e># Step 3. Calling getCurrentUser on Authentication API logs you in if the user isn&#39;t already logged in.</span>
-        current_user <span style=color:#f92672>=</span> auth_api<span style=color:#f92672>.</span>get_current_user()
-        print(<span style=color:#e6db74>&#34;Logged in as:&#34;</span>, current_user<span style=color:#f92672>.</span>display_name)
-    <span style=color:#66d9ef>except</span> vrchatapi<span style=color:#f92672>.</span>ApiException <span style=color:#66d9ef>as</span> e:
-        print(<span style=color:#e6db74>&#34;Exception when calling API: </span><span style=color:#e6db74>%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, e)
+    <span class=k>try</span><span class=p>:</span>
+        <span class=c1># Step 3. Calling getCurrentUser on Authentication API logs you in if the user isn&#39;t already logged in.</span>
+        <span class=n>current_user</span> <span class=o>=</span> <span class=n>auth_api</span><span class=o>.</span><span class=n>get_current_user</span><span class=p>()</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Logged in as:&#34;</span><span class=p>,</span> <span class=n>current_user</span><span class=o>.</span><span class=n>display_name</span><span class=p>)</span>
+    <span class=k>except</span> <span class=n>vrchatapi</span><span class=o>.</span><span class=n>ApiException</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Exception when calling API: </span><span class=si>%s</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>,</span> <span class=n>e</span><span class=p>)</span>
 </code></pre></div><p>See <a href=https://github.com/vrchatapi/vrchatapi-python/blob/main/example.py>example.py</a> for more example usage on getting started.</p>
 <h2 id=contributing>Contributing</h2>
 <p>Contributions are welcome, but do not add features that should be handled by the OpenAPI specification.</p>

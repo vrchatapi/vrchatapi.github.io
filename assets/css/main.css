@@ -319,3 +319,7 @@ small.legal {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+blockquote > .highlight > pre.chroma {
+    margin-right: 23px;
+}

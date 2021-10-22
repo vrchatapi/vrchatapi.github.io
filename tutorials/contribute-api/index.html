@@ -9,6 +9,7 @@ The website project contains the source code building up the website, all the gr
 <meta name=keywords content="vrchat,api,vrchatapi">
 <meta name=generator content="Hugo 0.88.1">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/api_custom_highlight.css>
 <link rel=stylesheet href=/assets/css/main.css>
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
 <title>Contributing to the API | VRChat API Documentation</title>
@@ -122,7 +123,7 @@ Join Discord
 </p></p>
 <h2 id=4-example-exercise-add-the-selectfallback-avatar-endpoint>4. Example exercise: Add the &ldquo;/selectFallback&rdquo; avatar endpoint</h2>
 <p>In this tutorial we will be implementing the <code>/selectFallback</code> endpoint. Crucially the <a href=https://github.com/vrchatapi/specification/issues/70>research has already been done</a> for this endpoint, which saves a lot of time. If you want to follow along with exact steps, run the following command:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git checkout 1baabd944ba82f4180e7927789f8b10206bee8a9
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git checkout 1baabd944ba82f4180e7927789f8b10206bee8a9
 </code></pre></div><p>This will checkout/restore the project at the specific point in time of where it is as of the writing of this tutorial. Please also study the research notes in the GitHub Issue thread closely to familiar yourself with what is needed to be done before proceeding.</p>
 <p>Go back to the &ldquo;API&rdquo; tab and click on the file <code>openapi > components > paths > avatars.yaml</code>. This will bring up the following window:</p>
 <p><p class=md__image>
@@ -148,46 +149,46 @@ We also make sure to update the path to <code>/selectFallback</code> instead of 
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/error.png alt>
 </p></p>
 <p>We then go back to the &ldquo;API&rdquo; section, select the <code>avatars.yaml</code> file, click <code>"&lt;/> Code"</code> and then select the <code>/selectFallback</code> endpoint bottom-left. We now add the additional error message we created, where the responses tab should look like the following. In case something is misspelled you will see an error in the top-right corner.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>      <span style=color:#f92672>responses</span>:
-        <span style=color:#f92672>&#39;200&#39;</span>:
-          <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>../responses/CurrentUserResponse.yaml</span>
-        <span style=color:#f92672>&#39;401&#39;</span>:
-          <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>../responses/MissingCredentialsError.yaml</span>
-        <span style=color:#f92672>&#39;403&#39;</span>:
-          <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>../responses/avatars/AvatarNotTaggedAsFallbackError.yaml</span>
-        <span style=color:#f92672>&#39;404&#39;</span>:
-          <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>../responses/avatars/AvatarNotFoundError.yaml</span>
-</code></pre></div><p>Finally, as mentioned before the specification is split up into multiple files. We therefore need to add our new URL to the main file, so it knows where to look for all the resources. We do this by editing the <code>openapi > components > paths.yaml</code> file.
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=w>      </span><span class=nt>responses</span><span class=p>:</span><span class=w>
+</span><span class=w>        </span><span class=nt>&#39;200&#39;</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/CurrentUserResponse.yaml</span><span class=w>
+</span><span class=w>        </span><span class=nt>&#39;401&#39;</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/MissingCredentialsError.yaml</span><span class=w>
+</span><span class=w>        </span><span class=nt>&#39;403&#39;</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/avatars/AvatarNotTaggedAsFallbackError.yaml</span><span class=w>
+</span><span class=w>        </span><span class=nt>&#39;404&#39;</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/avatars/AvatarNotFoundError.yaml</span><span class=w>
+</span></code></pre></div><p>Finally, as mentioned before the specification is split up into multiple files. We therefore need to add our new URL to the main file, so it knows where to look for all the resources. We do this by editing the <code>openapi > components > paths.yaml</code> file.
 Search for &ldquo;select&rdquo;, and add the new endpoint below the existing one. It should look like the following when done:
 (Note: <code>~1</code> is used as slashes in the $ref reference pointer.)</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#e6db74>&#39;/avatars/{avatarId}/select&#39;</span>:
-  <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1select</span>
-<span style=color:#e6db74>&#39;/avatars/{avatarId}/selectFallback&#39;</span>:
-  <span style=color:#f92672>$ref</span>: <span style=color:#ae81ff>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1selectFallback</span>
-</code></pre></div><p>That&rsquo;s it! We are now ready to commit the changes and create a PR. If you are using the Web version, do it with the &ldquo;Commit&rdquo; button top left, or if you are on desktop with your favorite Git software.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=s1>&#39;/avatars/{avatarId}/select&#39;</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1select</span><span class=w>
+</span><span class=w></span><span class=s1>&#39;/avatars/{avatarId}/selectFallback&#39;</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1selectFallback</span><span class=w>
+</span></code></pre></div><p>That&rsquo;s it! We are now ready to commit the changes and create a PR. If you are using the Web version, do it with the &ldquo;Commit&rdquo; button top left, or if you are on desktop with your favorite Git software.</p>
 <h2 id=5-preview-the-api-documentation>5. Preview the API Documentation</h2>
 <p>The following is <strong>optional</strong>, but allows you to preview what the documentation will look like before you submit a PR.</p>
 <p><strong>Requirements:</strong> NodeJS. You don&rsquo;t need to know any JavaScript programming, but you will need it installed. <a href=https://nodejs.org/en/download/>Download at nodejs.org</a>.</p>
 <p>Open the <code>specification</code> folder and run the following commands:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Install dependencies (ignore if it throws vulnerability warnings, they are not applicable)</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Install dependencies (ignore if it throws vulnerability warnings, they are not applicable)</span>
 npm install
 
-<span style=color:#75715e># Package the spec. This will bundle together all the files into a single specification, which can be used by the website.</span>
+<span class=c1># Package the spec. This will bundle together all the files into a single specification, which can be used by the website.</span>
 npm run bundle
 
-<span style=color:#75715e># Install a simple web server</span>
+<span class=c1># Install a simple web server</span>
 npm install -g http-server
 
-<span style=color:#75715e># Start it in the &#34;dist/&#34; folder</span>
-<span style=color:#75715e># The &#34;--cors&#34; part at the end allows the website on port 1313 to reach the spec on the different port 8080.</span>
+<span class=c1># Start it in the &#34;dist/&#34; folder</span>
+<span class=c1># The &#34;--cors&#34; part at the end allows the website on port 1313 to reach the spec on the different port 8080.</span>
 http-server dist/ --cors
 </code></pre></div><p>Your version of the specification is now available at <code>http://localhost:8080/openapi.yaml</code>. Switch VSCode window to the website project and restart the hugo server with the following command:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Windows cmd.exe</span>
-set SPEC_URL<span style=color:#f92672>=</span>http://localhost:8080/openapi.yaml
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Windows cmd.exe</span>
+<span class=nb>set</span> <span class=nv>SPEC_URL</span><span class=o>=</span>http://localhost:8080/openapi.yaml
 ./hugo.exe server
 
-<span style=color:#75715e># Linux or Git Bash</span>
-SPEC_URL<span style=color:#f92672>=</span>http://localhost:8080/openapi.yaml ./hugo server
+<span class=c1># Linux or Git Bash</span>
+<span class=nv>SPEC_URL</span><span class=o>=</span>http://localhost:8080/openapi.yaml ./hugo server
 </code></pre></div><p>(Note: The API Docs will <strong>not</strong> automatically reload if you re-bundle the API spec.)</p>
 <p><p class=md__image>
 <img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/result.png alt>
@@ -197,34 +198,35 @@ SPEC_URL<span style=color:#f92672>=</span>http://localhost:8080/openapi.yaml ./h
 <hr class=my-5>
 <a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
 <div class="row text-uppercase">
-<div class=col><a href=https://vrchatapi.github.io/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-<div class=col><a href=https://vrchatapi.github.io/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+<div class=col><a href=/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+<div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
 </div>
+<style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style>
 <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
 <div class="navbar-brand fw-bold py-2" href=#>General</div>
 <hr class=mt-1>
 <nav class="nav nav-pills flex-column">
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/getting-started/>
+<a class=nav-link href=/tutorials/getting-started/>
 <span class="badge rounded-pill bg-green me-2"> </span>
 Getting Started
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/instances/>
+<a class=nav-link href=/tutorials/instances/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Instances
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/tags/>
+<a class=nav-link href=/tutorials/tags/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Tags
 </a>
-<a class="nav-link active" href=https://vrchatapi.github.io/tutorials/contribute-api/>
+<a class="nav-link active" href=/tutorials/contribute-api/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the API
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/contribute-website/>
+<a class=nav-link href=/tutorials/contribute-website/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the Website
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/websocket/>
+<a class=nav-link href=/tutorials/websocket/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Websocket API
 </a>
@@ -262,34 +264,35 @@ Use of these names, logos, and brands does not imply endorsement.
 <div class="col-12 col-md-4 d-none d-md-block">
 <a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
 <div class="row text-uppercase">
-<div class=col><a href=https://vrchatapi.github.io/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-<div class=col><a href=https://vrchatapi.github.io/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
+<div class=col><a href=/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
+<div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
 </div>
+<style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style>
 <nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
 <div class="navbar-brand fw-bold py-2" href=#>General</div>
 <hr class=mt-1>
 <nav class="nav nav-pills flex-column">
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/getting-started/>
+<a class=nav-link href=/tutorials/getting-started/>
 <span class="badge rounded-pill bg-green me-2"> </span>
 Getting Started
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/instances/>
+<a class=nav-link href=/tutorials/instances/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Instances
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/tags/>
+<a class=nav-link href=/tutorials/tags/>
 <span class="badge rounded-pill bg-gold me-2"> </span>
 Tags
 </a>
-<a class="nav-link active" href=https://vrchatapi.github.io/tutorials/contribute-api/>
+<a class="nav-link active" href=/tutorials/contribute-api/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the API
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/contribute-website/>
+<a class=nav-link href=/tutorials/contribute-website/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Contributing to the Website
 </a>
-<a class=nav-link href=https://vrchatapi.github.io/tutorials/websocket/>
+<a class=nav-link href=/tutorials/websocket/>
 <span class="badge rounded-pill bg-red me-2"> </span>
 Websocket API
 </a>

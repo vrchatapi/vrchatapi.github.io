@@ -7,6 +7,7 @@
 <meta name=keywords content="vrchat,api,vrchatapi">
 <meta name=generator content="Hugo 0.88.1">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+<link rel=stylesheet href=/assets/css/api_custom_highlight.css>
 <link rel=stylesheet href=/assets/css/main.css>
 <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
 <title>Node SDK | VRChat API Documentation</title>
@@ -102,24 +103,24 @@ Join Discord
 <p>As stated, this documentation was not created with the help of the official VRChat team. Therefore this documentation is not an official documentation of the VRChat API and may not be always up to date with the latest versions. If you find that a page or endpoint is not longer valid please create an issue and tell us so we can fix it.</p>
 <h2 id=getting-started>Getting Started</h2>
 <p>First add the package to to your project:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install vrchat
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>npm install vrchat
 </code></pre></div><p>Below is an example on how to login to the API and fetch your own user information.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// Step 1. We begin with creating a Configuration, which contains the username and password for authentication.
-</span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>vrchat</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;vrchat&#34;</span>);
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>configuration</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>vrchat</span>.<span style=color:#a6e22e>Configuration</span>({
-    <span style=color:#a6e22e>username</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;username&#34;</span>,
-    <span style=color:#a6e22e>password</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;password&#34;</span>
-});
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=c1>// Step 1. We begin with creating a Configuration, which contains the username and password for authentication.
+</span><span class=c1></span><span class=kr>const</span> <span class=nx>vrchat</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s2>&#34;vrchat&#34;</span><span class=p>);</span>
+<span class=kr>const</span> <span class=nx>configuration</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>vrchat</span><span class=p>.</span><span class=nx>Configuration</span><span class=p>({</span>
+    <span class=nx>username</span><span class=o>:</span> <span class=s2>&#34;username&#34;</span><span class=p>,</span>
+    <span class=nx>password</span><span class=o>:</span> <span class=s2>&#34;password&#34;</span>
+<span class=p>});</span>
 
-<span style=color:#75715e>// Step 2. VRChat consists of several API&#39;s (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)
-</span><span style=color:#75715e>// Here we instantiate the Authentication API which is required for logging in.
-</span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>AuthenticationApi</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>vrchat</span>.<span style=color:#a6e22e>AuthenticationApi</span>(<span style=color:#a6e22e>configuration</span>);
+<span class=c1>// Step 2. VRChat consists of several API&#39;s (WorldsApi, UsersApi, FilesApi, NotificationsApi, FriendsApi, etc...)
+</span><span class=c1>// Here we instantiate the Authentication API which is required for logging in.
+</span><span class=c1></span><span class=kr>const</span> <span class=nx>AuthenticationApi</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>vrchat</span><span class=p>.</span><span class=nx>AuthenticationApi</span><span class=p>(</span><span class=nx>configuration</span><span class=p>);</span>
 
-<span style=color:#75715e>// Step 3. Calling getCurrentUser on Authentication API logs you in if the user isn&#39;t already logged in.
-</span><span style=color:#75715e></span><span style=color:#a6e22e>AuthenticationApi</span>.<span style=color:#a6e22e>getCurrentUser</span>().<span style=color:#a6e22e>then</span>(<span style=color:#a6e22e>resp</span> =&gt; {
-    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>currentUser</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>resp</span>.<span style=color:#a6e22e>data</span>;
-    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Logged in as: </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>currentUser</span>.<span style=color:#a6e22e>displayName</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>);
-});
+<span class=c1>// Step 3. Calling getCurrentUser on Authentication API logs you in if the user isn&#39;t already logged in.
+</span><span class=c1></span><span class=nx>AuthenticationApi</span><span class=p>.</span><span class=nx>getCurrentUser</span><span class=p>().</span><span class=nx>then</span><span class=p>(</span><span class=nx>resp</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>currentUser</span> <span class=o>=</span> <span class=nx>resp</span><span class=p>.</span><span class=nx>data</span><span class=p>;</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=sb>`Logged in as: </span><span class=si>${</span><span class=nx>currentUser</span><span class=p>.</span><span class=nx>displayName</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+<span class=p>});</span>
 </code></pre></div><p>See <a href=https://github.com/vrchatapi/vrchatapi-javascript/blob/master/example.js>example.js</a> for more example usage on getting started.</p>
 <h2 id=contributing>Contributing</h2>
 <p>Contributions are welcome, but do not add features that should be handled by the OpenAPI specification.</p>
