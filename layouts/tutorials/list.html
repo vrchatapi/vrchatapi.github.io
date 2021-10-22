@@ -19,21 +19,21 @@
     <ul class="list-group mb-5">
         {{ $any_page := false }}
         {{ range $page := where (where $.Data.Pages "Params.category" $cat.id) "Params.difficulty" "easy" }}
-        <a href="{{ $page.Permalink }}" class="list-group-item">
+        <a href="{{ $page.RelPermalink }}" class="list-group-item">
             <span class="badge bg-green me-3">Easy</span>
             {{ $page.LinkTitle }}
             {{ $any_page := true }}
         </a>
         {{ end }}
         {{ range $page := where (where $.Data.Pages "Params.category" $cat.id) "Params.difficulty" "medium" }}
-        <a href="{{ $page.Permalink }}" class="list-group-item">
+        <a href="{{ $page.RelPermalink }}" class="list-group-item">
             <span class="badge bg-gold me-3">Medium</span>
             {{ $page.LinkTitle }}
             {{ $any_page := true }}
         </a>
         {{ end }}
         {{ range $page := where (where $.Data.Pages "Params.category" $cat.id) "Params.difficulty" "hard" }}
-        <a href="{{ $page.Permalink }}" class="list-group-item">
+        <a href="{{ $page.RelPermalink }}" class="list-group-item">
             <span class="badge bg-red me-3">Hard</span>
             {{ $page.LinkTitle }}
             {{ $any_page := true }}

@@ -6,36 +6,36 @@
 {{ $next_bool := false }}
 {{ range $link := where (where $.Site.Pages "Params.category" .Params.category) "Params.difficulty" "easy" }}
     {{ if $next_bool }}
-        {{ $next_link = $link.Permalink }}
+        {{ $next_link = $link.RelPermalink }}
         {{ $next_bool = false }}
     {{ end }}
     {{ if eq $.LinkTitle $link.LinkTitle}}
         {{ $next_bool = true }}
         {{ $prev_link = $last_link }}
     {{ end }}
-    {{ $last_link = $link.Permalink }}
+    {{ $last_link = $link.RelPermalink }}
 {{ end }}
 {{ range $link := where (where $.Site.Pages "Params.category" .Params.category) "Params.difficulty" "medium" }}
     {{ if $next_bool }}
-        {{ $next_link = $link.Permalink }}
+        {{ $next_link = $link.RelPermalink }}
         {{ $next_bool = false }}
     {{ end }}
     {{ if eq $.LinkTitle $link.LinkTitle}}
         {{ $next_bool = true }}
         {{ $prev_link = $last_link }}
     {{ end }}
-    {{ $last_link = $link.Permalink }}
+    {{ $last_link = $link.RelPermalink }}
 {{ end }}
 {{ range $link := where (where $.Site.Pages "Params.category" .Params.category) "Params.difficulty" "hard" }}
     {{ if $next_bool }}
-        {{ $next_link = $link.Permalink }}
+        {{ $next_link = $link.RelPermalink }}
         {{ $next_bool = false }}
     {{ end }}
     {{ if eq $.LinkTitle $link.LinkTitle}}
         {{ $next_bool = true }}
         {{ $prev_link = $last_link }}
     {{ end }}
-    {{ $last_link = $link.Permalink }}
+    {{ $last_link = $link.RelPermalink }}
 {{ end }}
 
 <div class="row text-uppercase">
@@ -99,19 +99,19 @@
     <nav class="nav nav-pills flex-column">
         {{ $currentPage := . }}
         {{ range $link := where (where $.Site.Pages "Params.category" .Params.category) "Params.difficulty" "easy" }}
-        <a class="nav-link{{ if eq $link $currentPage }} active{{ end }}" href="{{ $link.Permalink }}">
+        <a class="nav-link{{ if eq $link $currentPage }} active{{ end }}" href="{{ $link.RelPermalink }}">
             <span class="badge rounded-pill bg-green me-2"> </span>
             {{ $link.LinkTitle }}
         </a>
         {{ end }}
         {{ range $link := where (where $.Site.Pages "Params.category" .Params.category) "Params.difficulty" "medium" }}
-        <a class="nav-link{{ if eq $link $currentPage }} active{{ end }}" href="{{ $link.Permalink }}">
+        <a class="nav-link{{ if eq $link $currentPage }} active{{ end }}" href="{{ $link.RelPermalink }}">
             <span class="badge rounded-pill bg-gold me-2"> </span>
             {{ $link.LinkTitle }}
         </a>
         {{ end }}
         {{ range $link := where (where $.Site.Pages "Params.category" .Params.category) "Params.difficulty" "hard" }}
-        <a class="nav-link{{ if eq $link $currentPage }} active{{ end }}" href="{{ $link.Permalink }}">
+        <a class="nav-link{{ if eq $link $currentPage }} active{{ end }}" href="{{ $link.RelPermalink }}">
             <span class="badge rounded-pill bg-red me-2"> </span>
             {{ $link.LinkTitle }}
         </a>
