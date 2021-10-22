@@ -44,3 +44,6 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [markup.goldmark.renderer]
     unsafe = true
+
+[markup.highlight]
+    noClasses = false

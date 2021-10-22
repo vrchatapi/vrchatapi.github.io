@@ -17,6 +17,15 @@
 
                 <h1 class="fw-bold display-2">{{ .LinkTitle }}</h1>
 
+                {{ if .Page.Params.toc }}
+                <nav id="tutorial-toc" class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3 mb-3 d-inline-block">
+                    <a class="navbar-brand fw-bold py-2" href="#">Contents</a>
+                
+                    <hr class="mt-1">
+                    {{ .TableOfContents }}
+                </nav>
+                {{ end }}
+
                 {{ .Content }}
 
                 <div class="d-block d-md-none">
