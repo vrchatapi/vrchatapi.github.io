@@ -13,7 +13,7 @@
 
     --yellow-6: #fadb14;
 
-    --gren-6: #52c41a;
+    --green-6: #52c41a;
 
     --blue-6: #1890ff;
     --blue-8: #0050b3;
@@ -42,7 +42,7 @@
     --orange: var(--orange-6);
     --gold: var(--gold-6);
     --yellow: var(--yellow-6);
-    --green: var(--gren-6);
+    --green: var(--green-6);
     --blue: var(--blue-6);
     --blue-dark: var(--blue-8);
     --purple: var(--purple-6);
