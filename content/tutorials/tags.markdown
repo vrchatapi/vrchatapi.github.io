@@ -68,7 +68,7 @@ Tag | Description
 `content_gore` | World has been uploaded with "Blood/Gore" warning.
 `content_other` | World has been uploaded with "Other NSFW" warning.
 
-Worlds can also have a range of different event-specific tags such as `admin_vket2021` for the Vket row, `admin_muzzfesst` for the MUZZFEST event, or `admin_halloween_2019` for the 2019 Halloween row. These are not extensively listed because it would be impossible to accurately keep the list up-to-date and each tag is of little use outside that specific event.
+Worlds can also have a range of different event-specific tags such as `admin_vket2021` for the Vket row, `admin_muzzfesst` for the MUZZFEST event, or `admin_halloween_2019` for the 2019 Halloween row. These are not listed because it would be impossible to accurately keep such list up-to-date, and each tag is of little use outside of that specific event.
 
 ## Language Tags
 
