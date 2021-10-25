@@ -101,12 +101,16 @@ These tags are in the form of simple strings, grouped together in a string array
 </thead>
 <tbody>
 <tr>
-<td><code>admin_scripting_access</code> and <code>system_scripting_access</code></td>
-<td>User can upload user-made scripts (Deprecated)</td>
+<td><code>admin_avatar_access</code></td>
+<td>User can upload Avatars without needing the neccesary trust rank</td>
 </tr>
 <tr>
-<td><code>admin_moderator</code></td>
-<td>VRChat staff and have Moderator permissions</td>
+<td><code>admin_can_grant_licenses</code></td>
+<td>User can give out licenses to other users</td>
+</tr>
+<tr>
+<td><code>admin_canny_access</code></td>
+<td>user can access Canny without needing the neccesary trust rank</td>
 </tr>
 <tr>
 <td><code>admin_lock_tags</code></td>
@@ -117,20 +121,32 @@ These tags are in the form of simple strings, grouped together in a string array
 <td>User&rsquo;s Trust rank has been locked and can no longer be changed automatically</td>
 </tr>
 <tr>
-<td><code>admin_can_grant_licenses</code></td>
-<td>WIP (#35)</td>
+<td><code>admin_moderator</code></td>
+<td>User is part of the VRChat Staff team</td>
 </tr>
 <tr>
 <td><code>admin_official_thumbnail</code></td>
 <td>Replaces the users profile picture with the VRChat logo</td>
 </tr>
 <tr>
-<td><code>system_avatar_access</code> and <code>admin_avatar_access</code></td>
+<td><code>admin_scripting_access</code> and <code>system_scripting_access</code></td>
+<td>User can upload user-made scripts (Deprecated)</td>
+</tr>
+<tr>
+<td><code>admin_world_access</code></td>
+<td>User can upload Worlds without needing the neccesary trust rank</td>
+</tr>
+<tr>
+<td><code>show_social_rank</code></td>
+<td>Shows the users Trust rank in-game</td>
+</tr>
+<tr>
+<td><code>system_avatar_access</code></td>
 <td>User can upload and publish Avatars</td>
 </tr>
 <tr>
-<td><code>system_world_access</code> and <code>admin_world_access</code></td>
-<td>User can upload and publish Worlds</td>
+<td><code>system_early_adopter</code></td>
+<td>User bought VRC+ in the early period of when it came out</td>
 </tr>
 <tr>
 <td><code>system_feedback_access</code></td>
@@ -141,20 +157,16 @@ These tags are in the form of simple strings, grouped together in a string array
 <td>User has been reported multiple times and is (probably) a troll</td>
 </tr>
 <tr>
-<td><code>system_troll</code></td>
-<td>User is a confirmed troll</td>
-</tr>
-<tr>
 <td><code>system_supporter</code></td>
 <td>User has an active VRC+ subscription</td>
 </tr>
 <tr>
-<td><code>system_early_adopter</code></td>
-<td>User bought VRC+ in the early period of when it came out</td>
-</tr>
-<tr>
 <td><code>system_legend</code></td>
 <td>User is an Experienced player and was active during the Summer of 2018<br>(Deprecated: can no longer be achieved)</td>
+</tr>
+<tr>
+<td><code>system_troll</code></td>
+<td>User is a confirmed troll</td>
 </tr>
 <tr>
 <td><code>system_trust_basic</code></td>
@@ -185,8 +197,8 @@ These tags are in the form of simple strings, grouped together in a string array
 <td>User is &ldquo;Veteran User&rdquo; (previously gold) Trust rank</td>
 </tr>
 <tr>
-<td><code>show_social_rank</code></td>
-<td>Shows the users Trust rank in-game</td>
+<td><code>system_world_access</code></td>
+<td>User can upload and publish Worlds</td>
 </tr>
 </tbody>
 </table>
@@ -216,7 +228,7 @@ These tags are in the form of simple strings, grouped together in a string array
 <td>World will show up in the &ldquo;Games&rdquo; world row</td>
 </tr>
 <tr>
-<td><code>admin_featured</code> and <code>content_featured</code></td>
+<td><code>admin_featured</code></td>
 <td>World has been manually selected by staff to appear in the &ldquo;Featured&rdquo; world category</td>
 </tr>
 <tr>
@@ -248,18 +260,6 @@ These tags are in the form of simple strings, grouped together in a string array
 <td>World will be hidden from &ldquo;Popular Worlds&rdquo; row</td>
 </tr>
 <tr>
-<td><code>admin_jam_*</code></td>
-<td>World has been manually selected by staff to appear in the &ldquo;World Jam&rdquo; row</td>
-</tr>
-<tr>
-<td><code>admin_vket*</code></td>
-<td>Special tag used for Virtual Market worlds to appear in own dedicated row</td>
-</tr>
-<tr>
-<td><code>admin_muzzfest</code></td>
-<td>Special tag used for the MUZZFEST world to show it in its own world row</td>
-</tr>
-<tr>
 <td><code>debug_allowed</code></td>
 <td>World <a href=https://user-images.githubusercontent.com/5008081/136931542-84fe3806-6933-4a0f-b816-d3a8052298a8.png>Debugging</a> has been enabled by author, allowing to see state of triggers</td>
 </tr>
@@ -268,19 +268,36 @@ These tags are in the form of simple strings, grouped together in a string array
 <td>World has been automatically approved through the Community Labs</td>
 </tr>
 <tr>
-<td><code>system_labs</code></td>
-<td>World has been submitted to Community Labs</td>
-</tr>
-<tr>
 <td><code>system_created_recently</code></td>
 <td>World was recently created</td>
+</tr>
+<tr>
+<td><code>system_labs</code></td>
+<td>World has been submitted to Community Labs</td>
 </tr>
 <tr>
 <td><code>system_updated_recently</code></td>
 <td>World has been recently updated and will show up in &ldquo;Updated Recently&rdquo; worlds row if also system approved</td>
 </tr>
+<tr>
+<td><code>content_sex</code></td>
+<td>World has been uploaded with &ldquo;Nudity/Sexuality&rdquo; warning.</td>
+</tr>
+<tr>
+<td><code>content_violence</code></td>
+<td>World has been uploaded with &ldquo;Realistic Violence&rdquo; warning.</td>
+</tr>
+<tr>
+<td><code>content_gore</code></td>
+<td>World has been uploaded with &ldquo;Blood/Gore&rdquo; warning.</td>
+</tr>
+<tr>
+<td><code>content_other</code></td>
+<td>World has been uploaded with &ldquo;Other NSFW&rdquo; warning.</td>
+</tr>
 </tbody>
 </table>
+<p>Worlds can also have a range of different event-specific tags such as <code>admin_vket2021</code> for the Vket row, <code>admin_muzzfesst</code> for the MUZZFEST event, or <code>admin_halloween_2019</code> for the 2019 Halloween row. These are not extensively listed because it would be impossible to accurately keep the list up-to-date and each tag is of little use outside that specific event.</p>
 <h2 id=language-tags>Language Tags</h2>
 <p>Language tags primarily appear on User profiles, with each user being allowed to have at most 3 language tags. Language tags can also appear on Instances, showing the languages the people in that instance speak.</p>
 <table>
@@ -464,6 +481,10 @@ These tags are in the form of simple strings, grouped together in a string array
 </tr>
 <tr>
 <td><code>'; DROP TABLE tags; -- </code></td>
+<td>Meaningless tag used by Fusl</td>
+</tr>
+<tr>
+<td><code>¯\\_(ツ)_/¯</code></td>
 <td>Meaningless tag used by Fusl</td>
 </tr>
 </tbody>
