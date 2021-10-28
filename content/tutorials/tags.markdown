@@ -22,13 +22,13 @@ Tag | Description
 `admin_official_thumbnail` | Replaces the users profile picture with the VRChat logo
 `admin_scripting_access` and `system_scripting_access` | User can upload user-made scripts (Deprecated)
 `admin_world_access` | User can upload Worlds without needing the neccesary trust rank
-`show_social_rank` | Shows the users Trust rank in-game
+`show_social_rank` | Toggle wether to show the user's real social rank<br>(Deprecated: This is now a registry key and sent over Photon)
 `system_avatar_access` | User can upload and publish Avatars
-`system_early_adopter` | User bought VRC+ in the early period of when it came out
+`system_early_adopter` | User bought VRC+ in the early period of it's launch, around December 2020
 `system_feedback_access` | User can send Feedback
 `system_probable_troll` | User has been reported multiple times and is (probably) a troll
 `system_supporter` | User has an active VRC+ subscription
-`system_legend` | User is an Experienced player and was active during the Summer of 2018<br>(Deprecated: can no longer be achieved)
+`system_legend` | User is an Experienced player and was active during the Summer of 2018<br>(Deprecated: Can no longer be achieved)
 `system_troll` | User is a confirmed troll
 `system_trust_basic` | User is "New User" (blue) Trust rank
 `system_trust_known` | User is "User" (green) Trust rank
