@@ -23,6 +23,7 @@ Tag | Description
 `admin_scripting_access` and `system_scripting_access` | User can upload user-made scripts (Deprecated)
 `admin_world_access` | User can upload Worlds without needing the neccesary trust rank
 `show_social_rank` | Toggle wether to show the user's real social rank<br>(Deprecated: This is now a registry key and sent over Photon)
+`show_mod_tag` | Unknown
 `system_avatar_access` | User can upload and publish Avatars
 `system_early_adopter` | User bought VRC+ in the early period of it's launch, around December 2020
 `system_feedback_access` | User can send Feedback
@@ -123,3 +124,4 @@ Tag | Description
 `'; DROP DATABASE tags; -- ` | Meaningless tag used by Fusl
 `'; DROP TABLE tags; -- ` | Meaningless tag used by Fusl
 `¯\\_(ツ)_/¯` | Meaningless tag used by Fusl
+`system_smart_fridge_beta` | Meaningless tag used by Nyx
