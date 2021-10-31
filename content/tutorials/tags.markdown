@@ -15,7 +15,7 @@ Tag | Description
 ----|------------
 `admin_avatar_access` | User can upload Avatars without needing the neccesary trust rank
 `admin_can_grant_licenses` | User can give out licenses to other users
-`admin_canny_access` | user can access Canny without needing the neccesary trust rank
+`admin_canny_access` | User can access Canny without needing the neccesary trust rank
 `admin_lock_tags` | User's tags have been locked and cannot be edited by the user
 `admin_lock_level` | User's Trust rank has been locked and can no longer be changed automatically
 `admin_moderator` | User is part of the VRChat Staff team
