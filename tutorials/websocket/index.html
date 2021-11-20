@@ -7,7 +7,7 @@
 Connecting Connecting to the VRChat webhook server is done via the URL: wss://pipeline.vrchat.cloud/?authToken=authcookie_...
 The auth-token query parameter is the authorization cookie you receive when logging into VRChat. A proper User-Agent is also required to connect to the websocket server.">
 <meta name=keywords content="vrchat,api,vrchatapi">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.4">
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
 <link rel=stylesheet href=/assets/css/api_custom_highlight.css>
 <link rel=stylesheet href=/assets/css/main.css>
@@ -130,9 +130,9 @@ It is possible to be connected from multiple locations at the same time. All cli
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
     <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;notification&#34;</span><span class=p>,</span>
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
-        <span class=err>//</span> <span class=err>&lt;Notification</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>Notification</span> <span class=err>API:</span>
-        <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/auth/user/notifications</span>
-    <span class=p>}</span>
+        <span class=c1>// &lt;Notification Object&gt;, See return data of Notification API:
+</span><span class=c1></span>        <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/auth/user/notifications
+</span><span class=c1></span>    <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div><h4 id=response-notification>response-notification</h4>
 <p>The &ldquo;<code>response-notification</code>&rdquo; event is used to respond to a previously sent event.
@@ -141,23 +141,23 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
     <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;response-notification&#34;</span><span class=p>,</span>
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
-        <span class=nt>&#34;notificationId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>not_00000000-0000-0000-000000000000</span>
-        <span class=nt>&#34;receiverId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>usr_00000000-0000-0000-000000000000</span>
-        <span class=nt>&#34;responseId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>not_00000000-0000-0000-000000000000</span>
-    <span class=p>}</span>
+        <span class=nt>&#34;notificationId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=c1>// not_00000000-0000-0000-000000000000
+</span><span class=c1></span>        <span class=nt>&#34;receiverId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=c1>// usr_00000000-0000-0000-000000000000
+</span><span class=c1></span>        <span class=nt>&#34;responseId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=c1>// not_00000000-0000-0000-000000000000
+</span><span class=c1></span>    <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div><h4 id=see-notification>see-notification</h4>
 <p>A &ldquo;<code>see-notification</code>&rdquo; event is sent when the client should mark a specific notification as seen.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
     <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;see-notification&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span> <span class=err>//</span> <span class=err>The</span> <span class=err>ID</span> <span class=err>of</span> <span class=err>the</span> <span class=err>notification</span> <span class=err>to</span> <span class=err>mark</span> <span class=err>as</span> <span class=err>seen.</span>
-<span class=p>}</span>
+    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span> <span class=c1>// The ID of the notification to mark as seen.
+</span><span class=c1></span><span class=p>}</span>
 </code></pre></div><h4 id=hide-notification>hide-notification</h4>
 <p>A &ldquo;<code>hide-notification</code>&rdquo; event is sent when the client should hide a notification.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
     <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;hide-notification&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span> <span class=err>//</span> <span class=err>The</span> <span class=err>ID</span> <span class=err>of</span> <span class=err>the</span> <span class=err>notification</span> <span class=err>to</span> <span class=err>hide.</span>
-<span class=p>}</span>
+    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span> <span class=c1>// The ID of the notification to hide.
+</span><span class=c1></span><span class=p>}</span>
 </code></pre></div><h4 id=clear-notification>clear-notification</h4>
 <p>A &ldquo;<code>clear-notification</code>&rdquo; event is sent when the client should clear <strong>all</strong> notifications.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
@@ -170,11 +170,11 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
     <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;friend-add&#34;</span><span class=p>,</span>
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
-        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>usr_00000000-0000-0000-000000000000</span>
-        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;User</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>User</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/users/-userId-</span>
-        <span class=p>}</span>
+        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=c1>// usr_00000000-0000-0000-000000000000
+</span><span class=c1></span>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=c1>// &lt;User Object&gt;, See return data of User API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span><span class=c1></span>        <span class=p>}</span>
     <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div><h4 id=friend-delete>friend-delete</h4>
@@ -192,17 +192,17 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
         <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
         <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;User</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>User</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/users/-userId-</span>
-        <span class=p>},</span>
-        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>Refer</span> <span class=err>to</span> <span class=err>https://vrchatapi.github.io/tutorials/instances/</span>
-        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>This</span> <span class=err>is</span> <span class=err>locationString</span> <span class=err>without</span> <span class=err>the</span> <span class=err>World</span> <span class=err>ID</span> <span class=err>part.</span>
-        <span class=nt>&#34;world&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;World</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>World</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-</span>
-            <span class=err>//</span>
-            <span class=err>//</span> <span class=err>NOTE:</span> <span class=err>WILL</span> <span class=err>BE</span> <span class=err>EMPTY</span> <span class=err>if</span> <span class=err>user</span> <span class=err>is</span> <span class=err>on</span> <span class=err>orange/red,</span> <span class=err>or</span> <span class=err>is</span> <span class=err>in</span> <span class=err>a</span> <span class=err>private</span> <span class=err>world.</span>
-        <span class=p>},</span>
+            <span class=c1>// &lt;User Object&gt;, See return data of User API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span><span class=c1></span>        <span class=p>},</span>
+        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=c1>// Refer to https://vrchatapi.github.io/tutorials/instances/
+</span><span class=c1></span>        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=c1>// This is locationString without the World ID part.
+</span><span class=c1></span>        <span class=nt>&#34;world&#34;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=c1>// &lt;World Object&gt;, See return data of World API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
+</span><span class=c1></span>            <span class=c1>//
+</span><span class=c1></span>            <span class=c1>// NOTE: WILL BE EMPTY if user is on orange/red, or is in a private world.
+</span><span class=c1></span>        <span class=p>},</span>
         <span class=nt>&#34;canRequestInvite&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span>
     <span class=p>}</span>
 <span class=p>}</span>
@@ -213,9 +213,9 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
         <span class=nt>&#34;userid&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
         <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;User</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>User</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/users/-userId-</span>
-        <span class=p>}</span>
+            <span class=c1>// &lt;User Object&gt;, See return data of User API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span><span class=c1></span>        <span class=p>}</span>
     <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div><h4 id=friend-offline>friend-offline</h4>
@@ -233,9 +233,9 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
         <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
         <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;User</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>User</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/users/-userId-</span>
-        <span class=p>}</span>
+            <span class=c1>// &lt;User Object&gt;, See return data of User API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span><span class=c1></span>        <span class=p>}</span>
     <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div><h4 id=friend-location>friend-location</h4>
@@ -245,17 +245,17 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
         <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
         <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;User</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>User</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/users/-userId-</span>
-        <span class=p>},</span>
-        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>Refer</span> <span class=err>to</span> <span class=err>https://vrchatapi.github.io/tutorials/instances/</span>
-        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>This</span> <span class=err>is</span> <span class=err>locationString</span> <span class=err>without</span> <span class=err>the</span> <span class=err>World</span> <span class=err>ID</span> <span class=err>part.</span>
-        <span class=nt>&#34;world&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;World</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>World</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-</span>
-            <span class=err>//</span>
-            <span class=err>//</span> <span class=err>NOTE:</span> <span class=err>WILL</span> <span class=err>BE</span> <span class=err>EMPTY</span> <span class=err>if</span> <span class=err>user</span> <span class=err>is</span> <span class=err>on</span> <span class=err>orange/red,</span> <span class=err>or</span> <span class=err>is</span> <span class=err>in</span> <span class=err>a</span> <span class=err>private</span> <span class=err>world.</span>
-        <span class=p>},</span>
+            <span class=c1>// &lt;User Object&gt;, See return data of User API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span><span class=c1></span>        <span class=p>},</span>
+        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=c1>// Refer to https://vrchatapi.github.io/tutorials/instances/
+</span><span class=c1></span>        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=c1>// This is locationString without the World ID part.
+</span><span class=c1></span>        <span class=nt>&#34;world&#34;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=c1>// &lt;World Object&gt;, See return data of World API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
+</span><span class=c1></span>            <span class=c1>//
+</span><span class=c1></span>            <span class=c1>// NOTE: WILL BE EMPTY if user is on orange/red, or is in a private world.
+</span><span class=c1></span>        <span class=p>},</span>
         <span class=nt>&#34;canRequestInvite&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span>
     <span class=p>}</span>
 <span class=p>}</span>
@@ -294,12 +294,12 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
     <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;user-location&#34;</span><span class=p>,</span>
     <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
         <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>Refer</span> <span class=err>to</span> <span class=err>https://vrchatapi.github.io/tutorials/instances/</span>
-        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=err>//</span> <span class=err>This</span> <span class=err>is</span> <span class=err>locationString</span> <span class=err>without</span> <span class=err>the</span> <span class=err>World</span> <span class=err>ID</span> <span class=err>part.</span>
-        <span class=nt>&#34;world&#34;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=err>//</span> <span class=err>&lt;World</span> <span class=err>Object&gt;,</span> <span class=err>See</span> <span class=err>return</span> <span class=err>data</span> <span class=err>of</span> <span class=err>World</span> <span class=err>API:</span>
-            <span class=err>//</span> <span class=err>https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-</span>
-        <span class=p>}</span>
+        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=c1>// Refer to https://vrchatapi.github.io/tutorials/instances/
+</span><span class=c1></span>        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=c1>// This is locationString without the World ID part.
+</span><span class=c1></span>        <span class=nt>&#34;world&#34;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=c1>// &lt;World Object&gt;, See return data of World API:
+</span><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
+</span><span class=c1></span>        <span class=p>}</span>
     <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div>

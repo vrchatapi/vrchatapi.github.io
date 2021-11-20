@@ -2,25 +2,68 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap);
 
 :root {
+    --red-1: #fff1f0;
+    --red-2: #ffccc7;
+    --red-3: #ffa39e;
+    --red-4: #ff7875;
     --red-6: #f5222d;
     --red-8: #a8071a;
 
+    --volcano-1: #fff2e8;
+    --volcano-2: #ffd8bf;
+    --volcano-3: #ffbb96;
+    --volcano-4: #ff9c6e;
     --volcano-6: #fa541c;
+    --volcano-8: #ad2102;
 
+    --orange-1: #fff7e6;
+    --orange-2: #ffe7ba;
+    --orange-3: #ffd591;
+    --orange-4: #ffc069;
     --orange-6: #fa8c16;
+    --orange-8: #ad4e00;
 
+    --gold-1: #fffbe6;
+    --gold-2: #fff1b8;
+    --gold-3: #ffe58f;
+    --gold-4: #ffd666;
     --gold-6: #faad14;
+    --gold-8: #ad6800;
 
+    --yellow-1: #feffe6;
+    --yellow-2: #ffffb8;
+    --yellow-3: #fffb8f;
+    --yellow-4: #fff566;
     --yellow-6: #fadb14;
+    --yellow-8: #ad8b00;
 
+    --green-1: #f6ffed;
+    --green-2: #d9f7be;
+    --green-3: #b7eb8f;
+    --green-4: #95de64;
     --green-6: #52c41a;
+    --green-8: #237804;
 
+    --blue-1: #e6f7ff;
+    --blue-2: #bae7ff;
+    --blue-3: #91d5ff;
+    --blue-4: #69c0ff;
     --blue-6: #1890ff;
     --blue-8: #0050b3;
 
+    --purple-1: #f9f0ff;
+    --purple-2: #efdbff;
+    --purple-3: #d3adf7;
+    --purple-4: #b37feb;
     --purple-6: #722ed1;
+    --purple-8: #391085;
 
+    --magenta-1: #fff0f6;
+    --magenta-2: #ffd6e7;
+    --magenta-3: #ffadd2;
+    --magenta-4: #ff85c0;
     --magenta-6: #eb2f96;
+    --magenta-8: #9e1068;
 
     --gray-1: #ffffff;
     --gray-2: #fafafa;
@@ -37,16 +80,35 @@
     --gray-13: #000000;
 
     --red: var(--red-6);
-    --red-dark: var(--red-8);
     --volcano: var(--volcano-6);
     --orange: var(--orange-6);
     --gold: var(--gold-6);
     --yellow: var(--yellow-6);
     --green: var(--green-6);
     --blue: var(--blue-6);
-    --blue-dark: var(--blue-8);
     --purple: var(--purple-6);
     --magenta: var(--magenta-6);
+
+    --light-red: var(--red-2);
+    --light-volcano: var(--volcano-2);
+    --light-orange: var(--orange-2);
+    --light-gold: var(--gold-2);
+    --light-yellow: var(--yellow-2);
+    --light-green: var(--green-2);
+    --light-blue: var(--blue-2);
+    --light-purple: var(--purple-2);
+    --light-magenta: var(--magenta-2);
+
+    --dark-red: var(--red-8);
+    --dark-volcano: var(--volcano-8);
+    --dark-orange: var(--orange-8);
+    --dark-gold: var(--gold-8);
+    --dark-yellow: var(--yellow-8);
+    --dark-green: var(--green-8);
+    --dark-blue: var(--blue-8);
+    --dark-purple: var(--purple-8);
+    --dark-magenta: var(--magenta-8);
+    
     --white: var(--gray-1);
     --black: var(--gray-13);
 }
@@ -94,7 +156,7 @@ samp {
 code {
     font-family: Inconsolata, Courier New, Courier, monospace;
     font-weight: 400;
-    color: var(--red-dark);
+    color: var(--dark-red);
     font-size: 16px;
     line-height: 24px;
 }
@@ -108,7 +170,7 @@ pre {
 }
 
 a, a.list-group-item {
-    color: var(--blue-dark);
+    color: var(--dark-blue);
     text-decoration: none;
 }
 .nav-link {
@@ -189,8 +251,8 @@ a, a.list-group-item {
     background-color: var(--blue);
     color: var(--white);
 }
-.btn-blue-dark {
-    background-color: var(--blue-dark);
+.btn-dark-blue {
+    background-color: var(--dark-blue);
     color: var(--white);
 }
 .btn-purple {
@@ -265,7 +327,7 @@ a, a.list-group-item {
 }
 
 blockquote {
-    border-left: 5px solid var(--blue-dark);
+    border-left: 5px solid var(--dark-blue);
     background-color: var(--gray-4);
     padding: 12px 0 12px 18px;
 }
