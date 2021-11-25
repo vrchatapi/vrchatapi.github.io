@@ -34,5 +34,6 @@ Region indicates the geographical location of the Photon servers used for the in
 Region | Hosted in | Token
 -------|-----------|------
 USA, West | San José | us
+USA, East | Washington D.C. | use
 Europe | Amsterdam | eu
 Japan | Tokyo | jp
