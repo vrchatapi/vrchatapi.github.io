@@ -1,14 +1,16 @@
 ---
-title: Getting Started
-category: general
-difficulty: easy
+タイトル: はじめに
+カテゴリ: 全般
+難易度: かんたん
 ---
 
-## Welcome to the VRChat API
+## ようこそ VRChat API へ！
 
-The VRChat API can be used to programmatically retrieve or update information regarding your profile, friends, avatars, worlds and more. The API is designed around the REST ideology, providing semi-simple and usually predictable URIs to access and modify objects. This Getting Started quick-start guide is the fastest to get started using the API.
+VRChat APIは、プロフィール、フレンド、アバター、ワールドなどに関する情報を取得・更新するために使えます。このAPIはREST思想に基づいて設計されているので、オブジェクトにアクセスしたり変更したりするために必要なURIを、予測可能かつ(やや)シンプルな形で提供できます。このページにある「はじめに」は、最短でVRChat APIを使い始めるための方法が記述されています。
 
-## Where to Begin
+## どこから始めればいいの？
+
+まずは環境を整えましょう。必要なソフトをダウンロードして、APIの仕様書もダウンロードし、APIの中身を覗いてみましょう。
 
 These beginning steps will help you to set up the necessary environment, download the API specification, and start exploring the API.
 Start with creating a simple API request and then viewing the response. 
