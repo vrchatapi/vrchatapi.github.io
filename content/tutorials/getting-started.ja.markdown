@@ -13,18 +13,15 @@ VRChat APIは、プロフィール、フレンド、アバター、ワールド�
 まずは環境を整えましょう。必要なソフトをダウンロードして、APIの仕様書もダウンロードし、APIの中身を覗いてみましょう。
 そしてかんたんなAPIリクエストを出して、レスポンスを取得できるか見てましょう。
 
-「そんなのもう知ってるよ！もっと高度なことがしたい！」って方は[チュートリアル](/tutorials)から自分にあったページを見たり、このページの一番下にある "Next" 
-These beginning steps will help you to set up the necessary environment, download the API specification, and start exploring the API.
-Start with creating a simple API request and then viewing the response. 
-or more advanced guides, view all the tutorials available under [Tutorials](/tutorials) or click the "Next" button to the right.
+「そんなのもう知ってるよ！もっと高度なことがしたい！」って方は[チュートリアル](/tutorials)から自分にあったページを見たり、このページの右にある "Next" を押すことによって次のチュートリアルへ行くことができます。
 
-## Setup Environment
+## 環境準備
 
-### Download Insomnia
+### Insomniaのダウンロード
 
-Insomnia is a popular and fast REST client that's available for Windows, Linux and Mac.
-You can use Insomnia for exploring the API in a user-friendly interface.
-The program automatically handles authentication, cookie management and environment variables.
+InsomniaはWindows、Linux、Macで動く高速なRESTクライアントです。
+Insomniaは、初心者さんにもやさしいユーザーフレンドリーなインターフェースでAPIを探索するために使用することができます。
+認証、Cookieの管理、環境変数とかも自動的に処理してくれます。
 
 <a target="_blank" href="https://insomnia.rest/download" class="btn btn-purple fw-bold btn-lg">Download Insomnia</a>
 
@@ -32,6 +29,7 @@ Simply click the downloaded EXE (or binary for your operating system) and Insomn
 Once installed you should see a window similar to the one in the picture below.
 Theme can be changed in the top right corner by clicking the "Gear" icon.
 The remaining of this tutorial we be using the "Hyper" theme, but the steps remain the same.
+
 
 ![](/assets/img/tutorials/getting-started/insomnia1.png)
 
