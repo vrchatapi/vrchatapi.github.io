@@ -17,7 +17,7 @@ VRChat APIは、プロフィール、フレンド、アバター、ワールド�
 
 ## 環境準備
 
-### Insomniaのダウンロード
+### Insomniaをダウンロードしよう！
 
 InsomniaはWindows、Linux、Macで動く高速なRESTクライアントです。
 Insomniaは、初心者さんにもやさしいユーザーフレンドリーなインターフェースでAPIを探索するために使用することができます。
@@ -25,35 +25,35 @@ Insomniaは、初心者さんにもやさしいユーザーフレンドリーな
 
 <a target="_blank" href="https://insomnia.rest/download" class="btn btn-purple fw-bold btn-lg">Download Insomnia</a>
 
-Simply click the downloaded EXE (or binary for your operating system) and Insomnia will install automatically.
-Once installed you should see a window similar to the one in the picture below.
-Theme can be changed in the top right corner by clicking the "Gear" icon.
-The remaining of this tutorial we be using the "Hyper" theme, but the steps remain the same.
+ダウンロードしたEXE（もしくはお使いのOSに対応したバイナリ）をクリックするだけで、Insomniaが自動的にインストールされます。
+インストールが完了すると、下の画像のようなウィンドウが表示されます。
+右上の "歯車 "アイコンをクリックすると、テーマを変更することができます。
+このチュートリアルでは、"Hyper" テーマを使用しますが、手順は同じです。
 
+![Insomniaインストール画面](/assets/img/tutorials/getting-started/insomnia1.png)
 
-![](/assets/img/tutorials/getting-started/insomnia1.png)
+### APIの仕様書をダウンロードしよう！
 
-### Download the API Specification
-
-Next, we are going to fetch the API specification for VRChatAPI.
-This is a community-written file in the "OpenAPI" format which defines all the public endpoints you can access and how to use them.
+次はVRChatAPIのAPI仕様(specification)をダウンロードします。
+これはコミュニティによって作られたOpenAPI形式のファイルで、一般人がアクセスできるすべてのパブリックエンドポイントとその使い方を定義しています。
+まずはInsomniaを立ち上げましょう！
 
 ![](/assets/img/tutorials/getting-started/insomnia2.png)
 
-Click in the top right corner "Create > URL", and in the following pop-up box enter the following URL and press "Fetch and Import":
+右上のにある`Create`から`URL`をクリックし、出てきたポップアップボックスに以下のURLを入力し、`Fetch and Import`を押してください。
 
 ```
 https://vrchatapi.github.io/specification/openapi.yaml
 ```
 
-On the next window you will be asked if you want to import it as "Request Collection" or "Design Document".
-As you will be using the API and not designing it, you want to press **Request Collection** here.
+次に、`How would you like to import VRChat API Documentation?`的なことを聞かれるので、**Request Collection**を選択します。
+べつにAPIのドキュメンテーションをデザインしたいわけじゃないからね。（初見ではわからないけど...）
 
 ![](/assets/img/tutorials/getting-started/insomnia3.png)
 
-Now you're ready to go! Now click on "VRChat API Documentation" to proceed.
+そして`Import Succeeded`みたいなことを言われたら成功です！`OK`を押して、ダッシュボードにポツンと置いてある "VRChat API Documentation" をクリックしましょう。
 
-## Sending your First Request
+## はじめてのAPIリクエスト
 
 Now we are going to send our first request! As a very simple, but also necessary, demo we will fetch the System Config.
 The System Config contains information such announcements, the world lists, download links to the latest SDKs, and much more!
