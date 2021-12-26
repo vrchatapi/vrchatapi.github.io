@@ -6,12 +6,14 @@
 
 ## ようこそ VRChat API へ！
 
-VRChat APIは、プロフィール、フレンド、アバター、ワールドなどに関する情報を取得・更新するために使えます。このAPIはREST思想に基づいて設計されているので、オブジェクトにアクセスしたり変更したりするために必要なURIを、予測可能かつ(やや)シンプルな形で提供できます。このページにある「はじめに」は、最短でVRChat APIを使い始めるための方法が記述されています。
+VRChat APIは、プロフィール、フレンド、アバター、ワールドなどに関する情報を取得・更新するためとかに使えます。このAPIはREST思想に基づいて設計されているので、オブジェクトにアクセスしたり変更したりするために必要なURIを、予測可能かつ(やや)シンプルな形で提供できます。このページにある「はじめに」は、最短でVRChat APIを使い始めるための方法が記述されています。
 
 ## どこから始めればいいの？
 
 まずは環境を整えましょう。必要なソフトをダウンロードして、APIの仕様書もダウンロードし、APIの中身を覗いてみましょう。
+そしてかんたんなAPIリクエストを出して、レスポンスを取得できるか見てましょう。
 
+「そんなのもう知ってるよ！もっと高度なことがしたい！」って方は[チュートリアル](/tutorials)から自分にあったページを見たり、このページの一番下にある "Next" 
 These beginning steps will help you to set up the necessary environment, download the API specification, and start exploring the API.
 Start with creating a simple API request and then viewing the response. 
 or more advanced guides, view all the tutorials available under [Tutorials](/tutorials) or click the "Next" button to the right.
