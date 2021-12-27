@@ -55,6 +55,13 @@ https://vrchatapi.github.io/specification/openapi.yaml
 
 ## はじめてのAPIリクエスト
 
+それでははじめてのAPIリクエストを送信してみましょう！とっても簡単だけど同時にすごく大事な「システム構成の取得」をします。
+システム構成にはアナウンスメント
+
+
+では、最初のリクエストを送信してみましょう。とても簡単な、しかし必要なデモとして、システム構成を取得します。
+システム構成には、アナウンス、ワールドリスト、最新のSDKへのダウンロードリンクなど、さまざまな情報が含まれています。
+しかし、重要なのは、必要な `apiKey` も含まれており、システム構成を取得すると、このキーがクッキーとして設定されることです。
 Now we are going to send our first request! As a very simple, but also necessary, demo we will fetch the System Config.
 The System Config contains information such announcements, the world lists, download links to the latest SDKs, and much more!
 But importantly it also contains the required `apiKey` and fetching the System Config sets this key as a cookie.
