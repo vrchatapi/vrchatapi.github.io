@@ -77,9 +77,15 @@ https://vrchatapi.github.io/specification/openapi.yaml
 
 ![](/assets/img/tutorials/getting-started/insomnia5.png)
 
-If you do not have 2FA enabled (strongly recommend you do!) then you should see your own user information returned on the right side.
-If you **do** have 2FA enabled (good job!) you need to locate the "**Verify 2FA code**" endpoint on the left, click on the "JSON" tab in the middle,
-and then replace `string` with the real code from your 2FA generator app. If everything validated correctly you should see `verified: true` in the response.
+2FAを有効にしていない場合（強くお勧めします！）、右側に自分のユーザー情報が返されるはずです。
+2FAを**有効**にしている場合（お疲れ様でした！）、左側の[** 2FAコードの確認**]エンドポイントを見つける必要があります。中央の[JSON]タブをクリックして、
+次に、 `string`を2FAジェネレーターアプリの実際のコードに置き換えます。 すべてが正しく検証された場合、応答に「verified：true」が表示されます。
+
+2FAを有効にしていない場合（有効にしておくことをつよくおすすめします）、右側に自分のユーザー情報が返されるのが確認できるハズです。
+2FAを有効にしている場合（いいねいいねっ👍）、左側の **Verify 2FA code** エンドポイントを見つけて、真ん中の`JSON`タブをクリックする必要があります。
+そしてそのタブの中にある`string`を2FAアプリから発行されたコードへ書き換えます。すべてが正しく検証されるとレスポンスに `verified: true` と表示されます。
+で、さっきいた **Login and/or Get Current User Info** エンドポイントで自分のユーザー名とパスワードを書き込んでログインすると、自分の情報が見れるようになるはずです。
+
 You can now go back to the "Get Current User Info" endpoint and try get your own info again.
 
 <div class="callout callout-warning mb-3">
