@@ -6,18 +6,18 @@
 
 ## ようこそ VRChat API へ！
 
-VRChat APIは、プロフィール、フレンド、アバター、ワールドなどに関する情報を取得・更新するためとかに使えます。このAPIはREST思想に基づいて設計されているので、オブジェクトにアクセスしたり変更したりするために必要なURIを、予測可能かつ(やや)シンプルな形で提供できます。このページにある「はじめに」は、最短でVRChat APIを使い始めるための方法が記述されています。
+VRChat APIは、プロフィール、フレンド、アバター、ワールドなどに関する情報を取得・更新するためとかに使えます。このAPIはREST思想に基づいて設計されているので、オブジェクトにアクセスしたり変更したりするために必要なURIを、予測可能かつ(やや)シンプルな形で提供できます。ここ「はじめに」ページでは、最短でVRChat APIを使い始めるための方法が記述されています。
 
 ## どこから始めればいいの？
 
 まずは環境を整えましょう。必要なソフトをダウンロードして、APIの仕様書もダウンロードし、APIの中身を覗いてみましょう。
 そしてかんたんなAPIリクエストを出して、レスポンスを取得できるか見てましょう。
 
-「そんなのもう知ってるよ！もっと高度なことがしたい！」って方は[チュートリアル](/tutorials)から自分にあったページを見たり、このページの右にある "Next" を押すことによって次のチュートリアルへ行くことができます。
+「そんなのもう知ってるよ！もっと高度なことがしたい！」って方は[チュートリアル](/tutorials)から自分にあったページを見つけたり、このページの右にある **NEXT** を押すことによって次のチュートリアルへ行くことができます。
 
 ## 環境準備
 
-### Insomniaをダウンロードしよう！
+### まずはInsomniaをダウンロードしよう！
 
 InsomniaはWindows、Linux、Macで動く高速なRESTクライアントです。
 Insomniaは、初心者さんにもやさしいユーザーフレンドリーなインターフェースでAPIを探索するために使用することができます。
@@ -32,13 +32,12 @@ Insomniaは、初心者さんにもやさしいユーザーフレンドリーな
 
 ![Insomniaインストール画面](/assets/img/tutorials/getting-started/insomnia1.png)
 
-### APIの仕様書をダウンロードしよう！
+### そしてAPIの仕様書をダウンロードしよう！
 
 次はVRChatAPIのAPI仕様(specification)をダウンロードします。
 これはコミュニティによって作られたOpenAPI形式のファイルで、一般人がアクセスできるすべてのパブリックエンドポイントとその使い方を定義しています。
-まずはInsomniaを立ち上げましょう！
 
-![](/assets/img/tutorials/getting-started/insomnia2.png)
+![URLから作成](/assets/img/tutorials/getting-started/insomnia2.png)
 
 右上のにある`Create`から`URL`をクリックし、出てきたポップアップボックスに以下のURLを入力し、`Fetch and Import`を押してください。
 
@@ -49,39 +48,32 @@ https://vrchatapi.github.io/specification/openapi.yaml
 次に、`How would you like to import VRChat API Documentation?`的なことを聞かれるので、**Request Collection**を選択します。
 べつにAPIのドキュメンテーションをデザインしたいわけじゃないからね。（初見ではわからないけど...）
 
-![](/assets/img/tutorials/getting-started/insomnia3.png)
+![コレクションを要求](/assets/img/tutorials/getting-started/insomnia3.png)
 
 そして`Import Succeeded`みたいなことを言われたら成功です！`OK`を押して、ダッシュボードにポツンと置いてある "VRChat API Documentation" をクリックしましょう。
 
 ## はじめてのAPIリクエスト
 
-それでははじめてのAPIリクエストを送信してみましょう！とっても簡単だけど同時にすごく大事な「システム構成の取得」をします。
-システム構成にはアナウンスメント
+ではでは、はじめてのAPIリクエストを送信してみましょう！とっても簡単だけど同時にすごく大事な「システム構成の取得」をします。
+システム構成にはアナウンスメント、ワールドのリスト、最新のVRCSDKへのリンクなど、さまざまな情報が含まれています。そのシステム構成のなかでも最も重要なのが`apikey`です。 システム構成を取得するとこの`apikey`がクッキーとし設定されます。
 
+さぁ、左の **system** フォルダーから **Fetch API Config** を探し出し、右上に出てくる **Send** を押してみましょう！
 
-では、最初のリクエストを送信してみましょう。とても簡単な、しかし必要なデモとして、システム構成を取得します。
-システム構成には、アナウンス、ワールドリスト、最新のSDKへのダウンロードリンクなど、さまざまな情報が含まれています。
-しかし、重要なのは、必要な `apiKey` も含まれており、システム構成を取得すると、このキーがクッキーとして設定されることです。
-Now we are going to send our first request! As a very simple, but also necessary, demo we will fetch the System Config.
-The System Config contains information such announcements, the world lists, download links to the latest SDKs, and much more!
-But importantly it also contains the required `apiKey` and fetching the System Config sets this key as a cookie.
+![APIをFetch](/assets/img/tutorials/getting-started/insomnia4.png)
 
-Now, under "**system**" folder on the left, locate the endpoint called "**Fetch API Config**" and simply press "**Send**".
+このAPIキーは、以降すべてのリクエストに必要です。このAPIキーはいまさっき作られた個人的なものではありません（どころかここ8年ずーっと同じキーだったりします）。
+画像右に表示されている`Preview`タブからリクエストのレスポンスを見たり、`Header`のタブからヘッダーを確認したり、`Cookie`のタブからついさっき設定されたクッキーを表示させることができます。
+なお、クッキーとはグローバルなものなのです。いま使っている全てのクッキーの保存状態...「クッキーストレージ」を見るには、ウィンドウの**左上**にある`Cookie`をクリックします。そうするとクッキーの保存状態を確認することができます。
 
-![](/assets/img/tutorials/getting-started/insomnia4.png)
+次に認証を行います。ほとんどのリクエストにはVRChatへのログインが必要なので、認証は大事です。
+左側にある**authentication**フォルダをクリックし、**Login and/or Get Current User Info** というエンドポイントを見つけてください。
+ところでVRChatでは、自分のユーザー情報を取得するのと同じエンドポイントが認証にも使用されます。
+もしあなたがVRChatへログインしていなかった場合、このエンドポイントは`authtoken`クッキーを生成し、あなたのユーザー情報を返します。
+すでにログインしている場合は特に何も起きず、あなたのユーザー情報のみが返されます。
 
-The API key is required for all further requests. The key is not personal, and has been the same for the last 8 years.
-You can view the request response on the right, as well as the Headers that were returned and Cookies which were set.
-Cookies are global, and you can view your cookie storage by clicking "Cookies" in the **top-left** corner of the window.
-
-Next we are going to Authenticate, as being logged in is required for most requests.
-Click the "**authentication**" folder on the left, locate the endpoint "**Login and/or Get Current User Info**".
-In VRChat the same endpoint is used for authentication as getting your own user information.
-If you are not logged in then it will generate an `authtoken` cookie for you and return your user info.
-If you already are logged in then nothing will happen and it will only return your user info.
-
-Click on the "**Basic**" tab, click *behind* the prefilled `httpUsername` and `httpPassword` and delete the variables.
-Enter instead your own username and password and click "**Send**".
+それでは実践です；APIでログインしてみましょう！
+**Basic**タブをクリックし、`httpUsername`と`httpPassword`の**すぐ隣**をクリックして、キーボードの`Backspace`や`Delete`キーなどでそれら変数を削除してください。
+そして代わりに自分のユーザー名とパスワードを記入しちゃって、右上の**Send**を押しましょう。
 
 ![](/assets/img/tutorials/getting-started/insomnia5.png)
 
