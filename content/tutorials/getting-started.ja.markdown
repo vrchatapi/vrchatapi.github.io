@@ -86,7 +86,7 @@ https://vrchatapi.github.io/specification/openapi.yaml
 
 <div class="callout callout-warning mb-3">
   <strong>⚠️注意：アカウントロックの可能性があるよ!</strong><br>
-    もしエラーが出た場合は直ちに[Discord](https://discord.gg/qjZE9C9fkB)の、Helpチャンネルへ書き込んで下さい。2FA認証が設定されたアカウントでログイン失敗を繰り返すとアカウントが一時的にロックされます！
+    もしエラーが出た場合は直ちに<a href="https://discord.gg/qjZE9C9fkB">Discord</a>のHelpチャンネルへ書き込んで下さい。2FA認証が設定されたアカウントでログイン失敗を繰り返すとアカウントが一時的にロックされます！
 </div>
 
 ![](/assets/img/tutorials/getting-started/insomnia6.png)
