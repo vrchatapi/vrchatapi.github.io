@@ -77,16 +77,12 @@ https://vrchatapi.github.io/specification/openapi.yaml
 
 ![](/assets/img/tutorials/getting-started/insomnia5.png)
 
-2FAを有効にしていない場合（強くお勧めします！）、右側に自分のユーザー情報が返されるはずです。
-2FAを**有効**にしている場合（お疲れ様でした！）、左側の[** 2FAコードの確認**]エンドポイントを見つける必要があります。中央の[JSON]タブをクリックして、
-次に、 `string`を2FAジェネレーターアプリの実際のコードに置き換えます。 すべてが正しく検証された場合、応答に「verified：true」が表示されます。
-
 2FAを有効にしていない場合（有効にしておくことをつよくおすすめします）、右側に自分のユーザー情報が返されるのが確認できるハズです。
 2FAを有効にしている場合（いいねいいねっ👍）、左側の **Verify 2FA code** エンドポイントを見つけて、真ん中の`JSON`タブをクリックする必要があります。
 そしてそのタブの中にある`string`を2FAアプリから発行されたコードへ書き換えます。すべてが正しく検証されるとレスポンスに `verified: true` と表示されます。
-で、さっきいた **Login and/or Get Current User Info** エンドポイントで自分のユーザー名とパスワードを書き込んでログインすると、自分の情報が見れるようになるはずです。
 
-You can now go back to the "Get Current User Info" endpoint and try get your own info again.
+
+今なら、さっきいた **Login and/or Get Current User Info** エンドポイントで自分のユーザー名とパスワードを書き込んでログインすると、自分の情報が見れるようになるはずです。
 
 <div class="callout callout-warning mb-3">
   <strong>⚠️ Account Lockout Warning!</strong><br>
@@ -95,11 +91,15 @@ You can now go back to the "Get Current User Info" endpoint and try get your own
 
 ![](/assets/img/tutorials/getting-started/insomnia6.png)
 
-**That's it! 🎉 Congratulations on getting started with the VRChat API!**
+**以上です！🎉 VRChat API の「はじめに」チュートリアルクリア、おめでとうございます！**
 
-But you are not done! In fact, your journey starts now! You can now begin to start exploring the API and play around with what is possible.
-Most of the endpoints are self-explanatory, and if you have any questions, you can always check in the [API Documentation](/docs/api) or contact on Discord.
-Please keep the number of requests you send per minute to a minimum. If you send requests too quickly you will get rate limited.
+でも本番はここからですよ？ここからあなたの旅がはじまるのです！APIを探索したり、いろいろといじくりまわって、なにが出来てなにが出来ないのかを試したりすることができます。
+ほとんどのエンドポイントはその名の通りのことをするので自明ですし、もし何かわからないことがあればいつでも[API Documentation](/docs/api)を確認できますし、いざとなれば[Discordサーバー](https://discord.gg/qjZE9C9fkB)だってあります。
+ちなみに1分間に送信するリクエストの数は最小限にしてください。あまりにも早くリクエストを送信すると、レート制限を喰らいます。
 
-Please also keep in mind that any actions you take is your own responsibility, and that deleted resources such as worlds or avatars cannot be recovered.
-The writer of this tutorial accidentally deleted every single player moderation (mute, block, show avatar) they've made during the last 2 years. But that's a story for another time.
+これでAPIの探索を開始し、何が可能か遊びまわることができます。
+もし何か疑問があれば、[API Documentation](/docs/api) を見るか、Discordでコンタクトを取ってください。
+1分間に送信するリクエストの数は最小限にしてください。あまりに早くリクエストを送信すると、レート制限を受けることになります。
+
+また、削除したワールドやアバターなどのリソースは復元不可能なので、自己責任でお願いします。
+余談ですが英語版チュートリアル(原文の方)を書いた筆者さんは間違って過去2年間に行った全てのモデレーション（アバターミュートやユーザーブロック等）を消去しちゃったそうです。（でもそれはまた別のお話だってさ）（終）
