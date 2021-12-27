@@ -85,13 +85,13 @@ https://vrchatapi.github.io/specification/openapi.yaml
 今なら、さっきいた **Login and/or Get Current User Info** エンドポイントで自分のユーザー名とパスワードを書き込んでログインすると、自分の情報が見れるようになるはずです。
 
 <div class="callout callout-warning mb-3">
-  <strong>⚠️ Account Lockout Warning!</strong><br>
-  If you got an error, please stop and contact help on Discord, as spamming the 2FA can get your account temporarily locked!
+  <strong>⚠️注意：アカウントロックの可能性があるよ!</strong><br>
+    もしエラーが出た場合は直ちに[Discord](https://discord.gg/qjZE9C9fkB)の、Helpチャンネルへ書き込んで下さい。2FA認証が設定されたアカウントでログイン失敗を繰り返すとアカウントが一時的にロックされます！
 </div>
 
 ![](/assets/img/tutorials/getting-started/insomnia6.png)
 
-**以上です！🎉 VRChat API の「はじめに」チュートリアルクリア、おめでとうございます！**
+**以上です！🎉 VRChat API はじめてのチュートリアルクリア、おめでとうございます！**
 
 でも本番はここからですよ？ここからあなたの旅がはじまるのです！APIを探索したり、いろいろといじくりまわって、なにが出来てなにが出来ないのかを試したりすることができます。
 ほとんどのエンドポイントはその名の通りのことをするので自明ですし、もし何かわからないことがあればいつでも[API Documentation](/docs/api)を確認できますし、いざとなれば[Discordサーバー](https://discord.gg/qjZE9C9fkB)だってあります。
