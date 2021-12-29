@@ -134,11 +134,11 @@ Your version of the specification is now available at `http://localhost:8080/ope
 
 ```bash
 # Windows cmd.exe
-set SPEC_URL=http://localhost:8080/openapi.yaml
+set HUGO_SPEC_URL=http://localhost:8080/openapi.yaml
 ./hugo.exe server
 
 # Linux or Git Bash
-SPEC_URL=http://localhost:8080/openapi.yaml ./hugo server
+HUGO_SPEC_URL=http://localhost:8080/openapi.yaml ./hugo server
 ```
 
 (Note: The API Docs will **not** automatically reload if you re-bundle the API spec.)
