@@ -124,4 +124,5 @@ Tag | Description
 `'; DROP DATABASE tags; -- ` | Meaningless tag used by Fusl
 `'; DROP TABLE tags; -- ` | Meaningless tag used by Fusl
 `¯\\_(ツ)_/¯` | Meaningless tag used by Fusl
+`ඞ` | Meaningless tag used by Fusl
 `system_smart_fridge_beta` | Meaningless tag used by Nyx
