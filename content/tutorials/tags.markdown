@@ -22,8 +22,8 @@ Tag | Description
 `admin_official_thumbnail` | Replaces the users profile picture with the VRChat logo
 `admin_scripting_access` and `system_scripting_access` | User can upload user-made scripts (Deprecated)
 `admin_world_access` | User can upload Worlds without needing the neccesary trust rank
-`show_social_rank` | Toggle wether to show the user's real social rank<br>(Deprecated: This is now a registry key and sent over Photon)
-`show_mod_tag` | Unknown
+`show_social_rank` | Toggle whether to show the user's real social rank<br>(Deprecated: This is now a registry key and sent over Photon)
+`show_mod_tag` | Toggle whether to show the [Red](https://user-images.githubusercontent.com/5008081/153017830-bff84210-3868-4ea6-ba52-047932176a56.png) Staff nameplate
 `system_avatar_access` | User can upload and publish Avatars
 `system_early_adopter` | User bought VRC+ in the early period of it's launch, around December 2020
 `system_feedback_access` | User can send Feedback
