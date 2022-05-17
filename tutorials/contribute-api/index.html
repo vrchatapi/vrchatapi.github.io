@@ -1,334 +1,65 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,minimum-scale=1">
-<meta name=author content="Contributing to the API | VRChat API Documentation">
-<meta name=description content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=author content="Contributing to the API | VRChat API Documentation"><meta name=description content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
 Structure The documentation effort is primarily divided into two projects, the website and the specification.
-The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
-<meta name=keywords content="vrchat,api,vrchatapi">
-<meta name=generator content="Hugo 0.92.1">
-<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
-<link rel=stylesheet href=/assets/css/api_custom_highlight.css>
-<link rel=stylesheet href=/assets/css/main.css>
-<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
-<title>Contributing to the API | VRChat API Documentation</title>
-<meta property="og:title" content="Contributing to the API">
-<meta property="og:description" content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
+The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials."><meta name=keywords content="vrchat,api,vrchatapi"><meta name=generator content="Hugo 0.99.0"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous><link rel=stylesheet href=/assets/css/api_custom_highlight.css><link rel=stylesheet href=/assets/css/main.css><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><title>Contributing to the API | VRChat API Documentation</title><meta property="og:title" content="Contributing to the API"><meta property="og:description" content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
 Structure The documentation effort is primarily divided into two projects, the website and the specification.
-The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://vrchatapi.github.io/tutorials/contribute-api/"><meta property="article:section" content="tutorials">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Contributing to the API">
-<meta name=twitter:description content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
+The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials."><meta property="og:type" content="article"><meta property="og:url" content="https://vrchatapi.github.io/tutorials/contribute-api/"><meta property="article:section" content="tutorials"><meta name=twitter:card content="summary"><meta name=twitter:title content="Contributing to the API"><meta name=twitter:description content="Please read &ldquo;Contributing to the Website&rdquo; first. You will need a local instance of the website to preview what the docs will look like.
 Structure The documentation effort is primarily divided into two projects, the website and the specification.
-The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials.">
-<script async defer src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-FBCK0H6BHS')</script>
-</head>
-<body class=overflow-hidden>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div class=container-fluid>
-<a class=navbar-brand href=/>
-<img src=/assets/img/website_logo.png alt="VRChat API Project" width=250 class="d-inline d-md-none my-1">
-<img src=/assets/img/website_logo.png alt="VRChat API Project" height=50 class="d-none d-md-inline my-1">
-</a>
+The website project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials."><script async defer src="https://www.googletagmanager.com/gtag/js?id=G-FBCK0H6BHS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-FBCK0H6BHS")</script></head><body class=overflow-hidden><nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container-fluid><a class=navbar-brand href=/><img src=/assets/img/website_logo.png alt="VRChat API Project" width=250 class="d-inline d-md-none my-1">
+<img src=/assets/img/website_logo.png alt="VRChat API Project" height=50 class="d-none d-md-inline my-1"></a>
 <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
-<span class=navbar-toggler-icon></span>
-</button>
-<div class="collapse navbar-collapse" id=navbarSupportedContent>
-<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item me-5">
-<a target=_blank class="nav-link fs-5 active fw-bold" href=https://github.com/vrchatapi>GitHub</a>
-</li>
-<li class="nav-item me-5 dropdown">
-<a class="nav-link fs-5 dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown aria-expanded=false>
-Reference
-</a>
-<ul class=dropdown-menu aria-labelledby=navbarDropdown>
-<li><a class="dropdown-item py-3" href=/docs/api>HTTP API</a></li>
-<li><a target=_blank class="dropdown-item py-3" href=https://vrchat.vercel.app/>
-Swagger UI
-</a></li>
-<li>
-<hr class=dropdown-divider>
-</li>
-<li><a class="dropdown-item py-3" href=/tutorials/getting-started>Getting Started</a></li>
-<li><a class="dropdown-item py-3" href=/tutorials>Tutorials</a></li>
-</ul>
-</li>
-<li class="nav-item me-5 dropdown">
-<a class="nav-link fs-5 dropdown-toggle" href=# id=languagesDropdown role=button data-bs-toggle=dropdown aria-expanded=false>
-Languages
-</a>
-<ul class=dropdown-menu aria-labelledby=languagesDropdown>
-<li><a class="dropdown-item py-3" href=/sdk/javascript>Node SDK</a></li>
-<li><a class="dropdown-item py-3" href=/sdk/python>Python SDK</a></li>
-<li><a class="dropdown-item py-3" href=/sdk/java>Java SDK</a></li>
-<li><a class="dropdown-item py-3" href=/sdk/dart>Dart SDK</a></li>
-<li><a class="dropdown-item py-3" href=/sdk/rust>Rust SDK</a></li>
-<li><a class="dropdown-item py-3" href=/sdk/csharp>C# SDK</a></li>
-</ul>
-</li>
-</ul>
-<a target=_blank href=https://discord.gg/qjZE9C9fkB class="d-flex text-decoration-none btn btn-outline-light me-3 px-4 py-3" type=submit>
-Join Discord
-</a>
-</div>
-</div>
-</nav>
-<main id=content style=position:fixed>
-<div class="container-fluid px-3 px-md-5">
-<div class=row>
-<div class="col-12 col-md-8">
-<div class="position-relative overflow-auto pe-3 pe-md-5 pb-3 pb-md-5" tabindex=0 style="height:calc(100vh - 84px)">
-<nav aria-label=breadcrumb class=mt-5>
-<ol class=breadcrumb>
-<li class=breadcrumb-item><a href=/>Home</a></li>
-<li class=breadcrumb-item><a href=/tutorials>Tutorials</a></li>
-<li class="breadcrumb-item active" aria-current=page>Contributing to the API</li>
-</ol>
-</nav>
-<h1 class="fw-bold display-2">Contributing to the API</h1>
-<p><strong>Please read <a href=/tutorials/contribute-website>&ldquo;Contributing to the Website&rdquo;</a> first. You will need a local instance of the website to preview what the docs will look like.</strong></p>
-<h2 id=structure>Structure</h2>
-<p>The documentation effort is primarily divided into two projects, the <a href=https://github.com/vrchatapi/vrchatapi.github.io>website</a> and the <a href=https://github.com/vrchatapi/specification>specification</a>.</p>
-<p>The <code>website</code> project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials. For more information, please see <a href=/tutorials/contribute-website>Contributing to the Website</a>.</p>
-<p>The <code>specification</code> is an <a href=https://swagger.io/docs/specification/about/>OpenAPI</a> document specifying the API in the tiniest detail. OpenAPI is both a human and machine-readable format and allows us to do a lot of cool post-processing stuff with it. The primary usage is generating the entire <a href=/docs/api/>API documentation page</a>, but it is also used to automatically generate the several language SDK&rsquo;s we maintain. Once a new endpoint is documented it can be automatically updated on the website and in all the SDKs at once. This is where you want to contribute if you have found an error in the API docs or want to add a new endpoint.</p>
-<p><strong>Pre-requisites:</strong></p>
-<ul>
-<li>Git/<a href=https://desktop.github.com/>Github Desktop</a> and knowledge of forking and making a PR.</li>
-</ul>
-<h2 id=1-cloning-the-repository>1. Cloning the repository</h2>
-<p>Start with creating a fork of <a href=https://github.com/vrchatapi/specification>https://github.com/vrchatapi/specification</a> and clone it with your favorite Git software.</p>
-<h2 id=2-getting-started-with-openapi>2. Getting started with OpenAPI</h2>
-<p>To modify the spec it is strongly recommended to use <a href=https://stoplight.io/studio/><strong>Stoplight Studio</strong></a>.</p>
-<ul>
-<li>Windows: <a href=https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-win.exe>https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-win.exe</a></li>
-<li>Linux: <a href=https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-linux-x86_64.AppImage>https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-linux-x86_64.AppImage</a></li>
-<li>Web version: <a href=https://stoplight.io/welcome>https://stoplight.io/welcome</a></li>
-</ul>
-<p>While it is possible to modify the spec in a normal editor like VSCode, it is strongly recommended to use Stoplight, as it will additionally check for linting errors and speed up your workflow. Stoplight Studio still allows you to edit in text-mode if you prefer that.</p>
-<p>The following <strong>optional</strong> video goes into better explanation of what OpenAPI is:</p>
-<iframe width=560 height=315 src=https://www.youtube-nocookie.com/embed/pRS9LRBgjYg title="YouTube video player" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h2 id=3-open-project>3. Open project</h2>
-<p>Open the <code>specification</code> folder you cloned earlier. It is very important to open the root folder, and not the <code>openapi</code> folder.</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/open_folder.png alt>
-</p></p>
-<p>After opening the project, click on &ldquo;Files&rdquo; top-left. If there is a <code>.spectral.yml</code> file in the root folder then it is correct. Spectral is the linter for OpenAPI specifications, and is the configuration on what to warn about if done incorrectly in the spec. In the future look in the top corner if you have any active warnings.</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/files_spectral.png alt>
-</p></p>
-<h2 id=4-example-exercise-add-the-selectfallback-avatar-endpoint>4. Example exercise: Add the &ldquo;/selectFallback&rdquo; avatar endpoint</h2>
-<p>In this tutorial we will be implementing the <code>/selectFallback</code> endpoint. Crucially the <a href=https://github.com/vrchatapi/specification/issues/70>research has already been done</a> for this endpoint, which saves a lot of time. If you want to follow along with exact steps, run the following command:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>git checkout 1baabd944ba82f4180e7927789f8b10206bee8a9
-</code></pre></div><p>This will checkout/restore the project at the specific point in time of where it is as of the writing of this tutorial. Please also study the research notes in the GitHub Issue thread closely to familiar yourself with what is needed to be done before proceeding.</p>
-<p>Go back to the &ldquo;API&rdquo; tab and click on the file <code>openapi > components > paths > avatars.yaml</code>. This will bring up the following window:</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/avatars_spec.png alt>
-</p></p>
-<p>All of the contact info, license and global properties are empty. This is because &ldquo;avatars&rdquo; section is only a small part of the overall API. To make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.</p>
-<p>The research by waterflame concluded that the <code>/selectFallback</code> endpoint has the same inputs and outputs as the existing <code>/select</code> endpoint. We will therefore proceed with clicking the <code>&lt;/> Code</code> button top-right to switch into text mode, and then select the <code>/avatars/{avatarsId}/select</code> endpoint in the lower left corner. This will show most of the endpoint in blue:</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/select_endpoint.png alt>
-</p></p>
-<p>We then proceed with copying the entire endpoint, including the parameters and the URL header, and pasting it right below.
-We also make sure to update the path to <code>/selectFallback</code> instead of <code>/select</code>, and update the <code>summary</code> (which will be the title), the <code>operationId</code> (which will be the function call in many SDK&rsquo;s), and the description. Once you are done it should look something like:</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/selectfallback_endpoint.png alt>
-</p></p>
-<p>We can click on the &ldquo;= Form&rdquo; button top-right to see what this looks visually.</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/selectfallback_gui.png alt>
-</p></p>
-<p>This looks good, we are almost done. As a minor addition, the research also found unlike <code>/select</code>, this endpoint has an additional possible error message, Code 403, <code>This avatar isn't tagged as a quest fallback avatar.</code>. To add this we click on &ldquo;Files&rdquo;, and open the folder <code>openapi > components > responses > avatars</code> and create a New <strong>File</strong> (because proper support for external Responses is not added yet) and name it <code>AvatarNotTaggedAsFallbackError.yaml</code>.</p>
-<p>Easiest then is to copy the contents of the contents of the <code>AvatarSeeOtherUserFavoritesError.yaml</code> file and modify the message, title and description:</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/error.png alt>
-</p></p>
-<p>We then go back to the &ldquo;API&rdquo; section, select the <code>avatars.yaml</code> file, click <code>"&lt;/> Code"</code> and then select the <code>/selectFallback</code> endpoint bottom-left. We now add the additional error message we created, where the responses tab should look like the following. In case something is misspelled you will see an error in the top-right corner.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=w>      </span><span class=nt>responses</span><span class=p>:</span><span class=w>
-</span><span class=w>        </span><span class=nt>&#39;200&#39;</span><span class=p>:</span><span class=w>
-</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/CurrentUserResponse.yaml</span><span class=w>
-</span><span class=w>        </span><span class=nt>&#39;401&#39;</span><span class=p>:</span><span class=w>
-</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/MissingCredentialsError.yaml</span><span class=w>
-</span><span class=w>        </span><span class=nt>&#39;403&#39;</span><span class=p>:</span><span class=w>
-</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/avatars/AvatarNotTaggedAsFallbackError.yaml</span><span class=w>
-</span><span class=w>        </span><span class=nt>&#39;404&#39;</span><span class=p>:</span><span class=w>
-</span><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/avatars/AvatarNotFoundError.yaml</span><span class=w>
-</span></code></pre></div><p>Finally, as mentioned before the specification is split up into multiple files. We therefore need to add our new URL to the main file, so it knows where to look for all the resources. We do this by editing the <code>openapi > components > paths.yaml</code> file.
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item me-5"><a target=_blank class="nav-link fs-5 active fw-bold" href=https://github.com/vrchatapi>GitHub</a></li><li class="nav-item me-5 dropdown"><a class="nav-link fs-5 dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown aria-expanded=false>Reference</a><ul class=dropdown-menu aria-labelledby=navbarDropdown><li><a class="dropdown-item py-3" href=/docs/api>HTTP API</a></li><li><a target=_blank class="dropdown-item py-3" href=https://vrchat.vercel.app/>Swagger UI</a></li><li><hr class=dropdown-divider></li><li><a class="dropdown-item py-3" href=/tutorials/getting-started>Getting Started</a></li><li><a class="dropdown-item py-3" href=/tutorials>Tutorials</a></li></ul></li><li class="nav-item me-5 dropdown"><a class="nav-link fs-5 dropdown-toggle" href=# id=languagesDropdown role=button data-bs-toggle=dropdown aria-expanded=false>Languages</a><ul class=dropdown-menu aria-labelledby=languagesDropdown><li><a class="dropdown-item py-3" href=/sdk/javascript>Node SDK</a></li><li><a class="dropdown-item py-3" href=/sdk/python>Python SDK</a></li><li><a class="dropdown-item py-3" href=/sdk/java>Java SDK</a></li><li><a class="dropdown-item py-3" href=/sdk/dart>Dart SDK</a></li><li><a class="dropdown-item py-3" href=/sdk/rust>Rust SDK</a></li><li><a class="dropdown-item py-3" href=/sdk/csharp>C# SDK</a></li></ul></li></ul><a target=_blank href=https://discord.gg/qjZE9C9fkB class="d-flex text-decoration-none btn btn-outline-light me-3 px-4 py-3" type=submit>Join Discord</a></div></div></nav><main id=content style=position:fixed><div class="container-fluid px-3 px-md-5"><div class=row><div class="col-12 col-md-8"><div class="position-relative overflow-auto pe-3 pe-md-5 pb-3 pb-md-5" tabindex=0 style="height:calc(100vh - 84px)"><nav aria-label=breadcrumb class=mt-5><ol class=breadcrumb><li class=breadcrumb-item><a href=/>Home</a></li><li class=breadcrumb-item><a href=/tutorials>Tutorials</a></li><li class="breadcrumb-item active" aria-current=page>Contributing to the API</li></ol></nav><h1 class="fw-bold display-2">Contributing to the API</h1><p><strong>Please read <a href=/tutorials/contribute-website>&ldquo;Contributing to the Website&rdquo;</a> first. You will need a local instance of the website to preview what the docs will look like.</strong></p><h2 id=structure>Structure</h2><p>The documentation effort is primarily divided into two projects, the <a href=https://github.com/vrchatapi/vrchatapi.github.io>website</a> and the <a href=https://github.com/vrchatapi/specification>specification</a>.</p><p>The <code>website</code> project contains the source code building up the website, all the graphic resources such as images and CSS, and the Tutorials. This is where you want to contribute if you want to write or improve one of the tutorials. For more information, please see <a href=/tutorials/contribute-website>Contributing to the Website</a>.</p><p>The <code>specification</code> is an <a href=https://swagger.io/docs/specification/about/>OpenAPI</a> document specifying the API in the tiniest detail. OpenAPI is both a human and machine-readable format and allows us to do a lot of cool post-processing stuff with it. The primary usage is generating the entire <a href=/docs/api/>API documentation page</a>, but it is also used to automatically generate the several language SDK&rsquo;s we maintain. Once a new endpoint is documented it can be automatically updated on the website and in all the SDKs at once. This is where you want to contribute if you have found an error in the API docs or want to add a new endpoint.</p><p><strong>Pre-requisites:</strong></p><ul><li>Git/<a href=https://desktop.github.com/>Github Desktop</a> and knowledge of forking and making a PR.</li></ul><h2 id=1-cloning-the-repository>1. Cloning the repository</h2><p>Start with creating a fork of <a href=https://github.com/vrchatapi/specification>https://github.com/vrchatapi/specification</a> and clone it with your favorite Git software.</p><h2 id=2-getting-started-with-openapi>2. Getting started with OpenAPI</h2><p>To modify the spec it is strongly recommended to use <a href=https://stoplight.io/studio/><strong>Stoplight Studio</strong></a>.</p><ul><li>Windows: <a href=https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-win.exe>https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-win.exe</a></li><li>Linux: <a href=https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-linux-x86_64.AppImage>https://github.com/stoplightio/studio/releases/latest/download/stoplight-studio-linux-x86_64.AppImage</a></li><li>Web version: <a href=https://stoplight.io/welcome>https://stoplight.io/welcome</a></li></ul><p>While it is possible to modify the spec in a normal editor like VSCode, it is strongly recommended to use Stoplight, as it will additionally check for linting errors and speed up your workflow. Stoplight Studio still allows you to edit in text-mode if you prefer that.</p><p>The following <strong>optional</strong> video goes into better explanation of what OpenAPI is:</p><iframe width=560 height=315 src=https://www.youtube-nocookie.com/embed/pRS9LRBgjYg title="YouTube video player" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h2 id=3-open-project>3. Open project</h2><p>Open the <code>specification</code> folder you cloned earlier. It is very important to open the root folder, and not the <code>openapi</code> folder.</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/open_folder.png alt></p></p><p>After opening the project, click on &ldquo;Files&rdquo; top-left. If there is a <code>.spectral.yml</code> file in the root folder then it is correct. Spectral is the linter for OpenAPI specifications, and is the configuration on what to warn about if done incorrectly in the spec. In the future look in the top corner if you have any active warnings.</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/files_spectral.png alt></p></p><h2 id=4-example-exercise-add-the-selectfallback-avatar-endpoint>4. Example exercise: Add the &ldquo;/selectFallback&rdquo; avatar endpoint</h2><p>In this tutorial we will be implementing the <code>/selectFallback</code> endpoint. Crucially the <a href=https://github.com/vrchatapi/specification/issues/70>research has already been done</a> for this endpoint, which saves a lot of time. If you want to follow along with exact steps, run the following command:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git checkout 1baabd944ba82f4180e7927789f8b10206bee8a9
+</span></span></code></pre></div><p>This will checkout/restore the project at the specific point in time of where it is as of the writing of this tutorial. Please also study the research notes in the GitHub Issue thread closely to familiar yourself with what is needed to be done before proceeding.</p><p>Go back to the &ldquo;API&rdquo; tab and click on the file <code>openapi > components > paths > avatars.yaml</code>. This will bring up the following window:</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/avatars_spec.png alt></p></p><p>All of the contact info, license and global properties are empty. This is because &ldquo;avatars&rdquo; section is only a small part of the overall API. To make it more manageable, it has been split up into several smaller parts, and is afterwards combined with a bundler tool.</p><p>The research by waterflame concluded that the <code>/selectFallback</code> endpoint has the same inputs and outputs as the existing <code>/select</code> endpoint. We will therefore proceed with clicking the <code>&lt;/> Code</code> button top-right to switch into text mode, and then select the <code>/avatars/{avatarsId}/select</code> endpoint in the lower left corner. This will show most of the endpoint in blue:</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/select_endpoint.png alt></p></p><p>We then proceed with copying the entire endpoint, including the parameters and the URL header, and pasting it right below.
+We also make sure to update the path to <code>/selectFallback</code> instead of <code>/select</code>, and update the <code>summary</code> (which will be the title), the <code>operationId</code> (which will be the function call in many SDK&rsquo;s), and the description. Once you are done it should look something like:</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/selectfallback_endpoint.png alt></p></p><p>We can click on the &ldquo;= Form&rdquo; button top-right to see what this looks visually.</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/selectfallback_gui.png alt></p></p><p>This looks good, we are almost done. As a minor addition, the research also found unlike <code>/select</code>, this endpoint has an additional possible error message, Code 403, <code>This avatar isn't tagged as a quest fallback avatar.</code>. To add this we click on &ldquo;Files&rdquo;, and open the folder <code>openapi > components > responses > avatars</code> and create a New <strong>File</strong> (because proper support for external Responses is not added yet) and name it <code>AvatarNotTaggedAsFallbackError.yaml</code>.</p><p>Easiest then is to copy the contents of the contents of the <code>AvatarSeeOtherUserFavoritesError.yaml</code> file and modify the message, title and description:</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/error.png alt></p></p><p>We then go back to the &ldquo;API&rdquo; section, select the <code>avatars.yaml</code> file, click <code>"&lt;/> Code"</code> and then select the <code>/selectFallback</code> endpoint bottom-left. We now add the additional error message we created, where the responses tab should look like the following. In case something is misspelled you will see an error in the top-right corner.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=w>      </span><span class=nt>responses</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>&#39;200&#39;</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/CurrentUserResponse.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>&#39;401&#39;</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/MissingCredentialsError.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>&#39;403&#39;</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/avatars/AvatarNotTaggedAsFallbackError.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>&#39;404&#39;</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>../responses/avatars/AvatarNotFoundError.yaml</span><span class=w>
+</span></span></span></code></pre></div><p>Finally, as mentioned before the specification is split up into multiple files. We therefore need to add our new URL to the main file, so it knows where to look for all the resources. We do this by editing the <code>openapi > components > paths.yaml</code> file.
 Search for &ldquo;select&rdquo;, and add the new endpoint below the existing one. It should look like the following when done:
-(Note: <code>~1</code> is used as slashes in the $ref reference pointer.)</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=s1>&#39;/avatars/{avatarId}/select&#39;</span><span class=p>:</span><span class=w>
-</span><span class=w>  </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1select</span><span class=w>
-</span><span class=w></span><span class=s1>&#39;/avatars/{avatarId}/selectFallback&#39;</span><span class=p>:</span><span class=w>
-</span><span class=w>  </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1selectFallback</span><span class=w>
-</span></code></pre></div><p>That&rsquo;s it! We are now ready to commit the changes and create a PR. If you are using the Web version, do it with the &ldquo;Commit&rdquo; button top left, or if you are on desktop with your favorite Git software.</p>
-<h2 id=5-preview-the-api-documentation>5. Preview the API Documentation</h2>
-<p>The following is <strong>optional</strong>, but allows you to preview what the documentation will look like before you submit a PR.</p>
-<p><strong>Requirements:</strong> NodeJS. You don&rsquo;t need to know any JavaScript programming, but you will need it installed. <a href=https://nodejs.org/en/download/>Download at nodejs.org</a>.</p>
-<p>Open the <code>specification</code> folder and run the following commands:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Install dependencies (ignore if it throws vulnerability warnings, they are not applicable)</span>
-npm install
-
-<span class=c1># Package the spec. This will bundle together all the files into a single specification, which can be used by the website.</span>
-npm run bundle
-
-<span class=c1># Install a simple web server</span>
-npm install -g http-server
-
-<span class=c1># Start it in the &#34;dist/&#34; folder</span>
-<span class=c1># The &#34;--cors&#34; part at the end allows the website on port 1313 to reach the spec on the different port 8080.</span>
-http-server dist/ --cors
-</code></pre></div><p>Your version of the specification is now available at <code>http://localhost:8080/openapi.yaml</code>. Switch VSCode window to the website project and restart the hugo server with the following command:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Windows cmd.exe</span>
-<span class=nb>set</span> <span class=nv>HUGO_SPEC_URL</span><span class=o>=</span>http://localhost:8080/openapi.yaml
-./hugo.exe server
-
-<span class=c1># Linux or Git Bash</span>
-<span class=nv>HUGO_SPEC_URL</span><span class=o>=</span>http://localhost:8080/openapi.yaml ./hugo server
-</code></pre></div><p>(Note: The API Docs will <strong>not</strong> automatically reload if you re-bundle the API spec.)</p>
-<p><p class=md__image>
-<img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/result.png alt>
-</p></p>
-<h2 id=heading>🎉</h2>
-<div class="d-block d-md-none">
-<hr class=my-5>
-<a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
-<div class="row text-uppercase">
-<div class=col><a href=/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-<div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
-</div>
-<style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style>
-<nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
-<div class="navbar-brand fw-bold py-2" href=#>General</div>
-<hr class=mt-1>
-<nav class="nav nav-pills flex-column">
-<a class=nav-link href=/tutorials/getting-started/>
-<span class="badge rounded-pill bg-green me-2"> </span>
-Getting Started
-</a>
-<a class=nav-link href=/tutorials/instances/>
-<span class="badge rounded-pill bg-gold me-2"> </span>
-Instances
-</a>
-<a class=nav-link href=/tutorials/tags/>
-<span class="badge rounded-pill bg-gold me-2"> </span>
-Tags
-</a>
-<a class="nav-link active" href=/tutorials/contribute-api/>
-<span class="badge rounded-pill bg-red me-2"> </span>
-Contributing to the API
-</a>
-<a class=nav-link href=/tutorials/contribute-website/>
-<span class="badge rounded-pill bg-red me-2"> </span>
-Contributing to the Website
-</a>
-<a class=nav-link href=/tutorials/websocket/>
-<span class="badge rounded-pill bg-red me-2"> </span>
-Websocket API
-</a>
-</nav>
-</nav>
-<div class="bg-light p-3 mt-3">
-<div id=footer slot=footer class="pt-2 pb-3">
-<div class="row pt-2 align-items-center">
-<div class="col-12 ps-4">
-<div class=text-center>VRChat API Documentation<br>made with ❤️ by the Community</div>
-<small class="legal mt-2">
-"VRChat" and the VRChat logo are registered trademarks of VRChat Incorporated in the United States.
+(Note: <code>~1</code> is used as slashes in the $ref reference pointer.)</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=s1>&#39;/avatars/{avatarId}/select&#39;</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1select</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=s1>&#39;/avatars/{avatarId}/selectFallback&#39;</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>$ref</span><span class=p>:</span><span class=w> </span><span class=l>./paths/avatars.yaml#/paths/~1avatars~1{avatarId}~1selectFallback</span><span class=w>
+</span></span></span></code></pre></div><p>That&rsquo;s it! We are now ready to commit the changes and create a PR. If you are using the Web version, do it with the &ldquo;Commit&rdquo; button top left, or if you are on desktop with your favorite Git software.</p><h2 id=5-preview-the-api-documentation>5. Preview the API Documentation</h2><p>The following is <strong>optional</strong>, but allows you to preview what the documentation will look like before you submit a PR.</p><p><strong>Requirements:</strong> NodeJS. You don&rsquo;t need to know any JavaScript programming, but you will need it installed. <a href=https://nodejs.org/en/download/>Download at nodejs.org</a>.</p><p>Open the <code>specification</code> folder and run the following commands:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Install dependencies (ignore if it throws vulnerability warnings, they are not applicable)</span>
+</span></span><span class=line><span class=cl>npm install
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Package the spec. This will bundle together all the files into a single specification, which can be used by the website.</span>
+</span></span><span class=line><span class=cl>npm run bundle
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Install a simple web server</span>
+</span></span><span class=line><span class=cl>npm install -g http-server
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Start it in the &#34;dist/&#34; folder</span>
+</span></span><span class=line><span class=cl><span class=c1># The &#34;--cors&#34; part at the end allows the website on port 1313 to reach the spec on the different port 8080.</span>
+</span></span><span class=line><span class=cl>http-server dist/ --cors
+</span></span></code></pre></div><p>Your version of the specification is now available at <code>http://localhost:8080/openapi.yaml</code>. Switch VSCode window to the website project and restart the hugo server with the following command:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Windows cmd.exe</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> <span class=nv>HUGO_SPEC_URL</span><span class=o>=</span>http://localhost:8080/openapi.yaml
+</span></span><span class=line><span class=cl>./hugo.exe server
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Linux or Git Bash</span>
+</span></span><span class=line><span class=cl><span class=nv>HUGO_SPEC_URL</span><span class=o>=</span>http://localhost:8080/openapi.yaml ./hugo server
+</span></span></code></pre></div><p>(Note: The API Docs will <strong>not</strong> automatically reload if you re-bundle the API spec.)</p><p><p class=md__image><img class="img-fluid rounded" src=/assets/img/tutorials/contribute-api/result.png alt></p></p><h2 id=heading>🎉</h2><div class="d-block d-md-none"><hr class=my-5><a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a><div class="row text-uppercase"><div class=col><a href=/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div><div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div></div><style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style><nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3"><div class="navbar-brand fw-bold py-2" href=#>General</div><hr class=mt-1><nav class="nav nav-pills flex-column"><a class=nav-link href=/tutorials/getting-started/><span class="badge rounded-pill bg-green me-2"></span>Getting Started</a>
+<a class=nav-link href=/tutorials/instances/><span class="badge rounded-pill bg-gold me-2"></span>Instances</a>
+<a class=nav-link href=/tutorials/tags/><span class="badge rounded-pill bg-gold me-2"></span>Tags</a>
+<a class="nav-link active" href=/tutorials/contribute-api/><span class="badge rounded-pill bg-red me-2"></span>Contributing to the API</a>
+<a class=nav-link href=/tutorials/contribute-website/><span class="badge rounded-pill bg-red me-2"></span>Contributing to the Website</a>
+<a class=nav-link href=/tutorials/websocket/><span class="badge rounded-pill bg-red me-2"></span>Websocket API</a></nav></nav><div class="bg-light p-3 mt-3"><div id=footer slot=footer class="pt-2 pb-3"><div class="row pt-2 align-items-center"><div class="col-12 ps-4"><div class=text-center>VRChat API Documentation<br>made with ❤️ by the Community</div><small class="legal mt-2">"VRChat" and the VRChat logo are registered trademarks of VRChat Incorporated in the United States.
 All trademarks referred to herein are the property of their respective owners.
 All company, product and service names used in this website are for identification purposes only, in
 accordance with Fair Use.
-Use of these names, logos, and brands does not imply endorsement.
-</small>
-</div>
-<div class="col-4 pt-4 text-center">
-<a href=https://discord.gg/qjZE9C9fkB>Support</a>
-</div>
-<div class="col-4 pt-4 text-center">
-<a href=mailto:me@ruby.js.org>Inquiries</a>
-</div>
-<div class="col-4 pt-4 pe-5">
-<a href=https://github.com/vrchatapi class="mx-auto d-block" style=width:30px><svg viewBox="0 0 128 128" width="30"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347.0-60.388 27.035-60.388 60.388.0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905.0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843.0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98.0.0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21.0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183.0 8.08-.07 14.583-.07 16.572.0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877.0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-12 col-md-4 d-none d-md-block">
-<a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a>
-<div class="row text-uppercase">
-<div class=col><a href=/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div>
-<div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div>
-</div>
-<style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style>
-<nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3">
-<div class="navbar-brand fw-bold py-2" href=#>General</div>
-<hr class=mt-1>
-<nav class="nav nav-pills flex-column">
-<a class=nav-link href=/tutorials/getting-started/>
-<span class="badge rounded-pill bg-green me-2"> </span>
-Getting Started
-</a>
-<a class=nav-link href=/tutorials/instances/>
-<span class="badge rounded-pill bg-gold me-2"> </span>
-Instances
-</a>
-<a class=nav-link href=/tutorials/tags/>
-<span class="badge rounded-pill bg-gold me-2"> </span>
-Tags
-</a>
-<a class="nav-link active" href=/tutorials/contribute-api/>
-<span class="badge rounded-pill bg-red me-2"> </span>
-Contributing to the API
-</a>
-<a class=nav-link href=/tutorials/contribute-website/>
-<span class="badge rounded-pill bg-red me-2"> </span>
-Contributing to the Website
-</a>
-<a class=nav-link href=/tutorials/websocket/>
-<span class="badge rounded-pill bg-red me-2"> </span>
-Websocket API
-</a>
-</nav>
-</nav>
-<div class="bg-light p-3 mt-3">
-<div id=footer slot=footer class="pt-2 pb-3">
-<div class="row pt-2 align-items-center">
-<div class="col-12 ps-4">
-<div class=text-center>VRChat API Documentation<br>made with ❤️ by the Community</div>
-<small class="legal mt-2">
-"VRChat" and the VRChat logo are registered trademarks of VRChat Incorporated in the United States.
+Use of these names, logos, and brands does not imply endorsement.</small></div><div class="col-4 pt-4 text-center"><a href=https://discord.gg/qjZE9C9fkB>Support</a></div><div class="col-4 pt-4 text-center"><a href=mailto:me@ruby.js.org>Inquiries</a></div><div class="col-4 pt-4 pe-5"><a href=https://github.com/vrchatapi class="mx-auto d-block" style=width:30px><svg viewBox="0 0 128 128" width="30"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347.0-60.388 27.035-60.388 60.388.0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905.0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843.0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98.0.0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21.0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183.0 8.08-.07 14.583-.07 16.572.0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877.0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg></a></div></div></div></div></div></div></div><div class="col-12 col-md-4 d-none d-md-block"><a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a><div class="row text-uppercase"><div class=col><a href=/tutorials/tags/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div><div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div></div><style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style><nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3"><div class="navbar-brand fw-bold py-2" href=#>General</div><hr class=mt-1><nav class="nav nav-pills flex-column"><a class=nav-link href=/tutorials/getting-started/><span class="badge rounded-pill bg-green me-2"></span>Getting Started</a>
+<a class=nav-link href=/tutorials/instances/><span class="badge rounded-pill bg-gold me-2"></span>Instances</a>
+<a class=nav-link href=/tutorials/tags/><span class="badge rounded-pill bg-gold me-2"></span>Tags</a>
+<a class="nav-link active" href=/tutorials/contribute-api/><span class="badge rounded-pill bg-red me-2"></span>Contributing to the API</a>
+<a class=nav-link href=/tutorials/contribute-website/><span class="badge rounded-pill bg-red me-2"></span>Contributing to the Website</a>
+<a class=nav-link href=/tutorials/websocket/><span class="badge rounded-pill bg-red me-2"></span>Websocket API</a></nav></nav><div class="bg-light p-3 mt-3"><div id=footer slot=footer class="pt-2 pb-3"><div class="row pt-2 align-items-center"><div class="col-12 ps-4"><div class=text-center>VRChat API Documentation<br>made with ❤️ by the Community</div><small class="legal mt-2">"VRChat" and the VRChat logo are registered trademarks of VRChat Incorporated in the United States.
 All trademarks referred to herein are the property of their respective owners.
 All company, product and service names used in this website are for identification purposes only, in
 accordance with Fair Use.
-Use of these names, logos, and brands does not imply endorsement.
-</small>
-</div>
-<div class="col-4 pt-4 text-center">
-<a href=https://discord.gg/qjZE9C9fkB>Support</a>
-</div>
-<div class="col-4 pt-4 text-center">
-<a href=mailto:me@ruby.js.org>Inquiries</a>
-</div>
-<div class="col-4 pt-4 pe-5">
-<a href=https://github.com/vrchatapi class="mx-auto d-block" style=width:30px><svg viewBox="0 0 128 128" width="30"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347.0-60.388 27.035-60.388 60.388.0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905.0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843.0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98.0.0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21.0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183.0 8.08-.07 14.583-.07 16.572.0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877.0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js integrity=sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM crossorigin=anonymous></script>
-<script>window.addEventListener("load",function(){[...document.querySelectorAll("*")].filter(a=>a.nodeName=="TABLE").map(a=>{console.log("Adding table to table",a),a.classList.add("table")})})</script>
-</body>
-</html>
+Use of these names, logos, and brands does not imply endorsement.</small></div><div class="col-4 pt-4 text-center"><a href=https://discord.gg/qjZE9C9fkB>Support</a></div><div class="col-4 pt-4 text-center"><a href=mailto:me@ruby.js.org>Inquiries</a></div><div class="col-4 pt-4 pe-5"><a href=https://github.com/vrchatapi class="mx-auto d-block" style=width:30px><svg viewBox="0 0 128 128" width="30"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347.0-60.388 27.035-60.388 60.388.0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905.0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843.0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98.0.0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21.0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183.0 8.08-.07 14.583-.07 16.572.0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877.0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg></a></div></div></div></div></div></div></div></main><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js integrity=sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM crossorigin=anonymous></script>
+<script>window.addEventListener("load",function(){[...document.querySelectorAll("*")].filter(e=>e.nodeName=="TABLE").map(e=>{console.log("Adding table to table",e),e.classList.add("table")})})</script></body></html>
