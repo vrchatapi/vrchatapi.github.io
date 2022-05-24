@@ -127,3 +127,4 @@ Tag | Description
 `ඞ` | Meaningless tag used by Fusl
 `we've been trying to reach you about your car's extended warranty` | Meaningless tag used by Fusl
 `system_smart_fridge_beta` | Meaningless tag used by Nyx
+`system_trust_sussy` | Meaningless tag used by Squid
