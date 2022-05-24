@@ -29,15 +29,15 @@ Tag | Description
 `system_feedback_access` | User can send Feedback
 `system_probable_troll` | User has been reported multiple times and is (probably) a troll
 `system_supporter` | User has an active VRC+ subscription
-`system_legend` | User is an Experienced player and was active during the Summer of 2018<br>(Deprecated: Removed in 2022-05-05)
+`system_legend` | User is an Experienced player and was active during the Summer of 2018<br>(Tag removed in 2022-05-05)
 `system_troll` | User is a confirmed troll
 `system_trust_basic` | User is "New User" (blue) Trust rank
 `system_trust_known` | User is "User" (green) Trust rank
-`system_trust_intermediate` | Unknown (Believed to be Deprecated)
 `system_trust_trusted` | User is "Known User" (orange) Trust rank
-`system_trust_advanced` | Unknown (Believed to be Deprecated)
 `system_trust_veteran` | User is "Trusted User" (purple) Trust rank
-`system_trust_legend` | User is "Veteran User" (previously gold) Trust rank<br>(Deprecated: Removed in 2022-05-05)
+`system_trust_intermediate` | Unknown<br>(Tag removed in 2022-05-05)
+`system_trust_advanced` | Unknown<br>(Tag removed in 2022-05-05)
+`system_trust_legend` | User is "Veteran User" (gold color) Trust rank<br>(Role was removed in Sep 2018. Tag removed in 2022-05-05)
 `system_world_access` | User can upload and publish Worlds
 
 Trust rank tags have an offset of 1 with their name, so `system_trust_trusted` is actually only `Known User` (orange). The arrows in the following picture highlight the offset naming inaccuracy. The naming system is because of legacy reasons. Visistors have no trust rank at all. It is common for people User and above to be missing the tag for New User.
