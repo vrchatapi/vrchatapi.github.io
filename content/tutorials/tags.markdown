@@ -127,4 +127,8 @@ Tag | Description
 `ඞ` | Meaningless tag used by Fusl
 `we've been trying to reach you about your car's extended warranty` | Meaningless tag used by Fusl
 `system_smart_fridge_beta` | Meaningless tag used by Nyx
+`system_hey_mom_look_im_in_a_git_commit` | Meaningless tag used by Nyx
 `system_trust_sussy` | Meaningless tag used by Squid
+`system_lizard` | Meaningless tag used by Afromana
+`system_me_I_read_them` | Meaningless tag used by Afromana
+`system_slug` | Meaningless tag used by Slorg
