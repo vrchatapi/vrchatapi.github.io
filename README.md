@@ -2,7 +2,7 @@
 
 # 💙 VRChat API Documentation 💙
 
-Welcome to the VRChat API Documentation Project! This project is an [OPEN Open Source Project](http://openopensource.org) where we strive to document the VRChat's Web API, and thereby enable of developers to programmatically interact with VRChat and develop amazing new programs, Discord bots and websites!
+Welcome to the VRChat API Documentation Project! This project is an [OPEN Open Source Project](https://openopensource.github.io) where we strive to document the VRChat's Web API, and thereby enable of developers to programmatically interact with VRChat and develop amazing new programs, Discord bots and websites!
 
 ## 🔰 Getting Started
 
