@@ -51,6 +51,10 @@ As you will be using the API and not designing it, you want to press **Request C
 
 Now you're ready to go! Now click on "VRChat API Documentation" to proceed.
 
+### Extra Notes
+The VRChat API can be used to programmatically retrieve or update information regarding your profile, friends, avatars, worlds and more. The API is designed around the REST ideology, providing semi-simple and usually predictable URLs to access and modify objects. This Getting Started quick-start guide is the fastest to get started using the API. The domain for all VRChat API endpoints is api.vrchat.cloud/api/1.
+This documentation includes some code samples for cURL as well.
+
 ## Sending your First Request
 
 Now we are going to send our first request! As a very simple, but also necessary, demo we will fetch the System Config.
