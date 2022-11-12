@@ -123,7 +123,7 @@ Tag | Description
 `system_not_cute` | Meaningless tag used by Fusl
 `'; DROP DATABASE tags; -- ` | Meaningless tag used by Fusl
 `'; DROP TABLE tags; -- ` | Meaningless tag used by Fusl
-`¯\\_(ツ)_/¯` | Meaningless tag used by Fusl
+`¯\_(ツ)_/¯` | Meaningless tag used by Fusl
 `ඞ` | Meaningless tag used by Fusl
 `we've been trying to reach you about your car's extended warranty` | Meaningless tag used by Fusl
 `system_smart_fridge_beta` | Meaningless tag used by Nyx
