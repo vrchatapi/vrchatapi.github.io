@@ -409,3 +409,9 @@ input[type='password'] {
     color: var(--white) !important;
     margin-right: 8px !important;
 }
+
+/* Swap so PUT is yellow, and strange is Orange */
+.nav-method.as-colored-block.put { background-color: var(--yellow) !important; color: var(--black) !important; }
+.nav-method.as-colored-block.head, .nav-method.as-colored-block.patch , .nav-method.as-colored-block.options { 
+  background-color: var(--orange) !important;
+}
