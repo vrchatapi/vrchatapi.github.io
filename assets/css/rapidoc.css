@@ -402,3 +402,10 @@ input[type='password'] {
 #api-info {
     display: none !important;
 }
+
+.nav-method.as-colored-block {
+    padding: 1px 6px !important;
+    border-radius: 0 !important;
+    color: var(--white) !important;
+    margin-right: 8px !important;
+}
