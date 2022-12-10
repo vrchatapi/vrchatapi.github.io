@@ -106,7 +106,13 @@ Tag | Description
 `language_fsl` | French Sign Language
 `language_kvk` | Korean Sign Language
 
-## Useless tags
+## Group Tags
+
+Tag | Description
+----|------------
+`admin_hide_member_count` | Hides both online members and total number of members in the group. Used for the [VRCHAT.0000](https://vrc.group/VRCHAT.0000) staff group.
+
+## Useless Tags
 
 Tag | Description
 ----|------------
