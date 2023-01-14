@@ -114,7 +114,7 @@ Tag | Description
 
 ## Useless Tags
 
-Tag | Description
+Tag | <div style="width:320px">Description</div>
 ----|------------
 `system_neuralink_beta` | Meaningless tag used by Tupper
 `system_extremely_cool_guy` | Meaningless tag used by Tupper
