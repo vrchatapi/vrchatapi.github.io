@@ -90,9 +90,9 @@ A "`clear-notification`" event is sent when the client should clear **all** noti
 }
 ```
 
-### NotificationV2 Events
+#### About NotificationV2 Events
 
-The `content` object of these events all contain the property `"version": <number>`, which appears to be a static indicator of
+The `version` property of the `content` of these events all currently have the value `2`.
 
 #### notification-v2
 A "`notification-v2`" event carries a NotificationV2 object.
@@ -110,7 +110,7 @@ A "`notification-v2`" event carries a NotificationV2 object.
         "senderUserId": ":userId", // NOTE: WILL BE NULL if the notification didn't originate from a user
         "senderUsername": ":username", // NOTE: same as "senderUserId"
         "receiverUserId": ":userId",
-        "relatedNotificationsId": ":?Id",
+        "relatedNotificationsId": ":?Id", // gpos_00000000-0000-0000-0000-000000000000
         "title": ":string",
         "message": ":string",
         "imageUrl": ":assetUrl",
@@ -121,7 +121,8 @@ A "`notification-v2`" event carries a NotificationV2 object.
                 "type": ":notificationV2ResponseTypeEnum", // One of: "delete", "unsubscribe", ???
                 "data": ":string", // Auxiliary data
                                    // If the type is "delete", then this will be empty
-                                   // If the type is "unsubscribe", then this will be 
+                                   // If the type is "unsubscribe", then this will be the id of the sending object, a comma, and the id of the (recieving) user
+                                   //   e.g.: grp_00000000-0000-0000-000000000000,usr_00000000-0000-0000-000000000000
                 "icon": ":notificationV2ResponseIconEnum", // One of: "check", "bell-slash", ???
                 "text": ":string"
             }
