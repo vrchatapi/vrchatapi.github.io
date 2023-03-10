@@ -90,6 +90,84 @@ A "`clear-notification`" event is sent when the client should clear **all** noti
 }
 ```
 
+### NotificationV2 Events
+
+The `content` object of these events all contain the property `"version": <number>`, which appears to be a static indicator of
+
+#### notification-v2
+A "`notification-v2`" event carries a NotificationV2 object.
+
+```json
+{
+    "type": "notification-v2",
+    "content": {
+        "id":  ":notificationId",
+        "version": 2, // Appears to be a static marker
+        "type": ":notificationV2TypeEnum", // One of: "group.announcement", ???
+        "category": ":notificationV2CategoryEnum", // One of: "social.group", ???
+        "isSystem": <boolean>,
+        "ignoreDND": <boolean>,
+        "senderUserId": ":userId", // NOTE: WILL BE NULL if the notification didn't originate from a user
+        "senderUsername": ":username", // NOTE: same as "senderUserId"
+        "receiverUserId": ":userId",
+        "relatedNotificationsId": ":?Id",
+        "title": ":string",
+        "message": ":string",
+        "imageUrl": ":assetUrl",
+        "link": ":notificationLinkUri", // The scheme is the type of the linked object, and the path is the id of that object, e.g.: "group:grp_00000000-0000-0000-0000-000000000000"
+        "linkText": ":string",
+        "responses": [
+            {
+                "type": ":notificationV2ResponseTypeEnum", // One of: "delete", "unsubscribe", ???
+                "data": ":string", // Auxiliary data
+                                   // If the type is "delete", then this will be empty
+                                   // If the type is "unsubscribe", then this will be 
+                "icon": ":notificationV2ResponseIconEnum", // One of: "check", "bell-slash", ???
+                "text": ":string"
+            }
+        ],
+        "expiresAt": "dateTimeString", // yyyy-mm-ddThh:mm:ss.sssZ
+        "expiryAfterSeen": <number>, // Typically 900
+        "requireSeen": <boolean>,
+        "seen": <boolean>,
+        "canDelete": <boolean>,
+        "createdAt": ":dateTimeString",
+        "updatedAt": ":dateTimeString"
+    }
+}
+```
+
+#### notification-v2-update
+A "`notification-v2-update`" event is sent when the client should update a notification, overwriting at least one property.
+
+```json
+{
+    "type": "notification-v2-update",
+    "content": {
+        "id":  ":notificationId",
+        "version": 2,
+        "updates": {
+            // These properties are to be overwrite the properties found in the content of a `notification-v2` event
+        }
+    }
+}
+```
+
+#### notification-v2-delete
+A "`notification-v2-delete`" event is sent when the client should delete one or more notifications.
+
+```json
+{
+    "type": "notification-v2-delete",
+    "content": {
+        "ids": [
+            ":notificationId"
+        ],
+        "version": 2
+    }
+}
+```
+
 ---
 
 ### Friend Events
@@ -267,6 +345,77 @@ A "`user-location`" event is sent when the user has changed instances.
         "world": {
             // <World Object>, See return data of World API:
             // https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
+        }
+    }
+}
+```
+
+---
+
+### Group Events
+
+#### group-joined
+A "`group-joined`" event is sent when the user has either joined a group, or has had one of their group join requests accepted.
+
+```json
+{
+    "type": "group-joined",
+    "content": {
+        "groupId": ":groupId" // grp_00000000-0000-0000-000000000000
+    }
+}
+```
+
+
+#### group-left
+A "`group-left`" event is sent when the user has either left a group, or has been removed from a group.
+
+```json
+{
+    "type": "group-left",
+    "content": {
+        "groupId": ":groupId"
+    }
+}
+```
+
+
+#### group-member-updated
+A "`group-member-updated`" event is sent when something regarding the user's group membership changes. Note that the `member` object is **not** a full GroupMember object, even though it has similarities. It's missing `user`, `createdAt`, `bannedAt`, and `managerNotes`. It also has the extra `lastPostReadAt` field.
+
+```json
+{
+    "type": "group-member-updated",
+    "content": {
+        "member": {
+            "id": ":groupMemberId", // gmem_00000000-0000-0000-000000000000
+            "groupId": ":groupId",
+            "userId": ":userId",
+            "isRepresenting": <boolean>,
+            "roleIds": [
+                ":groupRoleId" // grol_00000000-0000-0000-000000000000
+            ],
+            "joinedAt": ":dateTimeString", // yyyy-mm-ddThh:mm:ss.sssZ
+            "membershipStatus": ":groupMembershipEnum", // One of: "member", ???
+            "visibility": ":groupVisibilityEnum", // One of: "visible", ???
+            "isSubscribedToAnnouncements": <boolean>,
+            "lastPostReadAt": ":dateTimeString" // NOTE: WILL BE NULL if the user hasn't read any group posts
+        }
+    }
+}
+```
+
+
+#### group-role-updated
+A "`group-role-updated`" event is sent when something regarding one of the user's group's roles changes.
+
+```json
+{
+    "type": "group-role-updated",
+    "content": {
+        "role": {
+            // <GroupRole Object>, See return data of Groups API:
+            // https://vrchatapi.github.io/docs/api/#get-/groups/-groupId-/roles
         }
     }
 }
