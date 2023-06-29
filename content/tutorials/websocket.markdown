@@ -215,12 +215,6 @@ A "`friend-online`" event is sent when one of the user's friends has gone online
         },
         "location": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
         "instance": ":instanceId", // This is locationString without the World ID part.
-        "world": {
-            // <World Object>, See return data of World API:
-            // https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
-            //
-            // NOTE: WILL BE EMPTY if user is on orange/red, or is in a private world.
-        },
         "canRequestInvite": <boolean>
     }
 }
@@ -284,13 +278,9 @@ A "`friend-location`" event is sent when one of the user's friends has changed i
             // https://vrchatapi.github.io/docs/api/#get-/users/-userId-
         },
         "location": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
+        "travelingToLocation": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
         "instance": ":instanceId", // This is locationString without the World ID part.
-        "world": {
-            // <World Object>, See return data of World API:
-            // https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
-            //
-            // NOTE: WILL BE EMPTY if user is on orange/red, or is in a private world.
-        },
+        "worldId": ":worldId", // wlrd_...
         "canRequestInvite": <boolean>
     }
 }
@@ -341,8 +331,13 @@ A "`user-location`" event is sent when the user has changed instances.
     "type": "user-location",
     "content": {
         "userId": ":userId",
+        "user": {
+            // <User Object>, See return data of User API:
+            // https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+        },
         "location": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
         "instance": ":instanceId", // This is locationString without the World ID part.
+        "worldId": ":worldId", // wlrd_...
         "world": {
             // <World Object>, See return data of World API:
             // https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
