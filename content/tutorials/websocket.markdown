@@ -351,6 +351,20 @@ A "`user-location`" event is sent when the user has changed instances.
 }
 ```
 
+
+#### content-refresh
+A "`content-refresh`" event is sent when the user adds or removes profile images etc.
+
+```json
+{
+    "type": "content-refresh",
+    "content": {
+        "contentType": ":contentRefreshContentTypeEnum", // One of: "gallery", "icon", "emoji", ???
+        "actionType": ":contentRefreshActionTypeEnum" // One of: "created", "deleted", ???
+    }
+}
+```
+
 ---
 
 ### Group Events
