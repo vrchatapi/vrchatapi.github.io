@@ -132,6 +132,8 @@ Tag | <div style="width:320px">Description</div>
 `¯\_(ツ)_/¯` | Meaningless tag used by Fusl
 `ඞ` | Meaningless tag used by Fusl
 `we've been trying to reach you about your car's extended warranty` | Meaningless tag used by Fusl
+`<script>alert(document.cookie);</script>` | Meaningless tag used by Fusl
+`eeeeeeeeee` | Meaningless tag used by [eeeeeeeeee](https://vrchat.com/api/1/users/eeeeeeeeee)
 `if you're reading this, you've been in a coma for almost 20 years now. we're trying a new technique. we don't know where this message will end up in your dream, but we hope we're getting through. please wake up-` | Meaningless tag used by Fusl
 `system_smart_fridge_beta` | Meaningless tag used by Nyx
 `system_hey_mom_look_im_in_a_git_commit` | Meaningless tag used by Nyx
