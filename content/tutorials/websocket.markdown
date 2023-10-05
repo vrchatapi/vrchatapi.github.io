@@ -354,7 +354,7 @@ A "`content-refresh`" event is sent when the user adds or removes profile images
 {
     "type": "content-refresh",
     "content": {
-        "contentType": ":contentRefreshContentTypeEnum", // One of: "gallery", "icon", "emoji", ???
+        "contentType": ":contentRefreshContentTypeEnum", // One of: "gallery", "icon", "emoji", "avatar", "world", ???
         "actionType": ":contentRefreshActionTypeEnum" // One of: "created", "deleted", ???
     }
 }
