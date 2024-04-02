@@ -219,6 +219,20 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;actionType&#34;</span><span class=p>:</span> <span class=s2>&#34;:contentRefreshActionTypeEnum&#34;</span> <span class=c1>// One of: &#34;created&#34;, &#34;deleted&#34;, ???
 </span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h4 id=instance-queue-joined>instance-queue-joined</h4><p>A &ldquo;<code>instance-queue-joined</code>&rdquo; event is sent when the user queues to join an instance.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;instance-queue-joined&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;instanceLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=c1>// Refer to https://vrchatapi.github.io/tutorials/instances/
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;position&#34;</span><span class=p>:</span> <span class=err>&lt;number&gt;</span> <span class=c1>// Integer position in queue
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h4 id=instance-queue-ready>instance-queue-ready</h4><p>A &ldquo;<code>instance-queue-ready</code>&rdquo; event is sent when the user is at the front of the queue.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;instance-queue-ready&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;instanceLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=c1>// Refer to https://vrchatapi.github.io/tutorials/instances/
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;expiry&#34;</span><span class=p>:</span> <span class=s2>&#34;:dateTimeString&#34;</span> <span class=c1>// Time at which priority will be lost
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><hr><h3 id=group-events>Group Events</h3><h4 id=group-joined>group-joined</h4><p>A &ldquo;<code>group-joined</code>&rdquo; event is sent when the user has either joined a group, or has had one of their group join requests accepted.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;group-joined&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
