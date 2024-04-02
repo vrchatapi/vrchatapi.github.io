@@ -360,6 +360,34 @@ A "`content-refresh`" event is sent when the user adds or removes profile images
 }
 ```
 
+
+#### instance-queue-joined
+A "`instance-queue-joined`" event is sent when the user queues to join an instance.
+
+```json
+{
+    "type": "instance-queue-joined",
+    "content": {
+        "instanceLocation": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
+        "position": <number> // Integer position in queue
+    }
+}
+```
+
+
+#### instance-queue-ready
+A "`instance-queue-ready`" event is sent when the user is at the front of the queue.
+
+```json
+{
+    "type": "instance-queue-ready",
+    "content": {
+        "instanceLocation": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
+        "expiry": ":dateTimeString" // Time at which priority will be lost
+    }
+}
+```
+
 ---
 
 ### Group Events
