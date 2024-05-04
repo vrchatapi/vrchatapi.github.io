@@ -45,6 +45,9 @@
                     <option value="friends">Friends</option>
                     <option value="invite+">Invite+</option>
                     <option value="invite">Invite</option>
+                    <option value="grouppublic">Group Public</option>
+                    <option value="group+">Group+</option>
+                    <option value="group">Group</option>
                 </select>
             </div>
         </div>
@@ -66,7 +69,7 @@
         </div>
         <div class="col mt-0 mt-lg-3 mb-3 mb-lg-0">
             <span class="form-text">
-                Must be a valid User ID.
+                Must be a valid User ID or Group ID.
             </span>
         </div>
     </div>
@@ -143,6 +146,7 @@
             nonceElement.value = uuidv4();
         }
 
+        let ownerIdMatchesGroupID = (ownerId.match(/^(grp_[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12})$/) || [])[1] == undefined;
         switch (instanceType) {
             case "public":
                 ownerIdElement.disabled = true;
@@ -154,6 +158,20 @@
             case "invite":
                 ownerIdElement.disabled = false;
                 nonceElement.disabled = true;
+                if (!ownerIdMatchesGroupID) {
+                    output.innerHTML = "<span class='text-red'>Invalid User ID.</span>";
+                    return;
+                }
+                break;
+            case "grouppublic":
+            case "group+":
+            case "group":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                if (ownerIdMatchesGroupID) {
+                    output.innerHTML = "<span class='text-red'>Invalid Group ID.</span>";
+                    return;
+                }
                 break;
         }
 
@@ -163,7 +181,8 @@
         }
 
         let res_type = "";
-        let res_hidden = "";
+        let res_owner = "";
+        let res_gaccess = "";
         let res_nonce = "";
         let res_canRequestInvite = false;
 
@@ -177,14 +196,14 @@
                 ownerIdElement.disabled = false;
                 nonceElement.disabled = true;
                 res_type = "hidden";
-                res_hidden = ownerId;
+                res_owner = ownerId;
                 res_nonce = nonce;
                 break;
             case "friends":
                 ownerIdElement.disabled = false;
                 nonceElement.disabled = true;
                 res_type = "friends";
-                res_hidden = ownerId;
+                res_owner = ownerId;
                 res_nonce = nonce;
                 break;
             case "invite+":
@@ -192,14 +211,38 @@
                 nonceElement.disabled = true;
                 res_type = "private";
                 res_canRequestInvite = true;
-                res_hidden = ownerId;
+                res_owner = ownerId;
                 res_nonce = nonce;
                 break;
             case "invite":
                 ownerIdElement.disabled = false;
                 nonceElement.disabled = true;
                 res_type = "private";
-                res_hidden = ownerId;
+                res_owner = ownerId;
+                res_nonce = nonce;
+                break;
+            case "grouppublic":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "group";
+                res_owner = ownerId;
+                res_gaccess = "public";
+                res_nonce = nonce;
+                break;
+            case "group+":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "group";
+                res_owner = ownerId;
+                res_gaccess = "plus";
+                res_nonce = nonce;
+                break;
+            case "group":
+                ownerIdElement.disabled = false;
+                nonceElement.disabled = true;
+                res_type = "group";
+                res_owner = ownerId;
+                res_gaccess = "members";
                 res_nonce = nonce;
                 break;
         }
@@ -207,8 +250,11 @@
         let result = "";
         result += "worldId=<span class='text-danger'>" + worldId + "</span>";
         result += "&instanceId=<span class='text-orange'>" + instanceId + "</span>";
-        if (res_hidden != "") {
-            result += "<span class='text-green'>~" + res_type + "(<span class='text-blue'>" + res_hidden + "</span>)</span>";
+        if (res_owner != "") {
+            result += "<span class='text-green'>~" + res_type + "(<span class='text-blue'>" + res_owner + "</span>)</span>";
+        }
+        if (res_gaccess != "") {
+            result += "<span class='text-green'>~groupAccessType(<span class='text-blue'>" + res_gaccess + "</span>)</span>";
         }
         if (res_canRequestInvite) {
             result += "<span class='text-green'>~canRequestInvite</span>";
