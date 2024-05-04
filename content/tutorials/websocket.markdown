@@ -28,6 +28,36 @@ It is possible to be connected from multiple locations at the same time. All cli
 > }
 > ```
 
+## Note on Enumerations
+
+Several JSON string values present in both Websocket API messages and HTTP API responses appear to be contained in predictably consistent sets.
+Throughout both APIs, the empty string `""` is returned in places (including the immediately) where it would seem otherwise reasonable to have a `null` or undefined value.
+In this part of the documentation, the following `":identifier"`s will be used to describe possible enumeration-ish values:
+
+- `":locationString"`
+    - `""` Pseudo-null value
+    - `"offline"` Implies a user currently is not either running the VRChat client or connected to the Pipeline (e.g., browser tab open)
+    - `"traveling"` Indicates a user's client is travelling between instances (e.g., downloading world, synchronizing world state)
+    - `"private"` Indicates a user's location is not visible to the currently logged-in user. (e.g., Ask Me/Do Not Disturb status, Invite/Invite+/Group instance)
+    - *other values* An actual location (see https://vrchatapi.github.io/tutorials/instances/)
+- `":platformString"`
+    - `""` Pseudo-null value
+    - `"standalonewindows"`
+    - `"android"`
+    - `"web"` User is on a https://vrchat.com/home page
+    - *other values* Some other platform or third-party application (e.g., `"ios"` could be the value for a future build on some Apple devices)
+- `":contentRefreshContentTypeEnum"`
+    - `"gallery"`
+    - `"icon"`
+    - `"emoji"`
+    - `"avatar"`
+    - `"world"`
+    - *other values* Some other user-uploaded content
+- `":contentRefreshActionTypeEnum"`
+    - `"created"`
+    - `"deleted"`
+    - *other values* Not expected
+
 ## Events
 
 ### Notification Events
@@ -209,13 +239,13 @@ A "`friend-online`" event is sent when one of the user's friends has gone online
     "type": "friend-online",
     "content": {
         "userId": ":userId",
+        "platform": ":platformString",
+        "location": ":locationString",
+        "canRequestInvite": <boolean>,
         "user": {
             // <User Object>, See return data of User API:
             // https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-        },
-        "location": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
-        "instance": ":instanceId", // This is locationString without the World ID part.
-        "canRequestInvite": <boolean>
+        }
     }
 }
 ```
@@ -228,6 +258,7 @@ A "`friend-active`" event is sent when one of the user's friends is active on th
     "type": "friend-active",
     "content": {
         "userid": ":userId",
+        "platform": ":platformString", // Appears only to be "web" from these events
         "user": {
             // <User Object>, See return data of User API:
             // https://vrchatapi.github.io/docs/api/#get-/users/-userId-
@@ -243,7 +274,8 @@ A "`friend-offline`" event is sent when one of the user's friends has gone offli
 {
     "type": "friend-offline",
     "content": {
-        "userId": ":userId"
+        "userId": ":userId",
+        "platform": ":platformString", // Appears only to be empty "" from these events
     }
 }
 ```
@@ -266,22 +298,21 @@ A "`friend-update`" event is sent when something about one of the user's friends
 
 
 #### friend-location
-A "`friend-location`" event is sent when one of the user's friends has changed instances. Note that the "`world`" field will be an empty object when the friend is on orange/red, or is in a private world.
+A "`friend-location`" event is sent when one of the user's friends has changed instances. Note that the `worldId` field will be `"private"` when the friend is on orange/red, or is in a private world.
 
 ```json
 {
     "type": "friend-location",
     "content": {
         "userId": ":userId",
+        "location": ":locationString",
+        "travelingToLocation": ":locationString", // normally empty "", but when the above "location" is "traveling", this contains the imminent destination
+        "worldId": ":worldId",
+        "canRequestInvite": <boolean>,
         "user": {
             // <User Object>, See return data of User API:
             // https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-        },
-        "location": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
-        "travelingToLocation": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
-        "instance": ":instanceId", // This is locationString without the World ID part.
-        "worldId": ":worldId", // wlrd_...
-        "canRequestInvite": <boolean>
+        }
     }
 }
 ```
@@ -335,9 +366,9 @@ A "`user-location`" event is sent when the user has changed instances.
             // <User Object>, See return data of User API:
             // https://vrchatapi.github.io/docs/api/#get-/users/-userId-
         },
-        "location": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
+        "location": ":locationString",
         "instance": ":instanceId", // This is locationString without the World ID part.
-        "worldId": ":worldId", // wlrd_...
+        "worldId": ":worldId",
         "world": {
             // <World Object>, See return data of World API:
             // https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
@@ -354,8 +385,8 @@ A "`content-refresh`" event is sent when the user adds or removes profile images
 {
     "type": "content-refresh",
     "content": {
-        "contentType": ":contentRefreshContentTypeEnum", // One of: "gallery", "icon", "emoji", "avatar", "world", ???
-        "actionType": ":contentRefreshActionTypeEnum" // One of: "created", "deleted", ???
+        "contentType": ":contentRefreshContentTypeEnum",
+        "actionType": ":contentRefreshActionTypeEnum"
     }
 }
 ```
@@ -368,7 +399,7 @@ A "`instance-queue-joined`" event is sent when the user queues to join an instan
 {
     "type": "instance-queue-joined",
     "content": {
-        "instanceLocation": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
+        "instanceLocation": ":locationString",
         "position": <number> // Integer position in queue
     }
 }
@@ -382,7 +413,7 @@ A "`instance-queue-ready`" event is sent when the user is at the front of the qu
 {
     "type": "instance-queue-ready",
     "content": {
-        "instanceLocation": ":locationString", // Refer to https://vrchatapi.github.io/tutorials/instances/
+        "instanceLocation": ":locationString",
         "expiry": ":dateTimeString" // Time at which priority will be lost
     }
 }
@@ -419,25 +450,15 @@ A "`group-left`" event is sent when the user has either left a group, or has bee
 
 
 #### group-member-updated
-A "`group-member-updated`" event is sent when something regarding the user's group membership changes. Note that the `member` object is **not** a full GroupMember object, even though it has similarities. It's missing `user`, `createdAt`, `bannedAt`, and `managerNotes`. It also has the extra `lastPostReadAt` field.
+A "`group-member-updated`" event is sent when something regarding the user's group membership changes. Note that the optional values in the `member` are as if "fetching a specific user", per the schema description.
 
 ```json
 {
     "type": "group-member-updated",
     "content": {
         "member": {
-            "id": ":groupMemberId", // gmem_00000000-0000-0000-000000000000
-            "groupId": ":groupId",
-            "userId": ":userId",
-            "isRepresenting": <boolean>,
-            "roleIds": [
-                ":groupRoleId" // grol_00000000-0000-0000-000000000000
-            ],
-            "joinedAt": ":dateTimeString", // yyyy-mm-ddThh:mm:ss.sssZ
-            "membershipStatus": ":groupMembershipEnum", // One of: "member", ???
-            "visibility": ":groupVisibilityEnum", // One of: "visible", ???
-            "isSubscribedToAnnouncements": <boolean>,
-            "lastPostReadAt": ":dateTimeString" // NOTE: WILL BE NULL if the user hasn't read any group posts
+            // <GroupLimitedMember Object>, See return data of Groups API:
+            // https://vrchatapi.github.io/docs/api/#get-/groups/-groupId-/members/-userId-
         }
     }
 }

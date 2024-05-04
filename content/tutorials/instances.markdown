@@ -4,9 +4,11 @@ category: general
 difficulty: medium
 ---
 
-Instances are parallell "rooms" or "lobbies" of a world.
+Instances are parallel "rooms" or "lobbies" of a world.
 Each instance can only hold a limited number of users, but there is no limit on how many instances can exist of a world.
 Instances are uniquely identified by the combined World ID and Instance ID.
+
+*Note: as of 2024-05-02, VRChat indicated in [a Developer Update](https://ask.vrchat.com/t/developer-update-2-may-2024/24284#changes-to-instance-apis-and-auto-creation-13) an eventual intent to replace the current system with a UUID-ish system similar to User IDs*
 
 ## Instance Generator
 
@@ -37,3 +39,12 @@ USA, West | San José | us
 USA, East | Washington D.C. | use
 Europe | Amsterdam | eu
 Japan | Tokyo | jp
+
+### Special Values
+
+The VRChat API has several sentinel values for location strings:
+
+- `""` Pseudo-null value
+- `"offline"` Implies a user currently is not either running the VRChat client or connected to the Pipeline (e.g., browser tab open)
+- `"traveling"` Indicates a user's client is travelling between instances (e.g., downloading world, synchronizing world state)
+- `"private"` Indicates a user's location is not visible to the currently logged-in user. (e.g., Ask Me/Do Not Disturb status, Invite/Invite+/Group instance)
