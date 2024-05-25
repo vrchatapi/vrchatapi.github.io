@@ -378,6 +378,32 @@ A "`user-location`" event is sent when the user has changed instances.
 ```
 
 
+#### user-badge-assigned
+A "`user-badge-assigned`" event is sent when the user obtains a badge, such as for subscribing to VRChat+.
+
+```json
+{
+    "type": "user-badge-assigned",
+    "content": {
+        "badge": ":badge"
+    }
+}
+```
+
+
+#### user-badge-unassigned
+A "`user-badge-unassigned`" event is sent when the user loses a badge, such a VRChat+ subscription expiring.
+
+```json
+{
+    "type": "user-badge-unassigned",
+    "content": {
+        "badgeId": ":badgeId"
+    }
+}
+```
+
+
 #### content-refresh
 A "`content-refresh`" event is sent when the user adds or removes profile images etc.
 
