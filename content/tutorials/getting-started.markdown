@@ -53,19 +53,14 @@ Now you're ready to go! Now click on "VRChat API Documentation" to proceed.
 
 ## Sending your First Request
 
-Now we are going to send our first request! As a very simple, but also necessary, demo we will fetch the System Config.
-The System Config contains information such announcements, the world lists, download links to the latest SDKs, and much more!
-But importantly it also contains the required `apiKey` and fetching the System Config sets this key as a cookie.
+Now we are going to send our first request!
 
-Now, under "**system**" folder on the left, locate the endpoint called "**Fetch API Config**" and simply press "**Send**".
+<div class="callout callout-info mb-3">
+  <strong>clientApiKey has been deprecated</strong><br>
+  You can skip it without negative consequences.
+</div>
 
-![](/assets/img/tutorials/getting-started/insomnia4.png)
-
-The API key is required for all further requests. The key is not personal, and has been the same for the last 8 years.
-You can view the request response on the right, as well as the Headers that were returned and Cookies which were set.
-Cookies are global, and you can view your cookie storage by clicking "Cookies" in the **top-left** corner of the window.
-
-Next we are going to Authenticate, as being logged in is required for most requests.
+Go to Authenticate, as being logged in is required for most requests.
 Click the "**authentication**" folder on the left, locate the endpoint "**Login and/or Get Current User Info**".
 In VRChat the same endpoint is used for authentication as getting your own user information.
 If you are not logged in then it will generate an `authtoken` cookie for you and return your user info.
