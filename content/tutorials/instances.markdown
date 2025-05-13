@@ -47,4 +47,5 @@ The VRChat API has several sentinel values for location strings:
 - `""` Pseudo-null value
 - `"offline"` Implies a user currently is not either running the VRChat client or connected to the Pipeline (e.g., browser tab open)
 - `"traveling"` Indicates a user's client is travelling between instances (e.g., downloading world, synchronizing world state)
+    - Also can be `"traveling:traveling`
 - `"private"` Indicates a user's location is not visible to the currently logged-in user. (e.g., Ask Me/Do Not Disturb status, Invite/Invite+/Group instance)

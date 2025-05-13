@@ -38,6 +38,7 @@ In this part of the documentation, the following `":identifier"`s will be used t
     - `""` Pseudo-null value
     - `"offline"` Implies a user currently is not either running the VRChat client or connected to the Pipeline (e.g., browser tab open)
     - `"traveling"` Indicates a user's client is travelling between instances (e.g., downloading world, synchronizing world state)
+        - Also can be `"traveling:traveling`
     - `"private"` Indicates a user's location is not visible to the currently logged-in user. (e.g., Ask Me/Do Not Disturb status, Invite/Invite+/Group instance)
     - *other values* An actual location (see https://vrchatapi.github.io/tutorials/instances/)
 - `":platformString"`
@@ -50,13 +51,23 @@ In this part of the documentation, the following `":identifier"`s will be used t
     - `"gallery"`
     - `"icon"`
     - `"emoji"`
+    - `"print"`
+    - `"prints"` is also a value observed, but this never has an id attached
+    - `"sticker"`
+    - `"inventory"` appears to mirror other 
     - `"avatar"`
     - `"world"`
     - *other values* Some other user-uploaded content
 - `":contentRefreshActionTypeEnum"`
     - `"created"`
     - `"deleted"`
-    - *other values* Not expected
+    - `"add"` \*
+    - `"delete"` \*
+    - *other values* Not expected<br>
+      \* *only observed with* `"inventory"` *content type*
+- `":inventoryType"`
+    - `"sticker"`
+    - *other values* Some other user-uploaded or creator economy content
 
 ## Events
 
@@ -368,11 +379,7 @@ A "`user-location`" event is sent when the user has changed instances.
         },
         "location": ":locationString",
         "instance": ":instanceId", // This is locationString without the World ID part.
-        "worldId": ":worldId",
-        "world": {
-            // <World Object>, See return data of World API:
-            // https://vrchatapi.github.io/docs/api/#get-/worlds/-worldId-
-        }
+        "travelingToLocation": ":locationString"
     }
 }
 ```
@@ -412,6 +419,9 @@ A "`content-refresh`" event is sent when the user adds or removes profile images
     "type": "content-refresh",
     "content": {
         "contentType": ":contentRefreshContentTypeEnum",
+        "fileId": ":id", // Id for the content updated (avatar, world, file, etc.)
+        "itemId": ":inventoryId", // Id for `inventory` item
+        "itemType": ":inventoryType", // Type of `inventory` item
         "actionType": ":contentRefreshActionTypeEnum"
     }
 }
