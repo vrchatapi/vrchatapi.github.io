@@ -67,6 +67,9 @@ In this part of the documentation, the following `":identifier"`s will be used t
       \* *only observed with* `"inventory"` *content type*
 - `":inventoryType"`
     - `"sticker"`
+    - `"emoji"`
+    - `"bundle"`
+    - `"prop"`
     - *other values* Some other user-uploaded or creator economy content
 
 ## Events
@@ -423,6 +426,22 @@ A "`content-refresh`" event is sent when the user adds or removes profile images
         "itemId": ":inventoryId", // Id for `inventory` item
         "itemType": ":inventoryType", // Type of `inventory` item
         "actionType": ":contentRefreshActionTypeEnum"
+    }
+}
+```
+
+
+#### modified-image-update
+A "`modified-image-update`" event is sent when an image file is modified.
+
+```json
+{
+    "type": "modified-image-update",
+    "content": {
+        "fileId": ":id", // Id for the image updated
+        "pixelSize": <number>, // Integer size, in pixels, of the image
+        "versionNumber": <number>, // Integer version of the image
+        "needsProcessing": <boolean> // Whether the image requires processing
     }
 }
 ```
