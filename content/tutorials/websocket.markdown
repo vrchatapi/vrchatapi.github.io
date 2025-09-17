@@ -335,7 +335,7 @@ A "`friend-location`" event is sent when one of the user's friends has changed i
 User events are relating to the current user logged in.
 
 #### user-update
-A "`user-update`" event is sent when something regarding the user has been updated. Note that the "`user`" object is **not** a LimitedUser object, even though it has similarities. It's missing `developerType`, `friendKey`, `isFriend`, `last_platform` and `location`. It also has an extra `currentAvatar` field.
+A "`user-update`" event is sent when something regarding the user has been updated. Note that the "`user`" object is **not** a LimitedUser object, even though it has similarities. It's missing `developerType`, `friendKey`, `isFriend`, `last_platform` and `location`. It also has extra `currentAvatar` and `currentAvatarAssetUrl` fields.
 
 ```json
 {
@@ -345,6 +345,7 @@ A "`user-update`" event is sent when something regarding the user has been updat
         "user": {
             "bio": ":bioString",
             "currentAvatar": ":avatarId",
+            "currentAvatarAssetUrl": ":assetUrl",
             "currentAvatarImageUrl": ":assetUrl",
             "currentAvatarThumbnailImageUrl": ":assetUrl",
             "displayName": ":displayName",
