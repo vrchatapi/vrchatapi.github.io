@@ -5,7 +5,7 @@ Connecting to the VRChat webhook server is done via the URL:
 wss://pipeline.vrchat.cloud/?authToken=authcookie_...
 The auth-token query parameter is the authorization cookie you receive when logging into VRChat.
 A proper User-Agent is also required to connect to the websocket server.
-It is possible to be connected from multiple locations at the same time. All clients will receive the exact same messages."><meta name=keywords content="vrchat,api,vrchatapi"><meta name=generator content="Hugo 0.150.0"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous><link rel=stylesheet href=/assets/css/api_custom_highlight.css><link rel=stylesheet href=/assets/css/main.css><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><title>Websocket API | VRChat API Documentation</title><meta property="og:url" content="https://vrchatapi.github.io/tutorials/websocket/"><meta property="og:site_name" content="VRChat API Documentation"><meta property="og:title" content="Websocket API"><meta property="og:description" content="The VRChat Websocket API (a.k.a. “Pipeline”) is used receiving updates regarding the API, such as receiving an invite request. The WebSocket is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
+It is possible to be connected from multiple locations at the same time. All clients will receive the exact same messages."><meta name=keywords content="vrchat,api,vrchatapi"><meta name=generator content="Hugo 0.160.1"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous><link rel=stylesheet href=/assets/css/api_custom_highlight.css><link rel=stylesheet href=/assets/css/main.css><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><title>Websocket API | VRChat API Documentation</title><meta property="og:url" content="https://vrchatapi.github.io/tutorials/websocket/"><meta property="og:site_name" content="VRChat API Documentation"><meta property="og:title" content="Websocket API"><meta property="og:description" content="The VRChat Websocket API (a.k.a. “Pipeline”) is used receiving updates regarding the API, such as receiving an invite request. The WebSocket is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
 Connecting Connecting to the VRChat webhook server is done via the URL: wss://pipeline.vrchat.cloud/?authToken=authcookie_...
 The auth-token query parameter is the authorization cookie you receive when logging into VRChat. A proper User-Agent is also required to connect to the websocket server. It is possible to be connected from multiple locations at the same time. All clients will receive the exact same messages."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="tutorials"><meta name=twitter:card content="summary"><meta name=twitter:title content="Websocket API"><meta name=twitter:description content="The VRChat Websocket API (a.k.a. “Pipeline”) is used receiving updates regarding the API, such as receiving an invite request. The WebSocket is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
 Connecting Connecting to the VRChat webhook server is done via the URL: wss://pipeline.vrchat.cloud/?authToken=authcookie_...
@@ -26,8 +26,8 @@ In this part of the documentation, the following <code>":identifier"</code>s wil
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;notification&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// &lt;Notification Object&gt;, See return data of Notification API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/auth/user/notifications
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>        <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/auth/user/notifications
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=response-notification>response-notification</h4><p>The &ldquo;<code>response-notification</code>&rdquo; event is used to respond to a previously sent event.
 It carries an ID of the response notification &ldquo;<code>responseId</code>&rdquo;, whereby the data is required to be fetched from the API.
@@ -35,18 +35,18 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;response-notification&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;notificationId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=c1>// not_00000000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;receiverId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=c1>// usr_00000000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;responseId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=c1>// not_00000000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;receiverId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=c1>// usr_00000000-0000-0000-000000000000
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;responseId&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span> <span class=c1>// not_00000000-0000-0000-000000000000
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=see-notification>see-notification</h4><p>A &ldquo;<code>see-notification</code>&rdquo; event is sent when the client should mark a specific notification as seen.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;see-notification&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span> <span class=c1>// The ID of the notification to mark as seen.
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=hide-notification>hide-notification</h4><p>A &ldquo;<code>hide-notification</code>&rdquo; event is sent when the client should hide a notification.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;hide-notification&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationId&#34;</span> <span class=c1>// The ID of the notification to hide.
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=clear-notification>clear-notification</h4><p>A &ldquo;<code>clear-notification</code>&rdquo; event is sent when the client should clear <strong>all</strong> notifications.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;clear-notification&#34;</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
@@ -55,33 +55,33 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;id&#34;</span><span class=p>:</span>  <span class=s2>&#34;:notificationId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=c1>// Appears to be a static marker
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2TypeEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;group.announcement&#34;, ???
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;category&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2CategoryEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;social.group&#34;, ???
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;isSystem&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2TypeEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;group.announcement&#34;, ???
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;category&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2CategoryEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;social.group&#34;, ???
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;isSystem&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;ignoreDND&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;senderUserId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=c1>// NOTE: WILL BE NULL if the notification didn&#39;t originate from a user
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;senderUsername&#34;</span><span class=p>:</span> <span class=s2>&#34;:username&#34;</span><span class=p>,</span> <span class=c1>// NOTE: same as &#34;senderUserId&#34;
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;receiverUserId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;senderUsername&#34;</span><span class=p>:</span> <span class=s2>&#34;:username&#34;</span><span class=p>,</span> <span class=c1>// NOTE: same as &#34;senderUserId&#34;
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;receiverUserId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;relatedNotificationsId&#34;</span><span class=p>:</span> <span class=s2>&#34;:?Id&#34;</span><span class=p>,</span> <span class=c1>// gpos_00000000-0000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;title&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;title&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;message&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;imageUrl&#34;</span><span class=p>:</span> <span class=s2>&#34;:assetUrl&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;link&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationLinkUri&#34;</span><span class=p>,</span> <span class=c1>// The scheme is the type of the linked object, and the path is the id of that object, e.g.: &#34;group:grp_00000000-0000-0000-0000-000000000000&#34;
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;linkText&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;linkText&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;responses&#34;</span><span class=p>:</span> <span class=p>[</span>
 </span></span><span class=line><span class=cl>            <span class=p>{</span>
 </span></span><span class=line><span class=cl>                <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2ResponseTypeEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;delete&#34;, &#34;unsubscribe&#34;, ???
-</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span> <span class=c1>// Auxiliary data
-</span></span></span><span class=line><span class=cl><span class=c1></span>                                   <span class=c1>// If the type is &#34;delete&#34;, then this will be empty
-</span></span></span><span class=line><span class=cl><span class=c1></span>                                   <span class=c1>// If the type is &#34;unsubscribe&#34;, then this will be the id of the sending object, a comma, and the id of the (recieving) user
-</span></span></span><span class=line><span class=cl><span class=c1></span>                                   <span class=c1>//   e.g.: grp_00000000-0000-0000-000000000000,usr_00000000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2ResponseIconEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;check&#34;, &#34;bell-slash&#34;, ???
-</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span>
+</span></span></span><span class=line><span class=cl>                <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span><span class=p>,</span> <span class=c1>// Auxiliary data
+</span></span></span><span class=line><span class=cl>                                   <span class=c1>// If the type is &#34;delete&#34;, then this will be empty
+</span></span></span><span class=line><span class=cl>                                   <span class=c1>// If the type is &#34;unsubscribe&#34;, then this will be the id of the sending object, a comma, and the id of the (recieving) user
+</span></span></span><span class=line><span class=cl>                                   <span class=c1>//   e.g.: grp_00000000-0000-0000-000000000000,usr_00000000-0000-0000-000000000000
+</span></span></span><span class=line><span class=cl>                <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;:notificationV2ResponseIconEnum&#34;</span><span class=p>,</span> <span class=c1>// One of: &#34;check&#34;, &#34;bell-slash&#34;, ???
+</span></span></span><span class=line><span class=cl>                <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;:string&#34;</span>
 </span></span><span class=line><span class=cl>            <span class=p>}</span>
 </span></span><span class=line><span class=cl>        <span class=p>],</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;expiresAt&#34;</span><span class=p>:</span> <span class=s2>&#34;dateTimeString&#34;</span><span class=p>,</span> <span class=c1>// yyyy-mm-ddThh:mm:ss.sssZ
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;expiryAfterSeen&#34;</span><span class=p>:</span> <span class=err>&lt;number&gt;</span><span class=p>,</span> <span class=c1>// Typically 900
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;requireSeen&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;expiryAfterSeen&#34;</span><span class=p>:</span> <span class=err>&lt;number&gt;</span><span class=p>,</span> <span class=c1>// Typically 900
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;requireSeen&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;seen&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;canDelete&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;createdAt&#34;</span><span class=p>:</span> <span class=s2>&#34;:dateTimeString&#34;</span><span class=p>,</span>
@@ -95,7 +95,7 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;updates&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// These properties are to be overwrite the properties found in the content of a `notification-v2` event
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=notification-v2-delete>notification-v2-delete</h4><p>A &ldquo;<code>notification-v2-delete</code>&rdquo; event is sent when the client should delete one or more notifications.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -111,10 +111,10 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;friend-add&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span> <span class=c1>// usr_00000000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;User Object&gt;, See return data of User API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=friend-delete>friend-delete</h4><p>A &ldquo;<code>friend-delete</code>&rdquo; event is sent when the user has either been removed as a friend, or has removed someone else as a friend.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -132,8 +132,8 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;canRequestInvite&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;User Object&gt;, See return data of User API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=friend-active>friend-active</h4><p>A &ldquo;<code>friend-active</code>&rdquo; event is sent when one of the user&rsquo;s friends is active on the website.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -141,10 +141,10 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;userid&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;platform&#34;</span><span class=p>:</span> <span class=s2>&#34;:platformString&#34;</span><span class=p>,</span> <span class=c1>// Appears only to be &#34;web&#34; from these events
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;User Object&gt;, See return data of User API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=friend-offline>friend-offline</h4><p>A &ldquo;<code>friend-offline</code>&rdquo; event is sent when one of the user&rsquo;s friends has gone offline.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -152,7 +152,7 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;platform&#34;</span><span class=p>:</span> <span class=s2>&#34;:platformString&#34;</span><span class=p>,</span> <span class=c1>// Appears only to be empty &#34;&#34; from these events
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=friend-update>friend-update</h4><p>A &ldquo;<code>friend-update</code>&rdquo; event is sent when something about one of the user&rsquo;s friends profile has changed.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;friend-update&#34;</span><span class=p>,</span>
@@ -160,8 +160,8 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;User Object&gt;, See return data of User API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=friend-location>friend-location</h4><p>A &ldquo;<code>friend-location</code>&rdquo; event is sent when one of the user&rsquo;s friends has changed instances. Note that the <code>worldId</code> field will be <code>"private"</code> when the friend is on orange/red, or is in a private world.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -170,12 +170,12 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;travelingToLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span> <span class=c1>// normally empty &#34;&#34;, but when the above &#34;location&#34; is &#34;traveling&#34;, this contains the imminent destination
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;worldId&#34;</span><span class=p>:</span> <span class=s2>&#34;:worldId&#34;</span><span class=p>,</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;worldId&#34;</span><span class=p>:</span> <span class=s2>&#34;:worldId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;canRequestInvite&#34;</span><span class=p>:</span> <span class=err>&lt;boolean&gt;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;User Object&gt;, See return data of User API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><hr><h3 id=user-events>User Events</h3><p>User events are relating to the current user logged in.</p><h4 id=user-update>user-update</h4><p>A &ldquo;<code>user-update</code>&rdquo; event is sent when something regarding the user has been updated. Note that the &ldquo;<code>user</code>&rdquo; object is <strong>not</strong> a LimitedUser object, even though it has similarities. It&rsquo;s missing <code>developerType</code>, <code>friendKey</code>, <code>isFriend</code>, <code>last_platform</code> and <code>location</code>. It also has extra <code>currentAvatar</code> and <code>currentAvatarAssetUrl</code> fields.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -208,11 +208,11 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;userId&#34;</span><span class=p>:</span> <span class=s2>&#34;:userId&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;user&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;User Object&gt;, See return data of User API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>},</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/users/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>},</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;location&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;instance&#34;</span><span class=p>:</span> <span class=s2>&#34;:instanceId&#34;</span><span class=p>,</span> <span class=c1>// This is locationString without the World ID part.
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;travelingToLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;travelingToLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=user-badge-assigned>user-badge-assigned</h4><p>A &ldquo;<code>user-badge-assigned</code>&rdquo; event is sent when the user obtains a badge, such as for subscribing to VRChat+.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -232,9 +232,9 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;contentType&#34;</span><span class=p>:</span> <span class=s2>&#34;:contentRefreshContentTypeEnum&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;fileId&#34;</span><span class=p>:</span> <span class=s2>&#34;:id&#34;</span><span class=p>,</span> <span class=c1>// Id for the content updated (avatar, world, file, etc.)
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;itemId&#34;</span><span class=p>:</span> <span class=s2>&#34;:inventoryId&#34;</span><span class=p>,</span> <span class=c1>// Id for `inventory` item
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;itemType&#34;</span><span class=p>:</span> <span class=s2>&#34;:inventoryType&#34;</span><span class=p>,</span> <span class=c1>// Type of `inventory` item
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;actionType&#34;</span><span class=p>:</span> <span class=s2>&#34;:contentRefreshActionTypeEnum&#34;</span>
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;itemId&#34;</span><span class=p>:</span> <span class=s2>&#34;:inventoryId&#34;</span><span class=p>,</span> <span class=c1>// Id for `inventory` item
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;itemType&#34;</span><span class=p>:</span> <span class=s2>&#34;:inventoryType&#34;</span><span class=p>,</span> <span class=c1>// Type of `inventory` item
+</span></span></span><span class=line><span class=cl>        <span class=nt>&#34;actionType&#34;</span><span class=p>:</span> <span class=s2>&#34;:contentRefreshActionTypeEnum&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=instance-queue-joined>instance-queue-joined</h4><p>A &ldquo;<code>instance-queue-joined</code>&rdquo; event is sent when the user queues to join an instance.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -242,20 +242,20 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;instanceLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;position&#34;</span><span class=p>:</span> <span class=err>&lt;number&gt;</span> <span class=c1>// Integer position in queue
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=instance-queue-ready>instance-queue-ready</h4><p>A &ldquo;<code>instance-queue-ready</code>&rdquo; event is sent when the user is at the front of the queue.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;instance-queue-ready&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;instanceLocation&#34;</span><span class=p>:</span> <span class=s2>&#34;:locationString&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;expiry&#34;</span><span class=p>:</span> <span class=s2>&#34;:dateTimeString&#34;</span> <span class=c1>// Time at which priority will be lost
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><hr><h3 id=group-events>Group Events</h3><h4 id=group-joined>group-joined</h4><p>A &ldquo;<code>group-joined</code>&rdquo; event is sent when the user has either joined a group, or has had one of their group join requests accepted.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;group-joined&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;groupId&#34;</span><span class=p>:</span> <span class=s2>&#34;:groupId&#34;</span> <span class=c1>// grp_00000000-0000-0000-000000000000
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=group-left>group-left</h4><p>A &ldquo;<code>group-left</code>&rdquo; event is sent when the user has either left a group, or has been removed from a group.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;group-left&#34;</span><span class=p>,</span>
@@ -268,8 +268,8 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;member&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;GroupLimitedMember Object&gt;, See return data of Groups API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/groups/-groupId-/members/-userId-
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/groups/-groupId-/members/-userId-
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h4 id=group-role-updated>group-role-updated</h4><p>A &ldquo;<code>group-role-updated</code>&rdquo; event is sent when something regarding one of the user&rsquo;s group&rsquo;s roles changes.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
@@ -277,8 +277,8 @@ It also carries &ldquo;<code>notificationId</code>&rdquo; to indicate which noti
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;content&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=nt>&#34;role&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// &lt;GroupRole Object&gt;, See return data of Groups API:
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/groups/-groupId-/roles
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span></span><span class=line><span class=cl>            <span class=c1>// https://vrchatapi.github.io/docs/api/#get-/groups/-groupId-/roles
+</span></span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><div class="d-block d-md-none"><hr class=my-5><a href=/tutorials class="btn btn-light fw-bold text-uppercase mt-3 d-block btn-lg">Back to tutorials</a><div class="row text-uppercase"><div class=col><a href=/tutorials/contribute-website/ class="btn btn-light fw-bold d-block mt-3 btn-lg">Previous</a></div><div class=col><a href=/tutorials class="btn btn-light fw-bold d-block mt-3 btn-lg">Next</a></div></div><style>#TableOfContents ul{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;flex-direction:column!important}#TableOfContents li{display:block;padding:.5rem 1rem;background:0 0;border:0;border-radius:.25rem}#TableOfContents li>ul{margin-left:.5rem!important;margin-top:.75rem!important;margin-bottom:.25rem!important}#TableOfContents li>ul>li:last-child{padding-bottom:0}#TableOfContents a{color:var(--black);text-decoration:none}#TableOfContents a:hover{color:var(--blue)}</style><nav class="navbar navbar-light flex-column align-items-stretch bg-light p-3 mt-3"><div class="navbar-brand fw-bold py-2" href=#>General</div><hr class=mt-1><nav class="nav nav-pills flex-column"><a class=nav-link href=/tutorials/getting-started/><span class="badge rounded-pill bg-green me-2"></span>Getting Started
